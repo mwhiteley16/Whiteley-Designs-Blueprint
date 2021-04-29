@@ -12,43 +12,26 @@
      justify-content: space-between;
 
      span {
-          margin-top: $form-spacing-half;
+          margin-top: calc(#{$form-spacing} / 2);
           width: 100%;
 
           &:first-child {
                margin-top: 0;
           }
 
+          &.address_city,
           &.address_state,
           &.address_zip {
-               width: 32%;
-               margin-left: 2%;
+               width: calc(calc(100% / 3) - calc(calc(#{$form-spacing} * 2) / 3));
 
-               @media(max-width: 700px) {
-                    width: 49%;
-               }
-
-               @media(max-width:500px) {
+               @media(max-width:600px) {
                     width: 100%;
-                    margin-left: 0;
-               }
-          }
-
-          @media(max-width:700px) {
-               &.address_state {
-                    margin-left: 0;
-               }
-          }
-
-          @media(min-width:700px) {
-               &.address_city {
-                    width: 32%;
-                    margin-left: 0;
                }
           }
 
           label {
-               font-size: 14px;
+               font-size: calc(#{$form-font-size} - 2px);
+               margin-top: 3px;
           }
      }
 }

@@ -13,21 +13,21 @@
 
      .name_first,
      .name_last {
-          width: 49%;
+          width: calc(50% - calc(#{$form-spacing} / 2));
 
           @media(max-width:600px) {
                width: 100%;
           }
 
           label {
-               font-size: 14px;
+               font-size: calc(#{$form-font-size} - 2px);
+               margin-top: 3px;
           }
      }
 
-     .name_last {
-
-          @media(max-width:600px) {
-               margin-top: 15px;
+     @media(max-width:600px) {
+          .name_last {
+               margin-top: calc(#{$form-padding} / 2);
           }
      }
 }

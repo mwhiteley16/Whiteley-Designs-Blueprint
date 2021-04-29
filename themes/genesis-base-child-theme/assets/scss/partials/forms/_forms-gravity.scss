@@ -3,106 +3,99 @@
  *
  * Let's define base styles for Gravity Forms
  *
+ * - Core Styles
+ * - Columns
  *
  */
 
+/* ----- Form Core Styles -------------------- */
 .gform_wrapper {
      width: 100%;
      margin-bottom: $form-spacing;
 
-     ul {
-          margin-bottom: 0;
+     fieldset {
+          padding: 0;
+          border: none;
      }
 
-     form,
-     .gform_body,
-     .gform_footer {
-          width: 100%;
-     }
+     .gfield_label {
+          font-weight: 600;
+          margin-bottom: 5px;
+          display: inline-block;
+          font-size: $form-font-size;
 
-     .hidden_label {
-
-          .gfield_label {
-               clip: rect(1px,1px,1px,1px);
-               position: absolute!important;
-               height: 1px;
-               width: 1px;
-               overflow: hidden;
+          .gfield_required {
+               color: $form-required-color;
+               padding-left: 4px;
+               font-weight: 400;
+               font-style: italic;
+               font-size: calc(#{$form-font-size} - 2px);
           }
      }
 
-     .gfield_visibility_hidden {
-          visibility: hidden;
+     .gfield_description {
+          font-size: calc(#{$form-font-size} - 2px);
+          margin-top: 3px;
+     }
+
+     .field_description_above .gfield_description {
+           margin-top: 0;
+           margin-bottom: 3px;
+     }
+
+     .hidden_label .gfield_label,
+     .hidden_sub_label,
+     .screen-reader-text {
+          border: 0;
+          clip: rect(1px,1px,1px,1px);
+          -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+          height: 1px;
+          width: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
           position: absolute;
-          left: -9999px;
+          word-wrap: normal !important;
+     }
+
+     .gform_body .gfield.gform_hidden {
+          margin: 0;
      }
 }
 
-.editor-styles-wrapper ul.gform_fields,
-ul.gform_fields {
-     list-style-type: none;
-     padding-left: 0;
-     margin-left: 0;
-     display: flex;
-     justify-content: space-between;
-     flex-wrap: wrap;
+/* ----- Form Columns ------------------- */
+.gform_body {
 
-     > li {
-          margin-bottom: $form-spacing;
-          padding-bottom: 0;
-          width: 100%;
+     .gform_fields {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
 
-          &.gf_left_half,
-          &.left-side,
-          &.gf_right_half,
-          &.right-side, {
-               width: 49%;
-
-               @media(max-width:600px) {
-                    width: 100%;
-               }
-          }
-
-          &.gf_left_third,
-          &.gf_middle_third,
-          &.gf_right_third,
-          &.left-third,
-          &.middle-third,
-          &.right-third {
-               width: 32%;
-
-               @media(max-width:700px) {
-                    width: 100%;
-               }
-          }
-
-          > label {
-               display: block;
+          .gfield {
                width: 100%;
-               margin-bottom: 5px;
-               font-weight: 600;
+               margin-bottom: $form-spacing;
 
-               .gfield_required {
-                    color: $form-required-color;
-                    padding-left: 4px;
+               @media(min-width:601px) {
+
+                    &--width-half {
+                         width: calc(50% - calc(#{$form-spacing} / 2));
+                    }
+
+                    &--width-third {
+                         width: calc(calc(100% / 3) - calc(calc(#{$form-spacing} * 2) / 3));
+                    }
+
+                    &--width-quarter {
+                         width: calc(25% - calc(calc(#{$form-spacing} * 3) / 4));
+
+                         @media(max-width:1000px) {
+                              width: calc(50% - calc(#{$form-spacing} / 2));
+                         }
+                    }
                }
           }
-
-          &.field_admin_only {
-               margin-bottom: 0;
-               padding-bottom: 0;
-          }
      }
-
-     ul {
-          padding-left: 0;
-          margin-left: 0;
-     }
-}
-
-.editor-styles-wrapper .gform_footer .button {
-     @extend %button-styles;
-     line-height: normal;
 }
 
 @import 'forms-gravity-address';

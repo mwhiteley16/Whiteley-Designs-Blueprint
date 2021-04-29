@@ -6,12 +6,18 @@
  *
  */
 
-.gform_wrapper .validation_error {
-     border: 1px solid $form-error;
+.gform_validation_errors {
+     border: 2px solid $form-error;
      padding: $form-padding;
      margin-bottom: $form-spacing;
      border-radius: $form-border-radius;
-     display: none;
+     background-color: #fff9f9;
+     text-align: center;
+
+     h2 {
+          font-size: 20px;
+          margin: 0;
+     }
 }
 
  .gfield_error {
@@ -26,6 +32,7 @@
  	textarea,
  	select {
  		border-color: $form-error;
+          background-color: #fff9f9;
 
  		&:focus {
  			border-color: darken($form-error, 10%);

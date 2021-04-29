@@ -320,7 +320,7 @@ input {
   height: auto;
   min-height: auto; }
 
-.wp-block-button__link, .editor-styles-wrapper .gform_footer .button, a.wd-button,
+.wp-block-button__link, a.wd-button,
 input[type="button"],
 input[type="button"][disabled]:hover,
 input[type="button"][disabled]:focus,
@@ -340,14 +340,14 @@ input[type="submit"][disabled]:focus,
   display: inline-block;
   height: auto;
   border-radius: 3px; }
-  .wp-block-button__link:hover, .editor-styles-wrapper .gform_footer .button:hover, a.wd-button:hover,
+  .wp-block-button__link:hover, a.wd-button:hover,
   input[type="button"]:hover,
   input[type="button"][disabled]:hover,
   input[type="reset"]:hover,
   input[type="reset"][disabled]:hover,
   input[type="submit"]:hover,
   input[type="submit"][disabled]:hover,
-  .claim-search button:hover, .wp-block-button__link:focus, .editor-styles-wrapper .gform_footer .button:focus, a.wd-button:focus,
+  .claim-search button:hover, .wp-block-button__link:focus, a.wd-button:focus,
   input[type="button"]:focus,
   input[type="button"][disabled]:focus,
   input[type="reset"]:focus,
@@ -359,7 +359,7 @@ input[type="submit"][disabled]:focus,
     background: #004e5e;
     color: #fff;
     text-decoration: none; }
-  .button--inverse.wp-block-button__link, .editor-styles-wrapper .gform_footer .button--inverse.button, a.button--inverse.wd-button,
+  .button--inverse.wp-block-button__link, a.button--inverse.wd-button,
   input.button--inverse[type="button"],
   input.button--inverse[type="button"][disabled]:hover,
   input.button--inverse[type="button"][disabled]:focus,
@@ -372,11 +372,11 @@ input[type="submit"][disabled]:focus,
   .claim-search button.button--inverse {
     background-color: transparent;
     color: #007991; }
-    .button--inverse.wp-block-button__link:hover, .editor-styles-wrapper .gform_footer .button--inverse.button:hover, a.button--inverse.wd-button:hover,
+    .button--inverse.wp-block-button__link:hover, a.button--inverse.wd-button:hover,
     input.button--inverse[type="button"]:hover,
     input.button--inverse[type="reset"]:hover,
     input.button--inverse[type="submit"]:hover,
-    .claim-search button.button--inverse:hover, .button--inverse.wp-block-button__link:focus, .editor-styles-wrapper .gform_footer .button--inverse.button:focus, a.button--inverse.wd-button:focus,
+    .claim-search button.button--inverse:hover, .button--inverse.wp-block-button__link:focus, a.button--inverse.wd-button:focus,
     input.button--inverse[type="button"]:focus,
     input.button--inverse[type="reset"]:focus,
     input.button--inverse[type="submit"]:focus,
@@ -1221,93 +1221,69 @@ select {
  *
  * Let's define base styles for Gravity Forms
  *
+ * - Core Styles
+ * - Columns
  *
  */
+/* ----- Form Core Styles -------------------- */
 .gform_wrapper {
   width: 100%;
   margin-bottom: 30px; }
-  .gform_wrapper ul {
-    margin-bottom: 0; }
-  .gform_wrapper form,
-  .gform_wrapper .gform_body,
-  .gform_wrapper .gform_footer {
-    width: 100%; }
-  .gform_wrapper .hidden_label .gfield_label {
+  .gform_wrapper fieldset {
+    padding: 0;
+    border: none; }
+  .gform_wrapper .gfield_label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 16px; }
+    .gform_wrapper .gfield_label .gfield_required {
+      color: red;
+      padding-left: 4px;
+      font-weight: 400;
+      font-style: italic;
+      font-size: calc(16px - 2px); }
+  .gform_wrapper .gfield_description {
+    font-size: calc(16px - 2px);
+    margin-top: 3px; }
+  .gform_wrapper .field_description_above .gfield_description {
+    margin-top: 0;
+    margin-bottom: 3px; }
+  .gform_wrapper .hidden_label .gfield_label,
+  .gform_wrapper .hidden_sub_label,
+  .gform_wrapper .screen-reader-text {
+    border: 0;
     clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
     height: 1px;
     width: 1px;
-    overflow: hidden; }
-  .gform_wrapper .gfield_visibility_hidden {
-    visibility: hidden;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
     position: absolute;
-    left: -9999px; }
+    word-wrap: normal !important; }
+  .gform_wrapper .gform_body .gfield.gform_hidden {
+    margin: 0; }
 
-.editor-styles-wrapper ul.gform_fields,
-ul.gform_fields {
-  list-style-type: none;
-  padding-left: 0;
-  margin-left: 0;
+/* ----- Form Columns ------------------- */
+.gform_body .gform_fields {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
-  .editor-styles-wrapper ul.gform_fields > li,
-  ul.gform_fields > li {
-    margin-bottom: 30px;
-    padding-bottom: 0;
-    width: 100%; }
-    .editor-styles-wrapper ul.gform_fields > li.gf_left_half, .editor-styles-wrapper ul.gform_fields > li.left-side, .editor-styles-wrapper ul.gform_fields > li.gf_right_half, .editor-styles-wrapper ul.gform_fields > li.right-side,
-    ul.gform_fields > li.gf_left_half,
-    ul.gform_fields > li.left-side,
-    ul.gform_fields > li.gf_right_half,
-    ul.gform_fields > li.right-side {
-      width: 49%; }
-      @media (max-width: 600px) {
-        .editor-styles-wrapper ul.gform_fields > li.gf_left_half, .editor-styles-wrapper ul.gform_fields > li.left-side, .editor-styles-wrapper ul.gform_fields > li.gf_right_half, .editor-styles-wrapper ul.gform_fields > li.right-side,
-        ul.gform_fields > li.gf_left_half,
-        ul.gform_fields > li.left-side,
-        ul.gform_fields > li.gf_right_half,
-        ul.gform_fields > li.right-side {
-          width: 100%; } }
-    .editor-styles-wrapper ul.gform_fields > li.gf_left_third, .editor-styles-wrapper ul.gform_fields > li.gf_middle_third, .editor-styles-wrapper ul.gform_fields > li.gf_right_third, .editor-styles-wrapper ul.gform_fields > li.left-third, .editor-styles-wrapper ul.gform_fields > li.middle-third, .editor-styles-wrapper ul.gform_fields > li.right-third,
-    ul.gform_fields > li.gf_left_third,
-    ul.gform_fields > li.gf_middle_third,
-    ul.gform_fields > li.gf_right_third,
-    ul.gform_fields > li.left-third,
-    ul.gform_fields > li.middle-third,
-    ul.gform_fields > li.right-third {
-      width: 32%; }
-      @media (max-width: 700px) {
-        .editor-styles-wrapper ul.gform_fields > li.gf_left_third, .editor-styles-wrapper ul.gform_fields > li.gf_middle_third, .editor-styles-wrapper ul.gform_fields > li.gf_right_third, .editor-styles-wrapper ul.gform_fields > li.left-third, .editor-styles-wrapper ul.gform_fields > li.middle-third, .editor-styles-wrapper ul.gform_fields > li.right-third,
-        ul.gform_fields > li.gf_left_third,
-        ul.gform_fields > li.gf_middle_third,
-        ul.gform_fields > li.gf_right_third,
-        ul.gform_fields > li.left-third,
-        ul.gform_fields > li.middle-third,
-        ul.gform_fields > li.right-third {
-          width: 100%; } }
-    .editor-styles-wrapper ul.gform_fields > li > label,
-    ul.gform_fields > li > label {
-      display: block;
-      width: 100%;
-      margin-bottom: 5px;
-      font-weight: 600; }
-      .editor-styles-wrapper ul.gform_fields > li > label .gfield_required,
-      ul.gform_fields > li > label .gfield_required {
-        color: red;
-        padding-left: 4px; }
-    .editor-styles-wrapper ul.gform_fields > li.field_admin_only,
-    ul.gform_fields > li.field_admin_only {
-      margin-bottom: 0;
-      padding-bottom: 0; }
-  .editor-styles-wrapper ul.gform_fields ul,
-  ul.gform_fields ul {
-    padding-left: 0;
-    margin-left: 0; }
-
-.editor-styles-wrapper .gform_footer .button {
-  line-height: normal; }
-
+  .gform_body .gform_fields .gfield {
+    width: 100%;
+    margin-bottom: 30px; }
+    @media (min-width: 601px) {
+      .gform_body .gform_fields .gfield--width-half {
+        width: calc(50% - calc(30px / 2)); }
+      .gform_body .gform_fields .gfield--width-third {
+        width: calc(calc(100% / 3) - calc(calc(30px * 2) / 3)); }
+      .gform_body .gform_fields .gfield--width-quarter {
+        width: calc(25% - calc(calc(30px * 3) / 4)); } }
+  @media (min-width: 601px) and (max-width: 1000px) {
+    .gform_body .gform_fields .gfield--width-quarter {
+      width: calc(50% - calc(30px / 2)); } }
 /**
  * /assets/scss/partials/forms/forms-gravity-address.scss
  *
@@ -1320,29 +1296,18 @@ ul.gform_fields {
   flex-wrap: wrap;
   justify-content: space-between; }
   .ginput_container_address span {
-    margin-top: 15px;
+    margin-top: calc(30px / 2);
     width: 100%; }
     .ginput_container_address span:first-child {
       margin-top: 0; }
-    .ginput_container_address span.address_state, .ginput_container_address span.address_zip {
-      width: 32%;
-      margin-left: 2%; }
-      @media (max-width: 700px) {
-        .ginput_container_address span.address_state, .ginput_container_address span.address_zip {
-          width: 49%; } }
-      @media (max-width: 500px) {
-        .ginput_container_address span.address_state, .ginput_container_address span.address_zip {
-          width: 100%;
-          margin-left: 0; } }
-    @media (max-width: 700px) {
-      .ginput_container_address span.address_state {
-        margin-left: 0; } }
-    @media (min-width: 700px) {
-      .ginput_container_address span.address_city {
-        width: 32%;
-        margin-left: 0; } }
+    .ginput_container_address span.address_city, .ginput_container_address span.address_state, .ginput_container_address span.address_zip {
+      width: calc(calc(100% / 3) - calc(calc(30px * 2) / 3)); }
+      @media (max-width: 600px) {
+        .ginput_container_address span.address_city, .ginput_container_address span.address_state, .ginput_container_address span.address_zip {
+          width: 100%; } }
     .ginput_container_address span label {
-      font-size: 14px; }
+      font-size: calc(16px - 2px);
+      margin-top: 3px; }
 
 /**
  * /assets/scss/partials/forms/forms-gravity-checkboxradio.scss
@@ -1351,107 +1316,91 @@ ul.gform_fields {
  *
  *
  */
-.ginput_container_radio ul,
-.ginput_container_checkbox ul {
-  list-style-type: none;
-  padding-left: 0; }
-  .ginput_container_radio ul li,
-  .ginput_container_checkbox ul li {
-    display: flex;
-    align-items: center;
-    padding-bottom: 10px; }
-    .ginput_container_radio ul li input,
-    .ginput_container_checkbox ul li input {
-      margin-right: 5px; }
-
-.ginput_container ul.gfield_checkbox,
-.ginput_container ul.gfield_radio {
-  padding-left: 0 !important; }
-  .ginput_container ul.gfield_checkbox li,
-  .ginput_container ul.gfield_radio li {
-    padding: 5px 0;
-    position: relative; }
-    .ginput_container ul.gfield_checkbox li > label,
-    .ginput_container ul.gfield_radio li > label {
-      position: relative;
-      padding: 0 0 0 30px;
-      line-height: 26px; }
-    .ginput_container ul.gfield_checkbox li > input[type="radio"],
-    .ginput_container ul.gfield_radio li > input[type="radio"] {
+.ginput_container .gfield_checkbox .gchoice,
+.ginput_container .gfield_radio .gchoice {
+  padding: 5px 0;
+  position: relative; }
+  .ginput_container .gfield_checkbox .gchoice > label,
+  .ginput_container .gfield_radio .gchoice > label {
+    position: relative;
+    padding: 0 0 0 25px;
+    line-height: 26px; }
+  .ginput_container .gfield_checkbox .gchoice > input[type="radio"],
+  .ginput_container .gfield_radio .gchoice > input[type="radio"] {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer; }
+    .ginput_container .gfield_checkbox .gchoice > input[type="radio"] + *::before,
+    .ginput_container .gfield_radio .gchoice > input[type="radio"] + *::before {
+      content: "";
       position: absolute;
+      top: 1px;
       left: 0;
-      top: 2px;
-      opacity: 0;
-      height: 0;
-      width: 0;
-      cursor: pointer; }
-      .ginput_container ul.gfield_checkbox li > input[type="radio"] + *::before,
-      .ginput_container ul.gfield_radio li > input[type="radio"] + *::before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 0;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #ebe7e7;
-        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.15); }
-      .ginput_container ul.gfield_checkbox li > input[type="radio"] + *::after,
-      .ginput_container ul.gfield_radio li > input[type="radio"] + *::after {
-        content: "";
-        width: 10px;
-        height: 10px;
-        background-color: #fff;
-        position: absolute;
-        top: 8px;
-        left: 5px;
-        border-radius: 10px;
-        opacity: 0; }
-      .ginput_container ul.gfield_checkbox li > input[type="radio"]:checked + *::before,
-      .ginput_container ul.gfield_radio li > input[type="radio"]:checked + *::before {
-        background-color: #007991;
-        box-shadow: none; }
-      .ginput_container ul.gfield_checkbox li > input[type="radio"]:checked + *::after,
-      .ginput_container ul.gfield_radio li > input[type="radio"]:checked + *::after {
-        opacity: 1; }
-    .ginput_container ul.gfield_checkbox li > input[type="checkbox"],
-    .ginput_container ul.gfield_radio li > input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #ebe7e7;
+      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.15); }
+    .ginput_container .gfield_checkbox .gchoice > input[type="radio"] + *::after,
+    .ginput_container .gfield_radio .gchoice > input[type="radio"] + *::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
       position: absolute;
-      left: 0;
+      top: 5px;
+      left: 4px;
+      border-radius: 10px;
+      opacity: 0; }
+    .ginput_container .gfield_checkbox .gchoice > input[type="radio"]:checked + *::before,
+    .ginput_container .gfield_radio .gchoice > input[type="radio"]:checked + *::before {
+      background-color: #007991;
+      box-shadow: none; }
+    .ginput_container .gfield_checkbox .gchoice > input[type="radio"]:checked + *::after,
+    .ginput_container .gfield_radio .gchoice > input[type="radio"]:checked + *::after {
+      opacity: 1; }
+  .ginput_container .gfield_checkbox .gchoice > input[type="checkbox"],
+  .ginput_container .gfield_radio .gchoice > input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer; }
+    .ginput_container .gfield_checkbox .gchoice > input[type="checkbox"] + *::before,
+    .ginput_container .gfield_radio .gchoice > input[type="checkbox"] + *::before {
+      content: "";
+      position: absolute;
       top: 2px;
-      opacity: 0;
-      height: 0;
-      width: 0;
-      cursor: pointer; }
-      .ginput_container ul.gfield_checkbox li > input[type="checkbox"] + *::before,
-      .ginput_container ul.gfield_radio li > input[type="checkbox"] + *::before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 0;
-        width: 20px;
-        height: 20px;
-        border-radius: 2px;
-        background-color: #ebe7e7;
-        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.15); }
-      .ginput_container ul.gfield_checkbox li > input[type="checkbox"] + *::after,
-      .ginput_container ul.gfield_radio li > input[type="checkbox"] + *::after {
-        content: "";
-        background-image: url("../images/form-icons/check-solid-light.svg");
-        background-size: cover;
-        width: 12px;
-        height: 12px;
-        position: absolute;
-        top: 7px;
-        left: 4px;
-        opacity: 0; }
-      .ginput_container ul.gfield_checkbox li > input[type="checkbox"]:checked + *::before,
-      .ginput_container ul.gfield_radio li > input[type="checkbox"]:checked + *::before {
-        background-color: #007991;
-        box-shadow: none; }
-      .ginput_container ul.gfield_checkbox li > input[type="checkbox"]:checked + *::after,
-      .ginput_container ul.gfield_radio li > input[type="checkbox"]:checked + *::after {
-        opacity: 1; }
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      background-color: #ebe7e7;
+      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.15); }
+    .ginput_container .gfield_checkbox .gchoice > input[type="checkbox"] + *::after,
+    .ginput_container .gfield_radio .gchoice > input[type="checkbox"] + *::after {
+      content: "";
+      background-image: url("../images/form-icons/check-solid-light.svg");
+      background-size: cover;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 5px;
+      left: 3px;
+      opacity: 0; }
+    .ginput_container .gfield_checkbox .gchoice > input[type="checkbox"]:checked + *::before,
+    .ginput_container .gfield_radio .gchoice > input[type="checkbox"]:checked + *::before {
+      background-color: #007991;
+      box-shadow: none; }
+    .ginput_container .gfield_checkbox .gchoice > input[type="checkbox"]:checked + *::after,
+    .ginput_container .gfield_radio .gchoice > input[type="checkbox"]:checked + *::after {
+      opacity: 1; }
 
 .gf_list_2col .gfield_radio,
 .gf_list_2col .gfield_checkbox,
@@ -1468,134 +1417,134 @@ ul.gform_fields {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; }
-  .gf_list_2col .gfield_radio li,
-  .gf_list_2col .gfield_checkbox li,
-  .two-column .gfield_radio li,
-  .two-column .gfield_checkbox li,
-  .gf_list_3col .gfield_radio li,
-  .gf_list_3col .gfield_checkbox li,
-  .three-column .gfield_radio li,
-  .three-column .gfield_checkbox li,
-  .gf_list_4col .gfield_radio li,
-  .gf_list_4col .gfield_checkbox li,
-  .four-column .gfield_radio li,
-  .four-column .gfield_checkbox li {
+  .gf_list_2col .gfield_radio .gchoice,
+  .gf_list_2col .gfield_checkbox .gchoice,
+  .two-column .gfield_radio .gchoice,
+  .two-column .gfield_checkbox .gchoice,
+  .gf_list_3col .gfield_radio .gchoice,
+  .gf_list_3col .gfield_checkbox .gchoice,
+  .three-column .gfield_radio .gchoice,
+  .three-column .gfield_checkbox .gchoice,
+  .gf_list_4col .gfield_radio .gchoice,
+  .gf_list_4col .gfield_checkbox .gchoice,
+  .four-column .gfield_radio .gchoice,
+  .four-column .gfield_checkbox .gchoice {
     width: 49%;
     padding: 0 10px 0 0;
     margin: 10px 0 0 0; }
-    .gf_list_2col .gfield_radio li:first-child,
-    .gf_list_2col .gfield_checkbox li:first-child,
-    .two-column .gfield_radio li:first-child,
-    .two-column .gfield_checkbox li:first-child,
-    .gf_list_3col .gfield_radio li:first-child,
-    .gf_list_3col .gfield_checkbox li:first-child,
-    .three-column .gfield_radio li:first-child,
-    .three-column .gfield_checkbox li:first-child,
-    .gf_list_4col .gfield_radio li:first-child,
-    .gf_list_4col .gfield_checkbox li:first-child,
-    .four-column .gfield_radio li:first-child,
-    .four-column .gfield_checkbox li:first-child {
+    .gf_list_2col .gfield_radio .gchoice:first-child,
+    .gf_list_2col .gfield_checkbox .gchoice:first-child,
+    .two-column .gfield_radio .gchoice:first-child,
+    .two-column .gfield_checkbox .gchoice:first-child,
+    .gf_list_3col .gfield_radio .gchoice:first-child,
+    .gf_list_3col .gfield_checkbox .gchoice:first-child,
+    .three-column .gfield_radio .gchoice:first-child,
+    .three-column .gfield_checkbox .gchoice:first-child,
+    .gf_list_4col .gfield_radio .gchoice:first-child,
+    .gf_list_4col .gfield_checkbox .gchoice:first-child,
+    .four-column .gfield_radio .gchoice:first-child,
+    .four-column .gfield_checkbox .gchoice:first-child {
       margin-top: 0; }
     @media (max-width: 500px) {
-      .gf_list_2col .gfield_radio li,
-      .gf_list_2col .gfield_checkbox li,
-      .two-column .gfield_radio li,
-      .two-column .gfield_checkbox li,
-      .gf_list_3col .gfield_radio li,
-      .gf_list_3col .gfield_checkbox li,
-      .three-column .gfield_radio li,
-      .three-column .gfield_checkbox li,
-      .gf_list_4col .gfield_radio li,
-      .gf_list_4col .gfield_checkbox li,
-      .four-column .gfield_radio li,
-      .four-column .gfield_checkbox li {
+      .gf_list_2col .gfield_radio .gchoice,
+      .gf_list_2col .gfield_checkbox .gchoice,
+      .two-column .gfield_radio .gchoice,
+      .two-column .gfield_checkbox .gchoice,
+      .gf_list_3col .gfield_radio .gchoice,
+      .gf_list_3col .gfield_checkbox .gchoice,
+      .three-column .gfield_radio .gchoice,
+      .three-column .gfield_checkbox .gchoice,
+      .gf_list_4col .gfield_radio .gchoice,
+      .gf_list_4col .gfield_checkbox .gchoice,
+      .four-column .gfield_radio .gchoice,
+      .four-column .gfield_checkbox .gchoice {
         width: 100%;
         padding-right: 0; } }
 @media (min-width: 501px) {
-  .gf_list_2col .gfield_radio li:nth-child(2),
-  .gf_list_2col .gfield_checkbox li:nth-child(2),
-  .two-column .gfield_radio li:nth-child(2),
-  .two-column .gfield_checkbox li:nth-child(2) {
+  .gf_list_2col .gfield_radio .choice:nth-child(2),
+  .gf_list_2col .gfield_checkbox .choice:nth-child(2),
+  .two-column .gfield_radio .choice:nth-child(2),
+  .two-column .gfield_checkbox .choice:nth-child(2) {
     margin-top: 0; } }
 
-.gf_list_3col .gfield_radio li,
-.gf_list_3col .gfield_checkbox li,
-.three-column .gfield_radio li,
-.three-column .gfield_checkbox li {
+.gf_list_3col .gfield_radio .gchoice,
+.gf_list_3col .gfield_checkbox .gchoice,
+.three-column .gfield_radio .gchoice,
+.three-column .gfield_checkbox .gchoice {
   width: 32%; }
   @media (min-width: 701px) {
-    .gf_list_3col .gfield_radio li:nth-child(2), .gf_list_3col .gfield_radio li:nth-child(3),
-    .gf_list_3col .gfield_checkbox li:nth-child(2),
-    .gf_list_3col .gfield_checkbox li:nth-child(3),
-    .three-column .gfield_radio li:nth-child(2),
-    .three-column .gfield_radio li:nth-child(3),
-    .three-column .gfield_checkbox li:nth-child(2),
-    .three-column .gfield_checkbox li:nth-child(3) {
+    .gf_list_3col .gfield_radio .gchoice:nth-child(2), .gf_list_3col .gfield_radio .gchoice:nth-child(3),
+    .gf_list_3col .gfield_checkbox .gchoice:nth-child(2),
+    .gf_list_3col .gfield_checkbox .gchoice:nth-child(3),
+    .three-column .gfield_radio .gchoice:nth-child(2),
+    .three-column .gfield_radio .gchoice:nth-child(3),
+    .three-column .gfield_checkbox .gchoice:nth-child(2),
+    .three-column .gfield_checkbox .gchoice:nth-child(3) {
       margin-top: 0; } }
   @media (max-width: 700px) and (min-width: 501px) {
-    .gf_list_3col .gfield_radio li,
-    .gf_list_3col .gfield_checkbox li,
-    .three-column .gfield_radio li,
-    .three-column .gfield_checkbox li {
+    .gf_list_3col .gfield_radio .gchoice,
+    .gf_list_3col .gfield_checkbox .gchoice,
+    .three-column .gfield_radio .gchoice,
+    .three-column .gfield_checkbox .gchoice {
       width: 49%; }
-      .gf_list_3col .gfield_radio li:nth-child(2),
-      .gf_list_3col .gfield_checkbox li:nth-child(2),
-      .three-column .gfield_radio li:nth-child(2),
-      .three-column .gfield_checkbox li:nth-child(2) {
+      .gf_list_3col .gfield_radio .gchoice:nth-child(2),
+      .gf_list_3col .gfield_checkbox .gchoice:nth-child(2),
+      .three-column .gfield_radio .gchoice:nth-child(2),
+      .three-column .gfield_checkbox .gchoice:nth-child(2) {
         margin-top: 0; } }
   @media (max-width: 500px) {
-    .gf_list_3col .gfield_radio li,
-    .gf_list_3col .gfield_checkbox li,
-    .three-column .gfield_radio li,
-    .three-column .gfield_checkbox li {
+    .gf_list_3col .gfield_radio .gchoice,
+    .gf_list_3col .gfield_checkbox .gchoice,
+    .three-column .gfield_radio .gchoice,
+    .three-column .gfield_checkbox .gchoice {
       width: 100%; } }
-.gf_list_4col .gfield_radio li,
-.gf_list_4col .gfield_checkbox li,
-.four-column .gfield_radio li,
-.four-column .gfield_checkbox li {
+.gf_list_4col .gfield_radio .gchoice,
+.gf_list_4col .gfield_checkbox .gchoice,
+.four-column .gfield_radio .gchoice,
+.four-column .gfield_checkbox .gchoice {
   width: 23.5%; }
   @media (min-width: 901px) {
-    .gf_list_4col .gfield_radio li:nth-child(2), .gf_list_4col .gfield_radio li:nth-child(3), .gf_list_4col .gfield_radio li:nth-child(4),
-    .gf_list_4col .gfield_checkbox li:nth-child(2),
-    .gf_list_4col .gfield_checkbox li:nth-child(3),
-    .gf_list_4col .gfield_checkbox li:nth-child(4),
-    .four-column .gfield_radio li:nth-child(2),
-    .four-column .gfield_radio li:nth-child(3),
-    .four-column .gfield_radio li:nth-child(4),
-    .four-column .gfield_checkbox li:nth-child(2),
-    .four-column .gfield_checkbox li:nth-child(3),
-    .four-column .gfield_checkbox li:nth-child(4) {
+    .gf_list_4col .gfield_radio .gchoice:nth-child(2), .gf_list_4col .gfield_radio .gchoice:nth-child(3), .gf_list_4col .gfield_radio .gchoice:nth-child(4),
+    .gf_list_4col .gfield_checkbox .gchoice:nth-child(2),
+    .gf_list_4col .gfield_checkbox .gchoice:nth-child(3),
+    .gf_list_4col .gfield_checkbox .gchoice:nth-child(4),
+    .four-column .gfield_radio .gchoice:nth-child(2),
+    .four-column .gfield_radio .gchoice:nth-child(3),
+    .four-column .gfield_radio .gchoice:nth-child(4),
+    .four-column .gfield_checkbox .gchoice:nth-child(2),
+    .four-column .gfield_checkbox .gchoice:nth-child(3),
+    .four-column .gfield_checkbox .gchoice:nth-child(4) {
       margin-top: 0; } }
   @media (max-width: 900px) and (min-width: 701px) {
-    .gf_list_4col .gfield_radio li,
-    .gf_list_4col .gfield_checkbox li,
-    .four-column .gfield_radio li,
-    .four-column .gfield_checkbox li {
+    .gf_list_4col .gfield_radio .gchoice,
+    .gf_list_4col .gfield_checkbox .gchoice,
+    .four-column .gfield_radio .gchoice,
+    .four-column .gfield_checkbox .gchoice {
       width: 32%; }
-      .gf_list_4col .gfield_radio li:nth-child(2), .gf_list_4col .gfield_radio li:nth-child(3),
-      .gf_list_4col .gfield_checkbox li:nth-child(2),
-      .gf_list_4col .gfield_checkbox li:nth-child(3),
-      .four-column .gfield_radio li:nth-child(2),
-      .four-column .gfield_radio li:nth-child(3),
-      .four-column .gfield_checkbox li:nth-child(2),
-      .four-column .gfield_checkbox li:nth-child(3) {
+      .gf_list_4col .gfield_radio .gchoice:nth-child(2), .gf_list_4col .gfield_radio .gchoice:nth-child(3),
+      .gf_list_4col .gfield_checkbox .gchoice:nth-child(2),
+      .gf_list_4col .gfield_checkbox .gchoice:nth-child(3),
+      .four-column .gfield_radio .gchoice:nth-child(2),
+      .four-column .gfield_radio .gchoice:nth-child(3),
+      .four-column .gfield_checkbox .gchoice:nth-child(2),
+      .four-column .gfield_checkbox .gchoice:nth-child(3) {
         margin-top: 0; } }
   @media (max-width: 700px) and (min-width: 501px) {
-    .gf_list_4col .gfield_radio li,
-    .gf_list_4col .gfield_checkbox li,
-    .four-column .gfield_radio li,
-    .four-column .gfield_checkbox li {
+    .gf_list_4col .gfield_radio .gchoice,
+    .gf_list_4col .gfield_checkbox .gchoice,
+    .four-column .gfield_radio .gchoice,
+    .four-column .gfield_checkbox .gchoice {
       width: 49%; }
-      .gf_list_4col .gfield_radio li:nth-child(2),
-      .gf_list_4col .gfield_checkbox li:nth-child(2),
-      .four-column .gfield_radio li:nth-child(2),
-      .four-column .gfield_checkbox li:nth-child(2) {
+      .gf_list_4col .gfield_radio .gchoice:nth-child(2),
+      .gf_list_4col .gfield_checkbox .gchoice:nth-child(2),
+      .four-column .gfield_radio .gchoice:nth-child(2),
+      .four-column .gfield_checkbox .gchoice:nth-child(2) {
         margin-top: 0; } }
   @media (max-width: 500px) {
-    .gf_list_4col .gfield_radio li,
-    .gf_list_4col .gfield_checkbox li,
-    .four-column .gfield_radio li,
-    .four-column .gfield_checkbox li {
+    .gf_list_4col .gfield_radio .gchoice,
+    .gf_list_4col .gfield_checkbox .gchoice,
+    .four-column .gfield_radio .gchoice,
+    .four-column .gfield_checkbox .gchoice {
       width: 100%; } }
 /**
  * /assets/scss/partials/forms/forms-gravity-datepicker.scss
@@ -1606,7 +1555,7 @@ ul.gform_fields {
  */
 .ginput_container_date input {
   position: relative;
-  background-image: url("../images/forms/calendar-alt-light.svg");
+  background-image: url("../images/form-icons/calendar-alt-light.svg");
   background-position: calc(100% - 15px) 50%;
   background-repeat: no-repeat;
   background-size: 16px; }
@@ -2556,7 +2505,6 @@ ul.gform_fields {
  *
  *
  */
-.editor-styles-wrapper .gform_wrapper select,
 .gform_wrapper select,
 select {
   appearance: none;
@@ -2586,17 +2534,18 @@ select {
   justify-content: space-between; }
   .ginput_complex .name_first,
   .ginput_complex .name_last {
-    width: 49%; }
+    width: calc(50% - calc(30px / 2)); }
     @media (max-width: 600px) {
       .ginput_complex .name_first,
       .ginput_complex .name_last {
         width: 100%; } }
     .ginput_complex .name_first label,
     .ginput_complex .name_last label {
-      font-size: 14px; }
+      font-size: calc(16px - 2px);
+      margin-top: 3px; }
   @media (max-width: 600px) {
     .ginput_complex .name_last {
-      margin-top: 15px; } }
+      margin-top: calc(15px / 2); } }
 /**
  * /assets/scss/partials/forms/forms-gravity-validation.scss
  *
@@ -2604,12 +2553,16 @@ select {
  *
  *
  */
-.gform_wrapper .validation_error {
-  border: 1px solid red;
+.gform_validation_errors {
+  border: 2px solid red;
   padding: 15px;
   margin-bottom: 30px;
   border-radius: 5px;
-  display: none; }
+  background-color: #fff9f9;
+  text-align: center; }
+  .gform_validation_errors h2 {
+    font-size: 20px;
+    margin: 0; }
 
 .gfield_error .validation_message {
   color: red;
@@ -2619,7 +2572,8 @@ select {
 .gfield_error input,
 .gfield_error textarea,
 .gfield_error select {
-  border-color: red; }
+  border-color: red;
+  background-color: #fff9f9; }
   .gfield_error input:focus,
   .gfield_error textarea:focus,
   .gfield_error select:focus {
