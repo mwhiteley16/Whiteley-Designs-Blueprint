@@ -1,0 +1,113 @@
+/**
+ * /assets/scss/partials/forms/forms-gravity.scss
+ *
+ * Let's define base styles for Gravity Forms
+ *
+ *
+ */
+
+.gform_wrapper {
+     width: 100%;
+     margin-bottom: $form-spacing;
+
+     ul {
+          margin-bottom: 0;
+     }
+
+     form,
+     .gform_body,
+     .gform_footer {
+          width: 100%;
+     }
+
+     .hidden_label {
+
+          .gfield_label {
+               clip: rect(1px,1px,1px,1px);
+               position: absolute!important;
+               height: 1px;
+               width: 1px;
+               overflow: hidden;
+          }
+     }
+
+     .gfield_visibility_hidden {
+          visibility: hidden;
+          position: absolute;
+          left: -9999px;
+     }
+}
+
+.editor-styles-wrapper ul.gform_fields,
+ul.gform_fields {
+     list-style-type: none;
+     padding-left: 0;
+     margin-left: 0;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+
+     > li {
+          margin-bottom: $form-spacing;
+          padding-bottom: 0;
+          width: 100%;
+
+          &.gf_left_half,
+          &.left-side,
+          &.gf_right_half,
+          &.right-side, {
+               width: 49%;
+
+               @media(max-width:600px) {
+                    width: 100%;
+               }
+          }
+
+          &.gf_left_third,
+          &.gf_middle_third,
+          &.gf_right_third,
+          &.left-third,
+          &.middle-third,
+          &.right-third {
+               width: 32%;
+
+               @media(max-width:700px) {
+                    width: 100%;
+               }
+          }
+
+          > label {
+               display: block;
+               width: 100%;
+               margin-bottom: 5px;
+               font-weight: 600;
+
+               .gfield_required {
+                    color: $form-required-color;
+                    padding-left: 4px;
+               }
+          }
+
+          &.field_admin_only {
+               margin-bottom: 0;
+               padding-bottom: 0;
+          }
+     }
+
+     ul {
+          padding-left: 0;
+          margin-left: 0;
+     }
+}
+
+.editor-styles-wrapper .gform_footer .button {
+     @extend %button-styles;
+     line-height: normal;
+}
+
+@import 'forms-gravity-address';
+@import 'forms-gravity-checkboxradio';
+@import 'forms-gravity-datepicker';
+@import 'forms-gravity-select';
+@import 'forms-gravity-names';
+@import 'forms-gravity-validation';

@@ -1,0 +1,20 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-gallery.scss
+ *
+ * Let's define our core gallery styles
+ *
+ *
+ */
+
+ /* ----- Core Block Gallery -------------------- */
+.wp-block-gallery {
+
+     ul {
+          padding-left: 0;
+          margin-bottom: 0;
+
+          .blocks-gallery-item {
+               margin: 0;
+          }
+     }
+}

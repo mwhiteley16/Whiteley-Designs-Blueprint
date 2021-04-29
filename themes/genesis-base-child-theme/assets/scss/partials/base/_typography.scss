@@ -1,0 +1,102 @@
+/**
+ * /assets/scss/partials/base/typography.scss
+ *
+ * Let's define our global typography styles
+ *
+ */
+
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+     @extend %transition;
+}
+
+a {
+     color: $link_color;
+     background-color: transparent;
+     text-decoration: none;
+     @extend %transition;
+
+     &:hover {
+          color: darken( $link_color, 10% );
+          text-decoration: underline;
+     }
+
+     &[href^="tel"],
+     &[href^="tel"]:hover {
+          color: $base-color;
+     }
+
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+     border: 0 solid #1a1a1a;
+     border-left-width: 4px;
+     color: #686868;
+     font-size: 20px;
+     font-style: italic;
+     margin: 0 0 25px;
+     overflow: hidden;
+     padding: 0 0 0 35px;
+
+     > :last-child {
+          margin-bottom: 0;
+     }
+
+     p {
+          font-size: 20px;
+     }
+
+     cite {
+          color: #1a1a1a;
+          display: block;
+          font-size: 18px;
+          line-height: 1.75;
+          font-style: normal;
+          margin-top: 3px;
+     }
+
+     cite:before,
+     small:before {
+          content: "\2014\00a0";
+     }
+}
+
+code {
+     background-color: $grey-medium;
+     padding: 0.125em 0.25em;
+}
+
+
+pre {
+     border: 1px solid $grey-medium;
+     line-height: 1.3125;
+     margin: 0 0 1.75em;
+     max-width: 100%;
+     overflow: auto;
+     padding: 1.75em;
+     white-space: pre;
+     white-space: pre-wrap;
+     word-wrap: break-word;
+}

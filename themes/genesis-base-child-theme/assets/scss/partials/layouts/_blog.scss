@@ -1,0 +1,45 @@
+/**
+ * /assets/scss/partials/layouts/blog.scss
+ *
+ * Let's define our blog styles
+ *
+ * - Archive
+ * - Loop Item
+ * - Single
+ *
+ */
+
+/* ----- Archive -------------------- */
+
+/* ----- Loop Item -------------------- */
+.loop-wrapper {
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+}
+
+.loop-item {
+     width: calc(calc(100% / 3) - 20px);
+     margin: 0 30px 30px 0;
+
+     @media(min-width:1001px) {
+          &:nth-child(3n) {
+               margin-right: 0;
+          }
+     }
+
+     @media(max-width:1000px) and (min-width:701px) {
+          width: calc(50% - 15px);
+
+          &:nth-child(2n) {
+               margin-right: 0;
+          }
+     }
+
+     @media(max-width:700px) {
+          width: 100%;
+          margin-right: 0;
+     }
+}
+
+/* ----- Single -------------------- */

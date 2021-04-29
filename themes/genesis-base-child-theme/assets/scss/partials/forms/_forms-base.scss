@@ -1,0 +1,85 @@
+/**
+ * /assets/scss/partials/forms/forms-base.scss
+ *
+ * Let's define our base form styles
+ *
+ *
+ */
+
+input {
+	line-height: normal;
+}
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+	outline: thin dotted;
+	outline-offset: -4px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+	background: $white;
+	border: $form-border-width solid $form-border-color;
+	color: $form-text-color;
+	padding: $form-padding;
+	width: 100%;
+     border-radius: $form-border-radius;
+     line-height: 1.15;
+
+     &:focus {
+          background-color: $white;
+          border-color: $form-border-color-focus;
+          color: $form-text-color;
+          outline: 0;
+     }
+}
+
+/* ----- Placeholder Styles -------------------- */
+// input[type="text"]::placeholder {
+//      font-size: 16px;
+//      color: $base-color;
+//      font-style: normal;
+// }
+//
+// input[type="text"]::-ms-input-placeholder {
+//      font-size: 16px;
+//      color: $base-color;
+//      font-style: normal;
+// }
+//
+// input[type="text"]::-ms-input-placeholder {
+//      font-size: 16px;
+//      color: $base-color;
+//      font-style: normal;
+// }
+//
+// input[type="text"]::-moz-placeholder {
+//      font-size: 16px;
+//      font-style: normal;
+//      color: $base-color;
+// }
+//
+// input[type="text"]::-moz-placeholder {
+//      font-size: 16px;
+//      color: $base-color;
+//      font-style: normal;
+// }
+//
+// input[type="text"]::-webkit-input-placeholder {
+//      font-size: 16px;
+//      color: $base-color;
+//      font-style: normal;
+// }

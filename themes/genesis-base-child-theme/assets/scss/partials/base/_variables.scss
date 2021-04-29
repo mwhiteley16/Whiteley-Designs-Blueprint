@@ -1,0 +1,74 @@
+// typography
+$font-stack-main: 'Roboto', sans-serif;
+$font-stack-secondary: 'Roboto', sans-serif;
+
+// base colors
+$base-color: #373737;
+$white: #fff;
+$grey_1: #fafafa;
+$grey_2: #f5f5f5;
+$grey_3: #eeeeee;
+$grey_4: #e0e0e0;
+$grey_5: #bdbdbd;
+$grey_6: #9e9e9e;
+$grey_7: #757575;
+$grey_8: #616161;
+$grey_9: #424242;
+$grey_10: #212121;
+$black: #000;
+
+
+// gutenberg greys
+$grey-light: $grey_1;
+$grey-medium: $grey_4;
+$grey-dark: $grey_9;
+
+
+// brand colors
+$primary-color: #007991;
+$primary-color-hover: darken( $primary-color, 10% );
+$secondary-color: #439a86;
+$secondary-color-hover: darken( $secondary-color, 10% );
+
+// base link color
+$link_color: $primary-color;
+
+// interior Widths
+$base-margin: 30px;
+$base-margin-half: $base-margin / 2;
+$base-width: 1168px;
+$base-content-width: 768px;
+$base-width-with-padding: $base-width + ($base-margin * 2);
+$alignwide-width: 300px;
+$alingwide-width-full: $alignwide-width + $base-width;
+$alignwide-width-thin: $alignwide-width + $base-content-width;
+
+
+// form variables
+$form-spacing: $base-margin;
+$form-spacing-half: $form-spacing * 0.5;
+$form-padding: 15px;
+$form-border-width: 2px;
+$form-border-color: $grey-medium;
+$form-border-color-focus: $primary-color;
+$form-text-color: $base-color;
+$form-required-color: red;
+$form-error: red;
+$form-border-radius: 5px;
+
+
+// column spacing
+$column-gap: 50px;
+$column-gap-half: $column-gap * 0.5;
+
+
+// block Coloring
+// match names to Color Palette in /functions/gutenberg.php
+$colors: ( primary-color, $primary-color ),
+	    ( secondary-color, $secondary-color ),
+         ( base-color, $base-color ),
+         ( grey-light, $grey-light ),
+         ( grey-medium, $grey-medium ),
+         ( grey-dark, $grey-dark ),
+         ( white, $white ),
+         ( black, $black );

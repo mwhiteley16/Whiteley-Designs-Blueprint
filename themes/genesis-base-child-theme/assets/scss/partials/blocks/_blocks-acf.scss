@@ -1,0 +1,52 @@
+/**
+ * /assets/scss/partials/blocks/blocks-acf.scss
+ *
+ * Make sure ACF editor styles are using the block editor
+ *
+ */
+
+body .acf-block-fields,
+.edit-post-sidebar {
+     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+     font-size: 13px;
+     line-height: 1.4em;
+
+     .acf-field {
+
+          input[type="text"],
+          input[type="password"],
+          input[type="number"],
+          input[type="search"],
+          input[type="email"],
+          input[type="url"],
+          textarea,
+          select {
+               font-size: 14px;
+               line-height: 1.4;
+               box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+               transition: 50ms border-color ease-in-out;
+               border-radius: 0;
+               border: 1px solid #ddd;
+               color: #32373c;
+          }
+
+          textarea.wp-editor-area {
+               box-shadow: none;
+               border: none;
+          }
+
+          input[type="checkbox"],
+          input[type="radio"] {
+               border: 1px solid #b4b9be;
+               color: #555;
+               height: 16px;
+               width: 16px;
+               border-radius: 0;
+          }
+
+          input[type="radio"] {
+               border-radius: 50%;
+               padding: 1px !important;
+          }
+     }
+}

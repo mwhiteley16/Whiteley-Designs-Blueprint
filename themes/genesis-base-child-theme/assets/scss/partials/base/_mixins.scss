@@ -1,0 +1,57 @@
+/**
+ * /assets/scss/partials/base/mixins.scss
+ *
+ * Let's define our universal mixins for use throughout the theme
+ *
+ */
+
+%base-style {
+     color: $base-color;
+     font-family: $font-stack-main;
+     font-size: 16px;
+     line-height: 1.6;
+     font-weight: 400;
+     height: auto;
+     min-height: auto;
+}
+
+%button-styles {
+     border: 2px solid $primary-color;
+     background: $primary-color;
+     color: $white;
+     font-size: 16px;
+     cursor: pointer;
+     padding: 10px 15px;
+     display: inline-block;
+     height: auto;
+     border-radius: 3px;
+
+     &:hover,
+     &:focus {
+          border-color: $primary-color-hover;
+          background: $primary-color-hover;
+          color: $white;
+          text-decoration: none;
+     }
+
+     &.button--inverse {
+          background-color: transparent;
+          color: $primary-color;
+
+          &:hover,
+          &:focus {
+               background-color: $primary-color;
+               color: $white;
+               border-color: $primary-color;
+          }
+     }
+}
+
+%transition {
+     transition: all 0.2s ease-in-out;
+}
+
+@mixin rgba-background( $hexcolor, $opacity ) {
+     background-color: $hexcolor;
+     background-color: rgba( $hexcolor, $opacity );
+}

@@ -1,0 +1,76 @@
+/**
+ * /assets/scss/partials/base/headings.scss
+ *
+ * Let's define our heading styles
+ * We'll port this to the main stylesheet and the editor stylesheet for use in the block editor
+ *
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input {
+     color: $base-color;
+     font-family: $font-stack-secondary;
+     margin: 0 0 $base-margin 0;
+     line-height: 1.6;
+     font-weight: 600;
+
+     a {
+		color: $base-color;
+
+		&:hover {
+			color: $primary-color;
+			text-decoration: none;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+     &.has-background {
+          padding: 30px;
+     }
+
+     &.alignwide,
+     &.alignfull {
+          margin-bottom: $base-margin;
+     }
+
+     &.is-style-no-bottom-margin {
+          margin-bottom: 0;
+     }
+
+     &.is-style-half-bottom-margin {
+          margin-bottom: $base-margin-half;
+     }
+}
+
+h1,
+.editor-post-title__block .editor-post-title__input {
+     font-size: 32px;
+}
+
+h2 {
+     font-size: 26px;
+}
+
+h3 {
+     font-size: 22px;
+}
+
+h4 {
+     font-size: 18px;
+}
+
+h5 {
+     font-size: 16px;
+}
+
+h6 {
+     font-size: 12px;
+}

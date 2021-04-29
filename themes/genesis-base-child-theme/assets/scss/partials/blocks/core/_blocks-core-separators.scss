@@ -1,0 +1,19 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-separators.scss
+ *
+ * Let's define our core separator styles
+ *
+ *
+ */
+
+/* ----- Core Block Separators -------------------- */
+hr,
+hr.wp-block-separator {
+     border: 0;
+     border-collapse: collapse;
+     clear: both;
+     height: 2px;
+     margin: 50px 0;
+     width: 100%;
+     max-width: 100% !important;
+}

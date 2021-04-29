@@ -1,0 +1,33 @@
+/**
+ * /assets/scss/partials/blocks/acf/blocks-separator.scss
+ *
+ * Let's define our separator block styles
+ *
+ *
+ */
+
+// @import '../../../partials/base/variables';
+.acf-separator-block {
+     display: flex;
+     width: 100%;
+     justify-content: flex-start;
+
+     &.alignfull {
+          width: 100vw;
+     }
+
+     &.no-margin {
+
+          hr {
+               margin: 0;
+          }
+     }
+
+     &.center-align {
+          justify-content: center;
+     }
+
+     &.right-align {
+          justify-content: flex-end;
+     }
+}

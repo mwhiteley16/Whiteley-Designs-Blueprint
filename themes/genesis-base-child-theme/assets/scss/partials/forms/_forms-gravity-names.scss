@@ -1,0 +1,33 @@
+/**
+ * /assets/scss/partials/forms/forms-gravity-names.scss
+ *
+ * Let's define styles for Gravity Forms name field
+ *
+ *
+ */
+
+.ginput_complex {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+
+     .name_first,
+     .name_last {
+          width: 49%;
+
+          @media(max-width:600px) {
+               width: 100%;
+          }
+
+          label {
+               font-size: 14px;
+          }
+     }
+
+     .name_last {
+
+          @media(max-width:600px) {
+               margin-top: 15px;
+          }
+     }
+}

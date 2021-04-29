@@ -1,0 +1,44 @@
+{
+    "key": "group_5fb53ed0a8987",
+    "title": "Block - Max-Width",
+    "fields": [
+        {
+            "key": "field_5fb53edd8eb88",
+            "label": "Maximum Width",
+            "name": "wd_maximum_width",
+            "type": "range",
+            "instructions": "Set maximum width for this container.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1200,
+            "min": 150,
+            "max": 1440,
+            "step": 5,
+            "prepend": "",
+            "append": "px"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acf-max-width-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1605906091
+}

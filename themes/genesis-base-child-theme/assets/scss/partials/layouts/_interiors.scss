@@ -1,0 +1,65 @@
+/**
+ * /assets/scss/partials/layouts/interiors.scss
+ *
+ * Let's define our interior wrapper styles
+ *
+ * - Universal
+ * - Sidebars
+ *
+ */
+
+/* ----- Universal -------------------- */
+.site-inner {
+     width: 100%;
+     overflow: hidden;
+     padding: 0 $base-margin;
+
+     .content {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 75px 0;
+          width: 100%;
+
+          > article {
+               width: 100%;
+          }
+     }
+}
+
+.wrap {
+     width: 100%;
+     max-width: $base-width;
+     margin: 0 auto;
+}
+
+/* ----- Sidebars -------------------- */
+.content-sidebar,
+.sidebar-content {
+
+     .site-inner {
+
+          .wrap {
+               display: flex;
+               align-items: flex-start;
+               flex-wrap: wrap;
+               justify-content: space-between;
+
+               .content {
+                    width: $base-content-width;
+
+                    .alignfull,
+                    .alignwide {
+                         max-width: 100%;
+                         margin-left: 0;
+                         margin-right: 0;
+                    }
+               }
+
+               .sidebar {
+                    padding: 75px 0;
+                    flex: 1;
+                    padding-left: 50px;
+               }
+          }
+     }
+}

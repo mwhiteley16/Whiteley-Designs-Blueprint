@@ -1,0 +1,54 @@
+/**
+ * /assets/scss/partials/forms/forms-gravity-address.scss
+ *
+ * Let's define styles for Gravity Forms Address Fields
+ *
+ *
+ */
+
+.ginput_container_address {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+
+     span {
+          margin-top: $form-spacing-half;
+          width: 100%;
+
+          &:first-child {
+               margin-top: 0;
+          }
+
+          &.address_state,
+          &.address_zip {
+               width: 32%;
+               margin-left: 2%;
+
+               @media(max-width: 700px) {
+                    width: 49%;
+               }
+
+               @media(max-width:500px) {
+                    width: 100%;
+                    margin-left: 0;
+               }
+          }
+
+          @media(max-width:700px) {
+               &.address_state {
+                    margin-left: 0;
+               }
+          }
+
+          @media(min-width:700px) {
+               &.address_city {
+                    width: 32%;
+                    margin-left: 0;
+               }
+          }
+
+          label {
+               font-size: 14px;
+          }
+     }
+}

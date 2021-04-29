@@ -1,0 +1,65 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-list.scss
+ *
+ * Let's define our core list styles
+ *
+ *
+ */
+
+/* ----- Core List Styles -------------------- */
+ul,ol {
+
+     &.is-style-two-column-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+
+          li {
+               width: 50%;
+               padding-right: 60px;
+
+               @media(max-width:499px) {
+                    width: 100%;
+                    padding-right: 0;
+               }
+
+               @media(min-width:500px) {
+                    &:nth-child(even) {
+                         padding-right: 0;
+                    }
+               }
+          }
+     }
+
+     &.is-style-three-column-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+
+          li {
+               width: 33.33%;
+               padding-right: 60px;
+
+               @media(max-width:649px) {
+                    width: 50%;
+               }
+
+               @media(max-width:499px) {
+                    width: 100%;
+                    padding-right: 0;
+               }
+
+               @media(min-width:650px) and (max-width:500px) {
+                    &:nth-child(3n) {
+                         padding-right: 0;
+                    }
+               }
+
+               @media(min-width:500px) and (max-width:649px) {
+                    &:nth-child(even) {
+                         padding-right: 0;
+                    }
+               }
+          }
+     }
+}

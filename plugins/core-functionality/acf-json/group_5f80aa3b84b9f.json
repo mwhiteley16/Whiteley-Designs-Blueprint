@@ -1,0 +1,199 @@
+{
+    "key": "group_5f80aa3b84b9f",
+    "title": "Block - Separator",
+    "fields": [
+        {
+            "key": "field_5f80aa4f08f3e",
+            "label": "Separator Color",
+            "name": "wd_background_color",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary-color": "Primary Color",
+                "secondary-color": "Secondary Color",
+                "grey-light": "Grey Light",
+                "grey-medium": "Grey Medium",
+                "grey-dark": "Grey Dark",
+                "white": "White",
+                "black": "Black"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_602d118ae5ae5",
+            "label": "Separator Type",
+            "name": "wd_block_separator_type",
+            "type": "button_group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "solid": "Solid",
+                "dotted": "Dotted",
+                "dashed": "Dashed"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5f80aac708f3f",
+            "label": "Separator Width",
+            "name": "wd_block_separator_width_choice",
+            "type": "button_group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full-width": "Full",
+                "user-defined": "User Defined"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5f80ae5df6465",
+            "label": "Separator Alignment",
+            "name": "wd_block_separator_alignment",
+            "type": "button_group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f80aac708f3f",
+                        "operator": "==",
+                        "value": "user-defined"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left-align": "Left",
+                "center-align": "Center",
+                "right-align": "Right"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5f80ab2408f40",
+            "label": "Define Width",
+            "name": "wd_block_separator_width",
+            "type": "range",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f80aac708f3f",
+                        "operator": "==",
+                        "value": "user-defined"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 80,
+            "min": 20,
+            "max": 1200,
+            "step": 5,
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_5f80ab4d08f41",
+            "label": "Define Height",
+            "name": "wd_block_separator_height",
+            "type": "range",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 1,
+            "max": 100,
+            "step": 1,
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_5f80ab7b08f42",
+            "label": "Include Margin",
+            "name": "wd_block_separator_include_margin",
+            "type": "button_group",
+            "instructions": "Include base margin above and below separator?",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no-margin": "No",
+                "yes-margin": "Yes"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acf-separator"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1613566395
+}

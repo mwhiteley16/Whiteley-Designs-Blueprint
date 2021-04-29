@@ -1,0 +1,103 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-image.scss
+ *
+ * Let's define our core image styles
+ *
+ *
+ */
+
+ /* ----- Core Block Images -------------------- */
+.wp-block-image {
+     margin-bottom: 0;
+
+     img {
+          display: block;
+          margin-bottom: $base-margin;
+     }
+
+     .alignleft,
+     .wp-block[data-align="left"] > & {
+		float: left;
+		margin: 0 $base-margin $base-margin 0;
+
+          img {
+               margin-bottom: 0;
+          }
+	}
+
+	.alignright,
+     .wp-block[data-align="right"] > & {
+		float: right;
+		margin: 0 0 $base-margin $base-margin;
+
+          img {
+               margin-bottom: 0;
+          }
+	}
+
+	.aligncenter,
+     .wp-block[data-align="center"] > & {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+     &.is-style-no-bottom-margin {
+
+          img,
+          figure {
+               margin-bottom: 0;
+          }
+     }
+
+     &.is-style-half-bottom-margin {
+
+          figure {
+               margin-bottom: 0;
+          }
+
+          img {
+               margin-bottom: $base-margin-half;
+          }
+     }
+
+     &.is-style-hide-desktop {
+
+          @media(min-width:601px) {
+               display: none;
+          }
+     }
+
+     &.is-style-hide-mobile {
+
+          @media(max-width:600px) {
+               display: none;
+          }
+     }
+}
+
+.block-editor-block-list__layout .wp-block-image {
+
+     &.is-style-hide-desktop {
+          display: block;
+          opacity: 0.5;
+          padding-top: 55px;
+          @extend %transition;
+
+          &:hover,
+          &.is-selected {
+               opacity: 1;
+          }
+
+          &::before {
+               content: "The image below will be hidden on desktop but will remain visit within the editor for editing purposes.";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               border: 1px solid red;
+               padding: 10px;
+               z-index: 10;
+               font-size: 14px;
+          }
+     }
+}

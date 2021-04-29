@@ -1,0 +1,27 @@
+/* Author Dependencies */
+@import 'partials/base/reset';
+@import 'partials/base/variables';
+@import 'partials/base/mixins';
+@import 'partials/base/universal';
+@import 'partials/base/typography';
+@import 'partials/base/buttons';
+@import 'partials/base/tables';
+@import 'partials/base/headings';
+
+/* Layouts */
+@import 'partials/layouts/interiors';
+@import 'partials/layouts/widgets';
+@import 'partials/layouts/navigation';
+@import 'partials/layouts/footer';
+@import 'partials/layouts/header';
+@import 'partials/layouts/pagination';
+@import 'partials/layouts/blog';
+@import 'partials/layouts/search';
+@import 'partials/layouts/flickity';
+
+/* Forms */
+@import 'partials/forms/forms-base';
+@import 'partials/forms/forms-gravity';
+
+/* Blocks */
+@import 'partials/blocks/blocks-base';

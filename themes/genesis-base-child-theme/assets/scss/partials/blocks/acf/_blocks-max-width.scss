@@ -1,0 +1,26 @@
+/**
+ * /assets/scss/partials/blocks/acf/blocks-max-width.scss
+ *
+ * Let's define our max-width block styles
+ *
+ *
+ */
+
+.max-width-block {
+     display: flex;
+     width: 100%;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+
+     &__interior {
+          width: 100%;
+     }
+
+     &.has-text-align-center {
+          justify-content: center;
+     }
+
+     &.has-text-align-right {
+          justify-content: flex-end;
+     }
+}

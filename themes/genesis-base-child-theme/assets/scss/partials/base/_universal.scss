@@ -1,0 +1,134 @@
+/**
+ * /assets/scss/partials/base/universal.scss
+ *
+ * Let's define our universal styles
+ *
+ * - Universal
+ * - Box Sizing
+ * - Common Classes
+ * - Accessibility
+ * - Lists
+ *
+ */
+
+/* ----- Universal ---------------------- */
+body,
+p,
+select,
+textarea,
+input {
+     @extend %base-style;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+img {
+     border: none;
+     max-width: 100%;
+     height: auto;
+}
+
+iframe {
+     max-width: 100%;
+}
+
+figure {
+     margin-block-start: 0;
+     margin-block-end: 0;
+     margin-inline-start: 0;
+     margin-inline-end: 0;
+}
+
+/* ----- Box Sizing -------------------- */
+html,
+input[type="search"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* ----- Common Classes -------------------- */
+.align-left {
+     text-align: left;
+}
+
+.align-center {
+     text-align: center;
+}
+
+.align-right {
+     text-align: right;
+}
+
+/* ----- Accessibility -------------------- */
+.screen-reader-shortcut,
+.screen-reader-text,
+.screen-reader-text span {
+     border: 0;
+     clip: rect(0, 0, 0, 0);
+     height: 1px;
+     overflow: hidden;
+     position: absolute !important;
+     width: 1px;
+     word-wrap: normal !important;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.genesis-nav-menu .search input[type="submit"]:focus,
+.widget_search input[type="submit"]:focus  {
+	clip: auto !important;
+	height: auto;
+	width: auto;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 15px 23px 14px;
+	color: #333;
+	background: #fff;
+	z-index: 100000; /* Above WP toolbar. */
+	text-decoration: none;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+}
+
+.more-link {
+    position: relative;
+}
+
+.genesis-skip-link {
+     margin: 0;
+}
+
+.genesis-skip-link li {
+     height: 0;
+     width: 0;
+     list-style: none;
+}
+
+:focus {
+     color: #333;
+     outline: none;
+}
+
+/* ----- Lists ---------------------- */
+.entry-content ul,
+.entry-content ol {
+     padding-left: 40px;
+     margin-bottom: $base-margin;
+
+     li {
+          padding-bottom: 10px;
+
+          &:last-child {
+               padding-bottom: 0;
+          }
+     }
+}

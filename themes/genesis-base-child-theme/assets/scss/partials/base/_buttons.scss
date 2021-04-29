@@ -1,0 +1,26 @@
+/**
+ * /assets/scss/partials/base/buttons.scss
+ *
+ * Let's define our button styles
+ *
+ */
+
+a.wd-button,
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus,
+.claim-search button {
+     @extend %button-styles;
+}
+
+.widget_search input[type="submit"] {
+     display: none;
+}
+
+/* for block button coloring see /scss/partials/blocks/_blocks-base.scss */

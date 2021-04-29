@@ -1,0 +1,91 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-spacer.scss
+ *
+ * Let's define our core spacer styles
+ *
+ *
+ */
+
+ /* ----- Core Block Spacers -------------------- */
+.block-library-spacer {
+
+     &__resize-container {
+          margin-bottom: 0;
+     }
+}
+
+.wp-block-spacer {
+     margin-top: 0;
+     margin-bottom: 0;
+
+     &.is-style-responsive-small {
+
+          @media(max-width:1000px) {
+               max-height: 100px;
+          }
+
+          @media(max-width:800px) {
+               max-height: 60px;
+          }
+     }
+
+     &.is-style-responsive-medium {
+
+          @media(max-width:1000px) {
+               max-height: 120px;
+          }
+
+          @media(max-width:800px) {
+               max-height: 80px;
+          }
+     }
+
+     &.is-style-responsive-large {
+
+          @media(max-width:1000px) {
+               max-height: 140px;
+          }
+
+          @media(max-width:800px) {
+               max-height: 100px;
+          }
+     }
+
+     &.is-style-tablet-hide {
+
+          @media(max-width:1000px) {
+               display: none;
+          }
+     }
+
+     &.is-style-mobile-hide {
+
+          @media(max-width:600px) {
+               display: none;
+          }
+     }
+
+     &.is-style-desktop-hide {
+
+          @media(min-width:601px) {
+               display: none;
+
+               &.wp-block {
+                    display: block !important;
+                    border: 1px solid rgba(255,0,0,0.1);
+                    position: relative;
+
+                    &:before {
+                         content: "This is hidden on desktop and this message only shows in the admin area as a visual reminder of this hidden spacer block.";
+                         position: absolute;
+                         top: 10px;
+                         left: 0;
+                         width: 100%;
+                         padding: 5px;
+                         font-size: 12px;
+                         color: rgba(0,0,0,0.3);
+                    }
+               }
+          }
+     }
+}

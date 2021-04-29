@@ -1,0 +1,82 @@
+/**
+ * /assets/scss/partials/layouts/pagination.scss
+ *
+ * Let's define our pagination styles
+ *
+ *
+ */
+
+.pagination {
+     width: 100%;
+     padding-top: 25px;
+     border-top: 3px solid $grey-light;
+
+     .alignleft {
+          float: left;
+     }
+
+     .alignright {
+          float: right;
+     }
+
+     a {
+          color: $primary-color;
+          font-weight: 600;
+
+          &:hover {
+               text-decoration: none;
+               color: $base-color;
+          }
+     }
+
+     ul {
+          width: 100%;
+          list-style-type: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @media(max-width:500px) {
+               flex-wrap: wrap;
+          }
+
+          li {
+               display: inline-block;
+               margin: 0 2px;
+
+               a {
+                    padding: 2px 11px;
+                    border-radius: 3px;
+                    color: $base-color;
+                    font-size: 16px;
+                    line-height: 26px;
+                    display: inline-block;
+               }
+
+               &.active,
+               &:hover {
+
+                    a {
+                         background-color: $primary-color;
+                         color: $white;
+                    }
+               }
+
+               @media(max-width:500px) {
+
+                    &.pagination-previous,
+                    &.pagination-next {
+                         display: block;
+                         width: 100%;
+                         margin-bottom: 15px;
+                         text-align: center;
+                    }
+
+                    &.pagination-next {
+                         margin-bottom: 0;
+                         margin-top: 15px;
+                    }
+               }
+          }
+     }
+}

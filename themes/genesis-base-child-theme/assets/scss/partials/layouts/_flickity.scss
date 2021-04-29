@@ -1,0 +1,171 @@
+/**
+ * /assets/scss/partials/layouts/flickity.scss
+ *
+ * Let's define our flickity slideshow styles
+ *
+ *
+ */
+
+.flickity {
+
+     &-enabled {
+          position: relative;
+
+          &:focus {
+               outline: none;
+          }
+
+          &.is-draggable {
+               -webkit-tap-highlight-color: transparent;
+               tap-highlight-color: transparent;
+               -webkit-user-select: none;
+               -moz-user-select: none;
+               -ms-user-select: none;
+               user-select: none;
+
+               .flickity-viewport {
+                    cursor: move;
+                    cursor: -webkit-grab;
+                    cursor: grab;
+
+                    &.is-pointer-down {
+                         cursor: -webkit-grabbing;
+                         cursor: grabbing;
+                    }
+               }
+          }
+     }
+
+     &-viewport {
+          overflow: hidden;
+          position: relative;
+          height: 100%;
+     }
+
+     &-slider {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+     }
+
+     &-prev-next-button {
+          position: absolute;
+          top: 50%;
+          width: 28px;
+          height: 28px;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+
+          &:hover {
+               background-color: transparent;
+          }
+
+          &:focus {
+               outline: none;
+               box-shadow: none;
+          }
+
+          &:active {
+               opacity: 0.6;
+          }
+
+          &.previous {
+               left: -40px;
+
+               @media(max-width:1375px) {
+                    left: 20px;
+               }
+
+               @media(max-width:850px) {
+                    left: 0;
+                    top: calc(100% + 20px);
+               }
+          }
+
+          &.next {
+               right: -40px;
+               @media(max-width:1375px) {
+                    right: 20px;
+               }
+
+               @media(max-width:850px) {
+                    right: 0;
+                    top: calc(100% + 20px);
+               }
+          }
+
+          &:disabled {
+               cursor: auto;
+
+               .arrow {
+                    fill: #ddd;
+               }
+          }
+
+          svg {
+               position: absolute;
+               left: 0;
+               top: 0;
+               width: 100%;
+               height: 100%;
+          }
+
+          &.next svg {
+               left: auto;
+               right: 0;
+               top: 0;
+          }
+
+          .arrow {
+               fill: $primary-color;
+          }
+     }
+}
+
+.entry-content ol.flickity-page-dots,
+ol.flickity-page-dots {
+     list-style-type: none;
+     position: absolute;
+     top: calc(100% + 15px);
+     left: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+     padding: 0;
+     width: 100%;
+
+     @media(max-width:850px) {
+          top: calc(100% + 30px);
+     }
+
+     li {
+          width: 8px;
+          height: 8px;
+          border-radius: 8px;
+          background-color: $grey-medium;
+          margin-right: 8px;
+          cursor: pointer;
+          padding-bottom: 0;
+
+          &:hover {
+               background-color: #ddd;
+          }
+
+          &.is-selected {
+               background-color: $primary-color;
+          }
+     }
+}
+
+/* flickity-fade */
+.flickity-enabled.is-fade .flickity-slider > * {
+     pointer-events: none;
+     z-index: 0;
+}
+
+.flickity-enabled.is-fade .flickity-slider > .is-selected {
+     pointer-events: auto;
+     z-index: 1;
+}

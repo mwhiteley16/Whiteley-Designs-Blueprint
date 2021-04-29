@@ -1,0 +1,256 @@
+/**
+ * /assets/scss/partials/forms/forms-gravity-checkboxradio.scss
+ *
+ * Let's define styles for Gravity Forms checkboxes and radios
+ *
+ *
+ */
+
+.ginput_container_radio,
+.ginput_container_checkbox {
+
+     ul {
+          list-style-type: none;
+          padding-left: 0;
+
+          li {
+               display: flex;
+               align-items: center;
+               padding-bottom: 10px;
+
+               input {
+                    margin-right: 5px;
+               }
+          }
+     }
+}
+
+.ginput_container ul.gfield_checkbox,
+.ginput_container ul.gfield_radio {
+     padding-left: 0 !important;
+
+     li {
+          padding: 5px 0;
+          position: relative;
+
+          > label {
+               position: relative;
+               padding: 0 0 0 30px;
+               line-height: 26px;
+          }
+
+          > input[type="radio"] {
+               position: absolute;
+               left: 0;
+               top: 2px;
+               opacity: 0;
+               height: 0;
+               width: 0;
+               cursor: pointer;
+
+               + *::before {
+                    content: "";
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: #ebe7e7;
+                    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.15);
+               }
+
+               + *::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background-color: $white;
+                    position: absolute;
+                    top: 8px;
+                    left: 5px;
+                    border-radius: 10px;
+                    opacity: 0;
+               }
+
+               &:checked {
+
+                    + *::before {
+                         background-color: $primary-color;
+                         box-shadow: none;
+                    }
+
+                    + *::after {
+                         opacity: 1;
+                    }
+               }
+          }
+
+          > input[type="checkbox"] {
+               position: absolute;
+               left: 0;
+               top: 2px;
+               opacity: 0;
+               height: 0;
+               width: 0;
+               cursor: pointer;
+
+               + *::before {
+                    content: "";
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 2px;
+                    background-color: #ebe7e7;
+                    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.15);
+               }
+
+               + *::after {
+                    content: "";
+                    background-image: url('../images/form-icons/check-solid-light.svg');
+                    background-size: cover;
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    top: 7px;
+                    left: 4px;
+                    opacity: 0;
+               }
+
+               &:checked {
+
+                    + *::before {
+                         background-color: $primary-color;
+                         box-shadow: none;
+                    }
+
+                    + *::after {
+                         opacity: 1;
+                    }
+               }
+          }
+     }
+}
+
+.gf_list_2col,
+.two-column,
+.gf_list_3col,
+.three-column,
+.gf_list_4col,
+.four-column {
+
+     .gfield_radio,
+     .gfield_checkbox {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+
+          li {
+               width: 49%;
+               padding: 0 10px 0 0;
+               margin: 10px 0 0 0;
+
+               &:first-child {
+                    margin-top: 0;
+               }
+
+               @media(max-width:500px) {
+                    width: 100%;
+                    padding-right: 0;
+               }
+          }
+     }
+}
+
+.gf_list_2col,
+.two-column {
+
+     .gfield_radio,
+     .gfield_checkbox {
+
+          li {
+
+               @media(min-width:501px) {
+
+                    &:nth-child(2) {
+                         margin-top: 0;
+                    }
+               }
+          }
+     }
+}
+
+.gf_list_3col,
+.three-column {
+
+     .gfield_radio,
+     .gfield_checkbox {
+
+          li {
+               width: 32%;
+
+               @media(min-width:701px) {
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                         margin-top: 0;
+                    }
+               }
+
+               @media(max-width:700px) and (min-width:501px) {
+                    width: 49%;
+
+                    &:nth-child(2) {
+                         margin-top: 0;
+                    }
+               }
+
+               @media(max-width:500px) {
+                    width: 100%;
+               }
+          }
+     }
+}
+
+.gf_list_4col,
+.four-column {
+
+     .gfield_radio,
+     .gfield_checkbox {
+
+          li {
+               width: 23.5%;
+
+               @media(min-width:901px) {
+
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                         margin-top: 0;
+                    }
+               }
+
+               @media(max-width:900px) and (min-width:701px) {
+                    width: 32%;
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                         margin-top: 0;
+                    }
+               }
+
+               @media(max-width:700px) and (min-width:501px) {
+                    width: 49%;
+
+                    &:nth-child(2) {
+                         margin-top: 0;
+                    }
+               }
+
+               @media(max-width:500px) {
+                    width: 100%;
+               }
+          }
+     }
+}

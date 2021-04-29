@@ -1,0 +1,158 @@
+/**
+ * /assets/scss/partials/layouts/navigation.scss
+ *
+ * Let's define our navigation styles
+ *
+ * - Primary Navigation
+ * - Mobile Navigation Icon
+ *
+ */
+
+/* ----- Primary Navigation -------------------- */
+.nav-primary {
+
+     @media(max-width:1000px) {
+          display: none;
+          width: 100%;
+     }
+
+     .wrap {
+          max-width: 100%;
+          margin: 0;
+     }
+
+     ul {
+
+     	.menu-item {
+     		float: left;
+     		list-style: none;
+
+     		a {
+     			border: none;
+     			color: $base-color;
+     			display: block;
+     			font-size: 16px;
+     			padding: 15px;
+     			position: relative;
+     		}
+
+     		&:hover > a,
+     		&.current-menu-item > a,
+     		&.current-menu-ancestor > a {
+     			color: $primary-color;
+                    text-decoration: none;
+     		}
+
+     		&:hover {
+     			position: static;
+
+     			& > .sub-menu {
+     				left: auto;
+     				opacity: 1;
+     			}
+     		}
+     	}
+
+          @media(max-width:1000px) {
+               width: calc(100% + 60px);
+               margin: 30px -30px 0;
+               display: flex;
+               flex-direction: column;
+
+               .menu-item {
+                    width: 100%;
+               }
+          }
+     }
+
+	.sub-menu {
+		background: $grey-medium;
+		left: -9999px;
+		opacity: 0;
+		padding: 10px 0;
+		position: absolute;
+		width: auto;
+		z-index: 99;
+
+          .menu-item {
+               width: 100%;
+               display: block;
+               clear: both;
+          }
+
+		a {
+               width: 100%;
+			background: transparent;
+			color: $base-color;
+			padding: 8px 30px 8px 20px;
+			position: relative;
+               white-space: nowrap;
+		}
+
+		.menu-item:hover > a,
+		.current-menu-item > a {
+			color: $grey-dark;
+		}
+
+		.sub-menu {
+			margin: -54px 0 0 199px;
+		}
+	}
+}
+
+/* ----- Mobile Nav Icon -------------------- */
+.mobile-navigation-icon {
+     display: none;
+     position: absolute;
+     top: 30px;
+     right: 30px;
+     width: 24px;
+     height: 24px;
+     cursor: pointer;
+
+     @extend %transition;
+
+     span {
+          width: 32px;
+          height: 3px;
+          background-color: $grey-dark;
+          border-radius: 10px;
+          position: absolute;
+          top: 0;
+
+          @extend %transition;
+
+          &:nth-child(1) {
+
+          }
+          &:nth-child(2) {
+               top: 10px;
+          }
+          &:nth-child(3) {
+               top: 20px;
+          }
+     }
+
+     &.open span {
+
+          &:nth-child(1) {
+               transform: rotate(45deg);
+               top: 10px;
+               width: 33.94px;
+               left: 0;
+          }
+          &:nth-child(2) {
+               opacity: 0;
+          }
+          &:nth-child(3) {
+               transform: rotate(-45deg);
+               top: 10px;
+               width: 33.94px;
+               left: 0;
+          }
+     }
+
+     @media(max-width:1000px) {
+          display: block;
+     }
+}

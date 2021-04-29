@@ -1,0 +1,25 @@
+/**
+ * /assets/scss/partials/forms/forms-gravity-select.scss
+ *
+ * Let's define styles for Gravity Forms select field
+ *
+ *
+ */
+
+.editor-styles-wrapper .gform_wrapper select,
+.gform_wrapper select,
+select {
+     appearance: none;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     position: relative;
+     background: none;
+     background-image: url('../images/form-icons/caret-down-dark.svg');
+     background-position: calc(100% - 15px) 50%;
+     background-repeat: no-repeat;
+     background-size: 16px;
+     border-color: $form-border-color;
+     border-radius: $form-border-radius;
+     padding: $form-padding;
+     max-width: 100%;
+}

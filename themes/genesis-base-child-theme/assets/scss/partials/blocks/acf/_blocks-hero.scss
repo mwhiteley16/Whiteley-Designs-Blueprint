@@ -1,0 +1,115 @@
+/**
+ * /assets/scss/partials/blocks/acf/blocks-hero.scss
+ *
+ * Let's define our hero block styles
+ *
+ *
+ */
+
+.hero-block {
+     padding: 100px 30px;
+     background-size: cover;
+     background-position: left center;
+     position: relative;
+
+     &.image {
+
+          &-center-align {
+               background-position: center center;
+          }
+
+          &-right-align {
+               background-position: right center;
+          }
+     }
+
+     .wrap {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          max-width: $base-width;
+          margin: 0 auto;
+
+          &.is-position-top-left {
+               justify-content: flex-start;
+               align-items: flex-start;
+          }
+
+          &.is-position-center-left {
+               justify-content: flex-start;
+               align-items: center;
+          }
+
+          &.is-position-bottom-left {
+               justify-content: flex-start;
+               align-items: flex-end;
+          }
+
+          &.is-position-top-center {
+               justify-content: center;
+               align-items: flex-start;
+          }
+
+          &.is-position-center-center {
+               justify-content: center;
+               align-items: center;
+          }
+
+          &.is-position-bottom-center {
+               justify-content: center;
+               align-items: flex-end;
+          }
+
+          &.is-position-top-right {
+               justify-content: flex-end;
+               align-items: flex-start;
+          }
+
+          &.is-position-center-right {
+               justify-content: flex-end;
+               align-items: center;
+          }
+
+          &.is-position-bottom-right {
+               justify-content: flex-end;
+               align-items: flex-end;
+          }
+     }
+
+     &.content {
+
+          &-center-align {
+
+               .wrap {
+                    justify-content: center;
+               }
+          }
+
+          &-right-align {
+
+               .wrap {
+                    justify-content: flex-end;
+               }
+          }
+     }
+
+     &__overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $black;
+          z-index: 1;
+     }
+
+     &__content {
+          width: 100%;
+          position: relative;
+          z-index: 2;
+
+          &--solid-color {
+               padding: 50px;
+          }
+     }
+}

@@ -1,0 +1,33 @@
+/**
+ * /assets/scss/partials/layouts/footer.scss
+ *
+ * Let's define our footer styles
+ *
+ * - Main Footer Area
+ * - Footer Widgets
+ *
+ */
+
+/* ----- Main Footer -------------------- */
+.site-footer {
+     width: 100%;
+     padding: 75px 0;
+     text-align: center;
+}
+
+/* ----- Footer Widgets -------------------- */
+.footer-widgets {
+
+     width: 100%;
+     padding: 75px 0;
+
+     .wrap {
+          display: flex;
+
+          .widget-area {
+               width: 33.33%;
+          }
+
+     }
+
+}

@@ -1,0 +1,57 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-group.scss
+ *
+ * Let's define our core group styles
+ *
+ *
+ */
+
+ /* ----- Core Block Group -------------------- */
+.wp-block-group {
+
+     &.alignfull,
+     .wp-block[data-align="full"] & {
+          padding: 0 $base-margin;
+
+          .wp-block-group {
+
+               &__inner-container {
+                    max-width: $base-width;
+                    margin: 0 auto;
+               }
+          }
+
+          &.is-style-full-inner-width {
+
+               .wp-block-group {
+
+                    &__inner-container {
+                         max-width: none;
+
+                         > .wp-block {
+                              max-width: none;
+                         }
+                    }
+               }
+          }
+     }
+
+     &__inner-container > * {
+
+          &.alignwide {
+               margin: 0 calc(25% - 25vw);
+               max-width: 100vw;
+               width: auto;
+          }
+
+          &.alignfull {
+               margin: 0 calc(50% - 50vw);
+               max-width: 100vw;
+               width: 100vw;
+          }
+     }
+
+     &.has-background {
+          padding: 0 $base-margin;
+     }
+}

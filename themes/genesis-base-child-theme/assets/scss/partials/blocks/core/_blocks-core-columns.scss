@@ -1,0 +1,156 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-columns.scss
+ *
+ * Let's define our core column styles
+ *
+ *
+ */
+
+/* ----- Core Block Columns -------------------- */
+.wp-block-columns {
+     margin-bottom: 0;
+     justify-content: center;
+
+     .wp-block-column {
+
+          &:not(:first-child) {
+               margin-left: $column-gap;
+
+               @media(max-width:599px) {
+                    margin-left: 0;
+                    margin-top: 30px;
+               }
+          }
+
+          @media(min-width:600px) {
+               flex-basis: calc(50% - #{$column-gap-half}) !important;
+          }
+     }
+
+     &.is-style-three-column {
+
+          @media(max-width:781px) {
+               justify-content: center;
+          }
+
+          .wp-block-column {
+
+               @media(max-width:781px) {
+                    margin-top: 30px;
+
+                    &:nth-child(2n - 1) {
+                         margin-left: 0;
+                    }
+
+                    &:first-child,
+                    &:nth-child(2) {
+                         margin-top: 0;
+                    }
+               }
+
+               @media(max-width:599px) {
+
+                    &:not(:first-child) {
+                         margin-top: 30px;
+                    }
+               }
+          }
+     }
+
+     &.is-style-four-column {
+
+          @media(max-width:950px) {
+               flex-wrap: wrap;
+               justify-content: center;
+          }
+
+          .wp-block-column {
+
+               @media(max-width:950px) {
+                    margin-top: 30px;
+                    flex-grow: 0;
+
+                    &:nth-child(2n - 1) {
+                         margin-left: 0;
+                    }
+
+                    &:first-child,
+                    &:nth-child(2) {
+                         margin-top: 0;
+                    }
+               }
+
+               @media(max-width:599px) {
+
+                    &:not(:first-child) {
+                         margin-top: 30px;
+                    }
+               }
+          }
+     }
+
+     &.is-style-five-column {
+
+          @media(max-width:950px) {
+               flex-wrap: wrap;
+               justify-content: center;
+          }
+
+          .wp-block-column {
+
+               @media(max-width:950px) and (min-width:600px) {
+                    margin-top: 30px;
+                    flex-grow: 0;
+                    flex-basis: calc(calc(100% - calc(#{$column-gap} * 2)) / 3) !important;
+
+                    &:first-child,
+                    &:nth-child(4) {
+                         margin-left: 0;
+                    }
+
+                    &:first-child,
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                         margin-top: 0;
+                    }
+               }
+
+               @media(max-width:599px) {
+
+                    &:not(:first-child) {
+                         margin-top: 30px;
+                    }
+               }
+          }
+     }
+
+     &.is-style-wide-break {
+
+          @media(max-width:950px) {
+               flex-wrap: wrap;
+
+               .wp-block-column {
+                    flex-basis: 100% !important;
+                    margin-left: 0;
+
+                    &:not(:first-child) {
+                         margin-top: 30px;
+                    }
+               }
+          }
+     }
+
+     &.is-style-no-col-gap {
+
+          .wp-block-column {
+
+               &:not(:first-child) {
+                    margin-left: 0;
+               }
+
+               @media(min-width:600px) {
+                    flex-basis: 50% !important;
+               }
+          }
+     }
+}

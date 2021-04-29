@@ -1,0 +1,161 @@
+/* Author Dependencies */
+/**
+ * /assets/scss/partials/base/mixins.scss
+ *
+ * Let's define our universal mixins for use throughout the theme
+ *
+ */
+/* Admin CSS */
+/* ----- menu separators --------------- */
+#adminmenu li.wp-menu-separator {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.3); }
+
+/* ----- block editor --------------- */
+body .editor-styles-wrapper {
+  padding: 0 30px; }
+  body .editor-styles-wrapper a {
+    color: #007991; }
+    body .editor-styles-wrapper a:hover {
+      color: #004e5e; }
+    body .editor-styles-wrapper a[href^="tel"], body .editor-styles-wrapper a[href^="tel"]:hover {
+      color: #373737; }
+
+/*----- alignfull widths when editing with sidebar and/or WordPress menus --------------- */
+.is-sidebar-opened .editor-styles-wrapper .alignfull {
+  max-width: calc(100vw - 281px);
+  margin: 0 calc(50% - calc(50vw - 140px)); }
+
+body:not(.is-fullscreen-mode) .editor-styles-wrapper .alignfull {
+  max-width: calc(100vw - 160px);
+  margin: 0 calc(50% - calc(50vw - 80px)); }
+
+body:not(.is-fullscreen-mode) .is-sidebar-opened .editor-styles-wrapper .alignfull {
+  max-width: calc(100vw - 440px);
+  margin: 0 calc(50% - calc(50vw - 220px)); }
+
+/* ----- block editor content width for pages with sidebars --------------- */
+.post-type-post .editor-styles-wrapper .editor-post-title__block.wp-block,
+.post-type-post .editor-styles-wrapper .wp-block,
+.thin-layout .editor-styles-wrapper .editor-post-title__block.wp-block,
+.thin-layout .editor-styles-wrapper .wp-block {
+  max-width: 768px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+
+.content-sidebar .editor-styles-wrapper .editor-post-title__block.wp-block,
+.content-sidebar .editor-styles-wrapper .wp-block,
+.content-sidebar .editor-styles-wrapper .wp-block[data-align="full"],
+.content-sidebar .editor-styles-wrapper .wp-block[data-align="wide"],
+.content-sidebar .editor-styles-wrapper .alignfull,
+.sidebar-content .editor-styles-wrapper .editor-post-title__block.wp-block,
+.sidebar-content .editor-styles-wrapper .wp-block,
+.sidebar-content .editor-styles-wrapper .wp-block[data-align="full"],
+.sidebar-content .editor-styles-wrapper .wp-block[data-align="wide"],
+.sidebar-content .editor-styles-wrapper .alignfull {
+  max-width: 768px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+
+/*----- ACF Radio Button Color Picker ---------------*/
+.wp-admin .acf-block-component ul.acf-radio-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-left: 0; }
+  .wp-admin .acf-block-component ul.acf-radio-list li {
+    margin-right: 0;
+    display: flex; }
+    .wp-admin .acf-block-component ul.acf-radio-list li label {
+      width: 28px;
+      height: 28px;
+      position: relative;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      color: #fff; }
+      .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: 28px; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"]:checked::before {
+          content: "\f15e";
+          font-family: dashicons;
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+          font-size: 20px;
+          margin: 1px;
+          color: #fff; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="white"]:checked::before, .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="grey-light"]:checked::before, .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="grey-medium"]:checked::before {
+          color: #000; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="primary-color"] {
+          background-color: #007991; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="secondary-color"] {
+          background-color: #439a86; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="base-color"] {
+          background-color: #373737; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="grey-light"] {
+          background-color: #fafafa; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="grey-medium"] {
+          background-color: #e0e0e0; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="grey-dark"] {
+          background-color: #424242; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="white"] {
+          background-color: #fff; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="black"] {
+          background-color: #000; }
+
+/* Admin ACF CSS */
+/**
+ * /assets/scss/partials/blocks/blocks-acf.scss
+ *
+ * Make sure ACF editor styles are using the block editor
+ *
+ */
+body .acf-block-fields,
+.edit-post-sidebar {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: 13px;
+  line-height: 1.4em; }
+  body .acf-block-fields .acf-field input[type="text"],
+  body .acf-block-fields .acf-field input[type="password"],
+  body .acf-block-fields .acf-field input[type="number"],
+  body .acf-block-fields .acf-field input[type="search"],
+  body .acf-block-fields .acf-field input[type="email"],
+  body .acf-block-fields .acf-field input[type="url"],
+  body .acf-block-fields .acf-field textarea,
+  body .acf-block-fields .acf-field select,
+  .edit-post-sidebar .acf-field input[type="text"],
+  .edit-post-sidebar .acf-field input[type="password"],
+  .edit-post-sidebar .acf-field input[type="number"],
+  .edit-post-sidebar .acf-field input[type="search"],
+  .edit-post-sidebar .acf-field input[type="email"],
+  .edit-post-sidebar .acf-field input[type="url"],
+  .edit-post-sidebar .acf-field textarea,
+  .edit-post-sidebar .acf-field select {
+    font-size: 14px;
+    line-height: 1.4;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+    transition: 50ms border-color ease-in-out;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    color: #32373c; }
+  body .acf-block-fields .acf-field textarea.wp-editor-area,
+  .edit-post-sidebar .acf-field textarea.wp-editor-area {
+    box-shadow: none;
+    border: none; }
+  body .acf-block-fields .acf-field input[type="checkbox"],
+  body .acf-block-fields .acf-field input[type="radio"],
+  .edit-post-sidebar .acf-field input[type="checkbox"],
+  .edit-post-sidebar .acf-field input[type="radio"] {
+    border: 1px solid #b4b9be;
+    color: #555;
+    height: 16px;
+    width: 16px;
+    border-radius: 0; }
+  body .acf-block-fields .acf-field input[type="radio"],
+  .edit-post-sidebar .acf-field input[type="radio"] {
+    border-radius: 50%;
+    padding: 1px !important; }

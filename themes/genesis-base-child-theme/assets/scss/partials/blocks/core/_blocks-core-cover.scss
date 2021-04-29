@@ -1,0 +1,17 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-cover.scss
+ *
+ * Let's define our core cover styles
+ *
+ *
+ */
+
+ /* ----- Core Block Cover -------------------- */
+.wp-block-cover {
+     padding: $base-margin;
+
+     &__inner-container {
+          max-width: $base-width;
+          margin: 0 auto;
+     }
+}

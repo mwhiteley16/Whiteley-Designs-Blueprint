@@ -1,0 +1,40 @@
+/**
+ * /assets/scss/partials/forms/forms-gravity-validation.scss
+ *
+ * Let's define styles for Gravity Forms validation
+ *
+ *
+ */
+
+.gform_wrapper .validation_error {
+     border: 1px solid $form-error;
+     padding: $form-padding;
+     margin-bottom: $form-spacing;
+     border-radius: $form-border-radius;
+     display: none;
+}
+
+ .gfield_error {
+
+ 	.validation_message {
+ 		color: $form-error;
+          font-size: 12px;
+          font-style: italic;
+ 	}
+
+ 	input,
+ 	textarea,
+ 	select {
+ 		border-color: $form-error;
+
+ 		&:focus {
+ 			border-color: darken($form-error, 10%);
+ 		}
+ 	}
+ }
+
+ .gform_validation_container {
+	display: none;
+	position: absolute;
+	left: -9000px;
+}

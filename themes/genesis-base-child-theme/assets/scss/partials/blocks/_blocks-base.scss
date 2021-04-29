@@ -1,0 +1,137 @@
+/**
+ * /assets/scss/partials/blocks/blocks-base.scss
+ *
+ * Let's define our basic block styles
+ *
+ * - Imports
+ * - Alignwide/Alignfull
+ * - Block Editor Interior Widths
+ * - Editor Title Styles
+ * - Color Palette
+ *
+ */
+
+/* ----- Import Partials -------------------- */
+@import 'core/blocks-core-buttons';
+@import 'core/blocks-core-columns';
+@import 'core/blocks-core-cover';
+@import 'core/blocks-core-gallery';
+@import 'core/blocks-core-group';
+@import 'core/blocks-core-images';
+@import 'core/blocks-core-lists';
+@import 'core/blocks-core-media-text';
+@import 'core/blocks-core-paragraphs';
+@import 'core/blocks-core-separators';
+@import 'core/blocks-core-spacer';
+
+/* ----- Import ACF Block Partials -------------------- */
+@import 'acf/blocks-hero.scss';
+@import 'acf/blocks-max-width.scss';
+@import 'acf/blocks-separator.scss';
+
+/* ----- Alignwide/Alignfull -------------------- */
+.entry-content > *,
+.block-area > * {
+
+	.full-width-content &,
+	.content & {
+
+          &.alignwide {
+			margin-left: calc(50% - 50vw);
+               margin-right: calc(50% - 50vw);
+			max-width: 100vw;
+			width: auto;
+
+			@media(min-width:768px) {
+				margin-left: calc(25% - 25vw);
+				margin-right: calc(25% - 25vw);
+			}
+		}
+
+		&.alignfull {
+			margin-left: calc(50% - 50vw);
+			margin-right: calc(50% - 50vw);
+			max-width: 100vw;
+			width: 100vw;
+		}
+	}
+
+	&.alignleft {
+		float: left;
+		margin: 0 $base-margin $base-margin 0;
+	}
+
+	&.alignright {
+		float: right;
+		margin: 0 0 $base-margin $base-margin;
+	}
+
+	&.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* ----- Block Editor Interior Width -------------------- */
+.wp-block {
+    max-width: $base-width;
+
+	/* Wide column width */
+	&[data-align="wide"] {
+		max-width: none;
+	}
+
+     &[data-align="full"] {
+          max-width: none;
+          margin-left: -$base-margin !important;
+          margin-right: -$base-margin !important;
+     }
+}
+
+/* ----- Block Editor Margins -------------------- */
+.block-editor-block-list {
+
+     &__block {
+
+          // remove to and bottom margins in the editor for layout blocks & acf blocks
+          &[data-type^="acf"],
+          &[data-type="core/columns"],
+          &[data-type="core/cover"],
+          &[data-type="core/gallery"],
+          &[data-type="core/group"],
+          &[data-type="core/media-text"],
+          &[data-type="core/spacer"] {
+               margin-top: 0;
+               margin-bottom: 0;
+          }
+
+          // remove top margin only
+          &[data-type="core/embed"],
+          &[data-type="core/list"] {
+               margin-top: 0;
+               margin-bottom: $base-margin;
+          }
+     }
+}
+
+/* ----- Editor Title Styles -------------------- */
+.editor-post-title__block.wp-block {
+	max-width: $base-width;
+     margin: 50px auto;
+
+	.editor-post-title__input {
+          font-family: $font-stack-main;
+	}
+}
+
+/* ----- Front End Colors to Match Color Picker in Block Editor -------------------- */
+@each $name, $color in $colors {
+
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
+}
