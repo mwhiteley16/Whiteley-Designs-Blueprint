@@ -8,7 +8,7 @@
    License: GPL2
 
    BEFORE MODIFYING THIS PLUGIN:
-   Please read plugin documentation here: https://github.com/mwhiteley16/core-functionality/wiki   
+   Please read plugin documentation here: https://github.com/mwhiteley16/core-functionality/wiki
    */
 
 // Path to plugin
@@ -22,7 +22,7 @@ require_once WD_PATH.'/lib/blocks/blocks-acf.php';
 require_once WD_PATH.'/lib/functionality/acf.php';
 
 // post types
-//require_once WD_PATH.'/lib/post-types/post-type-block-areas.php';
+require_once WD_PATH.'/lib/post-types/post-type-block-areas.php';
 //require_once WD_PATH.'/lib/post-types/post-type-news.php';
 
 // taxonomies
