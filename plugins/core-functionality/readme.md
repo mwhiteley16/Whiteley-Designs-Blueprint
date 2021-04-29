@@ -15,3 +15,5 @@ Version 3.0 - 10/2/2020
 Version 2.0 - 08/10/2016
  - Initial Commit
  - Includes basic setup for custom post types, taxonomies and shortcodes
+
+ Repository refactored on 4/29/2021. View previous commits at old plugin repository located at https://github.com/mwhiteley16/core-functionality
