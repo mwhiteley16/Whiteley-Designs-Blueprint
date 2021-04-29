@@ -22,9 +22,10 @@
      }
 
      ul {
+          display: flex;
+          flex-wrap: wrap;
 
      	.menu-item {
-     		float: left;
      		list-style: none;
 
      		a {
@@ -51,6 +52,26 @@
      				opacity: 1;
      			}
      		}
+
+               &.menu-button {
+
+                    a {
+
+                         span {
+                              background-color: $primary-color;
+                              color: $white;
+                              padding: 10px 20px;
+                              @extend %transition;
+
+                              &:hover,
+                              &:focus {
+                                   background: darken( $primary-color, 10% );
+                                   color: $white;
+                                   text-decoration: none;
+                              }
+                         }
+                    }
+               }
      	}
 
           @media(max-width:1000px) {
