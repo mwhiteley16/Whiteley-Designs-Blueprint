@@ -3199,6 +3199,40 @@ ul.is-style-three-column-list, ol.is-style-three-column-list {
     @media (min-width: 500px) and (max-width: 649px) {
       ul.is-style-three-column-list li:nth-child(even), ol.is-style-three-column-list li:nth-child(even) {
         padding-right: 0; } }
+ul.is-style-styled-list, ol.is-style-styled-list {
+  list-style-type: none;
+  padding: 0 !important; }
+  ul.is-style-styled-list li, ol.is-style-styled-list li {
+    margin: 0 0 2px;
+    position: relative;
+    padding: 0 0 0 17px !important; }
+    ul.is-style-styled-list li::before, ol.is-style-styled-list li::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 7px;
+      background-color: #007991;
+      position: absolute;
+      top: 9px;
+      left: 0; }
+    ul.is-style-styled-list li:last-child, ol.is-style-styled-list li:last-child {
+      margin-bottom: 30px; }
+
+ol.is-style-styled-list {
+  counter-reset: wd-counter; }
+  ol.is-style-styled-list li {
+    counter-increment: wd-counter;
+    padding: 0 0 0 26px !important; }
+    ol.is-style-styled-list li::before {
+      content: counter(wd-counter) ".";
+      color: #007991;
+      font-weight: 600;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      top: 0;
+      font-family: "Roboto", sans-serif; }
+
 /**
  * /assets/scss/partials/blocks/core/blocks-core-media-text.scss
  *

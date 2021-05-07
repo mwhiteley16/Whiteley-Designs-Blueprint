@@ -134,6 +134,10 @@ wp.domReady( () => {
                     isDefault: true,
                },
                {
+                    name: 'styled-list',
+                    label: 'Styled List',
+               },
+               {
                     name: 'two-column-list',
                     label: 'Two Columns',
                },
