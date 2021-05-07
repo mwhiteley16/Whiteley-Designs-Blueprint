@@ -1,0 +1,97 @@
+{
+    "key": "group_600841a6c1f5f",
+    "title": "Block - Recent Posts",
+    "fields": [
+        {
+            "key": "field_60259aa66dda2",
+            "label": "Number of Posts",
+            "name": "wd_recent_posts_block_number_of_posts",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_600841b384303",
+            "label": "Display Type",
+            "name": "wd_recent_posts_block_display_type",
+            "type": "button_group",
+            "instructions": "Choose what posts to show.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "all-posts": "All",
+                "category-posts": "Category"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_600841eccb56c",
+            "label": "Category",
+            "name": "wd_recent_posts_block_category",
+            "type": "taxonomy",
+            "instructions": "Choose Category to display.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_600841b384303",
+                        "operator": "==",
+                        "value": "category-posts"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acf-recent-posts"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1620410857
+}

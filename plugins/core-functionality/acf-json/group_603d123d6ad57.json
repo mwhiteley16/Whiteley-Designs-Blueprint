@@ -1,0 +1,46 @@
+{
+    "key": "group_603d123d6ad57",
+    "title": "Block - Heading w\/ Button",
+    "fields": [
+        {
+            "key": "field_603d124ee8b76",
+            "label": "Mobile Button Hide",
+            "name": "wd_hwb_block_mobile_button_hide",
+            "type": "button_group",
+            "instructions": "Optionally hide the button on mobile.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no-mobile-hide": "No",
+                "yes-mobile-hide": "Yes"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acf-header-with-button"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1620410857
+}

@@ -1,0 +1,94 @@
+/**
+ * /assets/scss/partials/blocks/blocks-team.scss
+ *
+ * Let's define our team block styles
+ *
+ *
+ */
+
+.team-block {
+     position: relative;
+
+     &__interior {
+          display: flex;
+          flex-wrap: wrap;
+     }
+
+     &__item {
+          width: calc(calc(100% / 3) - 40px);
+          margin: 0 60px 0 0;
+
+          @media(min-width:901px) {
+               &:nth-child(3n) {
+                    margin-right: 0;
+               }
+
+               &:nth-child(n+4) {
+                    margin-top: 60px;
+               }
+          }
+
+          @media(max-width:900px) {
+               width: calc(50% - 30px);
+
+               &:nth-child(2n) {
+                    margin-right: 0;
+               }
+
+               &:nth-child(n+3) {
+                    margin-top: 60px;
+               }
+          }
+
+          @media(max-width:600px) {
+               width: 100%;
+               margin: 40px 0 0 0;
+
+               &:first-child {
+                    margin-top: 0;
+               }
+          }
+     }
+
+     &__headshot {
+          position: relative;
+          display: flex;
+          justify-content: center;
+
+          img {
+               display: block;
+               width: 100%;
+          }
+     }
+
+     &__name {
+          display: block;
+          width: 100%;
+          margin: 20px 0 0;
+     }
+
+     &__position {
+          display: block;
+          width: 100%;
+     }
+
+     &__email {
+          display: block;
+          width: 100%;
+          margin-top: 10px;
+     }
+
+     &__social {
+          display: block;
+          width: 100%;
+          margin-top: 10px;
+
+          &-item {
+               margin-right: 5px;
+
+               &:last-child {
+                    margin-right: 0;
+               }
+          }
+     }
+}

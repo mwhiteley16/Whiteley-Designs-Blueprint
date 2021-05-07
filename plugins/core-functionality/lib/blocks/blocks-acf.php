@@ -46,21 +46,85 @@ function wd_acf_blocks() {
           // ));
 
           acf_register_block_type(array(
-               'name'			=> 'acf-separator',
-               'title'			=> __( 'Separator Block' ),
-               'description'		=> __( 'A block to replace the standard block editor separator block.' ),
+               'name'			=> 'acf-cover-with-white-box',
+               'title'			=> __( 'Cover w/ White Box Block' ),
+               'description'		=> __( 'A image cover block with a white content box.' ),
                'category'		=> 'wd-blocks',
                'icon'			=> [
                     'background' => '#fff',
                     'foreground' => '#b5267b',
-                    'src'        => 'minus'
+                    'src'        => 'format-gallery'
                ],
                'mode'              => 'preview',
-               'keywords'		=> [ 'separator', 'hr', 'divider', 'wd', 'acf' ],
+               'align'             => 'full',
+               'keywords'		=> [ 'cover with white box', 'wd', 'acf', 'biome' ],
                'post_type'         => [ 'post', 'page' ],
                'render_callback'	=> 'wd_acf_block_render_callback',
                'supports'          => [
-                    'align' => [ 'full', 'wide' ],
+                    'align'         => [ 'full' ],
+                    'jsx'           => true
+               ]
+          ));
+
+          acf_register_block_type(array(
+               'name'			=> 'acf-header-with-button',
+               'title'			=> __( 'Header with Button Block' ),
+               'description'		=> __( 'A block for a heading w/ a button on the right side.' ),
+               'category'		=> 'wd-blocks',
+               'icon'			=> [
+                    'background' => '#fff',
+                    'foreground' => '#b5267b',
+                    'src'        => 'heading'
+               ],
+               'mode'              => 'preview',
+               'keywords'		=> [ 'heading', 'heading button', 'wd', 'acf' ],
+               'post_type'         => [ 'post', 'page' ],
+               'render_callback'	=> 'wd_acf_block_render_callback',
+               'supports'          => [
+                    'align'      => false,
+                    'jsx'        => true
+               ]
+          ));
+
+          acf_register_block_type(array(
+               'name'			=> 'acf-hero',
+               'title'			=> __( 'Hero Block' ),
+               'description'		=> __( 'A hero block.' ),
+               'category'		=> 'wd-blocks',
+               'icon'			=> [
+                    'background' => '#fff',
+                    'foreground' => '#b5267b',
+                    'src'        => 'star-filled'
+               ],
+               'mode'              => 'preview',
+               'align'             => 'full',
+               'keywords'		=> [ 'hero', 'wd', 'acf' ],
+               'post_type'         => [ 'post', 'page' ],
+               'render_callback'	=> 'wd_acf_block_render_callback',
+               'supports'          => [
+                    'align'         => [ 'wide', 'full' ],
+                    'align_content' => 'matrix',
+                    'jsx'           => true // defaults to false, used for innerBlocks
+               ]
+          ));
+
+          acf_register_block_type(array(
+               'name'			=> 'acf-highlight-split',
+               'title'			=> __( 'Highlight Split Block' ),
+               'description'		=> __( 'A block to media content split with block editor content with a color background.' ),
+               'category'		=> 'wd-blocks',
+               'icon'			=> [
+                    'background' => '#fff',
+                    'foreground' => '#b5267b',
+                    'src'        => 'admin-collapse'
+               ],
+               'mode'              => 'preview',
+               'keywords'		=> [ 'video', 'highlight', 'split image', 'wd', 'acf', 'biome' ],
+               'post_type'         => [ 'post', 'page' ],
+               'render_callback'	=> 'wd_acf_block_render_callback',
+               'supports'          => [
+                    'align' => false,
+                    'jsx'   => true,
                ]
           ));
 
@@ -86,24 +150,56 @@ function wd_acf_blocks() {
           ));
 
           acf_register_block_type(array(
-               'name'			=> 'acf-hero',
-               'title'			=> __( 'Hero Block' ),
-               'description'		=> __( 'A hero block.' ),
+               'name'			=> 'acf-recent-posts',
+               'title'			=> __( 'Recent Posts Block' ),
+               'description'		=> __( 'A block to recent posts.' ),
                'category'		=> 'wd-blocks',
                'icon'			=> [
                     'background' => '#fff',
                     'foreground' => '#b5267b',
-                    'src'        => 'star-filled'
+                    'src'        => 'admin-post'
                ],
                'mode'              => 'preview',
-               'align'             => 'full',
-               'keywords'		=> [ 'hero', 'wd', 'acf' ],
+               'keywords'		=> [ 'post', 'recent posts', 'wd', 'acf' ],
+               'post_type'         => [ 'post', 'page' ],
+               'render_callback'	=> 'wd_acf_block_render_callback',
+          ));
+
+          acf_register_block_type(array(
+               'name'			=> 'acf-separator',
+               'title'			=> __( 'Separator Block' ),
+               'description'		=> __( 'A block to replace the standard block editor separator block.' ),
+               'category'		=> 'wd-blocks',
+               'icon'			=> [
+                    'background' => '#fff',
+                    'foreground' => '#b5267b',
+                    'src'        => 'minus'
+               ],
+               'mode'              => 'preview',
+               'keywords'		=> [ 'separator', 'hr', 'divider', 'wd', 'acf' ],
                'post_type'         => [ 'post', 'page' ],
                'render_callback'	=> 'wd_acf_block_render_callback',
                'supports'          => [
-                    'align'         => [ 'wide', 'full' ],
-                    'align_content' => 'matrix',
-                    'jsx'           => true // defaults to false, used for innerBlocks
+                    'align' => [ 'full', 'wide' ],
+               ]
+          ));
+
+          acf_register_block_type(array(
+               'name'			=> 'acf-team',
+               'title'			=> __( 'Team Block' ),
+               'description'		=> __( 'A block to showcase team members block.' ),
+               'category'		=> 'wd-blocks',
+               'icon'			=> [
+                    'background' => '#fff',
+                    'foreground' => '#b5267b',
+                    'src'        => 'groups'
+               ],
+               'mode'              => 'preview',
+               'keywords'		=> [ 'team', 'wd', 'acf' ],
+               'post_type'         => [ 'post', 'page' ],
+               'render_callback'	=> 'wd_acf_block_render_callback',
+               'supports'          => [
+                    'align' => [ 'wide' ],
                ]
           ));
 

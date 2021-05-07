@@ -1,0 +1,42 @@
+/**
+ * /assets/scss/partials/blocks/blocks-header-with-button.scss
+ *
+ * Let's define our header with button block styles
+ *
+ *
+ */
+
+.header-button-block,
+.header-button-block .block-editor-inner-blocks .block-editor-block-list__layout {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+
+     .block-editor-inner-blocks {
+          width: 100%;
+     }
+
+     > * {
+          margin: 0;
+     }
+
+     margin-bottom: $base-margin;
+
+     @media(max-width:600px) {
+
+          &.no-mobile-hide {
+               flex-direction: column;
+
+               .wp-block-button {
+                    margin-top: $base-margin;
+               }
+          }
+
+          &.yes-mobile-hide {
+
+               .wp-block-button {
+                    display: none;
+               }
+          }
+     }
+}

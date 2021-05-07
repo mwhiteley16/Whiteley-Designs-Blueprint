@@ -1,0 +1,141 @@
+/**
+ * /assets/scss/partials/blocks/acf/blocks-highlight-split.scss
+ *
+ * Let's define our highlight split block styles
+ *
+ *
+ */
+
+.highlight-split {
+     position: relative;
+     width: 100%;
+     padding: 60px 0;
+
+     @media(max-width:900px) {
+          padding: 0;
+     }
+
+     &__highlight {
+          position: absolute;
+          top: 0;
+          left: 155px;
+          width: 100vw;
+          height: 100%;
+          background-color: $white;
+
+          @media(max-width:1350px) {
+               left: 75px;
+          }
+
+          @media(max-width:900px) {
+               left: -$base-margin;
+               right: -$base-margin;
+               height: calc(100% - 58px);
+               top: 58px;
+          }
+     }
+
+     &__inner {
+          position: relative;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+     }
+
+     &__media {
+          width: 544px;
+          order: 1;
+
+          @media(max-width:1350px) {
+               flex: 1;
+               margin-right: 50px;
+          }
+
+          @media(max-width:900px) {
+               width: calc(100% - 40px);
+               margin: 0 20px 32px;
+               flex: none;
+          }
+
+          @media(max-width:600px) {
+               width: 100%;
+               margin: 0 0 32px;
+          }
+
+          img {
+               display: block;
+               width: 100%;
+
+               &.yes-shadow {
+                    box-shadow: -32px 32px 48px rgba(60, 62, 64, 0.2);
+
+                    @media(min-width:901px) {
+                         .media-right & {
+                              box-shadow: 32px 32px 48px rgba(60,62,62,0.2);
+                         }
+                    }
+
+                    @media(max-width:900px) {
+                         box-shadow: 16px 16px 24px rgba(60, 62, 64, 0.2);
+                    }
+               }
+          }
+     }
+
+     &__content {
+          width: 480px;
+          order: 2;
+
+          @media(max-width:900px) {
+               width: 100%;
+               padding: 0 30px 30px;
+
+               .wp-block-image img {
+                    display: inline-block;
+               }
+          }
+
+          @media(max-width:600px) {
+               padding: 0 0 30px;
+          }
+     }
+
+     &.media-right {
+
+          .highlight-split {
+
+               &__highlight {
+                    left: auto;
+                    right: 155px;
+
+                    @media(max-width:1350px) {
+                         left: auto;
+                         right: 75px;
+                    }
+
+                    @media(max-width:900px) {
+                         left: -$base-margin;
+                         right: -$base-margin;
+                    }
+               }
+
+               &__media {
+                    @media(min-width:901px) {
+                         order: 2;
+                         margin-left: 50px;
+                    }
+
+                    @media(max-width:1350px) and (min-width:901px) {
+                         margin-left: 50px;
+                         margin-right: 0;
+                    }
+               }
+
+               &__content {
+                    order: 1;
+               }
+          }
+     }
+}

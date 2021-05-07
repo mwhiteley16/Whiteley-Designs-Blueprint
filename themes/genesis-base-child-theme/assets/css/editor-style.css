@@ -395,14 +395,16 @@ ol.flickity-page-dots {
  *
  * Let's define our basic block styles
  *
- * - Imports
+ * - Imports Core
+ * - Imports ACF Blocks
+ * - Gutenberg Font Sizes
  * - Alignwide/Alignfull
  * - Block Editor Interior Widths
  * - Editor Title Styles
  * - Color Palette
  *
  */
-/* ----- Import Partials -------------------- */
+/* ----- Import Core Partials -------------------- */
 /**
  * /assets/scss/partials/blocks/core/blocks-core-buttons.scss
  *
@@ -1215,6 +1217,96 @@ hr.wp-block-separator {
           color: rgba(0, 0, 0, 0.3); } }
 /* ----- Import ACF Block Partials -------------------- */
 /**
+ * /assets/scss/partials/blocks/acf/blocks-cwb.scss
+ *
+ * Let's define our cover white box block styles
+ *
+ *
+ */
+.cwb-block {
+  height: 680px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  position: relative; }
+  .cwb-block.content-vertical-bottom-align {
+    align-items: flex-end; }
+  .cwb-block.content-vertical-center-align {
+    align-items: center; }
+  @media (max-width: 700px) {
+    .cwb-block {
+      background-image: none !important;
+      height: auto;
+      flex-wrap: wrap; } }
+  .cwb-block__wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1168px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; }
+    .content-horizontal-right-align .cwb-block__wrap {
+      justify-content: flex-end; }
+    .content-horizontal-center-align .cwb-block__wrap {
+      justify-content: center; }
+    @media (max-width: 700px) {
+      .cwb-block__wrap {
+        order: 2; } }
+  .cwb-block__content {
+    width: 100%;
+    max-width: 448px;
+    background-color: #fff;
+    padding: 48px;
+    box-shadow: 32px 32px 48px rgba(60, 62, 64, 0.2); }
+    @media (max-width: 700px) {
+      .cwb-block__content {
+        max-width: 100%;
+        padding: 20px; } }
+  .cwb-block__img {
+    display: none;
+    order: 1;
+    width: 100%;
+    position: relative;
+    height: 275px; }
+    .cwb-block__img img {
+      display: block;
+      width: 100%; }
+    @media (max-width: 700px) {
+      .cwb-block__img {
+        display: block; } }
+/**
+ * /assets/scss/partials/blocks/blocks-header-with-button.scss
+ *
+ * Let's define our header with button block styles
+ *
+ *
+ */
+.header-button-block,
+.header-button-block .block-editor-inner-blocks .block-editor-block-list__layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px; }
+  .header-button-block .block-editor-inner-blocks,
+  .header-button-block .block-editor-inner-blocks .block-editor-block-list__layout .block-editor-inner-blocks {
+    width: 100%; }
+  .header-button-block > *,
+  .header-button-block .block-editor-inner-blocks .block-editor-block-list__layout > * {
+    margin: 0; }
+  @media (max-width: 600px) {
+    .header-button-block.no-mobile-hide,
+    .header-button-block .block-editor-inner-blocks .block-editor-block-list__layout.no-mobile-hide {
+      flex-direction: column; }
+      .header-button-block.no-mobile-hide .wp-block-button,
+      .header-button-block .block-editor-inner-blocks .block-editor-block-list__layout.no-mobile-hide .wp-block-button {
+        margin-top: 30px; }
+    .header-button-block.yes-mobile-hide .wp-block-button,
+    .header-button-block .block-editor-inner-blocks .block-editor-block-list__layout.yes-mobile-hide .wp-block-button {
+      display: none; } }
+/**
  * /assets/scss/partials/blocks/acf/blocks-hero.scss
  *
  * Let's define our hero block styles
@@ -1283,6 +1375,104 @@ hr.wp-block-separator {
       padding: 50px; }
 
 /**
+ * /assets/scss/partials/blocks/acf/blocks-highlight-split.scss
+ *
+ * Let's define our highlight split block styles
+ *
+ *
+ */
+.highlight-split {
+  position: relative;
+  width: 100%;
+  padding: 60px 0; }
+  @media (max-width: 900px) {
+    .highlight-split {
+      padding: 0; } }
+  .highlight-split__highlight {
+    position: absolute;
+    top: 0;
+    left: 155px;
+    width: 100vw;
+    height: 100%;
+    background-color: #fff; }
+    @media (max-width: 1350px) {
+      .highlight-split__highlight {
+        left: 75px; } }
+    @media (max-width: 900px) {
+      .highlight-split__highlight {
+        left: -30px;
+        right: -30px;
+        height: calc(100% - 58px);
+        top: 58px; } }
+  .highlight-split__inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+  .highlight-split__media {
+    width: 544px;
+    order: 1; }
+    @media (max-width: 1350px) {
+      .highlight-split__media {
+        flex: 1;
+        margin-right: 50px; } }
+    @media (max-width: 900px) {
+      .highlight-split__media {
+        width: calc(100% - 40px);
+        margin: 0 20px 32px;
+        flex: none; } }
+    @media (max-width: 600px) {
+      .highlight-split__media {
+        width: 100%;
+        margin: 0 0 32px; } }
+    .highlight-split__media img {
+      display: block;
+      width: 100%; }
+      .highlight-split__media img.yes-shadow {
+        box-shadow: -32px 32px 48px rgba(60, 62, 64, 0.2); }
+        @media (min-width: 901px) {
+          .media-right .highlight-split__media img.yes-shadow {
+            box-shadow: 32px 32px 48px rgba(60, 62, 62, 0.2); } }
+        @media (max-width: 900px) {
+          .highlight-split__media img.yes-shadow {
+            box-shadow: 16px 16px 24px rgba(60, 62, 64, 0.2); } }
+  .highlight-split__content {
+    width: 480px;
+    order: 2; }
+    @media (max-width: 900px) {
+      .highlight-split__content {
+        width: 100%;
+        padding: 0 30px 30px; }
+        .highlight-split__content .wp-block-image img {
+          display: inline-block; } }
+    @media (max-width: 600px) {
+      .highlight-split__content {
+        padding: 0 0 30px; } }
+  .highlight-split.media-right .highlight-split__highlight {
+    left: auto;
+    right: 155px; }
+    @media (max-width: 1350px) {
+      .highlight-split.media-right .highlight-split__highlight {
+        left: auto;
+        right: 75px; } }
+    @media (max-width: 900px) {
+      .highlight-split.media-right .highlight-split__highlight {
+        left: -30px;
+        right: -30px; } }
+  @media (min-width: 901px) {
+    .highlight-split.media-right .highlight-split__media {
+      order: 2;
+      margin-left: 50px; } }
+  @media (max-width: 1350px) and (min-width: 901px) {
+    .highlight-split.media-right .highlight-split__media {
+      margin-left: 50px;
+      margin-right: 0; } }
+  .highlight-split.media-right .highlight-split__content {
+    order: 1; }
+
+/**
  * /assets/scss/partials/blocks/acf/blocks-max-width.scss
  *
  * Let's define our max-width block styles
@@ -1320,6 +1510,66 @@ hr.wp-block-separator {
     justify-content: center; }
   .acf-separator-block.right-align {
     justify-content: flex-end; }
+
+/**
+ * /assets/scss/partials/blocks/blocks-team.scss
+ *
+ * Let's define our team block styles
+ *
+ *
+ */
+.team-block {
+  position: relative; }
+  .team-block__interior {
+    display: flex;
+    flex-wrap: wrap; }
+  .team-block__item {
+    width: calc(calc(100% / 3) - 40px);
+    margin: 0 60px 0 0; }
+    @media (min-width: 901px) {
+      .team-block__item:nth-child(3n) {
+        margin-right: 0; }
+      .team-block__item:nth-child(n+4) {
+        margin-top: 60px; } }
+    @media (max-width: 900px) {
+      .team-block__item {
+        width: calc(50% - 30px); }
+        .team-block__item:nth-child(2n) {
+          margin-right: 0; }
+        .team-block__item:nth-child(n+3) {
+          margin-top: 60px; } }
+    @media (max-width: 600px) {
+      .team-block__item {
+        width: 100%;
+        margin: 40px 0 0 0; }
+        .team-block__item:first-child {
+          margin-top: 0; } }
+  .team-block__headshot {
+    position: relative;
+    display: flex;
+    justify-content: center; }
+    .team-block__headshot img {
+      display: block;
+      width: 100%; }
+  .team-block__name {
+    display: block;
+    width: 100%;
+    margin: 20px 0 0; }
+  .team-block__position {
+    display: block;
+    width: 100%; }
+  .team-block__email {
+    display: block;
+    width: 100%;
+    margin-top: 10px; }
+  .team-block__social {
+    display: block;
+    width: 100%;
+    margin-top: 10px; }
+    .team-block__social-item {
+      margin-right: 5px; }
+      .team-block__social-item:last-child {
+        margin-right: 0; }
 
 /* ----- Gutenberg Font Sizes -------------------- */
 .has-larger-font-size {
