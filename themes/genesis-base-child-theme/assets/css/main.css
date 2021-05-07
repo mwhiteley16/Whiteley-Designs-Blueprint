@@ -533,30 +533,6 @@ em,
 i {
   font-style: italic; }
 
-blockquote {
-  border: 0 solid #1a1a1a;
-  border-left-width: 4px;
-  color: #686868;
-  font-size: 20px;
-  font-style: italic;
-  margin: 0 0 25px;
-  overflow: hidden;
-  padding: 0 0 0 35px; }
-  blockquote > :last-child {
-    margin-bottom: 0; }
-  blockquote p {
-    font-size: 20px; }
-  blockquote cite {
-    color: #1a1a1a;
-    display: block;
-    font-size: 18px;
-    line-height: 1.75;
-    font-style: normal;
-    margin-top: 3px; }
-  blockquote cite:before,
-  blockquote small:before {
-    content: "\2014\00a0"; }
-
 code {
   background-color: #e0e0e0;
   padding: 0.125em 0.25em; }
@@ -3301,6 +3277,40 @@ p {
     margin-bottom: 0; }
   p.is-style-half-bottom-margin {
     margin-bottom: 15px; }
+
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-quote.scss
+ *
+ * Let's define our core blockquote styles
+ *
+ *
+ */
+/* ----- Core Block Blockquote -------------------- */
+blockquote,
+blockquote.wp-block-quote {
+  background: #fafafa;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 40px;
+  border-left: 10px solid #bababa; }
+  .entry-content blockquote, .entry-content blockquote.wp-block-quote {
+    margin-left: 0;
+    margin-right: 0; }
+  blockquote p,
+  blockquote.wp-block-quote p {
+    font-size: 20px;
+    margin-bottom: 30px; }
+    blockquote p:last-child,
+    blockquote.wp-block-quote p:last-child {
+      margin-bottom: 0; }
+  blockquote cite,
+  blockquote .wp-block-quote__citation,
+  blockquote.wp-block-quote cite,
+  blockquote.wp-block-quote .wp-block-quote__citation {
+    margin-top: 30px;
+    display: block;
+    font-size: inherit;
+    font-style: normal; }
 
 /**
  * /assets/scss/partials/blocks/core/blocks-core-separators.scss
