@@ -39,32 +39,6 @@ function wd_acf_show_admin( $show ) {
 
 }
 
-/**
- * ACF Color Palette
- * @link https://www.advancedcustomfields.com/resources/adding-custom-javascript-fields/
- *
- * Add default color palatte to ACF color picker for branding
- * Match these colors to colors in /functions.php & /assets/scss/partials/base/variables.scss
- *
-*/
-function wd_acf_color_palette() { ?>
-<script type="text/javascript">
-(function($) {
-     acf.add_filter('color_picker_args', function( args, $field ){
-          args.palettes = [
-               '#007991',
-               '#439a86',
-               '#e9d985',
-               '#ffffff',
-               '#000000'
-          ]
-          return args;
-     });
-})(jQuery);
-</script>
-<?php }
-add_action( 'acf/input/admin_footer', 'wd_acf_color_palette' );
-
 
 /**
  * ACF Radio Color Palette
