@@ -3263,14 +3263,6 @@ p {
   padding: 0; }
   p.has-background {
     padding: 15px; }
-  p.has-larger-font-size {
-    font-size: 24px; }
-  p.has-large-font-size {
-    font-size: 20px; }
-  p.has-regular-font-size {
-    font-size: 16px; }
-  p.has-small-font-size {
-    font-size: 12px; }
   p.is-style-no-bottom-margin {
     margin-bottom: 0; }
   p.is-style-half-bottom-margin {
@@ -3455,6 +3447,19 @@ hr.wp-block-separator {
     justify-content: center; }
   .acf-separator-block.right-align {
     justify-content: flex-end; }
+
+/* ----- Gutenberg Font Sizes -------------------- */
+.has-larger-font-size {
+  font-size: 24px; }
+
+.has-large-font-size {
+  font-size: 20px; }
+
+.has-regular-font-size {
+  font-size: 16px; }
+
+.has-small-font-size {
+  font-size: 12px; }
 
 /* ----- Alignwide/Alignfull -------------------- */
 .full-width-content .entry-content > *.alignwide, .content .entry-content > *.alignwide, .full-width-content .block-area > *.alignwide, .content .block-area > *.alignwide {

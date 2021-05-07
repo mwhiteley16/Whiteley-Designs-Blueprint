@@ -7,29 +7,13 @@
  */
 
 /* ----- Core Block Paragraphs -------------------- */
-p { // Match these sizes to the font sizes in functions/gutenberg.php
+p {
 	margin: 0 0 $base-margin;
 	padding: 0;
 
      &.has-background {
           padding: 15px;
      }
-
-     &.has-larger-font-size {
-          font-size: 24px;
-     }
-
-	&.has-large-font-size {
-         	font-size: 20px;
-	}
-
-	&.has-regular-font-size {
-		font-size: 16px;
-	}
-
-	&.has-small-font-size {
-	    font-size: 12px;
-	}
 
      &.is-style-no-bottom-margin {
           margin-bottom: 0;
