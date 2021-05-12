@@ -74,7 +74,7 @@ add_filter( 'genesis_markup_content-sidebar-wrap_close', '__return_false' );
 remove_action( 'genesis_header', 'genesis_do_header' );
 add_action( 'genesis_header', 'wd_header' );
 function wd_header() {
-     get_template_part( 'sections/header' );
+     get_template_part( 'partials/header' );
 }
 
 
@@ -82,7 +82,7 @@ function wd_header() {
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 add_action( 'genesis_footer', 'wd_footer' );
 function wd_footer() {
-     get_template_part( 'sections/footer' );
+     get_template_part( 'partials/footer' );
 }
 
 
@@ -100,9 +100,9 @@ function wd_custom_loop() {
 
                     do_action( 'genesis_before_entry' );
                          if( is_search() ) {
-                              get_template_part( 'sections/search-loop-item' );
+                              get_template_part( 'partials/search-loop-item' );
                          } else {
-                              get_template_part( 'sections/loop-item' );
+                              get_template_part( 'partials/loop-item' );
                          }
      			do_action( 'genesis_after_entry' );
 
