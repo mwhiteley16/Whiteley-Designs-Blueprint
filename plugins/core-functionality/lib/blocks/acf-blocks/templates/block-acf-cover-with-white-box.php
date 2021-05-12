@@ -23,22 +23,22 @@ $block_classes .= ' content-vertical-' . $wd_cwb_block_content_vertical_alignmen
 $block_classes .= ' content-horizontal-' . $wd_cwb_block_content_horizontal_alignment;
 
 // for top-aligned ekg swap vertical classes to account for rotation
-if( $wd_cwb_block_ekg_vertical_alignment == 'top-align' ) {
+if ( $wd_cwb_block_ekg_vertical_alignment == 'top-align' ) {
 
-     if( $wd_cwb_block_ekg_horizontal_alignment == 'left' ) {
+     if ( $wd_cwb_block_ekg_horizontal_alignment == 'left' ) {
           $wd_cwb_block_ekg_horizontal_alignment = 'right';
-     } elseif( $wd_cwb_block_ekg_horizontal_alignment == 'right' ) {
+     } elseif ( $wd_cwb_block_ekg_horizontal_alignment == 'right' ) {
           $wd_cwb_block_ekg_horizontal_alignment = 'left';
      }
 }
 
 // get align class if present
-if( ! empty( $block['align'] ) ) {
+if ( ! empty( $block['align'] ) ) {
      $block_classes .= ' align' . $block['align'];
 }
 
 // get custom class name if present
-if( ! empty( $block['className'] ) ) {
+if ( ! empty( $block['className'] ) ) {
      $block_classes .= ' ' . $block['className'];
 }
 
@@ -58,12 +58,12 @@ $template = [
      [ 'acf/acf-separator',
           [ 'data' =>
                [
-                    'wd_background_color' => 'primay-color',
-                    'wd_block_separator_type' => 'solid',
-                    'wd_block_separator_width_choice' => 'user-defined',
-                    'wd_block_separator_alignment' => 'left-align',
-                    'wd_block_separator_width' => '57',
-                    'wd_block_separator_height' => '1',
+                    'wd_background_color'               => 'primay-color',
+                    'wd_block_separator_type'           => 'solid',
+                    'wd_block_separator_width_choice'   => 'user-defined',
+                    'wd_block_separator_alignment'      => 'left-align',
+                    'wd_block_separator_width'          => '57',
+                    'wd_block_separator_height'         => '1',
                     'wd_block_separator_include_margin' => 'no-margin'
                ]
           ]

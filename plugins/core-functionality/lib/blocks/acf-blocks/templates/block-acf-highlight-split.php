@@ -20,7 +20,7 @@ $block_id = 'highlight-split-' . $block['id'];
 // block Classes
 $block_classes = 'acf-block highlight-split ' . $wd_hs_block_media_layout;
 
-if( ! empty( $block['className'] ) ) {
+if ( ! empty( $block['className'] ) ) {
      $block_classes .= ' ' . $block['className'];
 }
 

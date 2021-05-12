@@ -17,26 +17,26 @@ $block_id = 'NAME-' . $block['id'];
 // block Classes
 $block_classes = 'acf-block NAME-block';
 
-if( ! empty( $block['align'] ) ) { // block alignment (left, center, right, wide, full)
+if ( ! empty( $block['align'] ) ) {
      $block_classes .= ' align' . $block['align'];
 }
 
-if( ! empty( $block['align_text'] ) ) { // text alignment (left, center, right)
+if ( ! empty( $block['align_text'] ) ) {
      $block_classes .= ' has-text-align-' . $block['align_text'];
 }
 
 // get content align (standard)
-if( ! empty( $block['align_content'] ) ) { // content alignment (top, center, bottom)
+if ( ! empty( $block['align_content'] ) ) {
      $block_classes .= ' is-vertically-aligned-' . $block['align_content'];
 }
 
 // get content align (matrix)
-if( ! empty( $block['align_content'] ) ) {
+if ( ! empty( $block['align_content'] ) ) {
      $block_content_align = preg_replace('#[ -]+#', '-', $block['align_content']);
      $block_classes .= ' is-position-' . $block_content_align;
 }
 
-if( ! empty( $block['className'] ) ) { // custom class name
+if ( ! empty( $block['className'] ) ) { // custom class name
      $block_classes .= ' ' . $block['className'];
 }
 

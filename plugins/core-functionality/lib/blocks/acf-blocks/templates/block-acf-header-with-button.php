@@ -17,14 +17,14 @@ $block_id = 'header-button-' . $block['id'];
 // block Classes
 $block_classes = 'acf-block header-button-block ' . $wd_hwb_block_mobile_button_hide;
 
-if( ! empty( $block['className'] ) ) { // custom class name
+if ( ! empty( $block['className'] ) ) { // custom class name
      $block_classes .= ' ' . $block['className'];
 }
 
 // THINGS FOR INNER BLOCKS
 $inner_allowed_blocks = [
      'core/heading',
-     'core/button',
+     'core/button'
 ];
 
 // create the placeholder template
@@ -41,7 +41,6 @@ $inner_template = [
           ]
      ]
 ];
-
 ?>
 
 <div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_classes ); ?>">

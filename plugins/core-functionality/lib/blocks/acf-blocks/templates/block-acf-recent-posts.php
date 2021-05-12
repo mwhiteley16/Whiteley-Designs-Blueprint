@@ -19,11 +19,11 @@ $block_id = 'recent-posts-' . $block['id'];
 // block Classes
 $block_classes = 'acf-block recent-posts-block';
 
-if( ! empty( $block['align'] ) ) { // block alignment (left, center, right, wide, full)
+if ( ! empty( $block['align'] ) ) { // block alignment (left, center, right, wide, full)
      $block_classes .= ' align' . $block['align'];
 }
 
-if( ! empty( $block['className'] ) ) { // custom class name
+if ( ! empty( $block['className'] ) ) { // custom class name
      $block_classes .= ' ' . $block['className'];
 }
 ?>
@@ -32,14 +32,14 @@ if( ! empty( $block['className'] ) ) { // custom class name
 
      <?php
      wp_reset_query();
-     $args = array(
+     $args = [
           'post_type'      => 'post',
           'post_status'    => 'publish',
           'posts_per_page' => $wd_recent_posts_block_number_of_posts
-     );
+     ];
 
      // include selected category if category option is set
-     if( $wd_recent_posts_block_display_type == 'category-posts' ) {
+     if ( $wd_recent_posts_block_display_type == 'category-posts' ) {
           $args['cat'] = $wd_recent_posts_block_category;
      }
 

@@ -1,63 +1,82 @@
 <?php
 /**
- * Block Area
- * CPT for block-based widget areas, until WP core adds block support to widget areas
- * @link https://www.billerickson.net/wordpress-gutenberg-block-widget-areas/
- *
- * @package      CoreFunctionality
- * @author       Bill Erickson
- * @since        1.0.0
- * @license      GPL-2.0+
-**/
+* Register Block Area Custom Post Type
+*
+* CPT for block-based content (widgets, archives, taxonomies, posts, etc..)
+*
+* @author       Bill Erickson
+* @since        1.0.0
+* @license      GPL-2.0+
+* @link https://www.billerickson.net/wordpress-gutenberg-block-widget-areas/
+*
+*/
+
 
 class WD_Block_Area {
 
 	/**
-	 * Instance of the class.
-	 * @var object
-	 */
+	* Instance of the class.
+	* @var object
+	*/
 	private static $instance;
 
+
 	/**
-	 * Class Instance.
-	 * @return WD_Block_Area
-	 */
+	* Class Instance.
+	* @return WD_Block_Area
+	*/
 	public static function instance() {
+
 		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof WD_Block_Area ) ) {
 			self::$instance = new WD_Block_Area();
 
 			// Actions
-			add_action( 'init',              array( self::$instance, 'wd_block_areas_cpt'      )    );
-			add_action( 'template_redirect', array( self::$instance, 'redirect_single'   )    );
+			add_action(
+                    'init',
+                    [
+                         self::$instance, 'wd_block_areas_cpt'
+                    ]
+               );
+
+               add_action(
+                    'template_redirect',
+                    [
+                         self::$instance, 'redirect_single'
+                    ]
+               );
+
 		}
+
 		return self::$instance;
+
 	}
 
+
 	/**
-	 * Register the custom post type
-	 *
-	 */
+	* Register the custom post type
+	*/
      function wd_block_areas_cpt() {
-     	$labels = array(
-     		'name'               => _x( 'Block Area', 'post type general name' ),
-     		'singular_name'      => _x( 'Block Area', 'post type singular name' ),
-     		'menu_name'          => _x( 'Block Areas', 'admin menu' ),
-     		'name_admin_bar'     => _x( 'Block Area', 'add new on admin bar' ),
-     		'add_new'            => _x( 'Add New', 'Block Area' ),
-     		'add_new_item'       => __( 'Add New Block Area' ),
-     		'new_item'           => __( 'New Block Area' ),
-     		'edit_item'          => __( 'Edit Block Area' ),
-     		'view_item'          => __( 'View Block Area' ),
-     		'all_items'          => __( 'All Block Areas' ),
-     		'search_items'       => __( 'Search Block Areas' ),
-     		'parent_item_colon'  => __( 'Parent Block Areas:' ),
-     		'not_found'          => __( 'No Block Areas found.' ),
-     		'not_found_in_trash' => __( 'No Block Areas found in Trash.' )
-     	);
+
+     	$labels = [
+     		'name'               => _x( 'Block Area', 'post type general name', CHILD_THEME_NAME ),
+     		'singular_name'      => _x( 'Block Area', 'post type singular name', CHILD_THEME_NAME ),
+     		'menu_name'          => _x( 'Block Areas', 'admin menu', CHILD_THEME_NAME ),
+     		'name_admin_bar'     => _x( 'Block Area', 'add new on admin bar', CHILD_THEME_NAME ),
+     		'add_new'            => _x( 'Add New', 'Block Area', CHILD_THEME_NAME ),
+     		'add_new_item'       => __( 'Add New Block Area', CHILD_THEME_NAME ),
+     		'new_item'           => __( 'New Block Area', CHILD_THEME_NAME ),
+     		'edit_item'          => __( 'Edit Block Area', CHILD_THEME_NAME ),
+     		'view_item'          => __( 'View Block Area', CHILD_THEME_NAME ),
+     		'all_items'          => __( 'All Block Areas', CHILD_THEME_NAME ),
+     		'search_items'       => __( 'Search Block Areas', CHILD_THEME_NAME ),
+     		'parent_item_colon'  => __( 'Parent Block Areas:', CHILD_THEME_NAME ),
+     		'not_found'          => __( 'No Block Areas found.', CHILD_THEME_NAME ),
+     		'not_found_in_trash' => __( 'No Block Areas found in Trash.', CHILD_THEME_NAME )
+     	];
 
      	$args = array(
                'labels'              => $labels,
-               'description'         => __( 'Block areas used to show custom blocks in templates.' ),
+               'description'         => __( 'Block areas used to show custom blocks in templates.', CHILD_THEME_NAME ),
                'public'              => false,
                'show_ui'             => true,
                'show_in_rest'        => true,
@@ -65,49 +84,70 @@ class WD_Block_Area {
                'show_in_menu'        => true,
                'query_var'           => true,
                'can_export'          => true,
-               'rewrite'             => array( 'slug' => 'block-area', 'with_front' => false ),
                'has_archive'         => false,
                'hierarchical'        => false,
                'menu_position'       => 29,
                'menu_icon'           => 'dashicons-welcome-widgets-menus', // https://developer.wordpress.org/resource/dashicons/
-               'supports'            => array( 'title', 'editor', 'revisions' ),
+               'supports'            => [
+                    'title',
+                    'editor',
+                    'revisions'
+               ],
+               'rewrite'             => [
+                    'slug'       => 'block-area',
+                    'with_front' => false
+               ],
      	);
 
-     	register_post_type( 'block_area', $args );
+     	register_post_type(
+               'block_area',
+               $args
+          );
+
      }
 
+
      /**
-      * Redirect single block areas
-      *
-      */
+     * Redirect single block areas
+     */
      function redirect_single() {
-     	if( is_singular( 'block_area' ) ) {
+
+          if ( is_singular( 'block_area' ) ) {
      		wp_redirect( home_url() );
      		exit;
      	}
+
      }
+
 
      /**
       * Show block area
       *
       */
      function show( $location = '' ) {
-     	if( ! $location )
+
+          if ( ! $location ) {
      		return;
+          }
 
      	$location = sanitize_key( $location );
 
-     	$loop = new WP_Query( array(
-     		'post_type'		=> 'block_area',
-     		'name'    		=> $location,
-     		'posts_per_page'	=> 1,
-     	));
+     	$loop = new WP_Query(
+               [
+          		'post_type'      => 'block_area',
+          		'name'    	  => $location,
+          		'posts_per_page' => 1,
+     	     ]
+          );
 
-     	if( $loop->have_posts() ): while( $loop->have_posts() ): $loop->the_post();
-     		echo '<div class="block-area block-area-' . $location . '">';
+     	if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post();
+
+               echo '<div class="block-area block-area-' . $location . '">';
      			the_content();
      		echo '</div>';
-     	endwhile; endif; wp_reset_postdata();
+
+          endwhile; endif; wp_reset_postdata();
+
      }
 
 }
@@ -119,12 +159,14 @@ class WD_Block_Area {
  * to declare the global.
  *
  * example usage:
- * if( function_exists( 'wd_block_area' ) )
- *   ea_block_area()->show( 'after-post' );
+ * if( function_exists( 'wd_block_area' ) ) {
+ *   wd_block_area()->show( 'after-post' );
+ * }
  *
  * @return object
  */
 function wd_block_area() {
 	return WD_Block_Area::instance();
 }
+
 wd_block_area();

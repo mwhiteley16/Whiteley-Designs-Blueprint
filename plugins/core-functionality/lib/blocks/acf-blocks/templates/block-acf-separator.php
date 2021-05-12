@@ -19,10 +19,10 @@ $wd_block_separator_alignment = get_field( 'wd_block_separator_alignment' );
 
 // get block editor colors
 $colors = get_theme_support( 'editor-color-palette' );
-foreach( $colors[0] as $color ) {
+foreach ( $colors[0] as $color ) {
 
      // loop over block editor colors and compare to color setting
-     if( $wd_background_color == $color['slug'] ) {
+     if ( $wd_background_color == $color['slug'] ) {
           $border_color = $color['color'];  // set border color
      }
 }
@@ -34,12 +34,12 @@ $block_id = 'acf-separator-' . $block['id'];
 $block_classes = 'acf-block acf-separator-block ' . $wd_block_separator_include_margin . ' ' . $wd_block_separator_alignment;
 
 // get align class if present
-if( ! empty( $block['align'] ) ) {
+if ( ! empty( $block['align'] ) ) {
      $block_classes .= ' align' . $block['align'];
 }
 
 // get custom class name if present
-if( ! empty( $block['className'] ) ) {
+if ( ! empty( $block['className'] ) ) {
      $block_classes .= ' ' . $block['className'];
 }
 
@@ -49,10 +49,9 @@ $hr_styles .= 'border-top-style:' . $wd_block_separator_type . ';';
 $hr_styles .= 'border-width:' . $wd_block_separator_height . 'px;';
 $hr_styles .= 'border-color:' . $border_color . ';';
 
-if( $wd_block_separator_width_choice == 'user-defined' ) {
+if ( $wd_block_separator_width_choice == 'user-defined' ) {
      $hr_styles .= 'width:' . $wd_block_separator_width . 'px;';
 }
-
 ?>
 
 <div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_classes ); ?>">

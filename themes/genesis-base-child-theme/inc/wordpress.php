@@ -2,70 +2,100 @@
 /**
  * WordPress Stuff
  *
- * @author       Matt Whiteley
+ * @author       WhiteleyDesigns
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
 
-// Ensure jQuery loads
+/**
+* Ensure jQuery loads
+*/
 add_action( 'init', 'wd_load_scripts', 0 );
 function wd_load_scripts() {
+
 	wp_enqueue_script( 'jquery' );
+
 }
 
 
-// Remove comment form allowed tags
+/**
+* Remove comment form allowed tags
+*/
 add_filter( 'comment_form_defaults', 'wd_remove_comments_allowed_tags' );
 function wd_remove_comments_allowed_tags( $defaults ) {
+
      $defaults['comment_notes_after'] = '';
      return $defaults;
+
 }
 
 
-// Clean up menu classes
+/**
+* Clean up menu classes
+*/
 function wd_clean_nav_menu_classes( $classes ) {
-	if( ! is_array( $classes ) )
+
+	if ( ! is_array( $classes ) ) {
 		return $classes;
-	foreach( $classes as $i => $class ) {
-		// Remove class with menu item id
+     }
+
+	foreach ( $classes as $i => $class ) {
+
+          // Remove class with menu item id
 		$id = strtok( $class, 'menu-item-' );
-		if( 0 < intval( $id ) )
+		if ( 0 < intval( $id ) ) {
 			unset( $classes[ $i ] );
-		// Remove menu-item-type-*
-		if( false !== strpos( $class, 'menu-item-type-' ) )
+          }
+
+          // Remove menu-item-type-*
+		if ( false !== strpos( $class, 'menu-item-type-' ) ) {
 			unset( $classes[ $i ] );
-		// Remove menu-item-object-*
-		if( false !== strpos( $class, 'menu-item-object-' ) )
+          }
+
+          // Remove menu-item-object-*
+		if ( false !== strpos( $class, 'menu-item-object-' ) ) {
 			unset( $classes[ $i ] );
-		// Change page ancestor to menu ancestor
-		if( 'current-page-ancestor' == $class ) {
+          }
+
+          // Change page ancestor to menu ancestor
+		if ( 'current-page-ancestor' == $class ) {
 			$classes[] = 'current-menu-ancestor';
 			unset( $classes[ $i ] );
 		}
 	}
+
 	// Remove submenu class if depth is limited
-	if( isset( $args->depth ) && 1 === $args->depth ) {
+	if ( isset( $args->depth ) && 1 === $args->depth ) {
 		$classes = array_diff( $classes, array( 'menu-item-has-children' ) );
 	}
+
 	return $classes;
+
 }
 add_filter( 'nav_menu_css_class', 'wd_clean_nav_menu_classes', 5 );
 
 
-// Clean up post classes
+/**
+* Clean up post classes
+*/
 function wd_clean_post_classes( $classes ) {
-	if( ! is_array( $classes ) )
+
+	if ( ! is_array( $classes ) ) {
 		return $classes;
-	$allowed_classes = array(
+     }
+
+	$allowed_classes = [
   		'hentry',
   		'type-' . get_post_type(),
-   	);
-	return array_intersect( $classes, $allowed_classes );
+   	];
+
+     return array_intersect( $classes, $allowed_classes );
+
 }
 add_filter( 'post_class', 'wd_clean_post_classes', 5 );
 
 
-/*
+/**
  * Remove un-neccessary site health checks
  *
  * Tutorial - https://wearnhardt.com/2019/05/how-to-disable-tests-in-the-wordpress-site-health-check-tool/
@@ -84,10 +114,18 @@ function wd_remove_site_health_checks( $tests ) {
 add_filter( 'site_status_tests', 'wd_remove_site_health_checks' );
 
 
-// remove site health dashboard widget
+/**
+* remove site health dashboard widget
+*/
 add_action('wp_dashboard_setup', 'wd_remove_site_health_dashboard_widget');
 function wd_remove_site_health_dashboard_widget() {
-     remove_meta_box('dashboard_site_health', 'dashboard', 'normal');
+
+     remove_meta_box(
+          'dashboard_site_health',
+          'dashboard',
+          'normal'
+     );
+
 }
 
 
@@ -124,16 +162,20 @@ function wd_editor_layout_class( $classes ) {
 
      // add page template slug to body classes
      $template_slug = get_page_template_slug( $post_id );
-     if( $template_slug ) {
+     if ( $template_slug ) {
 
           $template_slug_trimmed = str_replace( '.php', '', $template_slug );
           $classes .= ' page-template-' . $template_slug_trimmed;
+
      }
 
 	return $classes;
+
 }
 add_filter( 'admin_body_class', 'wd_editor_layout_class' );
 
 
-// Add custom image sizes
+/**
+* Add custom image sizes
+*/
 // add_image_size( 'size-name', 000, 000, true );

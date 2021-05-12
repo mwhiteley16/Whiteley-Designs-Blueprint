@@ -15,15 +15,14 @@ $block_id = 'team-' . $block['id'];
 $block_classes = 'acf-block team-block';
 
 // get align class if present
-if( ! empty( $block['align'] ) ) {
+if ( ! empty( $block['align'] ) ) {
      $block_classes .= ' align' . $block['align'];
 }
 
 // get custom class name if present
-if( ! empty( $block['className'] ) ) {
+if ( ! empty( $block['className'] ) ) {
      $block_classes .= ' ' . $block['className'];
 }
-
 ?>
 
 <div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_classes ); ?>">
@@ -50,13 +49,13 @@ if( ! empty( $block['className'] ) ) {
 
                          <h3 class="team-block__name"><?php echo $wd_team_name; ?></h3>
 
-                         <?php if( $wd_team_position ) : ?>
+                         <?php if ( $wd_team_position ) : ?>
                               <span class="team-block__position">
                                    <?php echo $wd_team_position; ?>
                               </span>
                          <?php endif; ?>
 
-                         <?php if( $wd_team_email ) : ?>
+                         <?php if ( $wd_team_email ) : ?>
                               <span class="team-block__email">
                                    <a href="mailto:<?php echo $wd_team_email; ?>"><i class="fas fa-paper-plane"></i> Email <?php echo $wd_team_name; ?></a>
                               </span>

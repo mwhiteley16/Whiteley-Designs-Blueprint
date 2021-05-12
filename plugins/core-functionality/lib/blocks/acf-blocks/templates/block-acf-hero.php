@@ -25,24 +25,24 @@ $block_classes .= ' image-' . $wd_block_hero_image_position;
 $block_classes .= ' content-' . $wd_block_hero_content_alignment;
 
 // get align class if present
-if( ! empty( $block['align'] ) ) {
+if ( ! empty( $block['align'] ) ) {
      $block_classes .= ' align' . $block['align'];
 }
 
 // get content align text class if present
-if( ! empty( $block['align_content'] ) ) {
+if ( ! empty( $block['align_content'] ) ) {
      $block_content_align = preg_replace('#[ -]+#', '-', $block['align_content']);
 }
 
 // get custom class name if present
-if( ! empty( $block['className'] ) ) {
+if ( ! empty( $block['className'] ) ) {
      $block_classes .= ' ' . $block['className'];
 }
 
 // set proper classes of content container
 $content_class = 'hero-block__content';
 $content_class .= ' hero-block__content--' . $wd_block_background_type;
-if( $wd_block_background_type == 'solid-color' ) {
+if ( $wd_block_background_type == 'solid-color' ) {
      $wd_block_background_color = get_field( 'wd_background_color' ); // only get background color variable if it is needed
      $content_class .= ' has-' . $wd_block_background_color . '-background-color';
 }
@@ -67,12 +67,11 @@ $template = [
           ]
      ],
 ];
-
 ?>
 
 <div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_classes ); ?>" style="background-image:url('<?php echo esc_url( $wd_block_hero_image['url'] ); ?>">
 
-     <?php if( $wd_block_hero_image_overlay == 'yes-overlay' ) : ?>
+     <?php if ( $wd_block_hero_image_overlay == 'yes-overlay' ) : ?>
           <?php $wd_block_hero_overlay_opacity = get_field( 'wd_block_hero_overlay_opacity' ); ?>
           <div class="hero-block__overlay" style="opacity:0.<?php echo $wd_block_hero_overlay_opacity; ?>;"></div>
      <?php endif; ?>
