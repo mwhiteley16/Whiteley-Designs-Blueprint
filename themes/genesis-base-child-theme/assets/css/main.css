@@ -307,6 +307,9 @@ template {
  * Let's define our universal mixins for use throughout the theme
  *
  */
+/**
+* Base text styles
+*/
 body,
 p,
 select,
@@ -320,6 +323,9 @@ input {
   height: auto;
   min-height: auto; }
 
+/**
+* Base button styles
+*/
 .wp-block-button__link, a.wd-button,
 input[type="button"],
 input[type="button"][disabled]:hover,
@@ -385,6 +391,9 @@ input[type="submit"][disabled]:focus,
       color: #fff;
       border-color: #007991; }
 
+/**
+* Transitions
+*/
 .block-editor-block-list__layout .wp-block-image.is-style-hide-desktop, .mobile-navigation-icon span, .mobile-navigation-icon, .nav-primary ul .menu-item.menu-button a span, a, button,
 input:focus,
 input[type="button"],
@@ -395,6 +404,12 @@ textarea:focus,
 .gallery img {
   transition: all 0.2s ease-in-out; }
 
+/**
+* RGBA color conversion
+*/
+/**
+ * Placeholder Color
+ */
 /**
  * /assets/scss/partials/base/universal.scss
  *
@@ -571,12 +586,12 @@ table {
   table.striped tr:nth-of-type(odd) {
     background-color: #fafafa; }
   table th {
-    border: 1px solid #ddd;
+    border: 1px solid #e0e0e0;
     padding: 10px;
     position: relative;
     text-align: left; }
   table td {
-    border: 1px solid #ddd;
+    border: 1px solid #e0e0e0;
     padding: 10px;
     position: relative; }
 

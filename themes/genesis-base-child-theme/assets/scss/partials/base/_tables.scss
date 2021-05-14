@@ -11,18 +11,18 @@ table {
      margin-bottom: 20px;
 
      &.striped tr:nth-of-type(odd) {
-          background-color: #fafafa;
+          background-color: $grey-light;
      }
 
      th {
-          border: 1px solid #ddd;
+          border: 1px solid $grey-medium;
           padding: 10px;
           position: relative;
           text-align: left;
      }
 
      td {
-          border: 1px solid #ddd;
+          border: 1px solid $grey-medium;
           padding: 10px;
           position: relative;
      }

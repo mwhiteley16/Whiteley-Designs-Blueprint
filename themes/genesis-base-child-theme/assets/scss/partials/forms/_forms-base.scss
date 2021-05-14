@@ -48,38 +48,4 @@ select {
 }
 
 /* ----- Placeholder Styles -------------------- */
-// input[type="text"]::placeholder {
-//      font-size: 16px;
-//      color: $base-color;
-//      font-style: normal;
-// }
-//
-// input[type="text"]::-ms-input-placeholder {
-//      font-size: 16px;
-//      color: $base-color;
-//      font-style: normal;
-// }
-//
-// input[type="text"]::-ms-input-placeholder {
-//      font-size: 16px;
-//      color: $base-color;
-//      font-style: normal;
-// }
-//
-// input[type="text"]::-moz-placeholder {
-//      font-size: 16px;
-//      font-style: normal;
-//      color: $base-color;
-// }
-//
-// input[type="text"]::-moz-placeholder {
-//      font-size: 16px;
-//      color: $base-color;
-//      font-style: normal;
-// }
-//
-// input[type="text"]::-webkit-input-placeholder {
-//      font-size: 16px;
-//      color: $base-color;
-//      font-style: normal;
-// }
+// @include placeholder-color( $base-color );
