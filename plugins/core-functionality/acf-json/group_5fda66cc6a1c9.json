@@ -33,6 +33,116 @@
             },
             "placement": "left",
             "endpoint": 0
+        },
+        {
+            "key": "field_609e9617b8108",
+            "label": "Copyright Text",
+            "name": "wd_options_copyright_text",
+            "type": "textarea",
+            "instructions": "Add copyright text. Exclude copyright year as that will be automatically generated and changed each year.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "All rights reserved.",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_609e957264fea",
+            "label": "Social Media",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_609e958264feb",
+            "label": "Social Media Links",
+            "name": "wd_options_social_media_links",
+            "type": "repeater",
+            "instructions": "Add links to all of your social media pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_609e95e664fee",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Social Media Link",
+            "sub_fields": [
+                {
+                    "key": "field_609e95a064fec",
+                    "label": "Icon",
+                    "name": "wd_icon",
+                    "type": "text",
+                    "instructions": "Enter icon code from <a href=\"https:\/\/fontawesome.com\/icons?d=gallery&p=2&s=brands\" target=\"_blank\">FontAwesome<\/a>.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_609e95e664fee",
+                    "label": "Aria Label",
+                    "name": "wd_aria_label",
+                    "type": "text",
+                    "instructions": "Enter short description of link for accessibility.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_609e95d264fed",
+                    "label": "Link",
+                    "name": "wd_link",
+                    "type": "url",
+                    "instructions": "Add full URL to social media channel.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -52,5 +162,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1608148721
+    "modified": 1621006240
 }
