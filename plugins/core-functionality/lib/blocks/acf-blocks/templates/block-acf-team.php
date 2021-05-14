@@ -65,7 +65,7 @@ if ( ! empty( $block['className'] ) ) {
                               <div class="team-block__social">
                                    <?php while ( have_rows( 'wd_team_social' ) ) : the_row(); ?>
                                         <span class="team-block__social-item">
-                                             <a href="<?php the_sub_field( 'wd_social_link' ); ?>" target="_blank">
+                                             <a href="<?php the_sub_field( 'wd_social_link' ); ?>" target="_blank" rel="noopener nofollow" aria-label="<?php the_sub_field( 'wd_aria_label' ); ?>">
                                                   <?php the_sub_field( 'wd_social_icon' ); ?>
                                              </a>
                                         </span>

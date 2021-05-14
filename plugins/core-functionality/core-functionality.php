@@ -11,6 +11,9 @@ Before modifying plugin, please reference plugin documentation:
 https://github.com/mwhiteley16/Whiteley-Designs-Blueprint/tree/master/plugins/core-functionality
 */
 
+/**
+* Define constants
+*/
 define( 'WD_PATH', WP_PLUGIN_DIR . '/' . basename( dirname( __FILE__ ) ) );
 define( 'CHILD_THEME_NAME', 'Base Genesis Child Theme' );
 define( 'CHILD_THEME_SLUG', 'base-child-theme' );
@@ -23,16 +26,19 @@ define( 'BLOCK_ICON_COLOR', '#b5267b' );
 require_once WD_PATH.'/lib/blocks/blocks-acf.php';
 // require_once WD_PATH.'/lib/blocks/block-patterns.php';
 
+
 /**
 * custom functionality
 */
 require_once WD_PATH.'/lib/functionality/acf.php';
+
 
 /**
 * custom post types
 */
 require_once WD_PATH.'/lib/post-types/post-type-block-areas.php';
 // require_once WD_PATH.'/lib/post-types/post-type-news.php';
+
 
 /**
 * custom taxonomies
