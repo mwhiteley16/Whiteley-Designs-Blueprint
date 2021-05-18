@@ -2,7 +2,7 @@
 /**
  * Functions
  *
- * @package      base-genesis-child
+ * @package      leankor-child-theme
  * @since        1.0.0
  * @author       Matt Whiteley <matt@whiteleydesigns.com>
  * @copyright    Copyright (c) 2021, Matt Whiteley
@@ -16,8 +16,8 @@
  For access contact matt@whiteleydesigns.com
  */
 
-define( 'CHILD_THEME_NAME', 'Base Genesis Child Theme' );
-define( 'CHILD_THEME_SLUG', 'base-genesis-child' );
+define( 'CHILD_THEME_NAME', 'Leankor' );
+define( 'CHILD_THEME_SLUG', 'leankor-child-theme' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 

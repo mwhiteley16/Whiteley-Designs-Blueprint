@@ -13,12 +13,12 @@ plugins/**
 # Start editing!
 
 # Theme
-!themes/genesis-base-child-theme/
-!themes/genesis-base-child-theme/**
+!themes/leankor-2021/
+!themes/leankor-2021/**
 
 # Functionality Plugin
-!plugins/core-functionality/
-!plugins/core-functionality/**
+!plugins/leankor-functionality/
+!plugins/leankor-functionality/**
 
 
 # Stop editing!
