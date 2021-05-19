@@ -9,7 +9,7 @@
 ?>
 
 <?php
-$wd_options_copyright_text = get_field( '$wd_options_copyright_text', 'option' );
+$wd_options_copyright_text = get_field( 'wd_options_copyright_text', 'option' );
 ?>
 
 <?php if ( ! empty( $wd_options_copyright_text ) ) : ?>
