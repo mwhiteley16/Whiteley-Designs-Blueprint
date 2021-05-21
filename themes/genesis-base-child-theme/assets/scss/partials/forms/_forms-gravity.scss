@@ -62,6 +62,12 @@
      .gform_body .gfield.gform_hidden {
           margin: 0;
      }
+
+     .gfield_visibility_hidden {
+          visibility: hidden;
+          position: absolute;
+          left: -9999px;
+     }     
 }
 
 /* ----- Form Columns ------------------- */

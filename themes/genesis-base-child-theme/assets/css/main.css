@@ -1256,6 +1256,10 @@ select {
     word-wrap: normal !important; }
   .gform_wrapper .gform_body .gfield.gform_hidden {
     margin: 0; }
+  .gform_wrapper .gfield_visibility_hidden {
+    visibility: hidden;
+    position: absolute;
+    left: -9999px; }
 
 /* ----- Form Columns ------------------- */
 .gform_body .gform_fields {
