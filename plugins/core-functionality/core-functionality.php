@@ -15,9 +15,9 @@ https://github.com/mwhiteley16/Whiteley-Designs-Blueprint/tree/master/plugins/co
 * Define constants
 */
 define( 'WD_PATH', WP_PLUGIN_DIR . '/' . basename( dirname( __FILE__ ) ) );
-define( 'CHILD_THEME_NAME', 'Base Genesis Child Theme' );
-define( 'CHILD_THEME_SLUG', 'base-child-theme' );
-define( 'BLOCK_ICON_COLOR', '#b5267b' );
+define( 'WD_THEME_NAME', 'Base Genesis Child Theme' );
+define( 'WD_THEME_SLUG', 'base-child-theme' );
+define( 'WD_BLOCK_ICON_COLOR', '#b5267b' );
 
 
 /**

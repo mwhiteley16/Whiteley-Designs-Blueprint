@@ -15,7 +15,7 @@ function wd_register_block_categories() {
 		register_block_pattern_category(
 			'whiteley-designs',
 			[
-                    'label' => _x( 'Whiteley Designs', 'Block pattern category', CHILD_THEME_NAME )
+                    'label' => _x( 'Whiteley Designs', 'Block pattern category', WD_THEME_NAME )
                ]
 		);
 
@@ -39,17 +39,17 @@ function wd_register_block_patterns() {
 		register_block_pattern(
 			'wd/three-column-learn-more',
 			[
-				'title'       => __( 'Three Column w/ Learn More', CHILD_THEME_NAME ),
-				'description' => _x( 'A three column layout with a header, description and Learn More button.', 'Block pattern description', CHILD_THEME_NAME ),
+				'title'       => __( 'Three Column w/ Learn More', WD_THEME_NAME ),
+				'description' => _x( 'A three column layout with a header, description and Learn More button.', 'Block pattern description', WD_THEME_NAME ),
 				'content'     => "",
 				'categories'  => [
                          'columns',
-                         CHILD_THEME_NAME
+                         WD_THEME_NAME
                     ],
                     'keywords' => [
                          'pattern',
                          'block pattern',
-                         CHILD_THEME_NAME
+                         WD_THEME_NAME
                     ]
 			]
 		);

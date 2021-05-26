@@ -13,9 +13,9 @@ function create_news_tax() {
 
      // customize labels
      $labels = [
-          'name'          => _x( 'News Category', 'taxonomy general name', CHILD_THEME_NAME ),
-          'add_new_item'  => __( 'Add News Category', CHILD_THEME_NAME ),
-          'new_item_name' => __( 'New News Category', CHILD_THEME_NAME )
+          'name'          => _x( 'News Category', 'taxonomy general name', WD_THEME_NAME ),
+          'add_new_item'  => __( 'Add News Category', WD_THEME_NAME ),
+          'new_item_name' => __( 'New News Category', WD_THEME_NAME )
      ];
 
      // modify arguments

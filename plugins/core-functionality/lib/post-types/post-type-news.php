@@ -12,25 +12,25 @@ add_action( 'init', 'wd_register_cpt_news' );
 function wd_register_cpt_news() {
 
 	$labels = [
-		'name'               => _x( 'News Item', 'post type general name', CHILD_THEME_NAME ),
-		'singular_name'      => _x( 'News Item', 'post type singular name', CHILD_THEME_NAME ),
-		'menu_name'          => _x( 'News Items', 'admin menu', CHILD_THEME_NAME ),
-		'name_admin_bar'     => _x( 'News Item', 'add new on admin bar', CHILD_THEME_NAME ),
-		'add_new'            => _x( 'Add New', 'News Item', CHILD_THEME_NAME ),
-		'add_new_item'       => __( 'Add New News Item', CHILD_THEME_NAME ),
-		'new_item'           => __( 'New News Item', CHILD_THEME_NAME ),
-		'edit_item'          => __( 'Edit News Item', CHILD_THEME_NAME ),
-		'view_item'          => __( 'View News Item', CHILD_THEME_NAME ),
-		'all_items'          => __( 'All News Items', CHILD_THEME_NAME ),
-		'search_items'       => __( 'Search News Items', CHILD_THEME_NAME ),
-		'parent_item_colon'  => __( 'Parent News Items:', CHILD_THEME_NAME ),
-		'not_found'          => __( 'No News Items found.', CHILD_THEME_NAME ),
-		'not_found_in_trash' => __( 'No News Items found in Trash.', CHILD_THEME_NAME )
+		'name'               => _x( 'News Item', 'post type general name', WD_THEME_NAME ),
+		'singular_name'      => _x( 'News Item', 'post type singular name', WD_THEME_NAME ),
+		'menu_name'          => _x( 'News Items', 'admin menu', WD_THEME_NAME ),
+		'name_admin_bar'     => _x( 'News Item', 'add new on admin bar', WD_THEME_NAME ),
+		'add_new'            => _x( 'Add New', 'News Item', WD_THEME_NAME ),
+		'add_new_item'       => __( 'Add New News Item', WD_THEME_NAME ),
+		'new_item'           => __( 'New News Item', WD_THEME_NAME ),
+		'edit_item'          => __( 'Edit News Item', WD_THEME_NAME ),
+		'view_item'          => __( 'View News Item', WD_THEME_NAME ),
+		'all_items'          => __( 'All News Items', WD_THEME_NAME ),
+		'search_items'       => __( 'Search News Items', WD_THEME_NAME ),
+		'parent_item_colon'  => __( 'Parent News Items:', WD_THEME_NAME ),
+		'not_found'          => __( 'No News Items found.', WD_THEME_NAME ),
+		'not_found_in_trash' => __( 'No News Items found in Trash.', WD_THEME_NAME )
 	];
 
 	$args = [
 		'labels'             => $labels,
-          'description'        => __( 'News.', CHILD_THEME_NAME ),
+          'description'        => __( 'News.', WD_THEME_NAME ),
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
