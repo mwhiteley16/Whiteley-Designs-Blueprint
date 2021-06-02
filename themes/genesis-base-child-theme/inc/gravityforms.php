@@ -28,3 +28,22 @@ function wd_gravityforms_domain( $notification, $form, $entry ) {
 
 }
 add_filter( 'gform_notification', 'wd_gravityforms_domain', 10, 3 );
+
+
+/**
+ * Gravity Forms custom classes
+ *
+ * Add custom classes for help with styling
+ *
+ * @link https://docs.gravityforms.com/gform_field_css_class/
+ */
+add_filter( 'gform_field_css_class', 'wd_gravity_field_classes', 10, 3 );
+function wd_gravity_field_classes( $classes, $field, $form ) {
+
+     // add custom date class for all date fieldsets
+     if ( $field->type == 'date' ) {
+          $classes .= ' gfield_date_wrap';
+     }
+
+     return $classes;
+}

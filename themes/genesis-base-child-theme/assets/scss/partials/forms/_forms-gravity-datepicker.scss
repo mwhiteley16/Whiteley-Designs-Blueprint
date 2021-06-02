@@ -8,12 +8,36 @@
 
 .ginput_container_date {
 
-     input {
+     input.datepicker {
           position: relative;
           background-image: url('../images/form-icons/calendar-alt-light.svg');
           background-position: calc(100% - #{$form-padding}) 50%;
           background-repeat: no-repeat;
           background-size: 16px;
+     }
+}
+
+.gfield_date_wrap .ginput_complex {
+     justify-content: flex-start;
+
+     > div {
+          margin-right: $form-spacing;
+          width: 100%;
+          max-width: 110px;
+
+          &:last-child {
+               margin-right: 0;
+          }
+
+          @media(max-width:500px) {
+               max-width: 100%;
+               margin-right: 0;
+               margin-bottom: 10px;
+
+               &:last-child {
+                    margin-bottom: 0;
+               }
+          }
      }
 }
 

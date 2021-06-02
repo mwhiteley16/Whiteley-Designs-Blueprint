@@ -1548,13 +1548,28 @@ select {
  *
  *
  */
-.ginput_container_date input {
+.ginput_container_date input.datepicker {
   position: relative;
   background-image: url("../images/form-icons/calendar-alt-light.svg");
   background-position: calc(100% - 15px) 50%;
   background-repeat: no-repeat;
   background-size: 16px; }
 
+.gfield_date_wrap .ginput_complex {
+  justify-content: flex-start; }
+  .gfield_date_wrap .ginput_complex > div {
+    margin-right: 30px;
+    width: 100%;
+    max-width: 110px; }
+    .gfield_date_wrap .ginput_complex > div:last-child {
+      margin-right: 0; }
+    @media (max-width: 500px) {
+      .gfield_date_wrap .ginput_complex > div {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px; }
+        .gfield_date_wrap .ginput_complex > div:last-child {
+          margin-bottom: 0; } }
 .ui-helper-hidden {
   display: none; }
   .ui-helper-hidden-accessible {
