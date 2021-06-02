@@ -14,36 +14,36 @@ https://github.com/mwhiteley16/Whiteley-Designs-Blueprint/tree/master/plugins/co
 /**
 * Define constants
 */
-define( 'WD_PATH', WP_PLUGIN_DIR . '/' . basename( dirname( __FILE__ ) ) );
-define( 'WD_THEME_NAME', 'Base Genesis Child Theme' );
-define( 'WD_THEME_SLUG', 'base-child-theme' );
-define( 'WD_BLOCK_ICON_COLOR', '#b5267b' );
+define( 'WD_PLUGIN_PATH', WP_PLUGIN_DIR . '/' . basename( dirname( __FILE__ ) ) );
+define( 'WD_PLUGIN_THEME_NAME', 'Base Genesis Child Theme' );
+define( 'WD_PLUGIN_THEME_SLUG', 'base-child-theme' );
+define( 'WD_PLUGIN_BLOCK_ICON_COLOR', '#b5267b' );
 
 
 /**
 * blocks
 */
-require_once WD_PATH.'/lib/blocks/blocks-acf.php';
-// require_once WD_PATH.'/lib/blocks/block-patterns.php';
+require_once WD_PLUGIN_PATH.'/lib/blocks/blocks-acf.php';
+// require_once WD_PLUGIN_PATH.'/lib/blocks/block-patterns.php';
 
 
 /**
 * custom functionality
 */
-require_once WD_PATH.'/lib/functionality/acf.php';
+require_once WD_PLUGIN_PATH.'/lib/functionality/acf.php';
 
 
 /**
 * custom post types
 */
-require_once WD_PATH.'/lib/post-types/post-type-block-areas.php';
-// require_once WD_PATH.'/lib/post-types/post-type-news.php';
+require_once WD_PLUGIN_PATH.'/lib/post-types/post-type-block-areas.php';
+// require_once WD_PLUGIN_PATH.'/lib/post-types/post-type-news.php';
 
 
 /**
 * custom taxonomies
 */
-//require_once WD_PATH.'/lib/taxonomies/taxonomy-news.php';
+//require_once WD_PLUGIN_PATH.'/lib/taxonomies/taxonomy-news.php';
 
 
 /**

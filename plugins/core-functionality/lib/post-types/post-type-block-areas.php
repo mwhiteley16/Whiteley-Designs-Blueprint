@@ -58,25 +58,25 @@ class WD_Block_Area {
      function wd_block_areas_cpt() {
 
      	$labels = [
-     		'name'               => _x( 'Block Area', 'post type general name', WD_THEME_NAME ),
-     		'singular_name'      => _x( 'Block Area', 'post type singular name', WD_THEME_NAME ),
-     		'menu_name'          => _x( 'Block Areas', 'admin menu', WD_THEME_NAME ),
-     		'name_admin_bar'     => _x( 'Block Area', 'add new on admin bar', WD_THEME_NAME ),
-     		'add_new'            => _x( 'Add New', 'Block Area', WD_THEME_NAME ),
-     		'add_new_item'       => __( 'Add New Block Area', WD_THEME_NAME ),
-     		'new_item'           => __( 'New Block Area', WD_THEME_NAME ),
-     		'edit_item'          => __( 'Edit Block Area', WD_THEME_NAME ),
-     		'view_item'          => __( 'View Block Area', WD_THEME_NAME ),
-     		'all_items'          => __( 'All Block Areas', WD_THEME_NAME ),
-     		'search_items'       => __( 'Search Block Areas', WD_THEME_NAME ),
-     		'parent_item_colon'  => __( 'Parent Block Areas:', WD_THEME_NAME ),
-     		'not_found'          => __( 'No Block Areas found.', WD_THEME_NAME ),
-     		'not_found_in_trash' => __( 'No Block Areas found in Trash.', WD_THEME_NAME )
+     		'name'               => _x( 'Block Area', 'post type general name', WD_PLUGIN_THEME_NAME ),
+     		'singular_name'      => _x( 'Block Area', 'post type singular name', WD_PLUGIN_THEME_NAME ),
+     		'menu_name'          => _x( 'Block Areas', 'admin menu', WD_PLUGIN_THEME_NAME ),
+     		'name_admin_bar'     => _x( 'Block Area', 'add new on admin bar', WD_PLUGIN_THEME_NAME ),
+     		'add_new'            => _x( 'Add New', 'Block Area', WD_PLUGIN_THEME_NAME ),
+     		'add_new_item'       => __( 'Add New Block Area', WD_PLUGIN_THEME_NAME ),
+     		'new_item'           => __( 'New Block Area', WD_PLUGIN_THEME_NAME ),
+     		'edit_item'          => __( 'Edit Block Area', WD_PLUGIN_THEME_NAME ),
+     		'view_item'          => __( 'View Block Area', WD_PLUGIN_THEME_NAME ),
+     		'all_items'          => __( 'All Block Areas', WD_PLUGIN_THEME_NAME ),
+     		'search_items'       => __( 'Search Block Areas', WD_PLUGIN_THEME_NAME ),
+     		'parent_item_colon'  => __( 'Parent Block Areas:', WD_PLUGIN_THEME_NAME ),
+     		'not_found'          => __( 'No Block Areas found.', WD_PLUGIN_THEME_NAME ),
+     		'not_found_in_trash' => __( 'No Block Areas found in Trash.', WD_PLUGIN_THEME_NAME )
      	];
 
      	$args = array(
                'labels'              => $labels,
-               'description'         => __( 'Block areas used to show custom blocks in templates.', WD_THEME_NAME ),
+               'description'         => __( 'Block areas used to show custom blocks in templates.', WD_PLUGIN_THEME_NAME ),
                'public'              => false,
                'show_ui'             => true,
                'show_in_rest'        => true,
