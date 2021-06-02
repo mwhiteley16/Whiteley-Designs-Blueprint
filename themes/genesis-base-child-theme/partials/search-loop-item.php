@@ -19,6 +19,6 @@
 
      </div>
 
-     <a class="readmore wd-button" href="<?php the_permalink(); ?>"><?php _e( 'Learn More', CHILD_THEME_SLUG ); ?></a>
+     <a class="readmore wd-button" href="<?php the_permalink(); ?>"><?php _e( 'Learn More', WD_CHILD_THEME_SLUG ); ?></a>
 
 </div>

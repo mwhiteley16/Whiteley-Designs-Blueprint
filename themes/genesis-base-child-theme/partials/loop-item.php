@@ -39,7 +39,7 @@
           <h4 class="loop-item__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
           <span class="loop-item__byline">
-               <?php _e( 'By', CHILD_THEME_SLUG ); ?> <a href="<?php echo $author_posts; ?>"><?php echo $author_display_name; ?></a> <?php _e( 'on', CHILD_THEME_SLUG ); ?> <?php echo $post_date; ?>
+               <?php _e( 'By', WD_CHILD_THEME_SLUG ); ?> <a href="<?php echo $author_posts; ?>"><?php echo $author_display_name; ?></a> <?php _e( 'on', WD_CHILD_THEME_SLUG ); ?> <?php echo $post_date; ?>
           </span>
 
           <div class="loop-item__excerpt">
@@ -47,7 +47,7 @@
           </div>
 
           <div class="loop-item__readmore">
-               <a href="<?php the_permalink(); ?>"><?php _e( 'Continue Reading', CHILD_THEME_SLUG ); ?></a>
+               <a href="<?php the_permalink(); ?>"><?php _e( 'Continue Reading', WD_CHILD_THEME_SLUG ); ?></a>
           </div>
 
      </div>

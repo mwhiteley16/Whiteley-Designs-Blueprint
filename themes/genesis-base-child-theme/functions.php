@@ -16,9 +16,9 @@
  For access contact matt@whiteleydesigns.com
  */
 
-define( 'CHILD_THEME_NAME', 'Base Genesis Child Theme' );
-define( 'CHILD_THEME_SLUG', 'base-genesis-child' );
-define( 'CHILD_THEME_VERSION', '1.0.0' );
+define( 'WD_CHILD_THEME_NAME', 'Base Genesis Child Theme' );
+define( 'WD_CHILD_THEME_SLUG', 'base-genesis-child' );
+define( 'WD_CHILD_THEME_VERSION', '1.0.0' );
 
 
 /**

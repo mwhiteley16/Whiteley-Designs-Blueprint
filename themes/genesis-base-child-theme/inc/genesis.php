@@ -63,7 +63,7 @@ add_theme_support( 'custom-logo',
 */
 add_theme_support( 'genesis-menus',
      [
-          'primary' => __( 'Primary Navigation Menu', CHILD_THEME_SLUG ),
+          'primary' => __( 'Primary Navigation Menu', WD_CHILD_THEME_SLUG ),
      ]
 );
 
@@ -88,7 +88,7 @@ genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_register_layout(
      'thin-layout',
           [
-               'label' => __( 'Thin Layout', CHILD_THEME_SLUG )
+               'label' => __( 'Thin Layout', WD_CHILD_THEME_SLUG )
           ]
 );
 
