@@ -176,6 +176,20 @@ add_filter( 'admin_body_class', 'wd_editor_layout_class' );
 
 
 /**
+* Disable self pingbacks
+*/
+function wd_disable_self_pingbacks( &$links ) {
+
+     foreach ( $links as $l => $link ) {
+          if ( 0 === strpos( $link, get_option( 'home' ) ) ) {
+               unset($links[$l]);
+          }
+     }
+}
+// add_action( 'pre_ping', 'wd_disable_self_pingbacks' );
+
+
+/**
 * Add custom image sizes
 */
 // add_image_size( 'size-name', 000, 000, true );
