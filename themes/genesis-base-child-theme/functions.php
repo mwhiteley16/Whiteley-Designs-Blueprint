@@ -26,20 +26,18 @@ define( 'WD_CHILD_THEME_VERSION', '1.0.0' );
 */
 function wd_theme_fonts() {
 
-     $font_families = apply_filters(
-          'wd_theme_fonts',
-          [
-               'Roboto:300,300i,400,400i,500,500i,700,700i,900,900i'
-          ]
-     );
+     // array of Google Fonts
+     $font_families_array = [
+          'Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900',
+          'Open+Sans:ital,wght@0,300;0,400;1,300'
+     ];
 
-     $query_args = [
-		'family' => implode( '|', $font_families ),
-		'subset' => 'latin,latin-ext',
-	];
+     // create URL string from array of font families
+     $font_families_string = implode( '&family=', $font_families_array );
 
-	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-     $fonts_url = $fonts_url . '&display=swap';
+     // create proper Google Font URL string
+     $fonts_url = 'https://fonts.googleapis.com/css2?family=' . $font_families_string . '&display=swap';
+
 	return esc_url_raw( $fonts_url );
 }
 
@@ -52,7 +50,10 @@ function wd_global_enqueues() {
      // fonts
      wp_enqueue_style(
           'wd-fonts',
-          wd_theme_fonts()
+          wd_theme_fonts(),
+          array(),
+          null, // remove version parameter to allow multiple fonts in string
+          // 'print' // optionally defer font loading to print (performance)
      );
 
      // javascript
