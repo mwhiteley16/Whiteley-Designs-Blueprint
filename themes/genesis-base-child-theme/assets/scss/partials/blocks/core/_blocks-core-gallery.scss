@@ -7,14 +7,14 @@
  */
 
  /* ----- Core Block Gallery -------------------- */
-.wp-block-gallery {
+.entry-content .wp-block-gallery {
 
      ul {
           padding-left: 0;
           margin-bottom: 0;
 
           .blocks-gallery-item {
-               margin: 0;
+               padding-bottom: 0;
           }
      }
 }

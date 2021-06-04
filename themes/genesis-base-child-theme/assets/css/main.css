@@ -3076,11 +3076,11 @@ a.wd-button--inverse.has-black-background-color {
  *
  */
 /* ----- Core Block Gallery -------------------- */
-.wp-block-gallery ul {
+.entry-content .wp-block-gallery ul {
   padding-left: 0;
   margin-bottom: 0; }
-  .wp-block-gallery ul .blocks-gallery-item {
-    margin: 0; }
+  .entry-content .wp-block-gallery ul .blocks-gallery-item {
+    padding-bottom: 0; }
 
 /**
  * /assets/scss/partials/blocks/core/blocks-core-group.scss
