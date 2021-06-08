@@ -64,5 +64,5 @@ function wd_acf_dynamic_colors_load( $field ) {
      }
 
      return $field;
-     
+
 }

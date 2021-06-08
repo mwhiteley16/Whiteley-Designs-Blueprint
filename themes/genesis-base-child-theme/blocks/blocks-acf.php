@@ -20,24 +20,23 @@ function wd_acf_blocks() {
           // acf_register_block_type(
           //      [
           //           'name'			=> '',
-          //           'title'			=> __( '', WD_PLUGIN_THEME_NAME ),
-          //           'description'		=> __( '', WD_PLUGIN_THEME_NAME ),
+          //           'title'			=> __( '', WD_CHILD_THEME_NAME ),
+          //           'description'		=> __( '', WD_CHILD_THEME_NAME ),
           //           'category'		=> 'wd-blocks',
           //           'mode'              => 'preview',
           //           'align'             => '',
           //           'render_callback'	=> 'wd_acf_block_render_callback',
-          //           'enqueue_script'    => plugin_dir_url(__FILE__) . '/acf-blocks/js/block-acf-NAME.js',
-          //           'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/acf-css-output/blocks-NAME.css',
+          //           'enqueue_script'    => get_stylesheet_directory_uri() . '/blocks/acf-blocks/js/block-acf-NAME.js',
           //           'icon'			=> [
           //                'background' => '#fff',
-          //                'foreground' => WD_PLUGIN_BLOCK_ICON_COLOR,
+          //                'foreground' => WD_BLOCK_ICON_COLOR,
           //                'src'        => 'star-filled'
           //           ],
           //           'keywords' => [
           //                '',
           //                'wd',
           //                'acf',
-          //                WD_PLUGIN_THEME_SLUG
+          //                WD_CHILD_THEME_SLUG
           //           ],
           //           'post_type' => [
           //                'post',
@@ -58,22 +57,22 @@ function wd_acf_blocks() {
           acf_register_block_type(
                [
                     'name'			=> 'acf-cover-with-white-box',
-                    'title'			=> __( 'Cover w/ White Box Block', WD_PLUGIN_THEME_NAME ),
-                    'description'		=> __( 'A image cover block with a white content box.', WD_PLUGIN_THEME_NAME ),
+                    'title'			=> __( 'Cover w/ White Box Block', WD_CHILD_THEME_NAME ),
+                    'description'		=> __( 'A image cover block with a white content box.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'render_callback'	=> 'wd_acf_block_render_callback',
                     'mode'              => 'preview',
                     'align'             => 'full',
                     'icon'			=> [
                          'background' => '#fff',
-                         'foreground' => WD_PLUGIN_BLOCK_ICON_COLOR,
+                         'foreground' => WD_BLOCK_ICON_COLOR,
                          'src'        => 'star-filled'
                     ],
                     'keywords' => [
                          'cover with white box',
                          'wd',
                          'acf',
-                         WD_PLUGIN_THEME_SLUG
+                         WD_CHILD_THEME_SLUG
                     ],
                     'post_type' => [
                          'post',
@@ -89,14 +88,14 @@ function wd_acf_blocks() {
           acf_register_block_type(
                [
                     'name'			=> 'acf-header-with-button',
-                    'title'			=> __( 'Header with Button Block', WD_PLUGIN_THEME_NAME ),
-                    'description'		=> __( 'A block for a heading w/ a button on the right side.', WD_PLUGIN_THEME_NAME ),
+                    'title'			=> __( 'Header with Button Block', WD_CHILD_THEME_NAME ),
+                    'description'		=> __( 'A block for a heading w/ a button on the right side.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'render_callback'	=> 'wd_acf_block_render_callback',
                     'mode'              => 'preview',
                     'icon'			=> [
                          'background' => '#fff',
-                         'foreground' => WD_PLUGIN_BLOCK_ICON_COLOR,
+                         'foreground' => WD_BLOCK_ICON_COLOR,
                          'src'        => 'star-filled'
                     ],
                     'keywords' => [
@@ -104,7 +103,7 @@ function wd_acf_blocks() {
                          'heading button',
                          'wd',
                          'acf',
-                         WD_PLUGIN_THEME_SLUG
+                         WD_CHILD_THEME_SLUG
                     ],
                     'post_type' => [
                          'post',
@@ -120,22 +119,22 @@ function wd_acf_blocks() {
           acf_register_block_type(
                [
                     'name'			=> 'acf-hero',
-                    'title'			=> __( 'Hero Block', WD_PLUGIN_THEME_NAME ),
-                    'description'		=> __( 'A hero block.' , WD_PLUGIN_THEME_NAME ),
+                    'title'			=> __( 'Hero Block', WD_CHILD_THEME_NAME ),
+                    'description'		=> __( 'A hero block.' , WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'mode'              => 'preview',
                     'align'             => 'full',
                     'render_callback'	=> 'wd_acf_block_render_callback',
                     'icon'			=> [
                          'background' => '#fff',
-                         'foreground' => WD_PLUGIN_BLOCK_ICON_COLOR,
+                         'foreground' => WD_BLOCK_ICON_COLOR,
                          'src'        => 'star-filled'
                     ],
                     'keywords' => [
                          'hero',
                          'wd',
                          'acf',
-                         WD_PLUGIN_THEME_SLUG
+                         WD_CHILD_THEME_SLUG
                     ],
                     'post_type' => [
                          'post',
@@ -152,14 +151,14 @@ function wd_acf_blocks() {
           acf_register_block_type(
                [
                     'name'			=> 'acf-highlight-split',
-                    'title'			=> __( 'Highlight Split Block', WD_PLUGIN_THEME_NAME ),
-                    'description'		=> __( 'A block to media content split with block editor content with a color background.', WD_PLUGIN_THEME_NAME ),
+                    'title'			=> __( 'Highlight Split Block', WD_CHILD_THEME_NAME ),
+                    'description'		=> __( 'A block to media content split with block editor content with a color background.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'mode'              => 'preview',
                     'render_callback'	=> 'wd_acf_block_render_callback',
                     'icon'			=> [
                          'background' => '#fff',
-                         'foreground' => WD_PLUGIN_BLOCK_ICON_COLOR,
+                         'foreground' => WD_BLOCK_ICON_COLOR,
                          'src'        => 'star-filled'
                     ],
                     'keywords' => [
@@ -168,7 +167,7 @@ function wd_acf_blocks() {
                          'split image',
                          'wd',
                          'acf',
-                         WD_PLUGIN_THEME_SLUG
+                         WD_CHILD_THEME_SLUG
                     ],
                     'post_type' => [
                          'post',
@@ -184,21 +183,21 @@ function wd_acf_blocks() {
           acf_register_block_type(
                [
                     'name'			=> 'acf-max-width-block',
-                    'title'			=> __( 'Max-Width Block', WD_PLUGIN_THEME_NAME ),
-                    'description'		=> __( 'A block to wrap any content in a max-width container with alignment options.', WD_PLUGIN_THEME_NAME ),
+                    'title'			=> __( 'Max-Width Block', WD_CHILD_THEME_NAME ),
+                    'description'		=> __( 'A block to wrap any content in a max-width container with alignment options.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'mode'              => 'preview',
                     'render_callback'	=> 'wd_acf_block_render_callback',
                     'icon'			=> [
                          'background' => '#fff',
-                         'foreground' => WD_PLUGIN_BLOCK_ICON_COLOR,
+                         'foreground' => WD_BLOCK_ICON_COLOR,
                          'src'        => 'star-filled'
                     ],
                     'keywords' => [
                          'max-width',
                          'wd',
                          'acf',
-                         WD_PLUGIN_THEME_SLUG
+                         WD_CHILD_THEME_SLUG
                     ],
                     'post_type' => [
                          'post',
@@ -215,14 +214,14 @@ function wd_acf_blocks() {
           acf_register_block_type(
                [
                     'name'			=> 'acf-recent-posts',
-                    'title'			=> __( 'Recent Posts Block', WD_PLUGIN_THEME_NAME ),
-                    'description'		=> __( 'A block to recent posts.', WD_PLUGIN_THEME_NAME ),
+                    'title'			=> __( 'Recent Posts Block', WD_CHILD_THEME_NAME ),
+                    'description'		=> __( 'A block to recent posts.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'render_callback'	=> 'wd_acf_block_render_callback',
                     'mode'              => 'preview',
                     'icon'			=> [
                          'background' => '#fff',
-                         'foreground' => WD_PLUGIN_BLOCK_ICON_COLOR,
+                         'foreground' => WD_BLOCK_ICON_COLOR,
                          'src'        => 'star-filled'
                     ],
                     'keywords' => [
@@ -230,7 +229,7 @@ function wd_acf_blocks() {
                          'recent posts',
                          'wd',
                          'acf',
-                         WD_PLUGIN_THEME_SLUG
+                         WD_CHILD_THEME_SLUG
                     ],
                     'post_type' => [
                          'post',
@@ -243,14 +242,14 @@ function wd_acf_blocks() {
           acf_register_block_type(
                [
                     'name'			=> 'acf-separator',
-                    'title'			=> __( 'Separator Block', WD_PLUGIN_THEME_NAME ),
-                    'description'		=> __( 'A block to replace the standard block editor separator block.', WD_PLUGIN_THEME_NAME ),
+                    'title'			=> __( 'Separator Block', WD_CHILD_THEME_NAME ),
+                    'description'		=> __( 'A block to replace the standard block editor separator block.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'mode'              => 'preview',
                     'render_callback'	=> 'wd_acf_block_render_callback',
                     'icon'			=> [
                          'background' => '#fff',
-                         'foreground' => WD_PLUGIN_BLOCK_ICON_COLOR,
+                         'foreground' => WD_BLOCK_ICON_COLOR,
                          'src'        => 'star-filled'
                     ],
                     'keywords' => [
@@ -259,7 +258,7 @@ function wd_acf_blocks() {
                          'divider',
                          'wd',
                          'acf',
-                         WD_PLUGIN_THEME_SLUG
+                         WD_CHILD_THEME_SLUG
                     ],
                     'post_type' => [
                          'post',
@@ -274,14 +273,14 @@ function wd_acf_blocks() {
           acf_register_block_type(
                [
                     'name'			=> 'acf-team',
-                    'title'			=> __( 'Team Block', WD_PLUGIN_THEME_NAME ),
-                    'description'		=> __( 'A block to showcase team members block.', WD_PLUGIN_THEME_NAME ),
+                    'title'			=> __( 'Team Block', WD_CHILD_THEME_NAME ),
+                    'description'		=> __( 'A block to showcase team members block.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'mode'              => 'preview',
                     'render_callback'	=> 'wd_acf_block_render_callback',
                     'icon'			=> [
                          'background' => '#fff',
-                         'foreground' => WD_PLUGIN_BLOCK_ICON_COLOR,
+                         'foreground' => WD_BLOCK_ICON_COLOR,
                          'src'        => 'star-filled'
                     ],
 
@@ -289,7 +288,7 @@ function wd_acf_blocks() {
                          'team',
                          'wd',
                          'acf',
-                         WD_PLUGIN_THEME_SLUG
+                         WD_CHILD_THEME_SLUG
                     ],
                     'post_type' => [
                          'post',
@@ -332,7 +331,7 @@ function wd_block_category( $categories, $post ) {
 		[
 			[
 				'slug' => 'wd-blocks',
-				'title' => __( 'Whiteley Designs Blocks', WD_PLUGIN_THEME_NAME ),
+				'title' => __( 'Whiteley Designs Blocks', WD_CHILD_THEME_NAME ),
 			],
 		]
 	);

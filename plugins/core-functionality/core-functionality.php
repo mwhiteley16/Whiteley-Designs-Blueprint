@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Core Functionality Plugin
-Description: DO NOT DEACTIVATE. This plugin controls creation of Custom Post Types (CPTs), taxonomies, ACF blocks and other non-theme specific functionality.  This is a core functionality plugin required for the site to function properly.
+Description: DO NOT DEACTIVATE. This plugin controls creation of Custom Post Types (CPTs), taxonomies and other non-theme specific functionality.  This is a core functionality plugin required for the site to function properly.
 Version: 1.0
 Author: Matt Whiteley
 Author URI: http://www.whiteleydesigns.com
@@ -17,20 +17,6 @@ https://github.com/mwhiteley16/Whiteley-Designs-Blueprint/tree/master/plugins/co
 define( 'WD_PLUGIN_PATH', WP_PLUGIN_DIR . '/' . basename( dirname( __FILE__ ) ) );
 define( 'WD_PLUGIN_THEME_NAME', 'Base Genesis Child Theme' );
 define( 'WD_PLUGIN_THEME_SLUG', 'base-child-theme' );
-define( 'WD_PLUGIN_BLOCK_ICON_COLOR', '#b5267b' );
-
-
-/**
-* blocks
-*/
-require_once WD_PLUGIN_PATH.'/lib/blocks/blocks-acf.php';
-// require_once WD_PLUGIN_PATH.'/lib/blocks/block-patterns.php';
-
-
-/**
-* custom functionality
-*/
-require_once WD_PLUGIN_PATH.'/lib/functionality/acf.php';
 
 
 /**
@@ -44,23 +30,3 @@ require_once WD_PLUGIN_PATH.'/lib/post-types/post-type-block-areas.php';
 * custom taxonomies
 */
 //require_once WD_PLUGIN_PATH.'/lib/taxonomies/taxonomy-news.php';
-
-
-/**
-* change location of acf json sync to /acf-json folder within core functionality plugin
-*
-* @link https://www.advancedcustomfields.com/resources/local-json/
-*
-*/
-add_filter( 'acf/settings/save_json',
-     function() {
-          return dirname(__FILE__) . '/acf-json';
-     }
-);
-
-add_filter( 'acf/settings/load_json',
-     function() {
-          $paths[] = dirname(__FILE__) . '/acf-json';
-          return $paths;
-     }
-);

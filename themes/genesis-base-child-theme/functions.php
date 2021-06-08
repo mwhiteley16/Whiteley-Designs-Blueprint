@@ -19,6 +19,7 @@
 define( 'WD_CHILD_THEME_NAME', 'Base Genesis Child Theme' );
 define( 'WD_CHILD_THEME_SLUG', 'base-genesis-child' );
 define( 'WD_CHILD_THEME_VERSION', '1.0.0' );
+define( 'WD_BLOCK_ICON_COLOR', '#b5267b' );
 
 
 /**
@@ -144,6 +145,9 @@ add_action( 'admin_enqueue_scripts', 'wd_admin_style' );
  *
  */
 function wd_base_setup() {
+     include_once( get_stylesheet_directory() . '/blocks/blocks-acf.php' );
+     // include_once( get_stylesheet_directory() . '/blocks/block-patterns.php' );
+     include_once( get_stylesheet_directory() . '/inc/acf.php' );
      include_once( get_stylesheet_directory() . '/inc/genesis.php' );
      include_once( get_stylesheet_directory() . '/inc/gravityforms.php' );
      include_once( get_stylesheet_directory() . '/inc/gutenberg.php' );
