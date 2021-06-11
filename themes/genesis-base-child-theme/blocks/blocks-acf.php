@@ -79,8 +79,10 @@ function wd_acf_blocks() {
                          'page'
                     ],
                     'supports' => [
-                         'align' => [ 'full' ],
-                         'jsx'   => true
+                         'align'           => [ 'full' ],
+                         'anchor'          => false,
+                         'customClassName' => true,
+                         'jsx'             => true
                     ]
                ]
           );
@@ -110,8 +112,10 @@ function wd_acf_blocks() {
                          'page'
                     ],
                     'supports' => [
-                         'align' => false,
-                         'jsx'   => true
+                         'align'           => false,
+                         'anchor'          => false,
+                         'customClassName' => true,
+                         'jsx'             => true
                     ]
                ]
           );
@@ -141,9 +145,11 @@ function wd_acf_blocks() {
                          'page'
                     ],
                     'supports' => [
-                         'align'         => [ 'wide', 'full' ],
-                         'align_content' => 'matrix',
-                         'jsx'           => true
+                         'align'           => [ 'wide', 'full' ],
+                         'align_content'   => 'matrix',
+                         'anchor'          => false,
+                         'customClassName' => true,
+                         'jsx'             => true
                     ]
                ]
           );
@@ -174,8 +180,10 @@ function wd_acf_blocks() {
                          'page'
                     ],
                     'supports' => [
-                         'align' => false,
-                         'jsx'   => true,
+                         'align'           => false,
+                         'anchor'          => false,
+                         'customClassName' => true,
+                         'jsx'             => true,
                     ]
                ]
           );
@@ -204,9 +212,11 @@ function wd_acf_blocks() {
                          'page'
                     ],
                     'supports' => [
-                         'align'      => false,
-                         'align_text' => true,
-                         'jsx'        => true
+                         'align'           => false,
+                         'align_text'      => true,
+                         'anchor'          => false,
+                         'customClassName' => true,
+                         'jsx'             => true
                     ]
                ]
           );
@@ -265,7 +275,9 @@ function wd_acf_blocks() {
                          'page'
                     ],
                     'supports' => [
-                         'align' => [ 'full', 'wide' ],
+                         'align'           => [ 'full', 'wide' ],
+                         'anchor'          => false,
+                         'customClassName' => true,
                     ]
                ]
           );
@@ -283,7 +295,6 @@ function wd_acf_blocks() {
                          'foreground' => WD_BLOCK_ICON_COLOR,
                          'src'        => 'star-filled'
                     ],
-
                     'keywords' => [
                          'team',
                          'wd',
@@ -295,7 +306,9 @@ function wd_acf_blocks() {
                          'page'
                     ],
                     'supports' => [
-                         'align' => [ 'wide' ],
+                         'align'           => [ 'wide' ],
+                         'anchor'          => false,
+                         'customClassName' => true,
                     ]
                ]
           );
