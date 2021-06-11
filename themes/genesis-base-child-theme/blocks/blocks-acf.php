@@ -25,7 +25,7 @@ function wd_acf_blocks() {
           //           'category'		=> 'wd-blocks',
           //           'mode'              => 'preview',
           //           'align'             => '',
-          //           'render_callback'	=> 'wd_acf_block_render_callback',
+          //           'render_template'   => 'blocks/acf-blocks/templates/block-acf-NAME.php',
           //           'enqueue_script'    => get_stylesheet_directory_uri() . '/blocks/acf-blocks/js/block-acf-NAME.js',
           //           'icon'			=> [
           //                'background' => '#fff',
@@ -48,6 +48,7 @@ function wd_acf_blocks() {
           //                'align_text' => true, // defaults to false
           //                'align_content' => true, // defaults to false ('matrix' to use align_content matrix)
           //                'anchor' => true, // defaults to false
+          //                'customClassName' => true, // defaults to false 
           //                'multiple' => false, // allows multiple instances of block, defaults to true
           //                'jsx' => true // defaults to false, used for innerBlocks
           //           ]
@@ -60,7 +61,7 @@ function wd_acf_blocks() {
                     'title'			=> __( 'Cover w/ White Box Block', WD_CHILD_THEME_NAME ),
                     'description'		=> __( 'A image cover block with a white content box.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
-                    'render_callback'	=> 'wd_acf_block_render_callback',
+                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-cover-with-white-box.php',
                     'mode'              => 'preview',
                     'align'             => 'full',
                     'icon'			=> [
@@ -93,7 +94,7 @@ function wd_acf_blocks() {
                     'title'			=> __( 'Header with Button Block', WD_CHILD_THEME_NAME ),
                     'description'		=> __( 'A block for a heading w/ a button on the right side.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
-                    'render_callback'	=> 'wd_acf_block_render_callback',
+                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-header-with-button.php',
                     'mode'              => 'preview',
                     'icon'			=> [
                          'background' => '#fff',
@@ -128,7 +129,7 @@ function wd_acf_blocks() {
                     'category'		=> 'wd-blocks',
                     'mode'              => 'preview',
                     'align'             => 'full',
-                    'render_callback'	=> 'wd_acf_block_render_callback',
+                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-hero.php',
                     'icon'			=> [
                          'background' => '#fff',
                          'foreground' => WD_BLOCK_ICON_COLOR,
@@ -161,7 +162,7 @@ function wd_acf_blocks() {
                     'description'		=> __( 'A block to media content split with block editor content with a color background.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'mode'              => 'preview',
-                    'render_callback'	=> 'wd_acf_block_render_callback',
+                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-highlight-split.php',
                     'icon'			=> [
                          'background' => '#fff',
                          'foreground' => WD_BLOCK_ICON_COLOR,
@@ -195,7 +196,7 @@ function wd_acf_blocks() {
                     'description'		=> __( 'A block to wrap any content in a max-width container with alignment options.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'mode'              => 'preview',
-                    'render_callback'	=> 'wd_acf_block_render_callback',
+                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-max-width-block.php',
                     'icon'			=> [
                          'background' => '#fff',
                          'foreground' => WD_BLOCK_ICON_COLOR,
@@ -227,7 +228,7 @@ function wd_acf_blocks() {
                     'title'			=> __( 'Recent Posts Block', WD_CHILD_THEME_NAME ),
                     'description'		=> __( 'A block to recent posts.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
-                    'render_callback'	=> 'wd_acf_block_render_callback',
+                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-recent-posts.php',
                     'mode'              => 'preview',
                     'icon'			=> [
                          'background' => '#fff',
@@ -256,7 +257,7 @@ function wd_acf_blocks() {
                     'description'		=> __( 'A block to replace the standard block editor separator block.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'mode'              => 'preview',
-                    'render_callback'	=> 'wd_acf_block_render_callback',
+                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-separator.php',
                     'icon'			=> [
                          'background' => '#fff',
                          'foreground' => WD_BLOCK_ICON_COLOR,
@@ -289,7 +290,7 @@ function wd_acf_blocks() {
                     'description'		=> __( 'A block to showcase team members block.', WD_CHILD_THEME_NAME ),
                     'category'		=> 'wd-blocks',
                     'mode'              => 'preview',
-                    'render_callback'	=> 'wd_acf_block_render_callback',
+                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-team.php',
                     'icon'			=> [
                          'background' => '#fff',
                          'foreground' => WD_BLOCK_ICON_COLOR,
@@ -314,22 +315,6 @@ function wd_acf_blocks() {
           );
 
  	}
-}
-
-
-/**
-* Callback to render proper block template
-*/
-function wd_acf_block_render_callback( $block ) {
-
-	// convert name into path friendly slug
-	$slug = str_replace( 'acf/', '', $block['name'] );
-
-     // include a template part from within the "blocks/templates" folder
-	if( file_exists( dirname(__FILE__) . "/acf-blocks/templates/block-{$slug}.php") ) {
-		include( dirname(__FILE__) . "/acf-blocks/templates/block-{$slug}.php" );
-	}
-
 }
 
 
