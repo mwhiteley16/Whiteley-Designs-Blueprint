@@ -76,6 +76,42 @@ add_filter( 'nav_menu_css_class', 'wd_clean_nav_menu_classes', 5 );
 
 
 /**
+ * Add a dropdown icon to top-level menu items.
+ *
+ * @param string $output Nav menu item start element.
+ * @param object $item   Nav menu item.
+ * @param int    $depth  Depth.
+ * @param object $args   Nav menu args.
+ * @return string Nav menu item start element.
+ * Add a dropdown icon to top-level menu items
+ */
+function wd_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
+
+     // only use on primary navigation menu
+	if ( ! isset( $args->theme_location ) || 'primary' !== $args->theme_location ) {
+		return $output;
+	}
+
+     // only use if menu depth is greater than 1
+	if ( 1 === $args->depth ) {
+		return $output;
+	}
+
+     // add submenu dropdown to elements that have children
+	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
+
+          $output .= '<button aria-label="Submenu Dropdown" tabindex="-1">';
+               $output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/images/utility/angle-down-regular.svg" alt="Submenu Down Arrow">';
+          $output .= '</button>';
+
+	}
+
+	return $output;
+}
+add_filter( 'walker_nav_menu_start_el', 'wd_nav_add_dropdown_icons', 10, 4 );
+
+
+/**
 * Clean up post classes
 */
 function wd_clean_post_classes( $classes ) {

@@ -394,7 +394,7 @@ input[type="submit"][disabled]:focus,
 /**
 * Transitions
 */
-.block-editor-block-list__layout .wp-block-image.is-style-hide-desktop, .mobile-navigation-icon span, .mobile-navigation-icon, .nav-primary ul .menu-item.menu-button a span, a, button,
+.block-editor-block-list__layout .wp-block-image.is-style-hide-desktop, .mobile-navigation-icon span, .mobile-navigation-icon, .nav-primary .sub-menu, .nav-primary ul .menu-item.menu-button a span, a, button,
 input:focus,
 input[type="button"],
 input[type="reset"],
@@ -777,7 +777,14 @@ h6 {
 @media (max-width: 1000px) {
   .nav-primary {
     display: none;
-    width: 100%; } }
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+    margin-left: -30px;
+    margin-right: -30px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 30px; } }
 
 .nav-primary .wrap {
   max-width: 100%;
@@ -787,7 +794,8 @@ h6 {
   display: flex;
   flex-wrap: wrap; }
   .nav-primary ul .menu-item {
-    list-style: none; }
+    list-style: none;
+    position: relative; }
     .nav-primary ul .menu-item a {
       border: none;
       color: #373737;
@@ -798,11 +806,31 @@ h6 {
     .nav-primary ul .menu-item:hover > a, .nav-primary ul .menu-item.current-menu-item > a, .nav-primary ul .menu-item.current-menu-ancestor > a {
       color: #007991;
       text-decoration: none; }
-    .nav-primary ul .menu-item:hover {
-      position: static; }
-      .nav-primary ul .menu-item:hover > .sub-menu {
-        left: auto;
-        opacity: 1; }
+    .nav-primary ul .menu-item.menu-item-has-children > a {
+      padding-right: 34px; }
+    .nav-primary ul .menu-item button {
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      outline: none;
+      cursor: pointer;
+      position: absolute;
+      line-height: 0;
+      top: 17px;
+      right: 7px; }
+      .nav-primary ul .menu-item button img {
+        width: 20px;
+        height: 20px; }
+      @media (max-width: 1000px) {
+        .nav-primary ul .menu-item button {
+          top: 4px;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center; } }
     .nav-primary ul .menu-item.menu-button a span {
       background-color: #007991;
       color: #fff;
@@ -811,26 +839,49 @@ h6 {
         background: #004e5e;
         color: #fff;
         text-decoration: none; }
-  @media (max-width: 1000px) {
-    .nav-primary ul {
-      width: calc(100% + 60px);
-      margin: 30px -30px 0;
-      display: flex;
-      flex-direction: column; }
+    .nav-primary ul .menu-item.open > .sub-menu {
+      display: block; }
+    .nav-primary ul .menu-item.open > button {
+      transform: rotate(180deg); }
+    @media (min-width: 1001px) {
+      .nav-primary ul .menu-item:hover > .sub-menu {
+        left: auto;
+        opacity: 1; } }
+    @media (max-width: 1000px) {
       .nav-primary ul .menu-item {
-        width: 100%; } }
+        width: 100%; }
+        .nav-primary ul .menu-item:not(.menu-button) {
+          border-top: 1px solid #e0e0e0; }
+        .nav-primary ul .menu-item.menu-button {
+          margin-top: 30px; } }
 .nav-primary .sub-menu {
-  background: #e0e0e0;
+  background: #fff;
   left: -9999px;
   opacity: 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   padding: 10px 0;
   position: absolute;
   width: auto;
+  min-width: 200px;
   z-index: 99; }
+  @media (max-width: 1000px) {
+    .nav-primary .sub-menu {
+      left: auto;
+      opacity: 1;
+      position: relative;
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-top: 1px solid #e0e0e0;
+      display: none; } }
   .nav-primary .sub-menu .menu-item {
     width: 100%;
     display: block;
-    clear: both; }
+    clear: both;
+    border-top: none !important; }
   .nav-primary .sub-menu a {
     width: 100%;
     background: transparent;
