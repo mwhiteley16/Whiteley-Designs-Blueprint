@@ -27,7 +27,7 @@
           }
      }
 
-     &.is-style-three-column {
+     &.is-variation-3-columns {
 
           @media(max-width:781px) {
                justify-content: center;
@@ -57,7 +57,7 @@
           }
      }
 
-     &.is-style-four-column {
+     &.is-variation-4-columns {
 
           @media(max-width:950px) {
                flex-wrap: wrap;
@@ -89,7 +89,7 @@
           }
      }
 
-     &.is-style-five-column {
+     &.is-variation-5-columns {
 
           @media(max-width:950px) {
                flex-wrap: wrap;

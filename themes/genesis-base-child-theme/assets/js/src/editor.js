@@ -34,18 +34,6 @@ wp.domReady( () => {
                     isDefault: true,
                },
                {
-                    name: 'three-column',
-                    label: 'Three Column',
-               },
-               {
-                    name: 'four-column',
-                    label: 'Four Column',
-               },
-               {
-                    name: 'five-column',
-                    label: 'Five Column',
-               },
-               {
                     name: 'wide-break',
                     label: 'Wide Break',
                },
@@ -251,8 +239,85 @@ wp.domReady( () => {
           ]
      );
 
+     // column variations
+     wp.blocks.unregisterBlockVariation( // removed unused layouts
+     	'core/columns',
+     	[
+               'one-column-full',
+               'two-columns-equal',
+               'two-columns-one-third-two-thirds',
+               'two-columns-two-thirds-one-third',
+               'three-columns-equal',
+               'three-columns-wider-center'
+          ]
+     );
 
-     // REMOVE CORE BLOCKS THAT AREN'T NEEDED
+     wp.blocks.registerBlockVariation( // add custom layouts & replace 2/3 column layouts
+          'core/columns',
+          [
+               {
+                    name: 'two-columns',
+                    title: '2 Columns',
+                    icon: 'star-filled',
+                    attributes: {
+                         className: 'is-variation-2-columns'
+                    },
+                    scope: [ 'block' ],
+                    innerBlocks: [
+                         [ 'core/column' ],
+                         [ 'core/column' ],
+                    ],
+               },
+               {
+                    name: 'three-columns',
+                    title: '3 Columns',
+                    icon: 'star-filled',
+                    attributes: {
+                         className: 'is-variation-3-columns'
+                    },
+                    scope: [ 'block' ],
+                    innerBlocks: [
+                         [ 'core/column' ],
+                         [ 'core/column' ],
+                         [ 'core/column' ],
+                    ],
+               },
+               {
+                    name: 'four-columns',
+                    title: '4 Columns',
+                    icon: 'star-filled',
+                    attributes: {
+                         className: 'is-variation-4-columns'
+                    },
+                    scope: [ 'block' ],
+                    innerBlocks: [
+                         [ 'core/column' ],
+                         [ 'core/column' ],
+                         [ 'core/column' ],
+                         [ 'core/column' ],
+                    ],
+               },
+               {
+                    name: 'five-columns',
+                    title: '5 Columns',
+                    icon: 'star-filled',
+                    attributes: {
+                         className: 'is-variation-5-columns'
+                    },
+                    scope: [ 'block' ],
+                    innerBlocks: [
+                         [ 'core/column' ],
+                         [ 'core/column' ],
+                         [ 'core/column' ],
+                         [ 'core/column' ],
+                         [ 'core/column' ],
+                    ],
+               },
+          ]
+     );
+
+
+     // REMOVE CORE BLOCKS / VARIATIONS THAT AREN'T NEEDED
 
      // design
      wp.blocks.unregisterBlockType( 'core/separator' );
