@@ -3028,6 +3028,14 @@ a.wd-button--inverse.has-black-background-color {
     background-color: #000 !important;
     border: 2px solid #000; }
 
+.wp-block-buttons.is-variation-wide .wp-block-button__link {
+  padding: 10px 30px; }
+
+.wp-block-buttons.is-variation-full .wp-block-button,
+.wp-block-buttons.is-variation-full .wp-block-button__link {
+  width: 100%;
+  margin-right: 0; }
+
 /**
  * /assets/scss/partials/blocks/core/blocks-core-columns.scss
  *

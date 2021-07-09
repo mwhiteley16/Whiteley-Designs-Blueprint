@@ -228,6 +228,30 @@ wp.domReady( () => {
      );
 
 
+     // ADD CUSTOM BLOCK VARIATIONS
+
+     // button variations
+     wp.blocks.registerBlockVariation(
+          'core/buttons',
+          [
+               {
+                    name: 'wide',
+                    title: 'Wide Buttons',
+                    attributes: {
+                         className: 'is-variation-wide'
+                    },
+               },
+               {
+                    name: 'full',
+                    title: 'Full Buttons',
+                    attributes: {
+                         className: 'is-variation-full'
+                    },
+               }
+          ]
+     );
+
+
      // REMOVE CORE BLOCKS THAT AREN'T NEEDED
 
      // design

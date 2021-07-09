@@ -56,7 +56,6 @@ a.wd-button {
                }
 		}
 	}
-
 }
 
 .is-style-inverse .wp-block-button__link,
@@ -104,6 +103,28 @@ a.wd-button--inverse {
                     background-color: $color !important;
                     border: 2px solid $color;
                }
+          }
+     }
+}
+
+.wp-block-buttons {
+
+     &.is-variation-wide {
+
+          .wp-block-button {
+
+               &__link {
+                    padding: 10px 30px;
+               }
+          }
+     }
+
+     &.is-variation-full {
+
+          .wp-block-button,
+          .wp-block-button__link {
+               width: 100%;
+               margin-right: 0;
           }
      }
 }
