@@ -1,5 +1,3 @@
-// @codekit-prepend quiet "flickity.pkgd.min.js";
-
 (function($){
 
      $(document).ready(function(){

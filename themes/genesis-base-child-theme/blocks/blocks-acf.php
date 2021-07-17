@@ -26,7 +26,20 @@ function wd_acf_blocks() {
           //           'mode'              => 'preview',
           //           'align'             => '',
           //           'render_template'   => 'blocks/acf-blocks/templates/block-acf-NAME.php',
-          //           'enqueue_script'    => get_stylesheet_directory_uri() . '/blocks/acf-blocks/js/block-acf-NAME.js',
+          //           'enqueue_assets'  => function() {
+          //                  wp_enqueue_script(
+          //                       'flickity',
+          //                       get_stylesheet_directory_uri() . '/assets/js/src/flickity.pkgd.min.js',
+          //                       [], null
+          //                  );
+          //                  wp_enqueue_script(
+          //                       'acf-custom-block',
+          //                       get_stylesheet_directory_uri() . '/blocks/acf-blocks/js/block.js',
+          //                       [ 'jquery' ],
+          //                       '',
+          //                       true
+          //                  );
+          //           },
           //           'icon'			=> [
           //                'background' => '#fff',
           //                'foreground' => WD_BLOCK_ICON_COLOR,
@@ -48,7 +61,7 @@ function wd_acf_blocks() {
           //                'align_text' => true, // defaults to false
           //                'align_content' => true, // defaults to false ('matrix' to use align_content matrix)
           //                'anchor' => true, // defaults to false
-          //                'customClassName' => true, // defaults to false 
+          //                'customClassName' => true, // defaults to false
           //                'multiple' => false, // allows multiple instances of block, defaults to true
           //                'jsx' => true // defaults to false, used for innerBlocks
           //           ]

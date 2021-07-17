@@ -105,7 +105,7 @@ function wd_admin_enqueues() {
           true
      );
 
-     // flickity
+     // flickity - only needed if using flickity outside of custom ACF blocks
      // wp_enqueue_script(
      //      'wd-flickity-admin',
      //      get_stylesheet_directory_uri() . '/assets/js/src/flickity.pkgd.min.js',
