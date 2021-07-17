@@ -148,14 +148,21 @@ function wd_footer() {
 
 /**
 * Modify superfish scripts
+* Do not deregister and re-register script or load order will cause console errors
 */
-add_action( 'wp_enqueue_scripts', 'wd_disable_superfish' );
+// add_filter( 'genesis_superfish_args_url', 'wd_superfish_args_url' );
+
+function wd_superfish_args_url( $url ) {
+	return get_stylesheet_directory_uri() . '/assets/js/superfish-args-min.js';
+}
+
+/**
+* Remove superfish scripts
+*/
+// add_action( 'wp_enqueue_scripts', 'wd_disable_superfish' );
 function wd_disable_superfish() {
 
-     // remove superfish completely
 	wp_deregister_script( 'superfish' );
-
-     // remove superfish args (replaced with args in /assets/js/src/main-js.js)
 	wp_deregister_script( 'superfish-args' );
 }
 
