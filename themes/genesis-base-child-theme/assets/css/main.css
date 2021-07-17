@@ -336,7 +336,8 @@ input[type="reset"][disabled]:focus,
 input[type="submit"],
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus,
-.claim-search button {
+.claim-search button,
+button.gform_button {
   border: 2px solid #007991;
   background: #007991;
   color: #fff;
@@ -353,14 +354,16 @@ input[type="submit"][disabled]:focus,
   input[type="reset"][disabled]:hover,
   input[type="submit"]:hover,
   input[type="submit"][disabled]:hover,
-  .claim-search button:hover, .wp-block-button__link:focus, a.wd-button:focus,
+  .claim-search button:hover,
+  button.gform_button:hover, .wp-block-button__link:focus, a.wd-button:focus,
   input[type="button"]:focus,
   input[type="button"][disabled]:focus,
   input[type="reset"]:focus,
   input[type="reset"][disabled]:focus,
   input[type="submit"]:focus,
   input[type="submit"][disabled]:focus,
-  .claim-search button:focus {
+  .claim-search button:focus,
+  button.gform_button:focus {
     border-color: #004e5e;
     background: #004e5e;
     color: #fff;
@@ -375,18 +378,21 @@ input[type="submit"][disabled]:focus,
   input.button--inverse[type="submit"],
   input.button--inverse[type="submit"][disabled]:hover,
   input.button--inverse[type="submit"][disabled]:focus,
-  .claim-search button.button--inverse {
+  .claim-search button.button--inverse,
+  button.button--inverse.gform_button {
     background-color: transparent;
     color: #007991; }
     .button--inverse.wp-block-button__link:hover, a.button--inverse.wd-button:hover,
     input.button--inverse[type="button"]:hover,
     input.button--inverse[type="reset"]:hover,
     input.button--inverse[type="submit"]:hover,
-    .claim-search button.button--inverse:hover, .button--inverse.wp-block-button__link:focus, a.button--inverse.wd-button:focus,
+    .claim-search button.button--inverse:hover,
+    button.button--inverse.gform_button:hover, .button--inverse.wp-block-button__link:focus, a.button--inverse.wd-button:focus,
     input.button--inverse[type="button"]:focus,
     input.button--inverse[type="reset"]:focus,
     input.button--inverse[type="submit"]:focus,
-    .claim-search button.button--inverse:focus {
+    .claim-search button.button--inverse:focus,
+    button.button--inverse.gform_button:focus {
       background-color: #007991;
       color: #fff;
       border-color: #007991; }

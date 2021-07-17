@@ -241,8 +241,8 @@ wp.domReady( () => {
 
      // column variations
      wp.blocks.unregisterBlockVariation( // removed unused layouts
-     	'core/columns',
-     	[
+          'core/columns',
+          [
                'one-column-full',
                'two-columns-equal',
                'two-columns-one-third-two-thirds',

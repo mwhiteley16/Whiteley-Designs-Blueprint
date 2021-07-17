@@ -15,7 +15,8 @@ input[type="reset"][disabled]:focus,
 input[type="submit"],
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus,
-.claim-search button {
+.claim-search button,
+button.gform_button {
      @extend %button-styles;
 }
 
