@@ -40,10 +40,8 @@ add_filter( 'gform_notification', 'wd_gravityforms_domain', 10, 3 );
 add_filter( 'gform_field_css_class', 'wd_gravity_field_classes', 10, 3 );
 function wd_gravity_field_classes( $classes, $field, $form ) {
 
-     // add custom date class for all date fieldsets
-     if ( $field->type == 'date' ) {
-          $classes .= ' gfield_date_wrap';
-     }
+     // add custom field type wrap class
+     $classes .= ' gfield_' . $field->type . '_wrap';
 
      return $classes;
 }

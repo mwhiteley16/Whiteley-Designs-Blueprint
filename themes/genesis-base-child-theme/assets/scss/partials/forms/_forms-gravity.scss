@@ -67,7 +67,7 @@
           visibility: hidden;
           position: absolute;
           left: -9999px;
-     }     
+     }
 }
 
 /* ----- Form Columns ------------------- */
@@ -107,6 +107,7 @@
 @import 'forms-gravity-address';
 @import 'forms-gravity-checkboxradio';
 @import 'forms-gravity-datepicker';
-@import 'forms-gravity-select';
 @import 'forms-gravity-names';
+@import 'forms-gravity-select';
+// @import 'forms-gravity-styled-labels';
 @import 'forms-gravity-validation';

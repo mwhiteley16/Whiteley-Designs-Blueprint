@@ -1,0 +1,111 @@
+/**
+ * /assets/scss/partials/forms/forms-gravity-styled-labels.scss
+ *
+ * Let's define our styled labels for gravity forms
+ *
+ * - Add class of "styled-labels" to form to activate
+ * - Works on inputs and textareas (no change to select/dropdowns)
+ * - Add class of "show-label" to any field to ignore this style
+ *
+ */
+
+.styled-labels .gform_body .gfield {
+     position: relative;
+
+     &.gfield_text_wrap,
+     &.gfield_email_wrap,
+     &.gfield_phone_wrap,
+     &.gfield_number_wrap,
+     &.gfield_textarea_wrap {
+
+          &:not(.show-label) {
+
+               .gfield_label {
+                    position: absolute;
+                    top: 5px;
+                    left: $form-padding;
+                    font-size: 12px;
+                    font-weight: normal;
+                    opacity: 0;
+                    height: 1px;
+                    overflow: hidden;
+                    @extend %transition;
+               }
+          }
+
+          &.hasValue:not(.show-label) {
+
+               .gfield_label {
+                    opacity: .5;
+                    visibility: visible;
+                    height: auto;
+               }
+
+               input[type="text"],
+               input[type="email"],
+               input[type="tel"],
+               input[type="number"],
+               textarea {
+                    @extend %transition;
+                    padding-top: calc( #{$form-padding} + 7px);
+                    padding-bottom: calc( #{$form-padding} - 7px);
+               }
+          }
+     }
+
+     // complex fieldsets (ie. address)
+     &.gfield_address_wrap,
+     &.gfield_name_wrap {
+
+          &:not(.show-label) {
+
+               legend.gfield_label {
+                    border: 0;
+                    clip: rect(1px,1px,1px,1px);
+                    -webkit-clip-path: inset(50%);
+                    clip-path: inset(50%);
+                    height: 1px;
+                    width: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    word-wrap: normal !important;
+               }
+
+               .ginput_complex {
+
+                    > span {
+                         position: relative;
+
+                         label {
+                              position: absolute;
+                              top: 5px;
+                              left: $form-padding;
+                              font-size: 12px;
+                              font-weight: normal;
+                              opacity: 0;
+                              height: 1px;
+                              overflow: hidden;
+                              @extend %transition;
+                         }
+
+                         &.hasValue {
+
+                              label {
+                                   opacity: .5;
+                                   visibility: visible;
+                                   height: auto;
+                              }
+
+                              input[type="text"] {
+                                   @extend %transition;
+                                   padding-top: calc( #{$form-padding} + 7px);
+                                   padding-bottom: calc( #{$form-padding} - 7px);
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
