@@ -152,13 +152,33 @@
 }
 
 /* ----- Editor Title Styles -------------------- */
-.editor-post-title__block.wp-block {
-	max-width: $base-width;
-     margin: 50px auto;
+.edit-post-visual-editor__post-title-wrapper {
+     width: calc(100% + 60px);
+     margin: 0 -30px 50px;
+     border-bottom: 4px solid rgba(0,0,0,0.3);
+     background-color: rgba(0,0,0,0.05);
 
-	.editor-post-title__input {
-          font-family: $font-stack-main;
-	}
+     .editor-post-title__block.wp-block {
+     	max-width: $base-width;
+          margin: 0 auto;
+
+          &::before{
+               content: 'Page / Post Title';
+               color: rgba(0,0,0,0.3);
+               font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+               font-size: 13px;
+               font-weight: 500;
+               position: absolute;
+               top: 5px;
+               left: 0;
+          }
+
+     	.editor-post-title__input {
+               margin-bottom: 0 !important;
+               height: auto !important;
+               padding: 20px 0 2px !important;
+     	}
+     }
 }
 
 /* ----- Front End Colors to Match Color Picker in Block Editor -------------------- */

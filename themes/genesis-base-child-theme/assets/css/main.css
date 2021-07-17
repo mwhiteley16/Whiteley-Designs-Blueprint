@@ -3915,11 +3915,27 @@ hr.wp-block-separator {
   margin: 0; }
 
 /* ----- Editor Title Styles -------------------- */
-.editor-post-title__block.wp-block {
-  max-width: 1168px;
-  margin: 50px auto; }
-  .editor-post-title__block.wp-block .editor-post-title__input {
-    font-family: "Roboto", sans-serif; }
+.edit-post-visual-editor__post-title-wrapper {
+  width: calc(100% + 60px);
+  margin: 0 -30px 50px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.05); }
+  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block {
+    max-width: 1168px;
+    margin: 0 auto; }
+    .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block::before {
+      content: 'Page / Post Title';
+      color: rgba(0, 0, 0, 0.3);
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      position: absolute;
+      top: 5px;
+      left: 0; }
+    .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input {
+      margin-bottom: 0 !important;
+      height: auto !important;
+      padding: 20px 0 2px !important; }
 
 /* ----- Front End Colors to Match Color Picker in Block Editor -------------------- */
 .has-primary-color-color {

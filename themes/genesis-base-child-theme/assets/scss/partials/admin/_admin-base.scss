@@ -53,6 +53,7 @@ body:not(.is-fullscreen-mode) .is-sidebar-opened .editor-styles-wrapper {
 
 	.editor-styles-wrapper {
 
+          // .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block, -- only used if you want page title to align with thinner content within editor
           .editor-post-title__block.wp-block,
           .wp-block {
                max-width: $base-content-width;
