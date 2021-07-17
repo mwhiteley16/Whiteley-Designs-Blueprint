@@ -29,6 +29,9 @@ foreach ( $colors[0] as $color ) {
 
 // Block ID
 $block_id = 'acf-separator-' . $block['id'];
+if ( ! empty( $block['anchor'] ) ) { // add anchor if present
+     $id = $block['anchor'];
+}
 
 // Block Classes
 $block_classes = 'acf-block acf-separator-block ' . $wd_block_separator_include_margin . ' ' . $wd_block_separator_alignment;

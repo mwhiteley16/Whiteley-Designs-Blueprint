@@ -16,6 +16,9 @@ $wd_background_color = get_field( 'wd_background_color' );
 
 // block ID
 $block_id = 'highlight-split-' . $block['id'];
+if ( ! empty( $block['anchor'] ) ) { // add anchor if present
+     $id = $block['anchor'];
+}
 
 // block Classes
 $block_classes = 'acf-block highlight-split ' . $wd_hs_block_media_layout;

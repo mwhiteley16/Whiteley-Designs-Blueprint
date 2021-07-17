@@ -13,6 +13,9 @@
 
 // block ID
 $block_id = 'NAME-' . $block['id'];
+if ( ! empty( $block['anchor'] ) ) { // add anchor if present
+     $id = $block['anchor'];
+}
 
 // block Classes
 $block_classes = 'acf-block NAME-block';

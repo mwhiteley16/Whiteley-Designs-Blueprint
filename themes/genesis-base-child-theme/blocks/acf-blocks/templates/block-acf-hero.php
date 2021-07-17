@@ -18,6 +18,9 @@ $wd_block_hero_content_max_width = get_field( 'wd_block_hero_content_max_width' 
 
 // Block ID
 $block_id = 'hero-' . $block['id'];
+if ( ! empty( $block['anchor'] ) ) { // add anchor if present
+     $id = $block['anchor'];
+}
 
 // Block Classes
 $block_classes = 'acf-block hero-block';

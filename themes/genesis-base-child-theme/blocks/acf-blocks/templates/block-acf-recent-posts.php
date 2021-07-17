@@ -15,6 +15,9 @@ $wd_recent_posts_block_number_of_posts = get_field( 'wd_recent_posts_block_numbe
 
 // block ID
 $block_id = 'recent-posts-' . $block['id'];
+if ( ! empty( $block['anchor'] ) ) { // add anchor if present
+     $id = $block['anchor'];
+}
 
 // block Classes
 $block_classes = 'acf-block recent-posts-block';

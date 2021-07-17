@@ -10,6 +10,9 @@
 
 // Block ID
 $block_id = 'team-' . $block['id'];
+if ( ! empty( $block['anchor'] ) ) { // add anchor if present
+     $id = $block['anchor'];
+}
 
 // Block Classes
 $block_classes = 'acf-block team-block';

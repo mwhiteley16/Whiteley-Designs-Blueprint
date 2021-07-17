@@ -16,6 +16,9 @@ $wd_cwb_block_content_horizontal_alignment = get_field( 'wd_cwb_block_content_ho
 
 // Block ID
 $block_id = 'cwb-' . $block['id'];
+if ( ! empty( $block['anchor'] ) ) { // add anchor if present
+     $id = $block['anchor'];
+}
 
 // Block Classes
 $block_classes = 'acf-block cwb-block';
