@@ -19,6 +19,57 @@ function wd_load_scripts() {
 
 
 /**
+ * Customize login page
+ *
+ * - Change logo URL to home page instead of WordPress.
+ * - Remove "Powered by WordPress" text
+ * - Customize login logo
+ */
+
+add_filter( 'login_headerurl', 'wd_login_header_url' );
+
+function wd_login_header_url( $url ) {
+     return esc_url( home_url() );
+}
+
+add_filter( 'login_headertext', '__return_empty_string' );
+
+add_action( 'login_head', 'wd_login_logo' );
+function wd_login_logo() {
+
+     // logo variables
+	$logo_path   = '';
+	$logo_width  = 367;
+	$logo_height = 194;
+
+     // if custom logo isn't set, return
+	if ( ! file_exists( get_stylesheet_directory() . $logo_path ) ) {
+		return;
+	}
+
+     // set logo URL as variable and calculate height
+	$logo   = get_stylesheet_directory_uri() . $logo_path;
+	$height = floor( $logo_height / $logo_width * 312 );
+	?>
+
+	<style type="text/css">
+	.login h1 a {
+		background-image: url(<?php echo esc_url( $logo ); ?>);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		display: block;
+		overflow: hidden;
+		text-indent: -9999em;
+		width: 312px;
+		height: <?php echo esc_attr( $height ); ?>px;
+	}
+	</style>
+	<?php
+}
+
+
+/**
 * Remove comment form allowed tags
 */
 add_filter( 'comment_form_defaults', 'wd_remove_comments_allowed_tags' );
