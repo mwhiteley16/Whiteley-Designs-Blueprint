@@ -52,7 +52,7 @@ if ( ! empty( $block['className'] ) ) { // custom class name
      <?php if ( $recent_query->have_posts() ) : ?>
           <div class="loop-wrapper">
                <?php while ( $recent_query->have_posts() ) : $recent_query->the_post(); ?>
-                    <?php get_template_part( 'sections/loop-item' ); ?>
+                    <?php get_template_part( 'partials/loop-item' ); ?>
                <?php endwhile; ?>
           </div>
      <?php wp_reset_query(); ?>
