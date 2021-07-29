@@ -323,6 +323,7 @@ wp.domReady( () => {
      wp.blocks.unregisterBlockType( 'core/separator' );
 
      // formatting
+     wp.blocks.unregisterBlockType( 'core/code' );
      wp.blocks.unregisterBlockType( 'core/preformatted' );
      wp.blocks.unregisterBlockType( 'core/pullquote' );
      wp.blocks.unregisterBlockType( 'core/verse' );
@@ -331,14 +332,32 @@ wp.domReady( () => {
      wp.blocks.unregisterBlockType( 'core/more' );
      wp.blocks.unregisterBlockType( 'core/nextpage' );
 
+     // media
+     wp.blocks.unregisterBlockType( 'core/file' );
+
+     // theme
+     wp.blocks.unregisterBlockType( 'core/post-content' );
+     wp.blocks.unregisterBlockType( 'core/post-date' );
+     wp.blocks.unregisterBlockType( 'core/post-excerpt' );
+     wp.blocks.unregisterBlockType( 'core/post-featured-image' );
+     wp.blocks.unregisterBlockType( 'core/post-terms' );
+     wp.blocks.unregisterBlockType( 'core/post-title' );
+     wp.blocks.unregisterBlockType( 'core/query' );
+     wp.blocks.unregisterBlockType( 'core/site-logo' );
+     wp.blocks.unregisterBlockType( 'core/site-tagline' );
+     wp.blocks.unregisterBlockType( 'core/site-title' );
+     wp.blocks.unregisterBlockType( 'core/query-title' );
+
      // widgets
      wp.blocks.unregisterBlockType( 'core/archives' );
      wp.blocks.unregisterBlockType( 'core/calendar' );
      wp.blocks.unregisterBlockType( 'core/categories' );
      wp.blocks.unregisterBlockType( 'core/latest-comments' );
      wp.blocks.unregisterBlockType( 'core/latest-posts' );
+     wp.blocks.unregisterBlockType( 'core/page-list' );
      wp.blocks.unregisterBlockType( 'core/rss' );
      wp.blocks.unregisterBlockType( 'core/search' );
+     wp.blocks.unregisterBlockType( 'core/social-links' );
      wp.blocks.unregisterBlockType( 'core/tag-cloud' );
 
      // embeds
@@ -372,5 +391,10 @@ wp.domReady( () => {
      wp.blocks.unregisterBlockVariation( 'core/embed', 'videopress' );
      wp.blocks.unregisterBlockVariation( 'core/embed', 'wordpress' );
      wp.blocks.unregisterBlockVariation( 'core/embed', 'wordpress-tv' );
+
+     // yoast
+     wp.blocks.unregisterBlockType( 'yoast/faq-block' );
+     wp.blocks.unregisterBlockType( 'yoast/how-to-block' );
+     wp.blocks.unregisterBlockType( 'yoast-seo/breadcrumbs' );
 
 } );
