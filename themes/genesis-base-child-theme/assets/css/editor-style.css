@@ -186,8 +186,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input {
+h6 {
   color: #373737;
   font-family: "Roboto", sans-serif;
   margin: 0 0 30px 0;
@@ -198,16 +197,14 @@ h6,
   h3 a,
   h4 a,
   h5 a,
-  h6 a,
-  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input a {
+  h6 a {
     color: #373737; }
     h1 a:hover,
     h2 a:hover,
     h3 a:hover,
     h4 a:hover,
     h5 a:hover,
-    h6 a:hover,
-    .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input a:hover {
+    h6 a:hover {
       color: #007991;
       text-decoration: none; }
   h1:focus,
@@ -215,16 +212,14 @@ h6,
   h3:focus,
   h4:focus,
   h5:focus,
-  h6:focus,
-  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input:focus {
+  h6:focus {
     outline: none; }
   h1.has-background,
   h2.has-background,
   h3.has-background,
   h4.has-background,
   h5.has-background,
-  h6.has-background,
-  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input.has-background {
+  h6.has-background {
     padding: 30px; }
   h1.alignwide, h1.alignfull,
   h2.alignwide,
@@ -236,29 +231,24 @@ h6,
   h5.alignwide,
   h5.alignfull,
   h6.alignwide,
-  h6.alignfull,
-  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input.alignwide,
-  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input.alignfull {
+  h6.alignfull {
     margin-bottom: 30px; }
   h1.is-style-no-bottom-margin,
   h2.is-style-no-bottom-margin,
   h3.is-style-no-bottom-margin,
   h4.is-style-no-bottom-margin,
   h5.is-style-no-bottom-margin,
-  h6.is-style-no-bottom-margin,
-  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input.is-style-no-bottom-margin {
+  h6.is-style-no-bottom-margin {
     margin-bottom: 0; }
   h1.is-style-half-bottom-margin,
   h2.is-style-half-bottom-margin,
   h3.is-style-half-bottom-margin,
   h4.is-style-half-bottom-margin,
   h5.is-style-half-bottom-margin,
-  h6.is-style-half-bottom-margin,
-  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input.is-style-half-bottom-margin {
+  h6.is-style-half-bottom-margin {
     margin-bottom: 15px; }
 
-h1,
-.editor-post-title__block .editor-post-title__input {
+h1 {
   font-size: 32px; }
 
 h2 {

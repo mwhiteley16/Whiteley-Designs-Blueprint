@@ -11,8 +11,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input {
+h6 {
      color: $base-color;
      font-family: $font-stack-secondary;
      margin: 0 0 $base-margin 0;
@@ -50,8 +49,7 @@ h6,
      }
 }
 
-h1,
-.editor-post-title__block .editor-post-title__input {
+h1 {
      font-size: 32px;
 }
 
