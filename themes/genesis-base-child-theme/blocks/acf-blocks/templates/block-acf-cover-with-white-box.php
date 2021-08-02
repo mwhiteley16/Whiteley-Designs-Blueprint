@@ -25,6 +25,12 @@ $block_classes = 'acf-block cwb-block';
 $block_classes .= ' content-vertical-' . $wd_cwb_block_content_vertical_alignment;
 $block_classes .= ' content-horizontal-' . $wd_cwb_block_content_horizontal_alignment;
 
+// optionally disable pointer events (prevent clicking links within block editor)
+$disable_pointer_events = true;
+if ( $disable_pointer_events == 1 && is_admin() ) {
+     $block_classes .= ' disable-pointer-events';
+}
+
 // for top-aligned ekg swap vertical classes to account for rotation
 if ( $wd_cwb_block_ekg_vertical_alignment == 'top-align' ) {
 

@@ -146,7 +146,7 @@ add_action( 'admin_enqueue_scripts', 'wd_admin_style' );
  */
 function wd_base_setup() {
      include_once( get_stylesheet_directory() . '/blocks/blocks-acf.php' );
-     include_once( get_stylesheet_directory() . '/inc/theme-genesis.php' );     
+     include_once( get_stylesheet_directory() . '/inc/theme-genesis.php' );
      include_once( get_stylesheet_directory() . '/inc/plugin-acf.php' );
      include_once( get_stylesheet_directory() . '/inc/plugin-gravityforms.php' );
      include_once( get_stylesheet_directory() . '/inc/wp-block-editor.php' );

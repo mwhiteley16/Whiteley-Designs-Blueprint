@@ -10,7 +10,6 @@
 
 // ACF custom fields
 
-
 // block ID
 $block_id = 'NAME-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) { // add anchor if present
@@ -19,6 +18,12 @@ if ( ! empty( $block['anchor'] ) ) { // add anchor if present
 
 // block Classes
 $block_classes = 'acf-block NAME-block';
+
+// optionally disable pointer events (prevent clicking links within block editor)
+$disable_pointer_events = false;
+if ( $disable_pointer_events == 1 && is_admin() ) {
+     $block_classes .= ' disable-pointer-events';
+}
 
 if ( ! empty( $block['align'] ) ) {
      $block_classes .= ' align' . $block['align'];

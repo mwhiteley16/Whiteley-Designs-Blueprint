@@ -1627,6 +1627,10 @@ hr.wp-block-separator {
   margin-left: auto;
   margin-right: auto; }
 
+/* ----- Disable Links within ACF blocks -------------------- */
+.acf-block-preview .acf-block.disable-pointer-events a {
+  pointer-events: none; }
+
 /* ----- Block Editor Interior Width -------------------- */
 .wp-block {
   max-width: 1168px;

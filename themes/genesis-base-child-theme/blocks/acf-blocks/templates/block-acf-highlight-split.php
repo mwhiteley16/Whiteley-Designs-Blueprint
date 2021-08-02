@@ -23,6 +23,12 @@ if ( ! empty( $block['anchor'] ) ) { // add anchor if present
 // block Classes
 $block_classes = 'acf-block highlight-split ' . $wd_hs_block_media_layout;
 
+// optionally disable pointer events (prevent clicking links within block editor)
+$disable_pointer_events = true;
+if ( $disable_pointer_events == 1 && is_admin() ) {
+     $block_classes .= ' disable-pointer-events';
+}
+
 if ( ! empty( $block['className'] ) ) {
      $block_classes .= ' ' . $block['className'];
 }

@@ -13,6 +13,8 @@ $wd_recent_posts_block_display_type = get_field( 'wd_recent_posts_block_display_
 $wd_recent_posts_block_category = get_field( 'wd_recent_posts_block_category' );
 $wd_recent_posts_block_number_of_posts = get_field( 'wd_recent_posts_block_number_of_posts' );
 
+// disable pointer events (admin only)
+
 // block ID
 $block_id = 'recent-posts-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) { // add anchor if present
@@ -21,6 +23,12 @@ if ( ! empty( $block['anchor'] ) ) { // add anchor if present
 
 // block Classes
 $block_classes = 'acf-block recent-posts-block';
+
+// optionally disable pointer events (prevent clicking links within block editor)
+$disable_pointer_events = true;
+if ( $disable_pointer_events == 1 && is_admin() ) {
+     $block_classes .= ' disable-pointer-events';
+}
 
 if ( ! empty( $block['align'] ) ) { // block alignment (left, center, right, wide, full)
      $block_classes .= ' align' . $block['align'];

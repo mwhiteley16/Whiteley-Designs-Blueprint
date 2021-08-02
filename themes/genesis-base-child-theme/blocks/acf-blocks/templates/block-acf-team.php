@@ -17,6 +17,12 @@ if ( ! empty( $block['anchor'] ) ) { // add anchor if present
 // Block Classes
 $block_classes = 'acf-block team-block';
 
+// optionally disable pointer events (prevent clicking links within block editor)
+$disable_pointer_events = true;
+if ( $disable_pointer_events == 1 && is_admin() ) {
+     $block_classes .= ' disable-pointer-events';
+}
+
 // get align class if present
 if ( ! empty( $block['align'] ) ) {
      $block_classes .= ' align' . $block['align'];
