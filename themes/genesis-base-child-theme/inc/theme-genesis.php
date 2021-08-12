@@ -203,3 +203,8 @@ function wd_custom_loop() {
      	do_action( 'genesis_loop_else' );
      }
 }
+
+/**
+* Enable the block-based widget editor
+*/
+add_filter( 'use_widgets_block_editor', '__return_true' );

@@ -4,7 +4,7 @@
  *
  * @package      CLIENTNAME
  * @author       Matt Whiteley
- * @since        3.0.0
+ * @since        1.0.0
  * @license      GPL-2.0+
 **/
 
