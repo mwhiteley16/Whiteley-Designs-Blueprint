@@ -348,4 +348,4 @@ function wd_block_category( $categories, $post ) {
 	);
 
 }
-add_filter( 'block_categories', 'wd_block_category', 10, 2);
+add_filter( 'block_categories_all', 'wd_block_category', 10, 2);
