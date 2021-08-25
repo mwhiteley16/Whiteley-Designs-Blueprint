@@ -137,59 +137,59 @@
                     }
                }
      	}
+
+          .sub-menu {
+               background: $white;
+               left: -9999px;
+               opacity: 0;
+               border-radius: 5px;
+               box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+               padding: 10px 0;
+               position: absolute;
+               width: auto;
+               min-width: 200px;
+               z-index: 99;
+               @extend %transition;
+
+               @media(max-width:1000px) {
+                    left: auto;
+                    opacity: 1;
+                    position: relative;
+                    width: 100%;
+                    border-radius: 0;
+                    box-shadow: none;
+                    padding: 0;
+                    background-color: rgba(0,0,0,0.05);
+                    border-top: 1px solid $grey-medium;
+                    display: none;
+               }
+
+               .menu-item {
+                    width: 100%;
+                    display: block;
+                    clear: both;
+                    border-top: none !important;
+               }
+
+               a {
+                    width: 100%;
+                    background: transparent;
+                    color: $base-color;
+                    padding: 8px 30px 8px 20px;
+                    position: relative;
+                    white-space: nowrap;
+               }
+
+               .menu-item:hover > a,
+               .current-menu-item > a {
+                    color: $grey-dark;
+               }
+
+               .sub-menu {
+                    margin: -54px 0 0 199px;
+               }
+          }
      }
-
-	.sub-menu {
-		background: $white;
-		left: -9999px;
-		opacity: 0;
-          border-radius: 5px;
-          box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-		padding: 10px 0;
-		position: absolute;
-		width: auto;
-          min-width: 200px;
-		z-index: 99;
-          @extend %transition;
-
-          @media(max-width:1000px) {
-               left: auto;
-               opacity: 1;
-               position: relative;
-               width: 100%;
-               border-radius: 0;
-               box-shadow: none;
-               padding: 0;
-               background-color: rgba(0,0,0,0.05);
-               border-top: 1px solid $grey-medium;
-               display: none;
-          }
-
-          .menu-item {
-               width: 100%;
-               display: block;
-               clear: both;
-               border-top: none !important;
-          }
-
-		a {
-               width: 100%;
-			background: transparent;
-			color: $base-color;
-			padding: 8px 30px 8px 20px;
-			position: relative;
-               white-space: nowrap;
-		}
-
-		.menu-item:hover > a,
-		.current-menu-item > a {
-			color: $grey-dark;
-		}
-
-		.sub-menu {
-			margin: -54px 0 0 199px;
-		}
-	}
 }
 
 /* ----- Mobile Nav Icon -------------------- */
