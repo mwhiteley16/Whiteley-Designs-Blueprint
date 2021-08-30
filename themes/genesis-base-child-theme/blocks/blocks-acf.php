@@ -29,6 +29,7 @@ function wd_acf_blocks() {
           //           'mode'              => 'preview',
           //           'align'             => '',
           //           'render_template'   => 'blocks/acf-blocks/templates/block-acf-NAME.php',
+          //           'icon'			   => $block_icon,          
           //           'enqueue_assets'  => function() {
           //                  wp_enqueue_script(
           //                       'flickity',
@@ -43,11 +44,6 @@ function wd_acf_blocks() {
           //                       true
           //                  );
           //           },
-          //           'icon'			=> [
-          //                'background' => '#fff',
-          //                'foreground' => WD_BLOCK_ICON_COLOR,
-          //                'src'        => 'star-filled'
-          //           ],
           //           'keywords' => [
           //                '',
           //                'wd',

@@ -19,7 +19,6 @@
 define( 'WD_CHILD_THEME_NAME', 'Base Genesis Child Theme' );
 define( 'WD_CHILD_THEME_SLUG', 'base-genesis-child' );
 define( 'WD_CHILD_THEME_VERSION', '1.0.0' );
-define( 'WD_BLOCK_ICON_COLOR', '#b5267b' );
 
 
 /**
