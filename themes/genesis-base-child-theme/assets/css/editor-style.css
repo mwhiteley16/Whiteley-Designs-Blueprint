@@ -1233,6 +1233,67 @@ hr.wp-block-separator {
       .cwb-block__img {
         display: block; } }
 /**
+ * /assets/scss/partials/blocks/acf/blocks-faq.scss
+ *
+ * Let's define our faq block styles
+ *
+ *
+ */
+.faq-block__toggle {
+  width: 100%;
+  margin-top: 24px;
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  padding: 20px; }
+  @media (max-width: 600px) {
+    .faq-block__toggle {
+      padding: 15px; } }
+  .faq-block__toggle:first-child {
+    margin-top: 0; }
+  .faq-block__toggle-question {
+    font-size: 20px;
+    line-height: 24px;
+    padding-right: 40px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    text-align: left; }
+    .faq-block__toggle-question:focus {
+      outline: none;
+      outline-offset: 0; }
+    .faq-block__toggle-question:hover {
+      color: #007991; }
+    .faq-block__toggle-question-icons {
+      position: absolute;
+      right: 20px;
+      top: 20px; }
+      .faq-block__toggle-question-icons i {
+        color: #007991; }
+        .faq-block__toggle-question-icons i:hover {
+          color: #373737;
+          cursor: pointer; }
+        .faq-block__toggle-question-icons i.fa-minus {
+          display: none; }
+  .faq-block__toggle-answer {
+    display: none;
+    margin-top: 24px; }
+    .faq-block__toggle-answer p:last-child {
+      margin-bottom: 0; }
+    .faq-block__toggle-answer[aria-hidden=true], .faq-block__toggle-answer[data-hidden=true] {
+      display: none; }
+  .faq-block__toggle.active {
+    background-color: #fff; }
+    .faq-block__toggle.active .faq-block__toggle-question {
+      color: #007991; }
+      .faq-block__toggle.active .faq-block__toggle-question-icons i.fa-plus {
+        display: none; }
+      .faq-block__toggle.active .faq-block__toggle-question-icons i.fa-minus {
+        display: block; }
+
+/**
  * /assets/scss/partials/blocks/blocks-header-with-button.scss
  *
  * Let's define our header with button block styles

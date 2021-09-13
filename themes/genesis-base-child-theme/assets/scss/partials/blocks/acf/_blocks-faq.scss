@@ -1,0 +1,109 @@
+/**
+ * /assets/scss/partials/blocks/acf/blocks-faq.scss
+ *
+ * Let's define our faq block styles
+ *
+ *
+ */
+
+.faq-block {
+
+     &__toggle {
+          width: 100%;
+          margin-top: 24px;
+          background-color: $grey-light;
+          border: 1px solid $grey-medium;
+          position: relative;
+          padding: 20px;
+
+          @media(max-width:600px) {
+               padding: 15px;
+          }
+
+          &:first-child {
+               margin-top: 0;
+          }
+
+          &-question {
+               font-size: 20px;
+               line-height: 24px;
+               padding-right: 40px;
+               font-weight: 600;
+               transition: all 0.2s ease-in-out;
+               cursor: pointer;
+               border: none;
+               background-color: transparent;
+               text-align: left;
+
+               &:focus {
+                    outline: none;
+                    outline-offset: 0;
+               }
+
+               &:hover {
+                    color: $primary-color;
+               }
+
+               &-icons {
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+
+                    i {
+                         color: $primary-color;
+
+                         &:hover {
+                              color: $base-color;
+                              cursor: pointer;
+                         }
+
+                         &.fa-minus {
+                              display: none;
+                         }
+                    }
+               }
+          }
+
+          &-answer {
+               display: none;
+               margin-top: 24px;
+
+               p {
+
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+               }
+
+               &[aria-hidden=true],
+               &[data-hidden=true] {
+                    display: none;
+               }
+          }
+
+          &.active {
+               background-color: $white;
+
+               .faq-block__toggle {
+
+                    &-question {
+                         color: $primary-color;
+
+                         &-icons {
+
+                              i {
+
+                                   &.fa-plus {
+                                        display: none;
+                                   }
+
+                                   &.fa-minus {
+                                        display: block;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}

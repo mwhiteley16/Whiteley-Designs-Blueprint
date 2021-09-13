@@ -1,0 +1,83 @@
+{
+    "key": "group_5f7ca7f1a5a38",
+    "title": "Block - FAQ",
+    "fields": [
+        {
+            "key": "field_5f7ca7fc3019f",
+            "label": "Frequently Asked Questions",
+            "name": "wd_block_faq",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5f7ca813301a0",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add FAQ Item",
+            "sub_fields": [
+                {
+                    "key": "field_5f7ca813301a0",
+                    "label": "FAQ Question",
+                    "name": "wd_faq_question",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f7ca821301a1",
+                    "label": "FAQ Answer",
+                    "name": "wd_faq_answer",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acf-faq"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1602005052
+}
