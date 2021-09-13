@@ -59,7 +59,7 @@ add_theme_support( 'custom-logo',
 
 
 /**
-* Remove secondary menu
+* Setup menu options
 */
 add_theme_support( 'genesis-menus',
      [
@@ -80,7 +80,7 @@ add_action( 'genesis_sidebar',
 
 
 /**
-* Remove unused page layouts
+* Setup proper page template options
 */
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );

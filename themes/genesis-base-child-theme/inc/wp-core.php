@@ -27,7 +27,6 @@ function wd_load_scripts() {
  */
 
 add_filter( 'login_headerurl', 'wd_login_header_url' );
-
 function wd_login_header_url( $url ) {
      return esc_url( home_url() );
 }
@@ -202,17 +201,15 @@ add_filter( 'site_status_tests', 'wd_remove_site_health_checks' );
 
 
 /**
-* remove site health dashboard widget
+* Cleanup WordPress dashboard widgets
 */
-add_action('wp_dashboard_setup', 'wd_remove_site_health_dashboard_widget');
-function wd_remove_site_health_dashboard_widget() {
+add_action( 'wp_dashboard_setup', 'wd_cleanup_dashboard_widgets' );
+function wd_cleanup_dashboard_widgets() {
 
-     remove_meta_box(
-          'dashboard_site_health',
-          'dashboard',
-          'normal'
-     );
-
+     remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
+     remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+     remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+     remove_meta_box( 'rg_forms_dashboard', 'dashboard', 'side' ); // gravity forms dashboard widget
 }
 
 

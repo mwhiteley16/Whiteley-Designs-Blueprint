@@ -27,10 +27,12 @@ add_theme_support( 'disable-custom-colors' );
 
 
 /**
-* Disable gradient color options
+* Gradient color setup
+*
+* @link https://richtabor.com/block-editor-gradients/
 */
 add_theme_support( 'editor-gradient-presets', [] );
-add_theme_support( 'disable-custom-gradients', true );
+add_theme_support( 'disable-custom-gradients', true ); // disable
 
 
 /**
