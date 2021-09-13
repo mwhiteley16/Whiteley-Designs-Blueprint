@@ -23,6 +23,10 @@
           img {
                margin-bottom: 0;
           }
+
+          figcaption {
+               margin-top: 0;
+          }
 	}
 
 	.alignright,
@@ -33,7 +37,22 @@
           img {
                margin-bottom: 0;
           }
+
+          figcaption {
+               margin-top: 0;
+          }
 	}
+
+     @media(max-width:600px) {
+
+          .alignleft,
+          .wp-block[data-align="left"] > &,
+          .alignright,
+          .wp-block[data-align="right"] > & {
+               float: none;
+               margin: 0 0 $base-margin;
+          }
+     }
 
 	.aligncenter,
      .wp-block[data-align="center"] > & {
@@ -72,6 +91,12 @@
           @media(max-width:600px) {
                display: none;
           }
+     }
+
+     figcaption {
+          margin: -$base-margin 0 $base-margin;
+          font-style: italic;
+          font-size: 0.9rem;
      }
 }
 
