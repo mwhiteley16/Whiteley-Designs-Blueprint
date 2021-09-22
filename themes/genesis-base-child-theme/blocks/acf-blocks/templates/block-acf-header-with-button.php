@@ -44,9 +44,16 @@ $inner_template = [
                'content'     => 'Heading Here'
           ]
      ],
-     [ 'core/button',
+     [ 'core/buttons',
           [
-               'content' => 'Learn More'
+               'contentJustification' => '',
+          ],
+          [
+               [ 'core/button',
+                    [
+                         'content' => 'Learn More',
+                    ]
+               ]
           ]
      ]
 ];

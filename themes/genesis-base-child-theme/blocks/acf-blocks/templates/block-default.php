@@ -72,10 +72,22 @@ $inner_template = [
                // 'content'     => 'Pre-defined content here.'
           ]
      ],
-     [ 'core/button',
-          [
-               'align'       => 'left',
-               'placeholder' => 'Button Text'
+     [ 'core/buttons',
+          [ // button block attributes
+               'contentJustification' => '',
+          ],
+          [ // settings for each buttons without buttons
+               [ 'core/button',
+                    [
+                         'backgroundColor' => '',
+                    ]
+               ],
+               [ 'core/button',
+                    [
+                         'backgroundColor' => '',
+                         'className'       => '',
+                    ]
+               ]
           ]
      ],
      [ 'core/group',

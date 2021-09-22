@@ -69,12 +69,18 @@ $template = [
                'placeholder' => 'Hero block descriptive text goes here. This uses innerBlocks so we can use whatever here.',
           ]
      ],
-     [ 'core/button',
+     [ 'core/buttons',
           [
-               'align'       => 'left',
-               'placeholder' => 'Button Text'
+               'contentJustification' => 'left',
+          ],
+          [
+               [ 'core/button',
+                    [
+                         'placeholder' => 'Button Text',
+                    ]
+               ]
           ]
-     ],
+     ]
 ];
 ?>
 

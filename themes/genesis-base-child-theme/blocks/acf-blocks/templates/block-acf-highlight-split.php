@@ -66,10 +66,16 @@ $template = [
      ],
      [ 'core/buttons',
           [
-               'align'       => 'left',
-               'placeholder' => 'Book a Demo',
+               'contentJustification' => 'left',
+          ],
+          [
+               [ 'core/button',
+                    [
+                         'placeholder' => 'Placeholder text...',
+                    ]
+               ]
           ]
-     ],
+     ]
 ];
 ?>
 

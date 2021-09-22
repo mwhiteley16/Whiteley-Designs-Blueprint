@@ -95,10 +95,16 @@ $template = [
      ],
      [ 'core/buttons',
           [
-               'align'       => 'left',
-               'placeholder' => 'Button Text'
+               'contentJustification' => 'left',
+          ],
+          [
+               [ 'core/button',
+                    [
+                         'placeholder' => 'Button Text',
+                    ]
+               ]
           ]
-     ],
+     ]
 ];
 
 ?>
