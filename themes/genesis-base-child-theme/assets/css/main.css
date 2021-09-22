@@ -721,6 +721,10 @@ h6 {
   max-width: 1168px;
   margin: 0 auto; }
 
+@media (max-width: 600px) {
+  html #wpadminbar {
+    position: fixed; } }
+
 /* ----- Sidebars -------------------- */
 .content-sidebar .site-inner .wrap,
 .sidebar-content .site-inner .wrap {

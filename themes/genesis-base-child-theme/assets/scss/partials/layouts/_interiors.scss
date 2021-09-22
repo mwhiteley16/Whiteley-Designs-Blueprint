@@ -32,6 +32,13 @@
      margin: 0 auto;
 }
 
+@media(max-width:600px) {
+     
+     html #wpadminbar {
+          position: fixed;
+     }
+}
+
 /* ----- Sidebars -------------------- */
 .content-sidebar,
 .sidebar-content {
