@@ -774,6 +774,10 @@ h6 {
  *
  */
 /* ----- Primary Navigation -------------------- */
+@media (min-width: 1001px) {
+  .nav-primary {
+    display: block !important; } }
+
 @media (max-width: 1000px) {
   .nav-primary {
     display: none;

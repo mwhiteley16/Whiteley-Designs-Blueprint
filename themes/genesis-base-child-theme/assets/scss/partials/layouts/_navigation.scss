@@ -11,6 +11,10 @@
 /* ----- Primary Navigation -------------------- */
 .nav-primary {
 
+     @media(min-width:1001px) {
+          display: block !important;
+     }
+
      @media(max-width:1000px) {
           display: none;
           position: absolute;
