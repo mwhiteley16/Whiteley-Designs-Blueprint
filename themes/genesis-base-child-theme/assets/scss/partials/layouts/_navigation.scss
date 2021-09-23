@@ -27,6 +27,11 @@
           padding-bottom: 30px;
      }
 
+     @media(max-width:600px) {
+          margin-left: -$mobile-margin;
+          margin-right: -$mobile-margin;
+     }
+
      .wrap {
           max-width: 100%;
           margin: 0;

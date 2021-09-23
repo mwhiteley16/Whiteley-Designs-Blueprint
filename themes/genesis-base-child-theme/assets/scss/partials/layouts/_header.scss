@@ -11,6 +11,10 @@
      padding: $base-margin;
      position: relative;
 
+     @media(max-width:600px) {
+          padding: $base-margin $mobile-margin;
+     }
+
      > .wrap {
           display: flex;
           flex-wrap: wrap;

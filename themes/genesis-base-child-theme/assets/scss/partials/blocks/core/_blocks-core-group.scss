@@ -13,6 +13,10 @@
      .wp-block[data-align="full"] & {
           padding: 0 $base-margin;
 
+          @media(max-width:600px) {
+               padding: 0 $mobile-margin;
+          }
+
           .wp-block-group {
 
                &__inner-container {

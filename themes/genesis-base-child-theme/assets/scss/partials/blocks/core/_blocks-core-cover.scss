@@ -10,6 +10,10 @@
 .wp-block-cover {
      padding: $base-margin;
 
+     @media(max-width:600px) {
+          padding: $base-margin $mobile-margin;
+     }
+
      &__inner-container {
           max-width: $base-width;
           margin: 0 auto;

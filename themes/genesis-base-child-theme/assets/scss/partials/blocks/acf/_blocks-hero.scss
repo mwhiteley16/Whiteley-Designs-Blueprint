@@ -7,10 +7,14 @@
  */
 
 .hero-block {
-     padding: 100px 30px;
+     padding: 100px $base-margin;
      background-size: cover;
      background-position: left center;
      position: relative;
+
+     @media(max-width:600px) {
+          padding: 100px $mobile-margin;
+     }
 
      &.image {
 

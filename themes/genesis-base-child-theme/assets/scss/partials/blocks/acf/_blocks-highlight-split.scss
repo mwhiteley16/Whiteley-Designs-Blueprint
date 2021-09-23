@@ -32,6 +32,11 @@
                height: calc(100% - 58px);
                top: 58px;
           }
+
+          @media(max-width:600px) {
+               left: -$mobile-margin;
+               right: -$mobile-margin;
+          }
      }
 
      &__inner {
@@ -117,6 +122,11 @@
                     @media(max-width:900px) {
                          left: -$base-margin;
                          right: -$base-margin;
+                    }
+
+                    @media(max-width:600px) {
+                         left: -$mobile-margin;
+                         right: -$mobile-margin;
                     }
                }
 
