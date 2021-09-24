@@ -1,27 +1,30 @@
 /* Author Dependencies */
-@import 'partials/base/reset';
-@import 'partials/base/variables';
-@import 'partials/base/mixins';
-@import 'partials/base/universal';
-@import 'partials/base/typography';
+@import 'partials/base/variables'; // must be first
+@import 'partials/base/mixins'; // must be second
 @import 'partials/base/buttons';
-@import 'partials/base/tables';
 @import 'partials/base/headings';
+@import 'partials/base/reset';
+@import 'partials/base/tables';
+@import 'partials/base/typography';
+@import 'partials/base/universal';
+
 
 /* Layouts */
-@import 'partials/layouts/interiors';
-@import 'partials/layouts/widgets';
-@import 'partials/layouts/navigation';
+@import 'partials/layouts/blog';
+@import 'partials/layouts/flickity';
 @import 'partials/layouts/footer';
 @import 'partials/layouts/header';
+@import 'partials/layouts/interiors';
+@import 'partials/layouts/navigation';
 @import 'partials/layouts/pagination';
-@import 'partials/layouts/blog';
 @import 'partials/layouts/search';
-@import 'partials/layouts/flickity';
+@import 'partials/layouts/widgets';
+
 
 /* Forms */
 @import 'partials/forms/forms-base';
 @import 'partials/forms/forms-gravity';
+
 
 /* Blocks */
 @import 'partials/blocks/blocks-base';

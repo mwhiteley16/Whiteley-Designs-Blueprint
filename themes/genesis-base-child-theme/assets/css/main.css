@@ -1,4 +1,221 @@
 /* Author Dependencies */
+/**
+ * /assets/scss/partials/base/mixins.scss
+ *
+ * Let's define our universal mixins for use throughout the theme
+ *
+ */
+/**
+* Base text styles
+*/
+body,
+p,
+select,
+textarea,
+input {
+  color: #373737;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  height: auto;
+  min-height: auto; }
+
+/**
+* Base button styles
+*/
+.wp-block-button__link, a.wd-button,
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus,
+.claim-search button,
+button.gform_button {
+  border: 2px solid #007991;
+  background: #007991;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+  display: inline-block;
+  height: auto;
+  border-radius: 3px; }
+  .wp-block-button__link:hover, a.wd-button:hover,
+  input[type="button"]:hover,
+  input[type="button"][disabled]:hover,
+  input[type="reset"]:hover,
+  input[type="reset"][disabled]:hover,
+  input[type="submit"]:hover,
+  input[type="submit"][disabled]:hover,
+  .claim-search button:hover,
+  button.gform_button:hover, .wp-block-button__link:focus, a.wd-button:focus,
+  input[type="button"]:focus,
+  input[type="button"][disabled]:focus,
+  input[type="reset"]:focus,
+  input[type="reset"][disabled]:focus,
+  input[type="submit"]:focus,
+  input[type="submit"][disabled]:focus,
+  .claim-search button:focus,
+  button.gform_button:focus {
+    border-color: #004e5e;
+    background: #004e5e;
+    color: #fff;
+    text-decoration: none; }
+  .button--inverse.wp-block-button__link, a.button--inverse.wd-button,
+  input.button--inverse[type="button"],
+  input.button--inverse[type="button"][disabled]:hover,
+  input.button--inverse[type="button"][disabled]:focus,
+  input.button--inverse[type="reset"],
+  input.button--inverse[type="reset"][disabled]:hover,
+  input.button--inverse[type="reset"][disabled]:focus,
+  input.button--inverse[type="submit"],
+  input.button--inverse[type="submit"][disabled]:hover,
+  input.button--inverse[type="submit"][disabled]:focus,
+  .claim-search button.button--inverse,
+  button.button--inverse.gform_button {
+    background-color: transparent;
+    color: #007991; }
+    .button--inverse.wp-block-button__link:hover, a.button--inverse.wd-button:hover,
+    input.button--inverse[type="button"]:hover,
+    input.button--inverse[type="reset"]:hover,
+    input.button--inverse[type="submit"]:hover,
+    .claim-search button.button--inverse:hover,
+    button.button--inverse.gform_button:hover, .button--inverse.wp-block-button__link:focus, a.button--inverse.wd-button:focus,
+    input.button--inverse[type="button"]:focus,
+    input.button--inverse[type="reset"]:focus,
+    input.button--inverse[type="submit"]:focus,
+    .claim-search button.button--inverse:focus,
+    button.button--inverse.gform_button:focus {
+      background-color: #007991;
+      color: #fff;
+      border-color: #007991; }
+
+/**
+* Transitions
+*/
+.block-editor-block-list__layout .wp-block-image.is-style-hide-desktop, .mobile-navigation-icon span, .mobile-navigation-icon, .nav-primary ul .sub-menu, .nav-primary ul .menu-item.menu-button a span, a, button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+  transition: all 0.2s ease-in-out; }
+
+/**
+* RGBA color conversion
+*/
+/**
+ * Placeholder Color
+ */
+/**
+ * /assets/scss/partials/base/buttons.scss
+ *
+ * Let's define our button styles
+ *
+ */
+.widget_search input[type="submit"] {
+  display: none; }
+
+/* for block button coloring see /scss/partials/blocks/_blocks-base.scss */
+/**
+ * /assets/scss/partials/base/headings.scss
+ *
+ * Let's define our heading styles
+ * We'll port this to the main stylesheet and the editor stylesheet for use in the block editor
+ *
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #373737;
+  font-family: "Roboto", sans-serif;
+  margin: 0 0 30px 0;
+  line-height: 1.6;
+  font-weight: 600; }
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    color: #373737; }
+    h1 a:hover,
+    h2 a:hover,
+    h3 a:hover,
+    h4 a:hover,
+    h5 a:hover,
+    h6 a:hover {
+      color: #007991;
+      text-decoration: none; }
+  h1:focus,
+  h2:focus,
+  h3:focus,
+  h4:focus,
+  h5:focus,
+  h6:focus {
+    outline: none; }
+  h1.has-background,
+  h2.has-background,
+  h3.has-background,
+  h4.has-background,
+  h5.has-background,
+  h6.has-background {
+    padding: 30px; }
+  h1.alignwide, h1.alignfull,
+  h2.alignwide,
+  h2.alignfull,
+  h3.alignwide,
+  h3.alignfull,
+  h4.alignwide,
+  h4.alignfull,
+  h5.alignwide,
+  h5.alignfull,
+  h6.alignwide,
+  h6.alignfull {
+    margin-bottom: 30px; }
+  h1.is-style-no-bottom-margin,
+  h2.is-style-no-bottom-margin,
+  h3.is-style-no-bottom-margin,
+  h4.is-style-no-bottom-margin,
+  h5.is-style-no-bottom-margin,
+  h6.is-style-no-bottom-margin {
+    margin-bottom: 0; }
+  h1.is-style-half-bottom-margin,
+  h2.is-style-half-bottom-margin,
+  h3.is-style-half-bottom-margin,
+  h4.is-style-half-bottom-margin,
+  h5.is-style-half-bottom-margin,
+  h6.is-style-half-bottom-margin {
+    margin-bottom: 15px; }
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 26px; }
+
+h3 {
+  font-size: 22px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 12px; }
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -302,120 +519,71 @@ template {
   display: none; }
 
 /**
- * /assets/scss/partials/base/mixins.scss
+ * /assets/scss/partials/base/tables.scss
  *
- * Let's define our universal mixins for use throughout the theme
+ * Let's define our table styles
  *
  */
-/**
-* Base text styles
-*/
-body,
-p,
-select,
-textarea,
-input {
-  color: #373737;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  font-weight: 400;
-  height: auto;
-  min-height: auto; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px; }
+  table.striped tr:nth-of-type(odd) {
+    background-color: #fafafa; }
+  table th {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    position: relative;
+    text-align: left; }
+  table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    position: relative; }
 
 /**
-* Base button styles
-*/
-.wp-block-button__link, a.wd-button,
-input[type="button"],
-input[type="button"][disabled]:hover,
-input[type="button"][disabled]:focus,
-input[type="reset"],
-input[type="reset"][disabled]:hover,
-input[type="reset"][disabled]:focus,
-input[type="submit"],
-input[type="submit"][disabled]:hover,
-input[type="submit"][disabled]:focus,
-.claim-search button,
-button.gform_button {
-  border: 2px solid #007991;
-  background: #007991;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 10px 15px;
-  display: inline-block;
-  height: auto;
-  border-radius: 3px; }
-  .wp-block-button__link:hover, a.wd-button:hover,
-  input[type="button"]:hover,
-  input[type="button"][disabled]:hover,
-  input[type="reset"]:hover,
-  input[type="reset"][disabled]:hover,
-  input[type="submit"]:hover,
-  input[type="submit"][disabled]:hover,
-  .claim-search button:hover,
-  button.gform_button:hover, .wp-block-button__link:focus, a.wd-button:focus,
-  input[type="button"]:focus,
-  input[type="button"][disabled]:focus,
-  input[type="reset"]:focus,
-  input[type="reset"][disabled]:focus,
-  input[type="submit"]:focus,
-  input[type="submit"][disabled]:focus,
-  .claim-search button:focus,
-  button.gform_button:focus {
-    border-color: #004e5e;
-    background: #004e5e;
-    color: #fff;
-    text-decoration: none; }
-  .button--inverse.wp-block-button__link, a.button--inverse.wd-button,
-  input.button--inverse[type="button"],
-  input.button--inverse[type="button"][disabled]:hover,
-  input.button--inverse[type="button"][disabled]:focus,
-  input.button--inverse[type="reset"],
-  input.button--inverse[type="reset"][disabled]:hover,
-  input.button--inverse[type="reset"][disabled]:focus,
-  input.button--inverse[type="submit"],
-  input.button--inverse[type="submit"][disabled]:hover,
-  input.button--inverse[type="submit"][disabled]:focus,
-  .claim-search button.button--inverse,
-  button.button--inverse.gform_button {
-    background-color: transparent;
-    color: #007991; }
-    .button--inverse.wp-block-button__link:hover, a.button--inverse.wd-button:hover,
-    input.button--inverse[type="button"]:hover,
-    input.button--inverse[type="reset"]:hover,
-    input.button--inverse[type="submit"]:hover,
-    .claim-search button.button--inverse:hover,
-    button.button--inverse.gform_button:hover, .button--inverse.wp-block-button__link:focus, a.button--inverse.wd-button:focus,
-    input.button--inverse[type="button"]:focus,
-    input.button--inverse[type="reset"]:focus,
-    input.button--inverse[type="submit"]:focus,
-    .claim-search button.button--inverse:focus,
-    button.button--inverse.gform_button:focus {
-      background-color: #007991;
-      color: #fff;
-      border-color: #007991; }
-
-/**
-* Transitions
-*/
-.block-editor-block-list__layout .wp-block-image.is-style-hide-desktop, .mobile-navigation-icon span, .mobile-navigation-icon, .nav-primary ul .sub-menu, .nav-primary ul .menu-item.menu-button a span, a, button,
-input:focus,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
-textarea:focus,
-.button,
-.gallery img {
-  transition: all 0.2s ease-in-out; }
-
-/**
-* RGBA color conversion
-*/
-/**
- * Placeholder Color
+ * /assets/scss/partials/base/typography.scss
+ *
+ * Let's define our global typography styles
+ *
  */
+a {
+  color: #007991;
+  background-color: transparent;
+  text-decoration: none; }
+  a:hover {
+    color: #004e5e;
+    text-decoration: underline; }
+  a[href^="tel"], a[href^="tel"]:hover {
+    color: #373737; }
+
+ol,
+ul {
+  margin: 0;
+  padding: 0; }
+
+b,
+strong {
+  font-weight: 700; }
+
+em,
+i {
+  font-style: italic; }
+
+code {
+  background-color: #e0e0e0;
+  padding: 0.125em 0.25em; }
+
+pre {
+  border: 1px solid #e0e0e0;
+  line-height: 1.3125;
+  margin: 0 0 1.75em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.75em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
 /**
  * /assets/scss/partials/base/universal.scss
  *
@@ -525,175 +693,214 @@ input[type="search"] {
     .entry-content ol li:last-child {
       padding-bottom: 0; }
 
-/**
- * /assets/scss/partials/base/typography.scss
- *
- * Let's define our global typography styles
- *
- */
-a {
-  color: #007991;
-  background-color: transparent;
-  text-decoration: none; }
-  a:hover {
-    color: #004e5e;
-    text-decoration: underline; }
-  a[href^="tel"], a[href^="tel"]:hover {
-    color: #373737; }
-
-ol,
-ul {
-  margin: 0;
-  padding: 0; }
-
-b,
-strong {
-  font-weight: 700; }
-
-em,
-i {
-  font-style: italic; }
-
-code {
-  background-color: #e0e0e0;
-  padding: 0.125em 0.25em; }
-
-pre {
-  border: 1px solid #e0e0e0;
-  line-height: 1.3125;
-  margin: 0 0 1.75em;
-  max-width: 100%;
-  overflow: auto;
-  padding: 1.75em;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-
-/**
- * /assets/scss/partials/base/buttons.scss
- *
- * Let's define our button styles
- *
- */
-.widget_search input[type="submit"] {
-  display: none; }
-
-/* for block button coloring see /scss/partials/blocks/_blocks-base.scss */
-/**
- * /assets/scss/partials/base/tables.scss
- *
- * Let's define our table styles
- *
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin-bottom: 20px; }
-  table.striped tr:nth-of-type(odd) {
-    background-color: #fafafa; }
-  table th {
-    border: 1px solid #e0e0e0;
-    padding: 10px;
-    position: relative;
-    text-align: left; }
-  table td {
-    border: 1px solid #e0e0e0;
-    padding: 10px;
-    position: relative; }
-
-/**
- * /assets/scss/partials/base/headings.scss
- *
- * Let's define our heading styles
- * We'll port this to the main stylesheet and the editor stylesheet for use in the block editor
- *
- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #373737;
-  font-family: "Roboto", sans-serif;
-  margin: 0 0 30px 0;
-  line-height: 1.6;
-  font-weight: 600; }
-  h1 a,
-  h2 a,
-  h3 a,
-  h4 a,
-  h5 a,
-  h6 a {
-    color: #373737; }
-    h1 a:hover,
-    h2 a:hover,
-    h3 a:hover,
-    h4 a:hover,
-    h5 a:hover,
-    h6 a:hover {
-      color: #007991;
-      text-decoration: none; }
-  h1:focus,
-  h2:focus,
-  h3:focus,
-  h4:focus,
-  h5:focus,
-  h6:focus {
-    outline: none; }
-  h1.has-background,
-  h2.has-background,
-  h3.has-background,
-  h4.has-background,
-  h5.has-background,
-  h6.has-background {
-    padding: 30px; }
-  h1.alignwide, h1.alignfull,
-  h2.alignwide,
-  h2.alignfull,
-  h3.alignwide,
-  h3.alignfull,
-  h4.alignwide,
-  h4.alignfull,
-  h5.alignwide,
-  h5.alignfull,
-  h6.alignwide,
-  h6.alignfull {
-    margin-bottom: 30px; }
-  h1.is-style-no-bottom-margin,
-  h2.is-style-no-bottom-margin,
-  h3.is-style-no-bottom-margin,
-  h4.is-style-no-bottom-margin,
-  h5.is-style-no-bottom-margin,
-  h6.is-style-no-bottom-margin {
-    margin-bottom: 0; }
-  h1.is-style-half-bottom-margin,
-  h2.is-style-half-bottom-margin,
-  h3.is-style-half-bottom-margin,
-  h4.is-style-half-bottom-margin,
-  h5.is-style-half-bottom-margin,
-  h6.is-style-half-bottom-margin {
-    margin-bottom: 15px; }
-
-h1 {
-  font-size: 32px; }
-
-h2 {
-  font-size: 26px; }
-
-h3 {
-  font-size: 22px; }
-
-h4 {
-  font-size: 18px; }
-
-h5 {
-  font-size: 16px; }
-
-h6 {
-  font-size: 12px; }
-
 /* Layouts */
+/**
+ * /assets/scss/partials/layouts/blog.scss
+ *
+ * Let's define our blog styles
+ *
+ * - Archive
+ * - Loop Item
+ * - Single
+ *
+ */
+/* ----- Archive -------------------- */
+/* ----- Loop Item -------------------- */
+.loop-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.loop-item {
+  width: calc(calc(100% / 3) - 20px);
+  margin: 0 30px 30px 0; }
+  @media (min-width: 1001px) {
+    .loop-item:nth-child(3n) {
+      margin-right: 0; } }
+  @media (max-width: 1000px) and (min-width: 701px) {
+    .loop-item {
+      width: calc(50% - 15px); }
+      .loop-item:nth-child(2n) {
+        margin-right: 0; } }
+  @media (max-width: 700px) {
+    .loop-item {
+      width: 100%;
+      margin-right: 0; } }
+/* ----- Single -------------------- */
+/**
+ * /assets/scss/partials/layouts/flickity.scss
+ *
+ * Let's define our flickity slideshow styles
+ *
+ *
+ */
+.flickity-enabled {
+  position: relative; }
+  .flickity-enabled:focus {
+    outline: none; }
+  .flickity-enabled.is-draggable {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    .flickity-enabled.is-draggable .flickity-viewport {
+      cursor: move;
+      cursor: -webkit-grab;
+      cursor: grab; }
+      .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+        cursor: -webkit-grabbing;
+        cursor: grabbing; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%; }
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+  .flickity-prev-next-button:hover {
+    background-color: transparent; }
+  .flickity-prev-next-button:focus {
+    outline: none;
+    box-shadow: none; }
+  .flickity-prev-next-button:active {
+    opacity: 0.6; }
+  .flickity-prev-next-button.previous {
+    left: -40px; }
+    @media (max-width: 1375px) {
+      .flickity-prev-next-button.previous {
+        left: 20px; } }
+    @media (max-width: 850px) {
+      .flickity-prev-next-button.previous {
+        left: 0;
+        top: calc(100% + 20px); } }
+  .flickity-prev-next-button.next {
+    right: -40px; }
+    @media (max-width: 1375px) {
+      .flickity-prev-next-button.next {
+        right: 20px; } }
+    @media (max-width: 850px) {
+      .flickity-prev-next-button.next {
+        right: 0;
+        top: calc(100% + 20px); } }
+  .flickity-prev-next-button:disabled {
+    cursor: auto; }
+    .flickity-prev-next-button:disabled .arrow {
+      fill: #ddd; }
+  .flickity-prev-next-button svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+  .flickity-prev-next-button.next svg {
+    left: auto;
+    right: 0;
+    top: 0; }
+  .flickity-prev-next-button .arrow {
+    fill: #007991; }
+
+.entry-content ol.flickity-page-dots,
+ol.flickity-page-dots {
+  list-style-type: none;
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  @media (max-width: 850px) {
+    .entry-content ol.flickity-page-dots,
+    ol.flickity-page-dots {
+      top: calc(100% + 30px); } }
+  .entry-content ol.flickity-page-dots li,
+  ol.flickity-page-dots li {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    margin-right: 8px;
+    cursor: pointer;
+    padding-bottom: 0; }
+    .entry-content ol.flickity-page-dots li:hover,
+    ol.flickity-page-dots li:hover {
+      background-color: #ddd; }
+    .entry-content ol.flickity-page-dots li.is-selected,
+    ol.flickity-page-dots li.is-selected {
+      background-color: #007991; }
+
+/* flickity-fade */
+.flickity-enabled.is-fade .flickity-slider > * {
+  pointer-events: none;
+  z-index: 0; }
+
+.flickity-enabled.is-fade .flickity-slider > .is-selected {
+  pointer-events: auto;
+  z-index: 1; }
+
+/**
+ * /assets/scss/partials/layouts/footer.scss
+ *
+ * Let's define our footer styles
+ *
+ * - Main Footer Area
+ * - Footer Widgets
+ *
+ */
+/* ----- Main Footer -------------------- */
+.site-footer {
+  width: 100%;
+  padding: 75px 0;
+  text-align: center; }
+
+/* ----- Footer Widgets -------------------- */
+.footer-widgets {
+  width: 100%;
+  padding: 75px 0; }
+  .footer-widgets .wrap {
+    display: flex; }
+    .footer-widgets .wrap .widget-area {
+      width: 33.33%; }
+
+/**
+ * /assets/scss/partials/layouts/header.scss
+ *
+ * Let's define our header styles
+ *
+ *
+ */
+.site-header {
+  width: 100%;
+  padding: 30px;
+  position: relative; }
+  @media (max-width: 600px) {
+    .site-header {
+      padding: 30px 20px; } }
+  .site-header > .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+  .site-header__logo img {
+    width: auto;
+    height: 125px; }
+
 /**
  * /assets/scss/partials/layouts/interiors.scss
  *
@@ -750,22 +957,6 @@ h6 {
     padding: 75px 0;
     flex: 1;
     padding-left: 50px; }
-
-/**
- * /assets/scss/partials/layouts/widgets.scss
- *
- * Let's define our base widget styles
- *
- *
- */
-.widget,
-.widget {
-  margin-bottom: 40px; }
-  .widget ul,
-  .widget ol,
-  .widget ul,
-  .widget ol {
-    list-style-type: none; }
 
 /**
  * /assets/scss/partials/layouts/navigation.scss
@@ -943,53 +1134,6 @@ h6 {
     .mobile-navigation-icon {
       display: block; } }
 /**
- * /assets/scss/partials/layouts/footer.scss
- *
- * Let's define our footer styles
- *
- * - Main Footer Area
- * - Footer Widgets
- *
- */
-/* ----- Main Footer -------------------- */
-.site-footer {
-  width: 100%;
-  padding: 75px 0;
-  text-align: center; }
-
-/* ----- Footer Widgets -------------------- */
-.footer-widgets {
-  width: 100%;
-  padding: 75px 0; }
-  .footer-widgets .wrap {
-    display: flex; }
-    .footer-widgets .wrap .widget-area {
-      width: 33.33%; }
-
-/**
- * /assets/scss/partials/layouts/header.scss
- *
- * Let's define our header styles
- *
- *
- */
-.site-header {
-  width: 100%;
-  padding: 30px;
-  position: relative; }
-  @media (max-width: 600px) {
-    .site-header {
-      padding: 30px 20px; } }
-  .site-header > .wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center; }
-  .site-header__logo img {
-    width: auto;
-    height: 125px; }
-
-/**
  * /assets/scss/partials/layouts/pagination.scss
  *
  * Let's define our pagination styles
@@ -1042,39 +1186,6 @@ h6 {
           margin-bottom: 0;
           margin-top: 15px; } }
 /**
- * /assets/scss/partials/layouts/blog.scss
- *
- * Let's define our blog styles
- *
- * - Archive
- * - Loop Item
- * - Single
- *
- */
-/* ----- Archive -------------------- */
-/* ----- Loop Item -------------------- */
-.loop-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%; }
-
-.loop-item {
-  width: calc(calc(100% / 3) - 20px);
-  margin: 0 30px 30px 0; }
-  @media (min-width: 1001px) {
-    .loop-item:nth-child(3n) {
-      margin-right: 0; } }
-  @media (max-width: 1000px) and (min-width: 701px) {
-    .loop-item {
-      width: calc(50% - 15px); }
-      .loop-item:nth-child(2n) {
-        margin-right: 0; } }
-  @media (max-width: 700px) {
-    .loop-item {
-      width: 100%;
-      margin-right: 0; } }
-/* ----- Single -------------------- */
-/**
  * /assets/scss/partials/layouts/search.scss
  *
  * Let's define our search styles
@@ -1088,131 +1199,20 @@ h6 {
   margin-bottom: 50px; }
 
 /**
- * /assets/scss/partials/layouts/flickity.scss
+ * /assets/scss/partials/layouts/widgets.scss
  *
- * Let's define our flickity slideshow styles
+ * Let's define our base widget styles
  *
  *
  */
-.flickity-enabled {
-  position: relative; }
-  .flickity-enabled:focus {
-    outline: none; }
-  .flickity-enabled.is-draggable {
-    -webkit-tap-highlight-color: transparent;
-    tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
-    .flickity-enabled.is-draggable .flickity-viewport {
-      cursor: move;
-      cursor: -webkit-grab;
-      cursor: grab; }
-      .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-        cursor: -webkit-grabbing;
-        cursor: grabbing; }
-
-.flickity-viewport {
-  overflow: hidden;
-  position: relative;
-  height: 100%; }
-
-.flickity-slider {
-  position: absolute;
-  width: 100%;
-  height: 100%; }
-
-.flickity-prev-next-button {
-  position: absolute;
-  top: 50%;
-  width: 28px;
-  height: 28px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer; }
-  .flickity-prev-next-button:hover {
-    background-color: transparent; }
-  .flickity-prev-next-button:focus {
-    outline: none;
-    box-shadow: none; }
-  .flickity-prev-next-button:active {
-    opacity: 0.6; }
-  .flickity-prev-next-button.previous {
-    left: -40px; }
-    @media (max-width: 1375px) {
-      .flickity-prev-next-button.previous {
-        left: 20px; } }
-    @media (max-width: 850px) {
-      .flickity-prev-next-button.previous {
-        left: 0;
-        top: calc(100% + 20px); } }
-  .flickity-prev-next-button.next {
-    right: -40px; }
-    @media (max-width: 1375px) {
-      .flickity-prev-next-button.next {
-        right: 20px; } }
-    @media (max-width: 850px) {
-      .flickity-prev-next-button.next {
-        right: 0;
-        top: calc(100% + 20px); } }
-  .flickity-prev-next-button:disabled {
-    cursor: auto; }
-    .flickity-prev-next-button:disabled .arrow {
-      fill: #ddd; }
-  .flickity-prev-next-button svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%; }
-  .flickity-prev-next-button.next svg {
-    left: auto;
-    right: 0;
-    top: 0; }
-  .flickity-prev-next-button .arrow {
-    fill: #007991; }
-
-.entry-content ol.flickity-page-dots,
-ol.flickity-page-dots {
-  list-style-type: none;
-  position: absolute;
-  top: calc(100% + 15px);
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  width: 100%; }
-  @media (max-width: 850px) {
-    .entry-content ol.flickity-page-dots,
-    ol.flickity-page-dots {
-      top: calc(100% + 30px); } }
-  .entry-content ol.flickity-page-dots li,
-  ol.flickity-page-dots li {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    background-color: #e0e0e0;
-    margin-right: 8px;
-    cursor: pointer;
-    padding-bottom: 0; }
-    .entry-content ol.flickity-page-dots li:hover,
-    ol.flickity-page-dots li:hover {
-      background-color: #ddd; }
-    .entry-content ol.flickity-page-dots li.is-selected,
-    ol.flickity-page-dots li.is-selected {
-      background-color: #007991; }
-
-/* flickity-fade */
-.flickity-enabled.is-fade .flickity-slider > * {
-  pointer-events: none;
-  z-index: 0; }
-
-.flickity-enabled.is-fade .flickity-slider > .is-selected {
-  pointer-events: auto;
-  z-index: 1; }
+.widget,
+.widget {
+  margin-bottom: 40px; }
+  .widget ul,
+  .widget ol,
+  .widget ul,
+  .widget ol {
+    list-style-type: none; }
 
 /* Forms */
 /**

@@ -1,11 +1,14 @@
 /* Author Dependencies */
-@import 'partials/base/variables';
-@import 'partials/base/mixins';
-@import 'partials/base/universal';
+@import 'partials/base/variables'; // must be first
+@import 'partials/base/mixins'; // must be second
 @import 'partials/base/headings';
+@import 'partials/base/universal';
+
 
 /* Layouts */
+@import 'partials/layouts/blog';
 @import 'partials/layouts/flickity';
+
 
 /* Blocks */
 @import 'partials/blocks/blocks-base';

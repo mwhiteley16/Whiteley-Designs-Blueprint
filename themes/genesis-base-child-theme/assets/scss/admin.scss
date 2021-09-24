@@ -1,6 +1,6 @@
 /* Author Dependencies */
-@import 'partials/base/variables';
-@import 'partials/base/mixins';
+@import 'partials/base/variables'; // must be first
+@import 'partials/base/mixins'; // must be second
 
 /* Admin CSS */
 @import 'partials/admin/admin-base';
