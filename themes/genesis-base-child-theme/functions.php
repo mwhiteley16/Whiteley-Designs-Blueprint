@@ -12,7 +12,7 @@
 
  /*
  BEFORE MODIFYING THIS THEME:
- Please read the instructions here:  https://github.com/mwhiteley16/genesis-base-child-theme/wiki
+ Please read the instructions here: https://github.com/mwhiteley16/Whiteley-Designs-Blueprint/wiki/Base-Starter-Theme-Wiki
  For access contact matt@whiteleydesigns.com
  */
 
