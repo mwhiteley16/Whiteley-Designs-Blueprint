@@ -14,7 +14,6 @@ function wd_blog_archive_custom_entry_header() { ?>
      <header class="wd-entry-header">
           <div class="wrap">
                <h1 class="entry-title">Blog</h1>
-               <?php do_action( 'wd_do_breadcrumbs' ); ?>
           </div>
      </header>
 

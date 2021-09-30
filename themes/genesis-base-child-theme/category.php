@@ -20,7 +20,6 @@ function wd_category_archive_custom_entry_header() { ?>
      <header class="wd-entry-header">
           <div class="wrap">
                <h1 class="entry-title">Category: <?php echo $page_header; ?></h1>
-               <?php do_action( 'wd_do_breadcrumbs' ); ?>
           </div>
      </header>
 
