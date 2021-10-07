@@ -137,6 +137,21 @@ add_action( 'admin_enqueue_scripts', 'wd_admin_style' );
 
 
 /**
+* Add additional script attributes
+*/
+function wd_script_attributes( $tag, $handle ) {
+
+     // add crossorigin to fontawesome
+     if ( 'wd-fontawesome' == $handle ) {
+          return str_replace( ' src', ' crossorigin="anonymous" src', $tag );
+     }
+     
+     return $tag;
+}
+// add_filter('script_loader_tag', 'wd_script_attributes', 10, 2);
+
+
+/**
  * Theme Setup
  *
  * Replace default "Start Engine" functionality
