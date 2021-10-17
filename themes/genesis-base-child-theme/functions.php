@@ -145,10 +145,10 @@ function wd_script_attributes( $tag, $handle ) {
      if ( 'wd-fontawesome' == $handle ) {
           return str_replace( ' src', ' crossorigin="anonymous" src', $tag );
      }
-     
+
      return $tag;
 }
-// add_filter('script_loader_tag', 'wd_script_attributes', 10, 2);
+// add_filter( 'script_loader_tag', 'wd_script_attributes', 10, 2 );
 
 
 /**
