@@ -106,7 +106,7 @@
 
 /* ----- Block Editor Interior Width -------------------- */
 .wp-block {
-    max-width: $base-width;
+     max-width: $base-width;
 
 	/* Wide column width */
 	&[data-align="wide"] {

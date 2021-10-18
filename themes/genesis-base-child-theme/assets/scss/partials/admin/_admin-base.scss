@@ -6,7 +6,7 @@
 
 /* ----- block editor --------------- */
 body .editor-styles-wrapper {
-     padding: 0 $base-margin;
+     @include spacing( 'horizontal', 'no-vertical' );
 
      a {
           color: $link_color;

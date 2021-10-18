@@ -36,10 +36,18 @@ $secondary-color-hover: darken( $secondary-color, 10% );
 $link_color: $primary-color;
 
 
-// interior Widths
+// spacing
 $base-margin: 30px;
 $mobile-margin: 20px;
 $base-margin-half: $base-margin / 2;
+$horizontal-spacing: $base-margin;
+$horizontal-spacing-tablet: $base-margin;
+$horizontal-spacing-mobile: $mobile-margin;
+$vertical-spacing: 80px;
+$vertical-spacing-tablet: 60px;
+$vertical-spacing-mobile: 40px;
+
+// interior Widths
 $base-width: 1168px;
 $base-content-width: 768px;
 $base-width-with-padding: $base-width + ($base-margin * 2);

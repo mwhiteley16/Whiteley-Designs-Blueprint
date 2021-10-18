@@ -101,6 +101,9 @@
 
 }
 
+/**
+ * Responsive font sizes
+ */
 @mixin font-sizes( $desktop: null, $tablet: null, $mobile: null ) {
 
      @if( $desktop ) {
@@ -117,5 +120,74 @@
           @media(max-width:$mobile-breakpoint) {
                font-size: $mobile;
           }
+     }
+}
+
+/**
+ * Default responsive spacing
+ */
+@mixin spacing( $orientation: null, $size: null ) {
+
+     @if 'vertical' == $orientation {
+
+          padding-top: $vertical-spacing;
+          padding-bottom: $vertical-spacing;
+
+          @media(max-width:$tablet-breakpoint) {
+               padding-top: $vertical-spacing-tablet;
+               padding-bottom: $vertical-spacing-tablet;
+          }
+
+          @media(max-width:$mobile-breakpoint) {
+               padding-top: $vertical-spacing-mobile;
+               padding-bottom: $vertical-spacing-mobile;
+          }
+     }
+
+     @if 'horizontal' == $orientation {
+
+          padding-left: $horizontal-spacing;
+          padding-right: $horizontal-spacing;
+
+          @if 'no-vertical' == $size {
+               padding-top: 0;
+               padding-bottom: 0;
+          }
+
+          @media(max-width:$tablet-breakpoint) {
+               padding-left: $horizontal-spacing-tablet;
+               padding-left: $horizontal-spacing-tablet;
+          }
+
+          @media(max-width:$mobile-breakpoint) {
+               padding-left: $horizontal-spacing-mobile;
+               padding-left: $horizontal-spacing-mobile;
+          }
+     }
+
+     @if 'both' == $orientation {
+
+          padding: $horizontal-spacing;
+
+          @media(max-width:$tablet-breakpoint) {
+               padding: $horizontal-spacing-tablet;
+          }
+
+          @media(max-width:$mobile-breakpoint) {
+               padding: $horizontal-spacing-mobile;
+          }
+
+          @if 'large' == $size {
+               padding: $vertical-spacing $horizontal-spacing;
+
+               @media(max-width:$tablet-breakpoint) {
+                    padding: $vertical-spacing-tablet $horizontal-spacing-tablet;
+               }
+
+               @media(max-width:$mobile-breakpoint) {
+                    padding: $vertical-spacing-mobile $horizontal-spacing-mobile;
+               }
+          }
+
      }
 }

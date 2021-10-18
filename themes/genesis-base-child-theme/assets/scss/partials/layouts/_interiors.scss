@@ -12,11 +12,7 @@
 .site-inner {
      width: 100%;
      overflow: hidden;
-     padding: 0 $base-margin;
-
-     @media(max-width:$mobile-breakpoint) {
-          padding: 0 $mobile-margin;
-     }
+     @include spacing( 'both', 'no-vertical' );
 
      .content {
           display: flex;

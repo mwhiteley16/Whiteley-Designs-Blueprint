@@ -8,10 +8,10 @@
 
  /* ----- Core Block Cover -------------------- */
 .wp-block-cover {
-     padding: $base-margin;
+     @include spacing( 'both', null );
 
      @media(max-width:$mobile-breakpoint) {
-          padding: $base-margin $mobile-margin;
+          padding: $vertical-spacing-tablet $horizontal-spacing-mobile;
      }
 
      &__inner-container {

@@ -11,11 +11,7 @@
 
      &.alignfull,
      .wp-block[data-align="full"] & {
-          padding: 0 $base-margin;
-
-          @media(max-width:$mobile-breakpoint) {
-               padding: 0 $mobile-margin;
-          }
+          @include spacing( 'both', 'no-vertical' );
 
           .wp-block-group {
 
@@ -56,6 +52,10 @@
      }
 
      &.has-background {
-          padding: 0 $base-margin;
+          @include spacing( 'both', null );
+
+          &.alignfull {
+               @include spacing( 'vertical', null );
+          }
      }
 }

@@ -7,13 +7,9 @@
  */
 
 .site-header {
+     @include spacing( 'both', null );
      width: 100%;
-     padding: $base-margin;
      position: relative;
-
-     @media(max-width:$mobile-breakpoint) {
-          padding: $base-margin $mobile-margin;
-     }
 
      > .wrap {
           display: flex;

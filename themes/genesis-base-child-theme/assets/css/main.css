@@ -115,6 +115,12 @@ textarea:focus,
  * Placeholder Color
  */
 /**
+ * Responsive font sizes
+ */
+/**
+ * Default responsive spacing
+ */
+/**
  * /assets/scss/partials/base/buttons.scss
  *
  * Let's define our button styles
@@ -877,10 +883,22 @@ ol.flickity-page-dots {
  */
 /* ----- Main Footer -------------------- */
 .site-footer {
+  padding: 30px;
+  padding: 80px 30px;
   width: 100%;
-  padding: 75px 0;
   text-align: center; }
-
+  @media (max-width: 768px) {
+    .site-footer {
+      padding: 30px; } }
+  @media (max-width: 600px) {
+    .site-footer {
+      padding: 20px; } }
+  @media (max-width: 768px) {
+    .site-footer {
+      padding: 60px 30px; } }
+  @media (max-width: 600px) {
+    .site-footer {
+      padding: 40px 20px; } }
 /* ----- Footer Widgets -------------------- */
 .footer-widgets {
   width: 100%;
@@ -898,12 +916,15 @@ ol.flickity-page-dots {
  *
  */
 .site-header {
-  width: 100%;
   padding: 30px;
+  width: 100%;
   position: relative; }
+  @media (max-width: 768px) {
+    .site-header {
+      padding: 30px; } }
   @media (max-width: 600px) {
     .site-header {
-      padding: 30px 20px; } }
+      padding: 20px; } }
   .site-header > .wrap {
     display: flex;
     flex-wrap: wrap;
@@ -926,10 +947,13 @@ ol.flickity-page-dots {
 .site-inner {
   width: 100%;
   overflow: hidden;
-  padding: 0 30px; }
+  padding: 30px; }
+  @media (max-width: 768px) {
+    .site-inner {
+      padding: 30px; } }
   @media (max-width: 600px) {
     .site-inner {
-      padding: 0 20px; } }
+      padding: 20px; } }
   .site-inner .content {
     display: flex;
     flex-wrap: wrap;
@@ -3078,9 +3102,15 @@ a.wd-button--inverse.has-black-background-color {
 /* ----- Core Block Cover -------------------- */
 .wp-block-cover {
   padding: 30px; }
+  @media (max-width: 768px) {
+    .wp-block-cover {
+      padding: 30px; } }
   @media (max-width: 600px) {
     .wp-block-cover {
-      padding: 30px 20px; } }
+      padding: 20px; } }
+  @media (max-width: 600px) {
+    .wp-block-cover {
+      padding: 60px 20px; } }
   .wp-block-cover__inner-container {
     max-width: 1168px;
     margin: 0 auto; }
@@ -3108,10 +3138,13 @@ a.wd-button--inverse.has-black-background-color {
  */
 /* ----- Core Block Group -------------------- */
 .wp-block-group.alignfull, .wp-block[data-align="full"] .wp-block-group {
-  padding: 0 30px; }
+  padding: 30px; }
+  @media (max-width: 768px) {
+    .wp-block-group.alignfull, .wp-block[data-align="full"] .wp-block-group {
+      padding: 30px; } }
   @media (max-width: 600px) {
     .wp-block-group.alignfull, .wp-block[data-align="full"] .wp-block-group {
-      padding: 0 20px; } }
+      padding: 20px; } }
   .wp-block-group.alignfull .wp-block-group__inner-container, .wp-block[data-align="full"] .wp-block-group .wp-block-group__inner-container {
     max-width: 1168px;
     margin: 0 auto; }
@@ -3131,8 +3164,24 @@ a.wd-button--inverse.has-black-background-color {
   width: 100vw; }
 
 .wp-block-group.has-background {
-  padding: 0 30px; }
-
+  padding: 30px; }
+  @media (max-width: 768px) {
+    .wp-block-group.has-background {
+      padding: 30px; } }
+  @media (max-width: 600px) {
+    .wp-block-group.has-background {
+      padding: 20px; } }
+  .wp-block-group.has-background.alignfull {
+    padding-top: 80px;
+    padding-bottom: 80px; }
+    @media (max-width: 768px) {
+      .wp-block-group.has-background.alignfull {
+        padding-top: 60px;
+        padding-bottom: 60px; } }
+    @media (max-width: 600px) {
+      .wp-block-group.has-background.alignfull {
+        padding-top: 40px;
+        padding-bottom: 40px; } }
 /**
  * /assets/scss/partials/blocks/core/blocks-core-image.scss
  *
@@ -3164,7 +3213,7 @@ a.wd-button--inverse.has-black-background-color {
     .wp-block-image .alignleft, .wp-block[data-align="left"] > .wp-block-image,
     .wp-block-image .alignright, .wp-block[data-align="right"] > .wp-block-image {
       float: none;
-      margin: 0 0 30px; } }
+      margin: 0 0 20px; } }
   .wp-block-image .aligncenter, .wp-block[data-align="center"] > .wp-block-image {
     margin-left: auto;
     margin-right: auto; }

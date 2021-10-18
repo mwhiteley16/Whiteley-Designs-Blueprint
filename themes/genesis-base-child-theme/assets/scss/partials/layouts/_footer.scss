@@ -10,8 +10,8 @@
 
 /* ----- Main Footer -------------------- */
 .site-footer {
+     @include spacing( 'both', 'large' );
      width: 100%;
-     padding: 75px 0;
      text-align: center;
 }
 

@@ -20,6 +20,12 @@
 /**
  * Placeholder Color
  */
+/**
+ * Responsive font sizes
+ */
+/**
+ * Default responsive spacing
+ */
 /* Admin CSS */
 /* ----- menu separators --------------- */
 #adminmenu li.wp-menu-separator {
@@ -28,7 +34,18 @@
 
 /* ----- block editor --------------- */
 body .editor-styles-wrapper {
-  padding: 0 30px; }
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 0;
+  padding-bottom: 0; }
+  @media (max-width: 768px) {
+    body .editor-styles-wrapper {
+      padding-left: 30px;
+      padding-left: 30px; } }
+  @media (max-width: 600px) {
+    body .editor-styles-wrapper {
+      padding-left: 20px;
+      padding-left: 20px; } }
   body .editor-styles-wrapper a {
     color: #007991; }
     body .editor-styles-wrapper a:hover {
