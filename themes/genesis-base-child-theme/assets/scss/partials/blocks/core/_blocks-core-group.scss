@@ -9,33 +9,6 @@
  /* ----- Core Block Group -------------------- */
 .wp-block-group {
 
-     &.alignfull,
-     .wp-block[data-align="full"] & {
-          @include spacing( 'both', 'no-vertical' );
-
-          .wp-block-group {
-
-               &__inner-container {
-                    max-width: $base-width;
-                    margin: 0 auto;
-               }
-          }
-
-          &.is-style-full-inner-width {
-
-               .wp-block-group {
-
-                    &__inner-container {
-                         max-width: none;
-
-                         > .wp-block {
-                              max-width: none;
-                         }
-                    }
-               }
-          }
-     }
-
      &__inner-container > * {
 
           &.alignwide {
@@ -49,12 +22,37 @@
                max-width: 100vw;
                width: 100vw;
           }
+
+          &:last-child {
+               margin-bottom: 0;
+          }
+     }
+
+     &.alignfull,
+     .wp-block[data-align="full"] & {
+          @include spacing( 'both', 'no-vertical' );
+
+          .wp-block-group__inner-container {
+               max-width: $base-width;
+               margin: 0 auto;
+          }
+     }
+
+     &.aligncenter,
+     .wp-block[data-align="center"] & {
+
+          .wp-block-group__inner-container {
+               max-width: $base-content-width;
+               margin: 0 auto;
+          }
      }
 
      &.has-background {
           @include spacing( 'both', null );
 
-          &.alignfull {
+          &.alignfull,
+          &.alignwide,
+          &.aligncenter {
                @include spacing( 'vertical', null );
           }
      }

@@ -45,23 +45,6 @@ wp.domReady( () => {
      );
 
 
-     // group styles
-     wp.blocks.registerBlockStyle(
-          'core/group',
-          [
-               {
-                    name: 'default',
-                    label: 'Default',
-                    isDefault: true,
-               },
-               {
-                    name: 'full-inner-width',
-                    label: 'Full Inner Width',
-               }
-          ]
-     );
-
-
      // heading styles
      wp.blocks.registerBlockStyle(
           'core/heading',

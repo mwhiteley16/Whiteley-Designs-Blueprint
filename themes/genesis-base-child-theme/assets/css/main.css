@@ -3137,6 +3137,19 @@ a.wd-button--inverse.has-black-background-color {
  *
  */
 /* ----- Core Block Group -------------------- */
+.wp-block-group__inner-container > *.alignwide {
+  margin: 0 calc(25% - 25vw);
+  max-width: 100vw;
+  width: auto; }
+
+.wp-block-group__inner-container > *.alignfull {
+  margin: 0 calc(50% - 50vw);
+  max-width: 100vw;
+  width: 100vw; }
+
+.wp-block-group__inner-container > *:last-child {
+  margin-bottom: 0; }
+
 .wp-block-group.alignfull, .wp-block[data-align="full"] .wp-block-group {
   padding: 30px; }
   @media (max-width: 768px) {
@@ -3148,20 +3161,10 @@ a.wd-button--inverse.has-black-background-color {
   .wp-block-group.alignfull .wp-block-group__inner-container, .wp-block[data-align="full"] .wp-block-group .wp-block-group__inner-container {
     max-width: 1168px;
     margin: 0 auto; }
-  .wp-block-group.alignfull.is-style-full-inner-width .wp-block-group__inner-container, .wp-block[data-align="full"] .wp-block-group.is-style-full-inner-width .wp-block-group__inner-container {
-    max-width: none; }
-    .wp-block-group.alignfull.is-style-full-inner-width .wp-block-group__inner-container > .wp-block, .wp-block[data-align="full"] .wp-block-group.is-style-full-inner-width .wp-block-group__inner-container > .wp-block {
-      max-width: none; }
 
-.wp-block-group__inner-container > *.alignwide {
-  margin: 0 calc(25% - 25vw);
-  max-width: 100vw;
-  width: auto; }
-
-.wp-block-group__inner-container > *.alignfull {
-  margin: 0 calc(50% - 50vw);
-  max-width: 100vw;
-  width: 100vw; }
+.wp-block-group.aligncenter .wp-block-group__inner-container, .wp-block[data-align="center"] .wp-block-group .wp-block-group__inner-container {
+  max-width: 768px;
+  margin: 0 auto; }
 
 .wp-block-group.has-background {
   padding: 30px; }
@@ -3171,15 +3174,15 @@ a.wd-button--inverse.has-black-background-color {
   @media (max-width: 600px) {
     .wp-block-group.has-background {
       padding: 20px; } }
-  .wp-block-group.has-background.alignfull {
+  .wp-block-group.has-background.alignfull, .wp-block-group.has-background.alignwide, .wp-block-group.has-background.aligncenter {
     padding-top: 80px;
     padding-bottom: 80px; }
     @media (max-width: 768px) {
-      .wp-block-group.has-background.alignfull {
+      .wp-block-group.has-background.alignfull, .wp-block-group.has-background.alignwide, .wp-block-group.has-background.aligncenter {
         padding-top: 60px;
         padding-bottom: 60px; } }
     @media (max-width: 600px) {
-      .wp-block-group.has-background.alignfull {
+      .wp-block-group.has-background.alignfull, .wp-block-group.has-background.alignwide, .wp-block-group.has-background.aligncenter {
         padding-top: 40px;
         padding-bottom: 40px; } }
 /**
