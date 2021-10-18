@@ -3,9 +3,11 @@
  *
  * Let's define our pagination styles
  *
- *
+ * - Default
+ * - FacetWP Pager
  */
 
+/* ----- Default -------------------- */
 .pagination {
      width: 100%;
      padding-top: 25px;
@@ -76,6 +78,38 @@
                          margin-bottom: 0;
                          margin-top: 15px;
                     }
+               }
+          }
+     }
+}
+
+/* ----- FacetWP Pager -------------------- */
+.archive-pager {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+
+     .facetwp-facet {
+          margin: 0;
+
+          button {
+               @extend %button-styles;
+               
+               margin-top: $horizontal-spacing;
+               margin-bottom: $horizontal-spacing;
+
+               @media(max-width:$tablet-breakpoint) {
+                    margin-top: $horizontal-spacing-tablet;
+                    margin-bottom: $horizontal-spacing-tablet;
+               }
+
+               @media(max-width:$mobile-breakpoint) {
+                    margin-top: $horizontal-spacing-mobile;
+                    margin-bottom: $horizontal-spacing-mobile;
+               }
+
+               &.facetwp-hidden {
+                    display: none;
                }
           }
      }
