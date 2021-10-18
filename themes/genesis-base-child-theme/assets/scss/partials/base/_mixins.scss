@@ -100,3 +100,22 @@
      }
 
 }
+
+@mixin font-sizes( $desktop: null, $tablet: null, $mobile: null ) {
+
+     @if( $desktop ) {
+          font-size: $desktop;
+     }
+
+     @if( $tablet ) {
+          @media(max-width:$tablet-breakpoint) {
+               font-size: $tablet;
+          }
+     }
+
+     @if( $mobile ) {
+          @media(max-width:$mobile-breakpoint) {
+               font-size: $mobile;
+          }
+     }
+}

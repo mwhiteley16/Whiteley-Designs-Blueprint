@@ -14,7 +14,7 @@
      overflow: hidden;
      padding: 0 $base-margin;
 
-     @media(max-width:600px) {
+     @media(max-width:$mobile-breakpoint) {
           padding: 0 $mobile-margin;
      }
 
@@ -36,7 +36,7 @@
      margin: 0 auto;
 }
 
-@media(max-width:600px) {
+@media(max-width:$mobile-breakpoint) {
 
      html #wpadminbar {
           position: fixed;

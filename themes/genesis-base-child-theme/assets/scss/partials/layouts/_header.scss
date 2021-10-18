@@ -11,7 +11,7 @@
      padding: $base-margin;
      position: relative;
 
-     @media(max-width:600px) {
+     @media(max-width:$mobile-breakpoint) {
           padding: $base-margin $mobile-margin;
      }
 

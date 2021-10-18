@@ -33,7 +33,7 @@
                top: 58px;
           }
 
-          @media(max-width:600px) {
+          @media(max-width:$mobile-breakpoint) {
                left: -$mobile-margin;
                right: -$mobile-margin;
           }

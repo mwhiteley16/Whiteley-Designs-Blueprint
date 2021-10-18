@@ -22,7 +22,7 @@
 
      margin-bottom: $base-margin;
 
-     @media(max-width:600px) {
+     @media(max-width:$mobile-breakpoint) {
 
           &.no-mobile-hide {
                flex-direction: column;

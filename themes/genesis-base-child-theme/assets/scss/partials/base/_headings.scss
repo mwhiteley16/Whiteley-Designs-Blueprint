@@ -50,19 +50,19 @@ h6 {
 }
 
 h1 {
-     font-size: 32px;
+     @include font-sizes( 32px, 30px, 28px );
 }
 
 h2 {
-     font-size: 26px;
+     @include font-sizes( 26px, 24px, 24px );
 }
 
 h3 {
-     font-size: 22px;
+     @include font-sizes( 22px, 20px, 20px );
 }
 
 h4 {
-     font-size: 18px;
+     @include font-sizes( 18px, 16px, 16px );
 }
 
 h5 {

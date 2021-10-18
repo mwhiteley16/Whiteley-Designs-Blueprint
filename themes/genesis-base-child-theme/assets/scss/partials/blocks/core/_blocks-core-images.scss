@@ -43,7 +43,7 @@
           }
 	}
 
-     @media(max-width:600px) {
+     @media(max-width:$mobile-breakpoint) {
 
           .alignleft,
           .wp-block[data-align="left"] > &,
@@ -88,7 +88,7 @@
 
      &.is-style-hide-mobile {
 
-          @media(max-width:600px) {
+          @media(max-width:$mobile-breakpoint) {
                display: none;
           }
      }

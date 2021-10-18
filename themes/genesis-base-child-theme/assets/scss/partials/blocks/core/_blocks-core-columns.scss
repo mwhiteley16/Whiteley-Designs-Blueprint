@@ -22,7 +22,7 @@
                }
           }
 
-          @media(min-width:600px) {
+          @media(min-width:$mobile-breakpoint) {
                flex-basis: calc(50% - #{$column-gap-half}) !important;
           }
      }
@@ -98,7 +98,7 @@
 
           .wp-block-column {
 
-               @media(max-width:950px) and (min-width:600px) {
+               @media(max-width:950px) and (min-width:$mobile-breakpoint) {
                     margin-top: 30px;
                     flex-grow: 0;
                     flex-basis: calc(calc(100% - calc(#{$column-gap} * 2)) / 3) !important;
@@ -148,7 +148,7 @@
                     margin-left: 0;
                }
 
-               @media(min-width:600px) {
+               @media(min-width:$mobile-breakpoint) {
                     flex-basis: 50% !important;
                }
           }

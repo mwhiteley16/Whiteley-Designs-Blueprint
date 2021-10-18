@@ -398,3 +398,19 @@ wp.domReady( () => {
      wp.blocks.unregisterBlockType( 'yoast-seo/breadcrumbs' );
 
 } );
+
+
+// add center align to group block
+wp.hooks.addFilter(
+	'blocks.registerBlockType',
+	'wd/groupAlignments',
+	function (settings, name) {
+		if (name === 'core/group') { return lodash.assign({}, settings, {
+			supports: lodash.assign({}, settings.supports, {
+				align: [ 'wide', 'full', 'center' ],
+			}),
+		});
+	}
+	return settings;
+	}
+);

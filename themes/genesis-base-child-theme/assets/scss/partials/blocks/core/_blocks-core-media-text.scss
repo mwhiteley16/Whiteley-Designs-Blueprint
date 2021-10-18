@@ -14,7 +14,7 @@
           &__content {
                padding: 0 0 0 50px;
 
-               @media(max-width:600px) {
+               @media(max-width:$mobile-breakpoint) {
                     padding: 0;
                }
           }
@@ -34,7 +34,7 @@
 
                &__content {
 
-                    @media(max-width:600px) {
+                    @media(max-width:$mobile-breakpoint) {
                          padding: 0 $mobile-margin;
                     }
                }
@@ -77,7 +77,7 @@
 
      &.is-style-mobile-image-top {
 
-          @media(max-width:600px) {
+          @media(max-width:$mobile-breakpoint) {
 
                .wp-block-media-text {
 

@@ -48,6 +48,13 @@ $alingwide-width-full: $alignwide-width + $base-width;
 $alignwide-width-thin: $alignwide-width + $base-content-width;
 
 
+// breakpoints
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 600px;
+$menu-breakpoint: 1000px;
+$menu-breakpoint-1: $menu-breakpoint + 1;
+
+
 // form variables
 $form-spacing: $base-margin;
 $form-spacing-half: $form-spacing / 2;
