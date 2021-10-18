@@ -1775,8 +1775,9 @@ hr.wp-block-separator {
   border-bottom: 4px solid rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.05); }
   .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block {
-    max-width: 1168px;
-    margin: 0 auto; }
+    max-width: 100%;
+    margin: 0;
+    padding: 0 30px; }
     .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block::before {
       content: 'Page / Post Title';
       color: rgba(0, 0, 0, 0.3);
@@ -1785,7 +1786,7 @@ hr.wp-block-separator {
       font-weight: 500;
       position: absolute;
       top: 5px;
-      left: 0; }
+      left: 30px; }
     .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input {
       margin-bottom: 0 !important;
       height: auto !important;

@@ -165,8 +165,9 @@
      background-color: rgba(0,0,0,0.05);
 
      .editor-post-title__block.wp-block {
-     	max-width: $base-width;
-          margin: 0 auto;
+     	max-width: 100%;
+          margin: 0;
+          padding: 0 30px;
 
           &::before{
                content: 'Page / Post Title';
@@ -176,7 +177,7 @@
                font-weight: 500;
                position: absolute;
                top: 5px;
-               left: 0;
+               left: 30px;
           }
 
      	.editor-post-title__input {
