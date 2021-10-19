@@ -781,7 +781,7 @@ a.wd-button--inverse.has-black-background-color {
  */
 /* ----- Core Block Columns -------------------- */
 .wp-block-columns {
-  margin-bottom: 0;
+  margin-bottom: 30px;
   justify-content: center; }
   .wp-block-columns .wp-block-column:not(:first-child) {
     margin-left: 50px; }
@@ -789,6 +789,8 @@ a.wd-button--inverse.has-black-background-color {
       .wp-block-columns .wp-block-column:not(:first-child) {
         margin-left: 0;
         margin-top: 30px; } }
+  .wp-block-columns .wp-block-column > *:last-child {
+    margin-bottom: 0; }
   @media (min-width: 600px) {
     .wp-block-columns .wp-block-column {
       flex-basis: calc(50% - 25px) !important; } }
