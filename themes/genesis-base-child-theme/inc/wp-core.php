@@ -274,6 +274,17 @@ function wd_disable_self_pingbacks( &$links ) {
 
 
 /**
+* Remove unused admin menu items
+*
+* @link https://whiteleydesigns.com/editing-wordpress-admin-menus/
+*/
+function wd_admin_menu_cleanup() {
+     remove_menu_page( 'edit-comments.php' );
+}
+// add_action( 'admin_menu', 'wd_admin_menu_cleanup' );
+
+
+/**
 * Add custom image sizes
 */
 // add_image_size( 'size-name', 000, 000, true );
