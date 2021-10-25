@@ -38,7 +38,7 @@
           align-items: center;
           justify-content: center;
 
-          @media(max-width:$mobile-breakpoint) {
+          @include media( 'mobile' ) {
                flex-wrap: wrap;
           }
 
@@ -64,7 +64,7 @@
                     }
                }
 
-               @media(max-width:$mobile-breakpoint) {
+               @include media( 'mobile' ) {
 
                     &.pagination-previous,
                     &.pagination-next {
@@ -98,12 +98,12 @@
                margin-top: $horizontal-spacing;
                margin-bottom: $horizontal-spacing;
 
-               @media(max-width:$tablet-breakpoint) {
+               @include media( 'tablet' ) {
                     margin-top: $horizontal-spacing-tablet;
                     margin-bottom: $horizontal-spacing-tablet;
                }
 
-               @media(max-width:$mobile-breakpoint) {
+               @include media( 'mobile' ) {
                     margin-top: $horizontal-spacing-mobile;
                     margin-bottom: $horizontal-spacing-mobile;
                }

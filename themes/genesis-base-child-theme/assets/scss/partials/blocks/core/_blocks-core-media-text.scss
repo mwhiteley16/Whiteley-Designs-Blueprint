@@ -14,7 +14,7 @@
           &__content {
                padding: 0 0 0 50px;
 
-               @media(max-width:$mobile-breakpoint) {
+               @include media( 'mobile' ) {
                     padding: 0;
                }
           }
@@ -34,7 +34,7 @@
 
                &__content {
 
-                    @media(max-width:$mobile-breakpoint) {
+                    @include media( 'mobile' ) {
                          padding: 0 $mobile-margin;
                     }
                }
@@ -44,6 +44,10 @@
      &.has-media-on-the-right .wp-block-media-text__content {
           padding-left: 0;
           padding-right: 50px;
+
+          @include media( 'mobile' ) {
+               padding: 0;
+          }
      }
 
      &.has-media-on-the-left .wp-block-media-text__content {
@@ -52,7 +56,7 @@
 
      &.is-style-wide-break {
 
-          @media(max-width:900px) {
+          @include media( 'medium' ) {
                -ms-grid-columns: 100% !important;
                grid-template-columns: 100% !important;
 
@@ -77,7 +81,7 @@
 
      &.is-style-mobile-image-top {
 
-          @media(max-width:$mobile-breakpoint) {
+          @include media( 'mobile' ) {
 
                .wp-block-media-text {
 

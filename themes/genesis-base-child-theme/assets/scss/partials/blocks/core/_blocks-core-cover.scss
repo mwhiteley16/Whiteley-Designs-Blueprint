@@ -10,7 +10,7 @@
 .wp-block-cover {
      @include spacing( 'both', null );
 
-     @media(max-width:$mobile-breakpoint) {
+     @include media( 'mobile' ) {
           padding: $vertical-spacing-tablet $horizontal-spacing-mobile;
      }
 

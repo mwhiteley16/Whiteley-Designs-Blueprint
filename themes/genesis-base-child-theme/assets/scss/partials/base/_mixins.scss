@@ -111,13 +111,13 @@
      }
 
      @if( $tablet ) {
-          @media(max-width:$tablet-breakpoint) {
+          @include media( 'tablet' ) {
                font-size: $tablet;
           }
      }
 
      @if( $mobile ) {
-          @media(max-width:$mobile-breakpoint) {
+          @include media( 'mobile' ) {
                font-size: $mobile;
           }
      }
@@ -133,12 +133,12 @@
           padding-top: $vertical-spacing;
           padding-bottom: $vertical-spacing;
 
-          @media(max-width:$tablet-breakpoint) {
+          @include media( 'tablet' ) {
                padding-top: $vertical-spacing-tablet;
                padding-bottom: $vertical-spacing-tablet;
           }
 
-          @media(max-width:$mobile-breakpoint) {
+          @include media( 'mobile' ) {
                padding-top: $vertical-spacing-mobile;
                padding-bottom: $vertical-spacing-mobile;
           }
@@ -154,12 +154,12 @@
                padding-bottom: 0;
           }
 
-          @media(max-width:$tablet-breakpoint) {
+          @include media( 'tablet' ) {
                padding-left: $horizontal-spacing-tablet;
                padding-left: $horizontal-spacing-tablet;
           }
 
-          @media(max-width:$mobile-breakpoint) {
+          @include media( 'mobile' ) {
                padding-left: $horizontal-spacing-mobile;
                padding-left: $horizontal-spacing-mobile;
           }
@@ -169,25 +169,41 @@
 
           padding: $horizontal-spacing;
 
-          @media(max-width:$tablet-breakpoint) {
+          @include media( 'tablet' ) {
                padding: $horizontal-spacing-tablet;
           }
 
-          @media(max-width:$mobile-breakpoint) {
+          @include media( 'mobile' ) {
                padding: $horizontal-spacing-mobile;
           }
 
           @if 'large' == $size {
                padding: $vertical-spacing $horizontal-spacing;
 
-               @media(max-width:$tablet-breakpoint) {
+               @include media( 'tablet' ) {
                     padding: $vertical-spacing-tablet $horizontal-spacing-tablet;
                }
 
-               @media(max-width:$mobile-breakpoint) {
+               @include media( 'mobile' ) {
                     padding: $vertical-spacing-mobile $horizontal-spacing-mobile;
                }
           }
 
      }
 }
+
+
+/**
+ * Media queries
+ */
+ @mixin media( $name ) {
+
+     // If the key exists in the map
+     @if map-has-key( $breakpoints, $name ) {
+
+          // Prints a media query based on the value
+          @media #{inspect( map-get( $breakpoints, $name ) )} {
+               @content;
+          }
+     }
+ }

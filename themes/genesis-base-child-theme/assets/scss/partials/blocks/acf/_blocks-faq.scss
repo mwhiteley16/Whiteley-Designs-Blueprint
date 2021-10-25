@@ -16,7 +16,7 @@
           position: relative;
           padding: 20px;
 
-          @media(max-width:$mobile-breakpoint) {
+          @include media( 'mobile' ) {
                padding: 15px;
           }
 

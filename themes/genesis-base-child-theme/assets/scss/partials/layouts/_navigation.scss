@@ -11,11 +11,11 @@
 /* ----- Primary Navigation -------------------- */
 .nav-primary {
 
-     @media(min-width:$menu-breakpoint-1) {
+     @include media( 'menu+' ) {
           display: block !important;
      }
 
-     @media(max-width:$menu-breakpoint) {
+     @include media( 'menu' ) {
           display: none;
           position: absolute;
           top: 100%;
@@ -27,7 +27,7 @@
           padding-bottom: 30px;
      }
 
-     @media(max-width:$mobile-breakpoint) {
+     @include media( 'mobile' ) {
           margin-left: -$mobile-margin;
           margin-right: -$mobile-margin;
      }
@@ -83,7 +83,7 @@
                          height: 20px;
                     }
 
-                    @media(max-width:$menu-breakpoint) {
+                    @include media( 'menu' ) {
                          top: 4px;
                          width: 48px;
                          height: 48px;
@@ -124,7 +124,7 @@
                     }
                }
 
-               @media(min-width:$menu-breakpoint-1) {
+               @include media( 'menu+' ) {
                     &:hover {
 
                          & > .sub-menu {
@@ -134,7 +134,7 @@
                     }
                }
 
-               @media(max-width:$menu-breakpoint) {
+               @include media( 'menu' ) {
                     width: 100%;
 
                     &:not(.menu-button) {
@@ -160,7 +160,7 @@
                z-index: 99;
                @extend %transition;
 
-               @media(max-width:$menu-breakpoint) {
+               @include media( 'menu' ) {
                     left: auto;
                     opacity: 1;
                     position: relative;
@@ -253,7 +253,7 @@
           }
      }
 
-     @media(max-width:$menu-breakpoint) {
+     @include media( 'menu' ) {
           display: block;
      }
 }

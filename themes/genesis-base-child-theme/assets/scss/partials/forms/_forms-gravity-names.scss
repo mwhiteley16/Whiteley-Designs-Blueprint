@@ -15,7 +15,7 @@
      .name_last {
           width: calc(50% - calc(#{$form-spacing} / 2));
 
-          @media(max-width:$mobile-breakpoint) {
+          @include media( 'mobile' ) {
                width: 100%;
           }
 
@@ -25,7 +25,7 @@
           }
      }
 
-     @media(max-width:$mobile-breakpoint) {
+     @include media( 'mobile' ) {
           .name_last {
                margin-top: calc(#{$form-padding} / 2);
           }

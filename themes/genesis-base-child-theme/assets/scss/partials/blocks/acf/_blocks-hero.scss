@@ -12,7 +12,7 @@
      background-position: left center;
      position: relative;
 
-     @media(max-width:$mobile-breakpoint) {
+     @include media( 'mobile' ) {
           padding: 100px $mobile-margin;
      }
 

@@ -11,7 +11,7 @@
      width: 100%;
      padding: 60px 0;
 
-     @media(max-width:900px) {
+     @include media( 'medium' ) {
           padding: 0;
      }
 
@@ -26,14 +26,14 @@
                left: 75px;
           }
 
-          @media(max-width:900px) {
+          @include media( 'medium' ) {
                left: -$base-margin;
                right: -$base-margin;
                height: calc(100% - 58px);
                top: 58px;
           }
 
-          @media(max-width:$mobile-breakpoint) {
+          @include media( 'mobile' ) {
                left: -$mobile-margin;
                right: -$mobile-margin;
           }
@@ -57,7 +57,7 @@
                margin-right: 50px;
           }
 
-          @media(max-width:900px) {
+          @include media( 'medium' ) {
                width: calc(100% - 40px);
                margin: 0 20px 32px;
                flex: none;
@@ -75,13 +75,13 @@
                &.yes-shadow {
                     box-shadow: -32px 32px 48px rgba(60, 62, 64, 0.2);
 
-                    @media(min-width:901px) {
+                    @include media( 'medium+' ) {
                          .media-right & {
                               box-shadow: 32px 32px 48px rgba(60,62,62,0.2);
                          }
                     }
 
-                    @media(max-width:900px) {
+                    @include media( 'medium' ) {
                          box-shadow: 16px 16px 24px rgba(60, 62, 64, 0.2);
                     }
                }
@@ -92,7 +92,7 @@
           width: 480px;
           order: 2;
 
-          @media(max-width:900px) {
+          @include media( 'medium' ) {
                width: 100%;
                padding: 0 30px 30px;
 
@@ -119,7 +119,7 @@
                          right: 75px;
                     }
 
-                    @media(max-width:900px) {
+                    @include media( 'medium' ) {
                          left: -$base-margin;
                          right: -$base-margin;
                     }
@@ -131,7 +131,7 @@
                }
 
                &__media {
-                    @media(min-width:901px) {
+                    @include media( 'medium+' ) {
                          order: 2;
                          margin-left: 50px;
                     }

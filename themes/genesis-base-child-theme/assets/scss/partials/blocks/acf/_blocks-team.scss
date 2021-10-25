@@ -18,7 +18,7 @@
           width: calc(calc(100% / 3) - 40px);
           margin: 0 60px 0 0;
 
-          @media(min-width:901px) {
+          @include media( 'medium+' ) {
                &:nth-child(3n) {
                     margin-right: 0;
                }
@@ -28,7 +28,7 @@
                }
           }
 
-          @media(max-width:900px) {
+          @include media( 'medium' ) {
                width: calc(50% - 30px);
 
                &:nth-child(2n) {
@@ -40,7 +40,7 @@
                }
           }
 
-          @media(max-width:$mobile-breakpoint) {
+          @include media( 'mobile' ) {
                width: 100%;
                margin: 40px 0 0 0;
 

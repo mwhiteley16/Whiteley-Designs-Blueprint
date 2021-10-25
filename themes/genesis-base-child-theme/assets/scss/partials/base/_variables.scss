@@ -58,10 +58,16 @@ $alignwide-width-thin: $alignwide-width + $base-content-width;
 
 
 // breakpoints
-$tablet-breakpoint: 768px;
-$mobile-breakpoint: 600px;
-$menu-breakpoint: 1000px;
-$menu-breakpoint-1: $menu-breakpoint + 1;
+$breakpoints: (
+     'tablet'  : ( max-width: 768px),
+     'tablet+' : ( min-width: 769px ),
+     'medium'  : ( max-width: 900px ),
+     'medium+' : ( min-width: 901px ),
+     'mobile'  : ( max-width: 600px ),
+     'mobile+' : ( min-width: 601px ),
+     'menu'    : ( max-width: 1000px ),
+     'menu+'   : ( min-width: 1001px )
+);
 
 
 // form variables

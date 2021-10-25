@@ -22,7 +22,7 @@
           align-items: center;
      }
 
-     @media(max-width:$tablet-breakpoint) {
+     @include media( 'tablet' ) {
           background-image: none !important;
           height: auto;
           flex-wrap: wrap;
@@ -46,7 +46,7 @@
                justify-content: center;
           }
 
-          @media(max-width:$tablet-breakpoint) {
+          @include media( 'tablet' ) {
                order: 2;
           }
      }
@@ -58,7 +58,7 @@
           padding: 48px;
           box-shadow: 32px 32px 48px rgba(60, 62, 64, 0.2);
 
-          @media(max-width:$tablet-breakpoint) {
+          @include media( 'tablet' ) {
                max-width: 100%;
                padding: 20px;
           }
@@ -76,7 +76,7 @@
                width: 100%;
           }
 
-          @media(max-width:$tablet-breakpoint) {
+          @include media( 'tablet' ) {
                display: block;
           }
      }

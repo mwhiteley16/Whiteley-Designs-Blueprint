@@ -20,54 +20,54 @@
 
      &.is-style-responsive-small {
 
-          @media(max-width:1000px) {
+          @include media( 'medium' ) {
                max-height: 100px;
           }
 
-          @media(max-width:800px) {
+          @include media( 'tablet' ) {
                max-height: 60px;
           }
      }
 
      &.is-style-responsive-medium {
 
-          @media(max-width:1000px) {
+          @include media( 'medium' ) {
                max-height: 120px;
           }
 
-          @media(max-width:800px) {
+          @include media( 'tablet' ) {
                max-height: 80px;
           }
      }
 
      &.is-style-responsive-large {
 
-          @media(max-width:1000px) {
+          @include media( 'medium' ) {
                max-height: 140px;
           }
 
-          @media(max-width:800px) {
+          @include media( 'tablet' ) {
                max-height: 100px;
           }
      }
 
      &.is-style-tablet-hide {
 
-          @media(max-width:1000px) {
+          @include media( 'tablet' ) {
                display: none;
           }
      }
 
      &.is-style-mobile-hide {
 
-          @media(max-width:600px) {
+          @include media( 'mobile' ) {
                display: none;
           }
      }
 
      &.is-style-desktop-hide {
 
-          @media(min-width:601px) {
+          @include media( 'mobile+' ) {
                display: none;
 
                &.wp-block {

@@ -24,7 +24,7 @@
           &.address_zip {
                width: calc(calc(100% / 3) - calc(calc(#{$form-spacing} * 2) / 3));
 
-               @media(max-width:$mobile-breakpoint) {
+               @include media( 'mobile' ) {
                     width: 100%;
                }
           }
