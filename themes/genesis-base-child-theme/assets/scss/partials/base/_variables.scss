@@ -40,12 +40,12 @@ $link_color: $primary-color;
 $base-margin: 30px;
 $mobile-margin: 20px;
 $base-margin-half: $base-margin / 2;
-$horizontal-spacing: $base-margin;
-$horizontal-spacing-tablet: $base-margin;
-$horizontal-spacing-mobile: $mobile-margin;
-$vertical-spacing: 80px;
-$vertical-spacing-tablet: 60px;
-$vertical-spacing-mobile: 40px;
+$h-spacing: $base-margin;
+$h-spacing-tablet: $base-margin;
+$h-spacing-mobile: $mobile-margin;
+$v-spacing: 80px;
+$v-spacing-tablet: 60px;
+$v-spacing-mobile: 40px;
 
 
 // interior Widths
@@ -55,19 +55,6 @@ $base-width-with-padding: $base-width + ($base-margin * 2);
 $alignwide-width: 300px;
 $alingwide-width-full: $alignwide-width + $base-width;
 $alignwide-width-thin: $alignwide-width + $base-content-width;
-
-
-// breakpoints
-$breakpoints: (
-     'tablet'  : ( max-width: 768px),
-     'tablet+' : ( min-width: 769px ),
-     'medium'  : ( max-width: 900px ),
-     'medium+' : ( min-width: 901px ),
-     'mobile'  : ( max-width: 600px ),
-     'mobile+' : ( min-width: 601px ),
-     'menu'    : ( max-width: 1000px ),
-     'menu+'   : ( min-width: 1001px )
-);
 
 
 // form variables
@@ -85,8 +72,21 @@ $form-font-size: 16px;
 
 
 // column spacing
-$column-gap: 50px;
+$column-gap: $base-margin;
 $column-gap-half: $column-gap * 0.5;
+
+
+// breakpoints
+$breakpoints: (
+     'tablet'  : ( max-width: 768px),
+     'tablet+' : ( min-width: 769px ),
+     'medium'  : ( max-width: 900px ),
+     'medium+' : ( min-width: 901px ),
+     'mobile'  : ( max-width: 600px ),
+     'mobile+' : ( min-width: 601px ),
+     'menu'    : ( max-width: 1000px ),
+     'menu+'   : ( min-width: 1001px )
+);
 
 
 // block Coloring

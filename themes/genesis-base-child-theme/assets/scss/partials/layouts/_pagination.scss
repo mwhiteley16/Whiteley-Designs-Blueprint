@@ -95,17 +95,17 @@
           button {
                @extend %button-styles;
                
-               margin-top: $horizontal-spacing;
-               margin-bottom: $horizontal-spacing;
+               margin-top: $h-spacing;
+               margin-bottom: $h-spacing;
 
                @include media( 'tablet' ) {
-                    margin-top: $horizontal-spacing-tablet;
-                    margin-bottom: $horizontal-spacing-tablet;
+                    margin-top: $h-spacing-tablet;
+                    margin-bottom: $h-spacing-tablet;
                }
 
                @include media( 'mobile' ) {
-                    margin-top: $horizontal-spacing-mobile;
-                    margin-bottom: $horizontal-spacing-mobile;
+                    margin-top: $h-spacing-mobile;
+                    margin-bottom: $h-spacing-mobile;
                }
 
                &.facetwp-hidden {

@@ -11,7 +11,7 @@
      @include spacing( 'both', null );
 
      @include media( 'mobile' ) {
-          padding: $vertical-spacing-tablet $horizontal-spacing-mobile;
+          padding: $v-spacing-tablet $h-spacing-mobile;
      }
 
      &__inner-container {

@@ -130,24 +130,24 @@
 
      @if 'vertical' == $orientation {
 
-          padding-top: $vertical-spacing;
-          padding-bottom: $vertical-spacing;
+          padding-top: $v-spacing;
+          padding-bottom: $v-spacing;
 
           @include media( 'tablet' ) {
-               padding-top: $vertical-spacing-tablet;
-               padding-bottom: $vertical-spacing-tablet;
+               padding-top: $v-spacing-tablet;
+               padding-bottom: $v-spacing-tablet;
           }
 
           @include media( 'mobile' ) {
-               padding-top: $vertical-spacing-mobile;
-               padding-bottom: $vertical-spacing-mobile;
+               padding-top: $v-spacing-mobile;
+               padding-bottom: $v-spacing-mobile;
           }
      }
 
      @if 'horizontal' == $orientation {
 
-          padding-left: $horizontal-spacing;
-          padding-right: $horizontal-spacing;
+          padding-left: $h-spacing;
+          padding-right: $h-spacing;
 
           @if 'no-vertical' == $size {
                padding-top: 0;
@@ -155,37 +155,37 @@
           }
 
           @include media( 'tablet' ) {
-               padding-left: $horizontal-spacing-tablet;
-               padding-left: $horizontal-spacing-tablet;
+               padding-left: $h-spacing-tablet;
+               padding-left: $h-spacing-tablet;
           }
 
           @include media( 'mobile' ) {
-               padding-left: $horizontal-spacing-mobile;
-               padding-left: $horizontal-spacing-mobile;
+               padding-left: $h-spacing-mobile;
+               padding-left: $h-spacing-mobile;
           }
      }
 
      @if 'both' == $orientation {
 
-          padding: $horizontal-spacing;
+          padding: $h-spacing;
 
           @include media( 'tablet' ) {
-               padding: $horizontal-spacing-tablet;
+               padding: $h-spacing-tablet;
           }
 
           @include media( 'mobile' ) {
-               padding: $horizontal-spacing-mobile;
+               padding: $h-spacing-mobile;
           }
 
           @if 'large' == $size {
-               padding: $vertical-spacing $horizontal-spacing;
+               padding: $v-spacing $h-spacing;
 
                @include media( 'tablet' ) {
-                    padding: $vertical-spacing-tablet $horizontal-spacing-tablet;
+                    padding: $v-spacing-tablet $h-spacing-tablet;
                }
 
                @include media( 'mobile' ) {
-                    padding: $vertical-spacing-mobile $horizontal-spacing-mobile;
+                    padding: $v-spacing-mobile $h-spacing-mobile;
                }
           }
 
