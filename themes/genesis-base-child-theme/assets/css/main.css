@@ -310,7 +310,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -630,16 +631,18 @@ iframe {
   max-width: 100%; }
 
 figure {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0; }
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0; }
 
 /* ----- Box Sizing -------------------- */
 html,
 input[type="search"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 *,
@@ -730,7 +733,9 @@ input[type="search"] {
 .loop-wrapper {
   display: grid;
   flex-wrap: wrap;
-  column-gap: 30px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   row-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
   width: 100%; }
@@ -1077,7 +1082,8 @@ ol.flickity-page-dots {
     .nav-primary ul .menu-item.open > .sub-menu {
       display: block; }
     .nav-primary ul .menu-item.open > button {
-      transform: rotate(180deg); }
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
     @media (min-width: 1001px) {
       .nav-primary ul .menu-item:hover > .sub-menu {
         left: auto;
@@ -1151,14 +1157,16 @@ ol.flickity-page-dots {
     .mobile-navigation-icon span:nth-child(3) {
       top: 20px; }
   .mobile-navigation-icon.open span:nth-child(1) {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
     top: 10px;
     width: 33.94px;
     left: 0; }
   .mobile-navigation-icon.open span:nth-child(2) {
     opacity: 0; }
   .mobile-navigation-icon.open span:nth-child(3) {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     top: 10px;
     width: 33.94px;
     left: 0; }
@@ -3998,3 +4006,4 @@ hr.wp-block-separator {
 
 .has-black-background-color {
   background-color: #000; }
+/*# sourceMappingURL=main.css.map */
