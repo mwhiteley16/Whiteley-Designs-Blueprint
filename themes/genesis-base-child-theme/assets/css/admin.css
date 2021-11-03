@@ -38,9 +38,7 @@
 /* ----- block editor --------------- */
 body .editor-styles-wrapper {
   padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 0;
-  padding-bottom: 0; }
+  padding-right: 30px; }
   @media (max-width: 768px) {
     body .editor-styles-wrapper {
       padding-left: 30px;

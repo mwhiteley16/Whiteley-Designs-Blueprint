@@ -149,11 +149,6 @@
           padding-left: $h-spacing;
           padding-right: $h-spacing;
 
-          @if 'no-vertical' == $size {
-               padding-top: 0;
-               padding-bottom: 0;
-          }
-
           @include media( 'tablet' ) {
                padding-left: $h-spacing-tablet;
                padding-left: $h-spacing-tablet;
@@ -186,6 +181,21 @@
 
                @include media( 'mobile' ) {
                     padding: $v-spacing-mobile $h-spacing-mobile;
+               }
+          }
+
+          @if 'no-vertical' == $size {
+               padding-top: 0;
+               padding-bottom: 0;
+
+               @include media( 'tablet' ) {
+                    padding-top: 0;
+                    padding-bottom: 0;
+               }
+
+               @include media( 'mobile' ) {
+                    padding-top: 0;
+                    padding-bottom: 0;
                }
           }
 

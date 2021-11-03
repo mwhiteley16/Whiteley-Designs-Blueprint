@@ -805,13 +805,23 @@ ol.flickity-page-dots {
   margin-bottom: 0; }
 
 .wp-block-group.alignfull, .wp-block[data-align="full"] .wp-block-group {
-  padding: 30px; }
+  padding: 30px;
+  padding-top: 0;
+  padding-bottom: 0; }
   @media (max-width: 768px) {
     .wp-block-group.alignfull, .wp-block[data-align="full"] .wp-block-group {
       padding: 30px; } }
   @media (max-width: 600px) {
     .wp-block-group.alignfull, .wp-block[data-align="full"] .wp-block-group {
       padding: 20px; } }
+  @media (max-width: 768px) {
+    .wp-block-group.alignfull, .wp-block[data-align="full"] .wp-block-group {
+      padding-top: 0;
+      padding-bottom: 0; } }
+  @media (max-width: 600px) {
+    .wp-block-group.alignfull, .wp-block[data-align="full"] .wp-block-group {
+      padding-top: 0;
+      padding-bottom: 0; } }
   .wp-block-group.alignfull .wp-block-group__inner-container, .wp-block[data-align="full"] .wp-block-group .wp-block-group__inner-container {
     max-width: 1168px;
     margin: 0 auto; }
