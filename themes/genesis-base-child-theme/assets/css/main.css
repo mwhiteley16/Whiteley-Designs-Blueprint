@@ -3095,15 +3095,15 @@ select {
   @media (max-width: 600px) {
     .wp-block-group.has-background {
       padding: 20px; } }
-  .wp-block-group.has-background.alignfull, .wp-block-group.has-background.alignwide, .wp-block-group.has-background.aligncenter {
+  .wp-block-group.has-background.alignfull, .wp-block-group.has-background.alignwide, .wp-block-group.has-background.aligncenter, .wp-block[data-align="full"] .wp-block-group.has-background, .wp-block[data-align="wide"] .wp-block-group.has-background, .wp-block[data-align="center"] .wp-block-group.has-background {
     padding-top: 80px;
     padding-bottom: 80px; }
     @media (max-width: 768px) {
-      .wp-block-group.has-background.alignfull, .wp-block-group.has-background.alignwide, .wp-block-group.has-background.aligncenter {
+      .wp-block-group.has-background.alignfull, .wp-block-group.has-background.alignwide, .wp-block-group.has-background.aligncenter, .wp-block[data-align="full"] .wp-block-group.has-background, .wp-block[data-align="wide"] .wp-block-group.has-background, .wp-block[data-align="center"] .wp-block-group.has-background {
         padding-top: 60px;
         padding-bottom: 60px; } }
     @media (max-width: 600px) {
-      .wp-block-group.has-background.alignfull, .wp-block-group.has-background.alignwide, .wp-block-group.has-background.aligncenter {
+      .wp-block-group.has-background.alignfull, .wp-block-group.has-background.alignwide, .wp-block-group.has-background.aligncenter, .wp-block[data-align="full"] .wp-block-group.has-background, .wp-block[data-align="wide"] .wp-block-group.has-background, .wp-block[data-align="center"] .wp-block-group.has-background {
         padding-top: 40px;
         padding-bottom: 40px; } }
 /**
