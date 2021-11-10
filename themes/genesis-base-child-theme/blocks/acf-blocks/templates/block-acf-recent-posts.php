@@ -12,6 +12,7 @@
 $wd_recent_posts_block_display_type = get_field( 'wd_recent_posts_block_display_type' );
 $wd_recent_posts_block_category = get_field( 'wd_recent_posts_block_category' );
 $wd_recent_posts_block_number_of_posts = get_field( 'wd_recent_posts_block_number_of_posts' );
+$wd_recent_posts_choose_posts = get_field( 'wd_recent_posts_choose_posts' );
 
 // disable pointer events (admin only)
 
@@ -54,6 +55,12 @@ if ( ! empty( $block['className'] ) ) { // custom class name
           $args['cat'] = $wd_recent_posts_block_category;
      }
 
+     // include selected posts if manual option is set
+     if ( $wd_recent_posts_block_display_type == 'manual-posts' ) {
+          $args['post__in'] = $wd_recent_posts_choose_posts;
+          $args['orderby']  = 'post__in';
+     }
+
      $recent_query = new WP_Query( $args );
      ?>
 
@@ -63,7 +70,7 @@ if ( ! empty( $block['className'] ) ) { // custom class name
                     <?php get_template_part( 'partials/loop-item' ); ?>
                <?php endwhile; ?>
           </div>
-     <?php wp_reset_query(); ?>
+          <?php wp_reset_query(); ?>
      <?php endif; ?>
 
 </div>

@@ -38,7 +38,8 @@
             },
             "choices": {
                 "all-posts": "All",
-                "category-posts": "Category"
+                "category-posts": "Category",
+                "manual-posts": "Manual"
             },
             "allow_null": 0,
             "default_value": "",
@@ -74,6 +75,36 @@
             "load_terms": 0,
             "return_format": "id",
             "multiple": 0
+        },
+        {
+            "key": "field_618c1dd0516dd",
+            "label": "Choose Posts",
+            "name": "wd_recent_posts_choose_posts",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_600841b384303",
+                        "operator": "==",
+                        "value": "manual-posts"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
@@ -93,5 +124,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1620410857
+    "modified": 1636572656
 }
