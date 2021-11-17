@@ -113,7 +113,7 @@ wp.domReady( () => {
                     label: 'Two Columns',
                },
                {
-                    name: 'two-three-list',
+                    name: 'three-column-list',
                     label: 'Three Columns',
                }
           ]

@@ -59,4 +59,8 @@
                @include spacing( 'vertical', null );
           }
      }
+
+     .max-width-block__interior > *:last-child {
+          margin-bottom: 0;
+     }
 }

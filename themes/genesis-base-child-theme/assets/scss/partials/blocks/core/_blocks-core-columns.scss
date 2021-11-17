@@ -24,6 +24,10 @@
 
           > *:last-child {
                margin-bottom: 0;
+
+               &.wp-block-image img {
+                    margin-bottom: 0;
+               }
           }
 
           @include media( 'mobile+' ) {
