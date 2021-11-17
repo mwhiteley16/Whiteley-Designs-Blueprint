@@ -1408,7 +1408,18 @@ select {
   .gform_body .gform_fields .gfield {
     width: 100%;
     margin-bottom: 30px; }
-
+    .gform_body .gform_fields .gfield.spacer {
+      margin-bottom: 0; }
+    @media (min-width: 601px) {
+      .gform_body .gform_fields .gfield--width-half {
+        width: calc(50% - calc(30px / 2)); }
+      .gform_body .gform_fields .gfield--width-third {
+        width: calc(calc(100% / 3) - calc(calc(30px * 2) / 3)); }
+      .gform_body .gform_fields .gfield--width-quarter {
+        width: calc(25% - calc(calc(30px * 3) / 4)); } }
+  @media (min-width: 601px) and (max-width: 1000px) {
+    .gform_body .gform_fields .gfield--width-quarter {
+      width: calc(50% - calc(30px / 2)); } }
 /**
  * /assets/scss/partials/forms/forms-gravity-address.scss
  *

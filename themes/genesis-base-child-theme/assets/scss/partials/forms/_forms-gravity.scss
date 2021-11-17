@@ -82,7 +82,11 @@
                width: 100%;
                margin-bottom: $form-spacing;
 
-               @include media( 'mobile+ ') {
+               &.spacer {
+                    margin-bottom: 0;
+               }
+
+               @include media( 'mobile+') {
 
                     &--width-half {
                          width: calc(50% - calc(#{$form-spacing} / 2));
