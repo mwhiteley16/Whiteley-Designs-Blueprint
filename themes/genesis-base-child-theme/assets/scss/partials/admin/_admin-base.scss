@@ -65,6 +65,11 @@ body:not(.is-fullscreen-mode) .is-sidebar-opened .editor-styles-wrapper {
                max-width: $base-content-width;
                margin-left: auto !important;
                margin-right: auto !important;
+
+               &.wp-block-button {
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+               }
           }
      }
 }
@@ -82,6 +87,11 @@ body:not(.is-fullscreen-mode) .is-sidebar-opened .editor-styles-wrapper {
                max-width: $base-content-width;
                margin-left: auto !important;
                margin-right: auto !important;
+
+               &.wp-block-button {
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+               }
           }
      }
 }

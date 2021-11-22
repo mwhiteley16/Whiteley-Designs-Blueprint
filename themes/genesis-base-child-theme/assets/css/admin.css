@@ -79,6 +79,12 @@ body:not(.is-fullscreen-mode) .is-sidebar-opened .editor-styles-wrapper .alignfu
   max-width: 768px;
   margin-left: auto !important;
   margin-right: auto !important; }
+  .post-type-post .editor-styles-wrapper .editor-post-title__block.wp-block.wp-block-button,
+  .post-type-post .editor-styles-wrapper .wp-block.wp-block-button,
+  .thin-layout .editor-styles-wrapper .editor-post-title__block.wp-block.wp-block-button,
+  .thin-layout .editor-styles-wrapper .wp-block.wp-block-button {
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
 
 .content-sidebar .editor-styles-wrapper .editor-post-title__block.wp-block,
 .content-sidebar .editor-styles-wrapper .wp-block,
@@ -93,6 +99,18 @@ body:not(.is-fullscreen-mode) .is-sidebar-opened .editor-styles-wrapper .alignfu
   max-width: 768px;
   margin-left: auto !important;
   margin-right: auto !important; }
+  .content-sidebar .editor-styles-wrapper .editor-post-title__block.wp-block.wp-block-button,
+  .content-sidebar .editor-styles-wrapper .wp-block.wp-block-button,
+  .content-sidebar .editor-styles-wrapper .wp-block[data-align="full"].wp-block-button,
+  .content-sidebar .editor-styles-wrapper .wp-block[data-align="wide"].wp-block-button,
+  .content-sidebar .editor-styles-wrapper .alignfull.wp-block-button,
+  .sidebar-content .editor-styles-wrapper .editor-post-title__block.wp-block.wp-block-button,
+  .sidebar-content .editor-styles-wrapper .wp-block.wp-block-button,
+  .sidebar-content .editor-styles-wrapper .wp-block[data-align="full"].wp-block-button,
+  .sidebar-content .editor-styles-wrapper .wp-block[data-align="wide"].wp-block-button,
+  .sidebar-content .editor-styles-wrapper .alignfull.wp-block-button {
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
 
 /*----- ACF Radio Button Color Picker ---------------*/
 .wp-admin .acf-block-component ul.acf-radio-list {
