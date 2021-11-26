@@ -2,7 +2,7 @@
 /**
  *  Max-Width Block
  *
- * @package      CLIENTNAME
+ * @package      ClientName
  * @author       Matt Whiteley
  * @since        1.0.0
  * @license      GPL-2.0+
