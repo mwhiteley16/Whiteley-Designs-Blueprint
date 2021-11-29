@@ -96,39 +96,41 @@ function wd_acf_blocks() {
                ]
           );
 
-          acf_register_block_type(array(
-               'name'			=> 'acf-faq',
-               'title'			=> __( 'FAQ Block' ),
-               'description'		=> __( 'A block to show FAQ items with an optional toggle.' ),
-               'category'		=> 'wd-blocks',
-               'render_template'   => 'blocks/acf-blocks/templates/block-acf-faq.php',
-               'mode'              => 'preview',
-               'icon'              => $block_icon,
-               'enqueue_assets'    => function() {
-                      wp_enqueue_script(
-                           'acf-custom-block',
-                           get_stylesheet_directory_uri() . '/blocks/acf-blocks/js/block-faq.js',
-                           [ 'jquery' ],
-                           '',
-                           true
-                      );
-               },
-               'keywords' => [
-                    'faq',
-                    'wd',
-                    'acf',
-                    WD_CHILD_THEME_SLUG
-               ],
-               'post_type' => [
-                    'post',
-                    'page'
-               ],
-               'supports' => [
-                    'align'           => [ 'wide' ],
-                    'anchor'          => false,
-                    'customClassName' => true
+          acf_register_block_type(
+               [
+                    'name'			=> 'acf-faq',
+                    'title'			=> __( 'FAQ Block' ),
+                    'description'		=> __( 'A block to show FAQ items with an optional toggle.' ),
+                    'category'		=> 'wd-blocks',
+                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-faq.php',
+                    'mode'              => 'preview',
+                    'icon'              => $block_icon,
+                    'enqueue_assets'    => function() {
+                           wp_enqueue_script(
+                                'acf-custom-block',
+                                get_stylesheet_directory_uri() . '/blocks/acf-blocks/js/block-faq.js',
+                                [ 'jquery' ],
+                                '',
+                                true
+                           );
+                    },
+                    'keywords' => [
+                         'faq',
+                         'wd',
+                         'acf',
+                         WD_CHILD_THEME_SLUG
+                    ],
+                    'post_type' => [
+                         'post',
+                         'page'
+                    ],
+                    'supports' => [
+                         'align'           => [ 'wide' ],
+                         'anchor'          => false,
+                         'customClassName' => true
+                    ]
                ]
-          ));
+          );
 
           acf_register_block_type(
                [
