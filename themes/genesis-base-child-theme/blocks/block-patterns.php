@@ -1,6 +1,8 @@
 <?php
 /**
 * Remove core block patterns
+* note: make sure at least one pattern category is registered if this support is removed or block editor will crash
+*
 */
 remove_theme_support( 'core-block-patterns' );
 
@@ -15,7 +17,7 @@ function wd_register_block_categories() {
 		register_block_pattern_category(
 			'whiteley-designs',
 			[
-                    'label' => _x( 'Whiteley Designs', 'Block pattern category', WD_PLUGIN_THEME_NAME )
+                    'label' => _x( 'Whiteley Designs', 'Block pattern category', WD_CHILD_THEME_NAME ),
                ]
 		);
 
@@ -30,27 +32,31 @@ add_action( 'init', 'wd_register_block_categories' );
 *
 * Block Pattern API - https://developer.wordpress.org/block-editor/developers/block-api/block-patterns/
 * Rich Tabor Tutorial - https://richtabor.com/build-block-patterns/
-* Escape HTML Tool - https://codebeautify.org/json-escape-unescape
+* Escape HTML Tool - https://www.freeformatter.com/json-escape.html
+* -- After running the block output through the escape tool do a find/replace to remove all instances of \ r (remove space) and replace \ / (remove space) with /
+*
 */
 function wd_register_block_patterns() {
 
 	if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
 
+          // block patterns markeup, must have double quotes around it
+          $content = "";
+
 		register_block_pattern(
-			'wd/three-column-learn-more',
+			'wd/block-pattern-name',
 			[
-				'title'       => __( 'Three Column w/ Learn More', WD_PLUGIN_THEME_NAME ),
-				'description' => _x( 'A three column layout with a header, description and Learn More button.', 'Block pattern description', WD_PLUGIN_THEME_NAME ),
-				'content'     => "",
+				'title'       => __( 'Block Patterns Title', WD_CHILD_THEME_NAME ),
+				'description' => _x( 'Block pattern descriptive text.', 'Block pattern description', WD_CHILD_THEME_NAME ),
+				'content'     => trim( $content ),
 				'categories'  => [
-                         'columns',
-                         WD_PLUGIN_THEME_NAME
+                         'whiteley-designs',
+                         WD_CHILD_THEME_NAME,
                     ],
                     'keywords' => [
-                         'pattern',
-                         'block pattern',
-                         WD_PLUGIN_THEME_NAME
-                    ]
+                         'keyword',
+                         WD_CHILD_THEME_NAME,
+                    ],
 			]
 		);
 
