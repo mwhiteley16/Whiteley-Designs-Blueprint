@@ -32,8 +32,7 @@ add_action( 'init', 'wd_register_block_categories' );
 *
 * Block Pattern API - https://developer.wordpress.org/block-editor/developers/block-api/block-patterns/
 * Rich Tabor Tutorial - https://richtabor.com/build-block-patterns/
-* Escape HTML Tool - https://www.freeformatter.com/json-escape.html
-* -- After running the block output through the escape tool do a find/replace to remove all instances of \ r (remove space) and replace \ / (remove space) with /
+* Escape HTML Tool - https://jsonformatter.org/json-escape
 *
 */
 function wd_register_block_patterns() {
