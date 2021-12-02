@@ -200,10 +200,10 @@ function wd_register_block_patterns() {
                register_block_pattern(
                     'wd/' . $post_slug,
                     [
-                         'title' => $post_title,
-                         'content' => trim( $post_content ),
+                         'title'      => $post_title,
+                         'content'    => trim( $post_content ),
                          'categories' => $block_pattern_categories,
-                         'keywords' => [
+                         'keywords'   => [
                               $post_title,
                               'pattern',
                               'block pattern',
