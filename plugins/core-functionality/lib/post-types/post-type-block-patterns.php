@@ -33,7 +33,7 @@ function wd_register_cpt_block_pattern() {
 
      $args = [
           'labels'              => $labels,
-          'description'         => __( 'News.', WD_PLUGIN_THEME_NAME ),
+          'description'         => __( 'Block Patterns.', WD_PLUGIN_THEME_NAME ),
           'public'              => false,
           'exclude_from_search' => true,
           'publicly_queryable'  => true,
@@ -79,7 +79,6 @@ function wd_register_block_pattern_categories() {
           );
 
      }
-
 }
 add_action( 'init', 'wd_register_block_pattern_categories' );
 
@@ -87,7 +86,7 @@ add_action( 'init', 'wd_register_block_pattern_categories' );
 /**
 * Remove core block patterns (optional)
 *
-* Optionally disable core block patters. If this is used remove $base_categories in wd_add_block_patterns_acf_metabox
+* Optionally disable core block patterns
 */
 // remove_theme_support( 'core-block-patterns' );
 
@@ -100,21 +99,16 @@ add_action( 'init', 'wd_register_block_pattern_categories' );
 add_action( 'acf/init', 'wd_add_block_patterns_acf_metabox' );
 function wd_add_block_patterns_acf_metabox() {
 
-     // base categories that come baked in, remove if using remove_theme_support( 'core-block-patters' )
-     $base_categories = [
-          'buttons' => 'Buttons',
-          'columns' => 'Columns',
-          'gallery' => 'Gallery',
-          'header'  => 'Headers',
-          'text'    => 'Text',
-          'query'   => 'Query',
+     // set array of categories to offer
+     $block_pattern_categories = [
+          // 'buttons'          => 'Buttons', // core
+          // 'columns'          => 'Columns', // core
+          // 'gallery'          => 'Gallery', // core
+          // 'header'           => 'Headers', // core
+          // 'text'             => 'Text', // core
+          // 'query'            => 'Query', // core
+          'whiteley-designs' => 'Whiteley Designs', // custom
      ];
-
-     // custom categories, make sure to match this to custom categories registered in wd_register_block_pattern_categories
-     $custom_categories = [ 'whiteley-designs' => 'Whiteley Designs' ];
-
-     // merge category arrays, remove this and change 'choices' variable if not using both arrays
-     $block_pattern_categories = array_merge( $base_categories, $custom_categories );
 
      // register the ACF field group
      acf_add_local_field_group(
@@ -173,7 +167,6 @@ function wd_add_block_patterns_acf_metabox() {
 add_action( 'template_redirect', 'wd_block_patterns_cpt_redirect_single' );
 function wd_block_patterns_cpt_redirect_single() {
 
-     // redirect single and archive pages for "tutorials" custom post type to support library
      if ( is_singular( 'block_pattern' ) ) {
           wp_redirect( get_home_url() );
           exit;
@@ -192,6 +185,7 @@ function wd_register_block_patterns() {
           $loop = new WP_Query(
                [
                     'post_type'      => 'block_pattern',
+                    'post_status'    => 'publish',
                     'posts_per_page' => -1,
                ]
           );
