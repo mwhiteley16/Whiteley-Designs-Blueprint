@@ -15,7 +15,7 @@ function create_news_tax() {
      $labels = [
           'name'          => _x( 'News Category', 'taxonomy general name', WD_PLUGIN_THEME_NAME ),
           'add_new_item'  => __( 'Add News Category', WD_PLUGIN_THEME_NAME ),
-          'new_item_name' => __( 'New News Category', WD_PLUGIN_THEME_NAME )
+          'new_item_name' => __( 'New News Category', WD_PLUGIN_THEME_NAME ),
      ];
 
      // modify arguments

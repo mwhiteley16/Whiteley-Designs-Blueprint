@@ -147,10 +147,10 @@ function wd_add_block_patterns_acf_metabox() {
                          ]
                     ]
                ],
-               'menu_order' => 0,
-               'position'   => 'side',
-               'style'      => 'default',
-               'label_placement' => 'top',
+               'menu_order'            => 0,
+               'position'              => 'side',
+               'style'                 => 'default',
+               'label_placement'       => 'top',
                'instruction_placement' => 'label',
                'hide_on_screen'        => '',
                'active'                => true,
