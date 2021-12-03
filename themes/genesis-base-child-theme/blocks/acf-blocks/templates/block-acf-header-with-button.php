@@ -41,7 +41,7 @@ $inner_template = [
      [ 'core/heading',
           [
                'level'       => 2,
-               'content'     => 'Heading Here'
+               'content'     => 'Heading Here',
           ]
      ],
      [ 'core/buttons',

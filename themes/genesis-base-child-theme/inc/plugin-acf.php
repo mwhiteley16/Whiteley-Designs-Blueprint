@@ -13,7 +13,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
                'capability'	=> 'edit_posts',
                'position'     => '58.997', // Adds under Genesis options page
                'icon_url'     => 'dashicons-image-filter',
-               'redirect'	=> false
+               'redirect'	=> false,
           ]
      );
 }
@@ -36,7 +36,6 @@ function wd_acf_show_admin( $show ) {
      // allow access to acf if current user is in approved users list
      $access_result = in_array( $current_user->user_email, $approved_users ) ? true : false;
      return $access_result;
-
 }
 
 
@@ -64,5 +63,4 @@ function wd_acf_dynamic_colors_load( $field ) {
      }
 
      return $field;
-
 }

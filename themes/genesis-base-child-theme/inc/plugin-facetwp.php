@@ -19,13 +19,13 @@ function wd_facetwp_pager_setup() {
 
           // array of post types to enable FacetWP pager on
           $post_type = [
-               'post'
+               'post',
           ];
 
           // array of taxonomies to enable FacetWP pager on
           $taxonomies = [
                'category',
-               'tag'
+               'tag',
           ];
 
           // default show to false

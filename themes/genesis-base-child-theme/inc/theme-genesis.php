@@ -25,7 +25,7 @@ add_theme_support( 'genesis-accessibility',
           'headings',
           'rems',
           'search-form',
-          'skip-links'
+          'skip-links',
      ]
 );
 add_theme_support( 'genesis-structural-wraps',
@@ -35,7 +35,7 @@ add_theme_support( 'genesis-structural-wraps',
           'header',
           'nav',
           'site-inner',
-          'site-tagline'
+          'site-tagline',
      ]
 );
 add_theme_support( 'genesis-footer-widgets', 3 );
@@ -52,7 +52,7 @@ add_theme_support( 'custom-logo',
           'flex-height' => true,
           'header-text' => [
                '.site-title',
-               '.site-description'
+               '.site-description',
           ]
      ]
 );
@@ -87,9 +87,9 @@ genesis_unregister_layout( 'sidebar-sidebar-content' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_register_layout(
      'thin-layout',
-          [
-               'label' => __( 'Thin Layout', WD_CHILD_THEME_SLUG )
-          ]
+     [
+          'label' => __( 'Thin Layout', WD_CHILD_THEME_SLUG ),
+     ]
 );
 
 
@@ -153,7 +153,7 @@ function wd_footer() {
 // add_filter( 'genesis_superfish_args_url', 'wd_superfish_args_url' );
 
 function wd_superfish_args_url( $url ) {
-	return get_stylesheet_directory_uri() . '/assets/js/superfish-args-min.js';
+     return get_stylesheet_directory_uri() . '/assets/js/superfish-args-min.js';
 }
 
 /**
@@ -161,9 +161,8 @@ function wd_superfish_args_url( $url ) {
 */
 // add_action( 'wp_enqueue_scripts', 'wd_disable_superfish' );
 function wd_disable_superfish() {
-
-	wp_deregister_script( 'superfish' );
-	wp_deregister_script( 'superfish-args' );
+     wp_deregister_script( 'superfish' );
+     wp_deregister_script( 'superfish-args' );
 }
 
 

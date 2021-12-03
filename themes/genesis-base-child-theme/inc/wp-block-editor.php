@@ -49,40 +49,40 @@ add_theme_support( 'responsive-embeds' );
 */
 add_theme_support( 'editor-color-palette',
      [
-     	[
-     		'name'  => __( 'Primary Color', WD_CHILD_THEME_SLUG ),
-     		'slug'  => 'primary-color',
-     		'color' => '#007991',
-     	],
-     	[
-     		'name'  => __( 'Secondary Color', WD_CHILD_THEME_SLUG ),
-     		'slug'  => 'secondary-color',
-     		'color' => '#439a86',
-     	],
-     	[
-     		'name'  => __( 'Grey Light', WD_CHILD_THEME_SLUG ),
-     		'slug'  => 'grey-light',
-     		'color' => '#fafafa',
-     	],
-     	[
-     		'name'  => __( 'Grey Medium', WD_CHILD_THEME_SLUG ),
-     		'slug'  => 'grey-medium',
-     		'color' => '#e0e0e0',
-     	],
-     	[
-     		'name'  => __( 'Grey Dark', WD_CHILD_THEME_SLUG ),
-     		'slug'  => 'grey-dark',
-     		'color' => '#424242',
-     	],
           [
-     		'name'  => __( 'White', WD_CHILD_THEME_SLUG ),
-     		'slug'  => 'white',
-     		'color' => '#ffffff',
+               'name'  => __( 'Primary Color', WD_CHILD_THEME_SLUG ),
+               'slug'  => 'primary-color',
+               'color' => '#007991',
           ],
           [
-     		'name'  => __( 'Black', WD_CHILD_THEME_SLUG ),
-     		'slug'  => 'black',
-     		'color' => '#000000',
+               'name'  => __( 'Secondary Color', WD_CHILD_THEME_SLUG ),
+               'slug'  => 'secondary-color',
+               'color' => '#439a86',
+          ],
+          [
+               'name'  => __( 'Grey Light', WD_CHILD_THEME_SLUG ),
+               'slug'  => 'grey-light',
+               'color' => '#fafafa',
+          ],
+          [
+               'name'  => __( 'Grey Medium', WD_CHILD_THEME_SLUG ),
+               'slug'  => 'grey-medium',
+               'color' => '#e0e0e0',
+          ],
+          [
+               'name'  => __( 'Grey Dark', WD_CHILD_THEME_SLUG ),
+               'slug'  => 'grey-dark',
+               'color' => '#424242',
+          ],
+          [
+               'name'  => __( 'White', WD_CHILD_THEME_SLUG ),
+               'slug'  => 'white',
+               'color' => '#ffffff',
+          ],
+          [
+               'name'  => __( 'Black', WD_CHILD_THEME_SLUG ),
+               'slug'  => 'black',
+               'color' => '#000000',
           ],
      ]
 );
@@ -96,30 +96,30 @@ add_theme_support( 'editor-color-palette',
 */
 add_theme_support( 'editor-font-sizes',
      [
-     	[
-     		'name'      => __( 'Small', WD_CHILD_THEME_SLUG ),
-     		'shortName' => __( 'S', WD_CHILD_THEME_SLUG ),
-     		'size'      => 12,
-     		'slug'      => 'small'
-     	],
-     	[
-     		'name'      => __( 'Regular', WD_CHILD_THEME_SLUG ),
-     		'shortName' => __( 'M', WD_CHILD_THEME_SLUG ),
-     		'size'      => 16,
-     		'slug'      => 'regular'
-     	],
-     	[
-     		'name'      => __( 'Large', WD_CHILD_THEME_SLUG ),
-     		'shortName' => __( 'L', WD_CHILD_THEME_SLUG ),
-     		'size'      => 20,
-     		'slug'      => 'large'
-     	],
-     	[
-     		'name'      => __( 'Larger', WD_CHILD_THEME_SLUG ),
-     		'shortName' => __( 'XL', WD_CHILD_THEME_SLUG ),
-     		'size'      => 24,
-     		'slug'      => 'larger'
-     	]
+          [
+               'name'      => __( 'Small', WD_CHILD_THEME_SLUG ),
+               'shortName' => __( 'S', WD_CHILD_THEME_SLUG ),
+               'size'      => 12,
+               'slug'      => 'small',
+          ],
+          [
+               'name'      => __( 'Regular', WD_CHILD_THEME_SLUG ),
+               'shortName' => __( 'M', WD_CHILD_THEME_SLUG ),
+               'size'      => 16,
+               'slug'      => 'regular',
+          ],
+          [
+               'name'      => __( 'Large', WD_CHILD_THEME_SLUG ),
+               'shortName' => __( 'L', WD_CHILD_THEME_SLUG ),
+               'size'      => 20,
+               'slug'      => 'large',
+          ],
+          [
+               'name'      => __( 'Larger', WD_CHILD_THEME_SLUG ),
+               'shortName' => __( 'XL', WD_CHILD_THEME_SLUG ),
+               'size'      => 24,
+               'slug'      => 'larger',
+          ]
      ]
 );
 
@@ -132,15 +132,14 @@ add_theme_support( 'editor-font-sizes',
 */
 function wd_reusable_blocks_admin_menu() {
 
-    add_menu_page(
-         'Reusable Blocks',
-         'Reusable Blocks',
-         'edit_posts',
-         'edit.php?post_type=wp_block',
-         '',
-         'dashicons-editor-table',
-         32
-    );
-
+     add_menu_page(
+          'Reusable Blocks',
+          'Reusable Blocks',
+          'edit_posts',
+          'edit.php?post_type=wp_block',
+          '',
+          'dashicons-editor-table',
+          32
+     );
 }
 add_action( 'admin_menu', 'wd_reusable_blocks_admin_menu' );

@@ -61,7 +61,7 @@ $template = [
      ],
      [ 'core/spacer',
           [
-               'height' => 12
+               'height' => 12,
           ]
      ],
      [ 'acf/acf-separator',
@@ -73,13 +73,13 @@ $template = [
                     'wd_block_separator_alignment'      => 'left-align',
                     'wd_block_separator_width'          => '57',
                     'wd_block_separator_height'         => '1',
-                    'wd_block_separator_include_margin' => 'no-margin'
+                    'wd_block_separator_include_margin' => 'no-margin',
                ]
           ]
      ],
      [ 'core/spacer',
           [
-               'height' => 32
+               'height' => 32,
           ]
      ],
      [ 'core/paragraph',
@@ -90,7 +90,7 @@ $template = [
      ],
      [ 'core/spacer',
           [
-               'height' => 12
+               'height' => 12,
           ]
      ],
      [ 'core/buttons',

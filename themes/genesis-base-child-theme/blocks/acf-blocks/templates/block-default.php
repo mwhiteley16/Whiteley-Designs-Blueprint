@@ -54,7 +54,7 @@ $inner_allowed_blocks = [
      'core/paragraph',
      'core/button',
      'core/group',
-     'core/separator'
+     'core/separator',
 ];
 
 // create the placeholder template
@@ -63,13 +63,13 @@ $inner_template = [
           [
                'level'       => 2,
                'placeholder' => 'Hero Block Title Here',
-               // 'content'     => 'Pre-defined header here.'
+               // 'content'     => 'Pre-defined header here.',
           ]
      ],
      [ 'core/paragraph',
           [
                'placeholder' => 'Placeholder text here.',
-               // 'content'     => 'Pre-defined content here.'
+               // 'content'     => 'Pre-defined content here.',
           ]
      ],
      [ 'core/buttons',
@@ -92,21 +92,25 @@ $inner_template = [
      ],
      [ 'core/group',
           [ // group block attributes
-               'className' => ''
+               'className' => '',
           ],
           [ // blocks within groups block
                [ 'core/separator',
-                    [ 'color' => 'grey-medium' ]
+                    [
+                         'color' => 'grey-medium',
+                    ]
                ],
                [ 'core/heading',
                     [
                          'placeholder' => '',
                          'level' => '3',
-                         'className' => ''
+                         'className' => '',
                     ]
                ],
                [ 'core/paragraph',
-                    [ 'placeholder' => 'Loren ipsum dolor...' ]
+                    [
+                         'placeholder' => 'Loren ipsum dolor...',
+                    ]
                ],
           ]
      ]

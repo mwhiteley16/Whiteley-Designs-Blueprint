@@ -5,7 +5,7 @@
 add_action( 'genesis_before_loop', 'genesis_do_search_title' );
 function genesis_do_search_title() {
 
-	$title = sprintf(
+     $title = sprintf(
           '<div class="archive-description"><h1 class="archive-title">%s %s</h1></div>',
           apply_filters( 'genesis_search_title_text',
           __( 'Search Results for:', 'genesis' ) ),
@@ -13,7 +13,6 @@ function genesis_do_search_title() {
      );
 
      echo apply_filters( 'genesis_search_title_output', $title ) . "\n";
-
 }
 
 
@@ -27,7 +26,6 @@ function wd_search_results_count() {
      echo '<div class="search-results-found">';
           echo $wp_query->found_posts.' results found';
      echo '</div>';
-
 }
 
 

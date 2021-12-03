@@ -50,13 +50,13 @@ $template = [
                     'wd_block_separator_alignment' => 'left-align',
                     'wd_block_separator_width' => '57',
                     'wd_block_separator_height' => '1',
-                    'wd_block_separator_include_margin' => 'no-margin'
+                    'wd_block_separator_include_margin' => 'no-margin',
                ]
           ]
      ],
      [ 'core/spacer',
           [
-               'height' => 24
+               'height' => 24,
           ]
      ],
      [ 'core/paragraph',

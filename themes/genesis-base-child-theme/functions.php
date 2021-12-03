@@ -29,7 +29,7 @@ function wd_theme_fonts() {
      // array of Google Fonts
      $font_families_array = [
           'Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900',
-          'Open+Sans:ital,wght@0,300;0,400;1,300'
+          'Open+Sans:ital,wght@0,300;0,400;1,300',
      ];
 
      // create URL string from array of font families
@@ -38,7 +38,7 @@ function wd_theme_fonts() {
      // create proper Google Font URL string
      $fonts_url = 'https://fonts.googleapis.com/css2?family=' . $font_families_string . '&display=swap';
 
-	return esc_url_raw( $fonts_url );
+     return esc_url_raw( $fonts_url );
 }
 
 
@@ -53,13 +53,13 @@ function wd_global_enqueues() {
           wd_theme_fonts(),
           [],
           null, // remove version parameter to allow multiple fonts in string
-          // 'print' // optionally defer font loading to print (performance)
+          // 'print', // optionally defer font loading to print (performance)
      );
 
      // javascript
      wp_enqueue_script(
           'wd-scripts',
-          get_stylesheet_directory_uri() . '/assets/js/main-js-min.js'
+          get_stylesheet_directory_uri() . '/assets/js/main-js-min.js',
      );
 
      // enqueue custom stylesheet
@@ -67,7 +67,7 @@ function wd_global_enqueues() {
           'wd-style',
           get_stylesheet_directory_uri() . '/assets/css/main.css',
           [],
-          filemtime( get_stylesheet_directory() . '/assets/css/main.css' ) // append timestamp for cache busting
+          filemtime( get_stylesheet_directory() . '/assets/css/main.css' ), // append timestamp for cache busting
      );
 
      // font awesome
@@ -75,7 +75,7 @@ function wd_global_enqueues() {
      //      'wd-fontawesome',
      //      'https://kit.fontawesome.com/7bb1dd36e7.js',
      //      [],
-     //      null
+     //      null,
      // );
 
 }
@@ -92,7 +92,7 @@ function wd_admin_enqueues() {
           'wd-fonts',
           wd_theme_fonts(),
           [],
-          null
+          null,
      );
 
      // custom block styles
@@ -101,7 +101,7 @@ function wd_admin_enqueues() {
           get_stylesheet_directory_uri() . '/assets/js/editor-min.js',
           [ 'wp-blocks', 'wp-dom' ],
           filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ),
-          true
+          true,
      );
 
      // flickity - only needed if using flickity outside of custom ACF blocks
@@ -109,7 +109,7 @@ function wd_admin_enqueues() {
      //      'wd-flickity-admin',
      //      get_stylesheet_directory_uri() . '/assets/js/src/flickity.pkgd.min.js',
      //      [],
-     //      null
+     //      null,
      // );
 
      // font awesome
@@ -117,7 +117,7 @@ function wd_admin_enqueues() {
      //      'wd-fontawesome',
      //      'https://kit.fontawesome.com/7bb1dd36e7.js',
      //      [],
-     //      null
+     //      null,
      // );
 }
 add_action( 'enqueue_block_editor_assets', 'wd_admin_enqueues' );
@@ -130,7 +130,7 @@ function wd_admin_style() {
           'admin-styles',
           get_stylesheet_directory_uri().'/assets/css/admin.css',
           [],
-          filemtime( get_stylesheet_directory() . '/assets/css/admin.css' ) // append timestamp for cache busting
+          filemtime( get_stylesheet_directory() . '/assets/css/admin.css' ), // append timestamp for cache busting
      );
 }
 add_action( 'admin_enqueue_scripts', 'wd_admin_style' );
