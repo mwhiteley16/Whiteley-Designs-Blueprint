@@ -208,6 +208,30 @@ function wd_cleanup_dashboard_widgets() {
 
 
 /**
+* Add separator above custom WP admin menu items
+*/
+add_action( 'admin_menu', function () {
+
+     $position = 278;
+     global $menu;
+
+     $separator = [
+          0 => '',
+          1 => 'read',
+          2 => 'separator' . $position,
+          3 => '',
+          4 => 'wp-menu-separator',
+     ];
+
+     if ( isset( $menu[ $position ] ) ) {
+          $menu = array_splice( $menu, $position, 0, $separator );
+     } else {
+          $menu[ $position ] = $separator;
+     }
+});
+
+
+/**
  * Editor layout class
  *
  * @param string $classes Admin classes.

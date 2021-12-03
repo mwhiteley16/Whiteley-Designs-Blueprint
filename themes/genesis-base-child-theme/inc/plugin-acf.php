@@ -11,7 +11,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
                'menu_title'	=> 'Theme Options',
                'menu_slug' 	=> 'theme-options',
                'capability'	=> 'edit_posts',
-               'position'     => '58.997', // Adds under Genesis options page
+               'position'     => '310',
                'icon_url'     => 'dashicons-image-filter',
                'redirect'	=> false,
           ]

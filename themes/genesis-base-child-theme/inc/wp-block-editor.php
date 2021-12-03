@@ -139,7 +139,7 @@ function wd_reusable_blocks_admin_menu() {
           'edit.php?post_type=wp_block',
           '',
           'dashicons-editor-table',
-          32
+          300
      );
 }
 add_action( 'admin_menu', 'wd_reusable_blocks_admin_menu' );

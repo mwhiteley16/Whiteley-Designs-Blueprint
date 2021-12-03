@@ -43,7 +43,7 @@ function wd_register_cpt_block_pattern() {
           'capability_type'     => 'post',
           'has_archive'         => false,
           'hierarchical'        => false,
-          'menu_position'       => 28,
+          'menu_position'       => 290,
           'menu_icon'           => 'dashicons-align-left',
           'show_in_rest'        => true,
           'supports'            => [

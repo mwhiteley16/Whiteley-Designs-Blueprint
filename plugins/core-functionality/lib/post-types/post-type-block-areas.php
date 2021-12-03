@@ -85,7 +85,7 @@ class WD_Block_Area {
                'can_export'          => true,
                'has_archive'         => false,
                'hierarchical'        => false,
-               'menu_position'       => 29,
+               'menu_position'       => 280,
                'menu_icon'           => 'dashicons-welcome-widgets-menus', // https://developer.wordpress.org/resource/dashicons/
                'supports'            => [
                     'title',
