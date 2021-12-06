@@ -127,7 +127,6 @@
 
           // remove to and bottom margins in the editor for layout blocks & acf blocks
           &[data-type^="acf"],
-          &[data-type="core/columns"],
           &[data-type="core/cover"],
           &[data-type="core/gallery"],
           &[data-type="core/group"],

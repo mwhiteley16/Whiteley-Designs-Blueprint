@@ -307,9 +307,8 @@ input[type="search"] {
 .loop-wrapper {
   display: grid;
   flex-wrap: wrap;
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   row-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
   width: 100%; }
@@ -1668,7 +1667,7 @@ hr.wp-block-separator {
     margin-right: -30px !important; }
 
 /* ----- Block Editor Margins -------------------- */
-.block-editor-block-list__block[data-type^="acf"], .block-editor-block-list__block[data-type="core/columns"], .block-editor-block-list__block[data-type="core/cover"], .block-editor-block-list__block[data-type="core/gallery"], .block-editor-block-list__block[data-type="core/group"], .block-editor-block-list__block[data-type="core/media-text"], .block-editor-block-list__block[data-type="core/spacer"] {
+.block-editor-block-list__block[data-type^="acf"], .block-editor-block-list__block[data-type="core/cover"], .block-editor-block-list__block[data-type="core/gallery"], .block-editor-block-list__block[data-type="core/group"], .block-editor-block-list__block[data-type="core/media-text"], .block-editor-block-list__block[data-type="core/spacer"] {
   margin-top: 0;
   margin-bottom: 0; }
 
