@@ -119,7 +119,7 @@ add_theme_support( 'editor-font-sizes',
                'shortName' => __( 'XL', WD_CHILD_THEME_SLUG ),
                'size'      => 24,
                'slug'      => 'larger',
-          ]
+          ],
      ]
 );
 
