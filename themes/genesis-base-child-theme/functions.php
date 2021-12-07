@@ -73,7 +73,7 @@ function wd_global_enqueues() {
      // font awesome
      // wp_enqueue_script(
      //      'wd-fontawesome',
-     //      'https://kit.fontawesome.com/7bb1dd36e7.js',
+     //      'https://kit.fontawesome.com/03bdb67d4c.js',
      //      [],
      //      null
      // );
@@ -115,7 +115,7 @@ function wd_admin_enqueues() {
      // font awesome
      // wp_enqueue_script(
      //      'wd-fontawesome',
-     //      'https://kit.fontawesome.com/7bb1dd36e7.js',
+     //      'https://kit.fontawesome.com/03bdb67d4c.js',
      //      [],
      //      null
      // );
