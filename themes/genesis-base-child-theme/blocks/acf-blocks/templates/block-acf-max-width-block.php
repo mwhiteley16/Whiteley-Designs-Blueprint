@@ -20,6 +20,19 @@ if ( ! empty( $block['anchor'] ) ) { // add anchor if present
 // block Classes
 $block_classes = 'acf-block max-width-block';
 
+// if using animations
+if ( ! empty( $block['animationType'] ) ) {
+     $block_classes .= ' ' . $block['animationType'];
+
+     if ( ! empty( $block['animationDuration'] ) ) {
+          $block_classes .= ' ' . $block['animationDuration'];
+     }
+
+     if ( ! empty( $block['animationDelay'] ) ) {
+          $block_classes .= ' ' . $block['animationDelay'];
+     }
+}
+
 if ( ! empty( $block['align_text'] ) ) {
      $block_classes .= ' has-text-align-' . $block['align_text'];
 }

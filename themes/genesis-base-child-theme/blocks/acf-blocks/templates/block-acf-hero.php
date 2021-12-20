@@ -27,6 +27,19 @@ $block_classes = 'acf-block hero-block';
 $block_classes .= ' image-' . $wd_block_hero_image_position;
 $block_classes .= ' content-' . $wd_block_hero_content_alignment;
 
+// if using animations
+if ( ! empty( $block['animationType'] ) ) {
+     $block_classes .= ' ' . $block['animationType'];
+
+     if ( ! empty( $block['animationDuration'] ) ) {
+          $block_classes .= ' ' . $block['animationDuration'];
+     }
+
+     if ( ! empty( $block['animationDelay'] ) ) {
+          $block_classes .= ' ' . $block['animationDelay'];
+     }
+}
+
 // optionally disable pointer events (prevent clicking links within block editor)
 $disable_pointer_events = true;
 if ( $disable_pointer_events == 1 && is_admin() ) {

@@ -17,6 +17,19 @@ if ( ! empty( $block['anchor'] ) ) { // add anchor if present
 // block Classes
 $block_classes = 'acf-block faq-block';
 
+// if using animations
+if ( ! empty( $block['animationType'] ) ) {
+     $block_classes .= ' ' . $block['animationType'];
+
+     if ( ! empty( $block['animationDuration'] ) ) {
+          $block_classes .= ' ' . $block['animationDuration'];
+     }
+
+     if ( ! empty( $block['animationDelay'] ) ) {
+          $block_classes .= ' ' . $block['animationDelay'];
+     }
+}
+
 // get align class if present
 if ( ! empty( $block['align'] ) ) {
      $block_classes .= ' align' . $block['align'];

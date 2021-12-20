@@ -36,6 +36,19 @@ if ( ! empty( $block['anchor'] ) ) { // add anchor if present
 // Block Classes
 $block_classes = 'acf-block acf-separator-block ' . $wd_block_separator_include_margin . ' ' . $wd_block_separator_alignment;
 
+// if using animations
+if ( ! empty( $block['animationType'] ) ) {
+     $block_classes .= ' ' . $block['animationType'];
+
+     if ( ! empty( $block['animationDuration'] ) ) {
+          $block_classes .= ' ' . $block['animationDuration'];
+     }
+
+     if ( ! empty( $block['animationDelay'] ) ) {
+          $block_classes .= ' ' . $block['animationDelay'];
+     }
+}
+
 // optionally disable pointer events (prevent clicking links within block editor)
 $disable_pointer_events = true;
 if ( $disable_pointer_events == 1 && is_admin() ) {

@@ -35,6 +35,9 @@
   margin: 0;
   background-color: rgba(255, 255, 255, 0.3); }
 
+.block-editor-block-inspector .components-base-control {
+  width: calc(100% - 8px); }
+
 /* ----- block editor --------------- */
 body .editor-styles-wrapper {
   padding-left: 30px;

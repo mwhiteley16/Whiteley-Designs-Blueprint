@@ -25,6 +25,19 @@ $block_classes = 'acf-block cwb-block';
 $block_classes .= ' content-vertical-' . $wd_cwb_block_content_vertical_alignment;
 $block_classes .= ' content-horizontal-' . $wd_cwb_block_content_horizontal_alignment;
 
+// if using animations
+if ( ! empty( $block['animationType'] ) ) {
+     $block_classes .= ' ' . $block['animationType'];
+
+     if ( ! empty( $block['animationDuration'] ) ) {
+          $block_classes .= ' ' . $block['animationDuration'];
+     }
+
+     if ( ! empty( $block['animationDelay'] ) ) {
+          $block_classes .= ' ' . $block['animationDelay'];
+     }
+}
+
 // optionally disable pointer events (prevent clicking links within block editor)
 $disable_pointer_events = true;
 if ( $disable_pointer_events == 1 && is_admin() ) {
