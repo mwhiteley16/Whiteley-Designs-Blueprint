@@ -20,6 +20,7 @@
 
                @include media( 'mobile' ) {
                     padding: 0;
+                    margin-top: $base-margin;
                }
           }
      }
