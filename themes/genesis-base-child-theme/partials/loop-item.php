@@ -20,7 +20,7 @@
 
      <?php if ( has_post_thumbnail() ) : ?>
           <div class="loop-item__thumbnail">
-               <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+               <a href="<?php the_permalink(); ?>" tabindex="-1"><?php the_post_thumbnail(); ?></a>
           </div>
      <?php endif; ?>
 
@@ -36,7 +36,7 @@
 
      <div class="loop-item__content">
 
-          <h4 class="loop-item__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+          <h4 class="loop-item__title"><a href="<?php the_permalink(); ?>" tabindex="-1"><?php the_title(); ?></a></h4>
 
           <span class="loop-item__byline">
                <?php _e( 'By', WD_CHILD_THEME_SLUG ); ?> <a href="<?php echo $author_posts; ?>"><?php echo $author_display_name; ?></a> <?php _e( 'on', WD_CHILD_THEME_SLUG ); ?> <?php echo $post_date; ?>
