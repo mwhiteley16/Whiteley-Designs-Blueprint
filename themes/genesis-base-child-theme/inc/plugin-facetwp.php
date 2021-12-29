@@ -32,12 +32,12 @@ function wd_facetwp_pager_setup() {
           $show_facetwp_pager = false;
 
           // check for post types
-          if ( is_home() && in_array( 'post', $post_type ) || is_post_type_archive() && in_array( get_post_type(), $post_type ) ) {
+          if ( is_home() && in_array( 'post', $post_type ) || is_post_type_archive( $post_type ) ) {
                $show_facetwp_pager = true;
           }
 
           // check for taxonomies
-          if ( is_category() && in_array( 'category', $taxonomies ) || is_tag() && in_array( 'tag', $taxonomies ) || is_tax() && in_array( $object->slug, $taxonomies ) ) {
+          if ( is_category() && in_array( 'category', $taxonomies ) || is_tag() && in_array( 'tag', $taxonomies ) || is_tax( $taxonomies ) ) {
                $show_facetwp_pager = true;
           }
 
