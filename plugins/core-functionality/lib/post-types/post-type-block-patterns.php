@@ -74,7 +74,7 @@ function wd_register_block_pattern_categories() {
           register_block_pattern_category(
                'whiteley-designs',
                [
-                    'label' => _x( 'Whiteley Designs', 'Block pattern category', WD_CHILD_THEME_NAME ),
+                    'label' => _x( 'Whiteley Designs', 'Block pattern category', WD_PLUGIN_THEME_NAME ),
                ]
           );
 
