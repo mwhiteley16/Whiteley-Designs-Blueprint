@@ -13,7 +13,7 @@
 // block ID
 $block_id = 'NAME-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) { // add anchor if present
-     $id = $block['anchor'];
+     $block_id = $block['anchor'];
 }
 
 // block Classes

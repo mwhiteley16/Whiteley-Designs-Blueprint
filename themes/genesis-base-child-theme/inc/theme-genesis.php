@@ -159,7 +159,7 @@ function wd_superfish_args_url( $url ) {
 /**
 * Remove superfish scripts
 */
-// add_action( 'wp_enqueue_scripts', 'wd_disable_superfish' );
+add_action( 'wp_enqueue_scripts', 'wd_disable_superfish' );
 function wd_disable_superfish() {
      wp_deregister_script( 'superfish' );
      wp_deregister_script( 'superfish-args' );

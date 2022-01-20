@@ -13,6 +13,7 @@
      $(document).ready(function(){
           $('.faq-block').each(function(){
                initializeBlock( $(this) );
+               return false; // stop after first run to ensure it works if multiple instances are on page
           });
      });
 

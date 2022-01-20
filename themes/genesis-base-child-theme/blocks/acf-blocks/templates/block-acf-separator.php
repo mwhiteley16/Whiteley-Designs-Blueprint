@@ -30,7 +30,7 @@ foreach ( $colors[0] as $color ) {
 // Block ID
 $block_id = 'acf-separator-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) { // add anchor if present
-     $id = $block['anchor'];
+     $block_id = $block['anchor'];
 }
 
 // Block Classes

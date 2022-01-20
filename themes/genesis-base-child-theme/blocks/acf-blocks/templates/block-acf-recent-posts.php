@@ -19,7 +19,7 @@ $wd_recent_posts_choose_posts = get_field( 'wd_recent_posts_choose_posts' );
 // block ID
 $block_id = 'recent-posts-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) { // add anchor if present
-     $id = $block['anchor'];
+     $block_id = $block['anchor'];
 }
 
 // block Classes

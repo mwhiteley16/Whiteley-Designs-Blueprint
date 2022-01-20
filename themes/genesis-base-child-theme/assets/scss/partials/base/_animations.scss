@@ -87,17 +87,17 @@ $aos-distance: 50px !default;
 }
 
 .animation-fade-up-right {
-  transform: translate3d(-$aos-distance, $aos-distance, 0);
+     transform: translate3d(-$aos-distance, $aos-distance, 0);
 }
 
 .animation-fade-up-left {
-  transform: translate3d($aos-distance, $aos-distance, 0);
+     transform: translate3d($aos-distance, $aos-distance, 0);
 }
 
 .animation-fade-down-right {
-  transform: translate3d(-$aos-distance, -$aos-distance, 0);
+     transform: translate3d(-$aos-distance, -$aos-distance, 0);
 }
 
 .animation-fade-down-left {
-  transform: translate3d($aos-distance, -$aos-distance, 0);
+     transform: translate3d($aos-distance, -$aos-distance, 0);
 }

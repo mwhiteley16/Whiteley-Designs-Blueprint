@@ -14,7 +14,7 @@ $wd_hwb_block_mobile_button_hide = get_field( 'wd_hwb_block_mobile_button_hide' 
 // block ID
 $block_id = 'header-button-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) { // add anchor if present
-     $id = $block['anchor'];
+     $block_id = $block['anchor'];
 }
 
 // block Classes

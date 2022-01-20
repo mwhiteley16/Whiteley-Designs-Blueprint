@@ -73,6 +73,10 @@
           &.previous {
                left: -40px;
 
+               .alignfull & {
+                    left: 20px;
+               }
+
                @media(max-width:1375px) {
                     left: 20px;
                }
@@ -85,6 +89,11 @@
 
           &.next {
                right: -40px;
+
+               .alignfull & {
+                    right: 20px;
+               }
+
                @media(max-width:1375px) {
                     right: 20px;
                }

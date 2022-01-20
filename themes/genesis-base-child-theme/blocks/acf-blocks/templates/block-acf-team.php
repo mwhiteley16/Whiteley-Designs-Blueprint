@@ -11,7 +11,7 @@
 // Block ID
 $block_id = 'team-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) { // add anchor if present
-     $id = $block['anchor'];
+     $block_id = $block['anchor'];
 }
 
 // Block Classes

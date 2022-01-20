@@ -14,7 +14,7 @@ $wd_maximum_width = get_field( 'wd_maximum_width' );
 // block ID
 $block_id = 'max-width-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) { // add anchor if present
-     $id = $block['anchor'];
+     $block_id = $block['anchor'];
 }
 
 // block Classes
