@@ -70,35 +70,6 @@ function wd_acf_blocks() {
 
           acf_register_block_type(
                [
-                    'name'			=> 'acf-cover-with-white-box',
-                    'title'			=> __( 'Cover w/ White Box Block', WD_CHILD_THEME_NAME ),
-                    'description'		=> __( 'A image cover block with a white content box.', WD_CHILD_THEME_NAME ),
-                    'category'		=> 'wd-blocks',
-                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-cover-with-white-box.php',
-                    'mode'              => 'preview',
-                    'align'             => 'full',
-                    'icon'              => $block_icon,
-                    'keywords' => [
-                         'cover with white box',
-                         'wd',
-                         'acf',
-                         WD_CHILD_THEME_SLUG,
-                    ],
-                    'post_type' => [
-                         'post',
-                         'page',
-                    ],
-                    'supports' => [
-                         'align'           => [ 'full' ],
-                         'anchor'          => false,
-                         'customClassName' => true,
-                         'jsx'             => true,
-                    ]
-               ]
-          );
-
-          acf_register_block_type(
-               [
                     'name'			=> 'acf-faq',
                     'title'			=> __( 'FAQ Block' ),
                     'description'		=> __( 'A block to show FAQ items with an optional toggle.' ),
@@ -108,7 +79,7 @@ function wd_acf_blocks() {
                     'icon'              => $block_icon,
                     'enqueue_assets'    => function() {
                            wp_enqueue_script(
-                                'acf-custom-block',
+                                'acf-faq-block-js',
                                 get_stylesheet_directory_uri() . '/blocks/acf-blocks/js/block-faq.js',
                                 [ 'jquery' ],
                                 '',
@@ -185,36 +156,6 @@ function wd_acf_blocks() {
                     'supports' => [
                          'align'           => [ 'wide', 'full' ],
                          'align_content'   => 'matrix',
-                         'anchor'          => false,
-                         'customClassName' => true,
-                         'jsx'             => true,
-                    ]
-               ]
-          );
-
-          acf_register_block_type(
-               [
-                    'name'			=> 'acf-highlight-split',
-                    'title'			=> __( 'Highlight Split Block', WD_CHILD_THEME_NAME ),
-                    'description'		=> __( 'A block to media content split with block editor content with a color background.', WD_CHILD_THEME_NAME ),
-                    'category'		=> 'wd-blocks',
-                    'mode'              => 'preview',
-                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-highlight-split.php',
-                    'icon'              => $block_icon,
-                    'keywords' => [
-                         'video',
-                         'highlight',
-                         'split image',
-                         'wd',
-                         'acf',
-                         WD_CHILD_THEME_SLUG,
-                    ],
-                    'post_type' => [
-                         'post',
-                         'page',
-                    ],
-                    'supports' => [
-                         'align'           => false,
                          'anchor'          => false,
                          'customClassName' => true,
                          'jsx'             => true,
