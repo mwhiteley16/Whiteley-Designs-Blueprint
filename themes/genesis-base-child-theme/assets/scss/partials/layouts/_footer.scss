@@ -12,22 +12,4 @@
 .site-footer {
      @include spacing( 'both', 'large' );
      width: 100%;
-     text-align: center;
-}
-
-/* ----- Footer Widgets -------------------- */
-.footer-widgets {
-
-     width: 100%;
-     padding: 75px 0;
-
-     .wrap {
-          display: flex;
-
-          .widget-area {
-               width: 33.33%;
-          }
-
-     }
-
 }

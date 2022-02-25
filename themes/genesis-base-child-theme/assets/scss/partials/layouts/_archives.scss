@@ -1,22 +1,21 @@
 /**
- * /assets/scss/partials/layouts/blog.scss
+ * /assets/scss/partials/layouts/archives.scss
  *
- * Let's define our blog styles
+ * Let's define our archive styles
  *
  * - Archive
- * - Loop Item
- * - Single
+ * - The Loop
  *
  */
 
 /* ----- Archive -------------------- */
 
-/* ----- Loop Item -------------------- */
+/* ----- The Loop -------------------- */
 .loop-wrapper {
      display: grid;
      flex-wrap: wrap;
-     column-gap: $base-margin;
-     row-gap: $base-margin;
+     column-gap: var(--wp--custom--layout--block-gap);
+     row-gap: var(--wp--custom--layout--block-gap);
      grid-template-columns: repeat( 3, 1fr );
      width: 100%;
 
@@ -28,5 +27,3 @@
           grid-template-columns: 1fr;
      }
 }
-
-/* ----- Single -------------------- */

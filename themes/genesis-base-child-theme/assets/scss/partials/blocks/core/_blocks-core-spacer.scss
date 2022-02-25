@@ -18,36 +18,18 @@
      margin-top: 0;
      margin-bottom: 0;
 
-     &.is-style-responsive-small {
+     &.is-style-responsive {
 
           @include media( 'medium' ) {
-               max-height: 100px;
+               max-height: calc( 4 * var(--wp--custom--layout--padding) );
           }
 
           @include media( 'tablet' ) {
-               max-height: 60px;
-          }
-     }
-
-     &.is-style-responsive-medium {
-
-          @include media( 'medium' ) {
-               max-height: 120px;
+               max-height: calc( 3 * var(--wp--custom--layout--padding) );
           }
 
-          @include media( 'tablet' ) {
-               max-height: 80px;
-          }
-     }
-
-     &.is-style-responsive-large {
-
-          @include media( 'medium' ) {
-               max-height: 140px;
-          }
-
-          @include media( 'tablet' ) {
-               max-height: 100px;
+          @include media( 'mobile' ) {
+               max-height: calc( 2 * var(--wp--custom--layout--padding) );
           }
      }
 

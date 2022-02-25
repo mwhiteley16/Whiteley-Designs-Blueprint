@@ -20,16 +20,11 @@
           position: absolute;
           top: 100%;
           width: 100vw;
-          margin-left: -$base-margin;
-          margin-right: -$base-margin;
-          background-color: $white;
-          border-bottom: 1px solid $grey-medium;
+          margin-left: calc(var(--wp--custom--layout--padding) * -1);
+          margin-right: calc(var(--wp--custom--layout--padding) * -1);
+          background-color: var(--wp--preset--color--white);
+          border-bottom: 1px solid $neutral_4;
           padding-bottom: 30px;
-     }
-
-     @include media( 'mobile' ) {
-          margin-left: -$mobile-margin;
-          margin-right: -$mobile-margin;
      }
 
      .wrap {
@@ -47,7 +42,7 @@
 
      		a {
      			border: none;
-     			color: $base-color;
+     			color: var(--wp--preset--color--foreground);
      			display: block;
      			font-size: 16px;
      			padding: 15px;
@@ -57,7 +52,7 @@
      		&:hover > a,
      		&.current-menu-item > a,
      		&.current-menu-ancestor > a {
-     			color: $primary-color;
+     			color: var(--wp--preset--color--primary);
                     text-decoration: none;
      		}
 
@@ -98,15 +93,15 @@
                     a {
 
                          span {
-                              background-color: $primary-color;
-                              color: $white;
+                              background-color: var(--wp--preset--color--primary);
+                              color: var(--wp--preset--color--white);
                               padding: 10px 20px;
                               @extend %transition;
 
                               &:hover,
                               &:focus {
-                                   background: darken( $primary-color, 10% );
-                                   color: $white;
+                                   background: var(--wp--custom--color--primary-darken);
+                                   color: var(--wp--preset--color--white);
                                    text-decoration: none;
                               }
                          }
@@ -138,64 +133,64 @@
                     width: 100%;
 
                     &:not(.menu-button) {
-                         border-top: 1px solid $grey-medium;
+                         border-top: 1px solid $neutral_4;
                     }
 
                     &.menu-button {
                          margin-top: 30px;
                     }
                }
-     	}
-
-          .sub-menu {
-               background: $white;
-               left: -9999px;
-               opacity: 0;
-               border-radius: 5px;
-               box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-               padding: 10px 0;
-               position: absolute;
-               width: auto;
-               min-width: 200px;
-               z-index: 99;
-               @extend %transition;
-
-               @include media( 'menu' ) {
-                    left: auto;
-                    opacity: 1;
-                    position: relative;
-                    width: 100%;
-                    border-radius: 0;
-                    box-shadow: none;
-                    padding: 0;
-                    background-color: rgba(0,0,0,0.05);
-                    border-top: 1px solid $grey-medium;
-                    display: none;
-               }
-
-               .menu-item {
-                    width: 100%;
-                    display: block;
-                    clear: both;
-                    border-top: none !important;
-               }
-
-               a {
-                    width: 100%;
-                    background: transparent;
-                    color: $base-color;
-                    padding: 8px 30px 8px 20px;
-                    position: relative;
-                    white-space: nowrap;
-               }
-
-               .menu-item:hover > a,
-               .current-menu-item > a {
-                    color: $grey-dark;
-               }
 
                .sub-menu {
-                    margin: -54px 0 0 199px;
+                    background: var(--wp--preset--color--white);
+                    left: -9999px;
+                    opacity: 0;
+                    border-radius: 5px;
+                    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+                    padding: 10px 0;
+                    position: absolute;
+                    width: auto;
+                    min-width: 200px;
+                    z-index: 99;
+                    @extend %transition;
+
+                    @include media( 'menu' ) {
+                         left: auto;
+                         opacity: 1;
+                         position: relative;
+                         width: 100%;
+                         border-radius: 0;
+                         box-shadow: none;
+                         padding: 0;
+                         background-color: rgba(0,0,0,0.05);
+                         border-top: 1px solid $neutral_4;
+                         display: none;
+                    }
+
+                    .menu-item {
+                         width: 100%;
+                         display: block;
+                         clear: both;
+                         border-top: none !important;
+                    }
+
+                    a {
+                         width: 100%;
+                         background: transparent;
+                         color: var(--wp--preset--color--foreground);
+                         padding: 8px 30px 8px 20px;
+                         position: relative;
+                         white-space: nowrap;
+                    }
+
+                    .menu-item:hover > a,
+                    .current-menu-item > a {
+                         color: $neutral_9;
+                    }
+
+                    .sub-menu {
+                         margin: -54px 0 0 199px;
+                    }
                }
           }
      }
@@ -216,7 +211,7 @@
      span {
           width: 32px;
           height: 3px;
-          background-color: $grey-dark;
+          background-color: $neutral_9;
           border-radius: 10px;
           position: absolute;
           top: 0;

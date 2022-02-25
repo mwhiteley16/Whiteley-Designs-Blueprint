@@ -64,6 +64,11 @@ function wd_acf_blocks() {
           //                'customClassName' => true, // defaults to false
           //                'multiple' => false, // allows multiple instances of block, defaults to true
           //                'jsx' => true, // defaults to false, used for innerBlocks
+          //                'color'           => [ // add gutenberg properties to acf blocks
+          //                     'background' => true,
+          //                     'gradients'  => false,
+          //                     'text'       => false
+          //                ]
           //           ]
           //      ]
           // );
@@ -78,13 +83,13 @@ function wd_acf_blocks() {
                     'mode'              => 'preview',
                     'icon'              => $block_icon,
                     'enqueue_assets'    => function() {
-                           wp_enqueue_script(
-                                'acf-faq-block-js',
-                                get_stylesheet_directory_uri() . '/blocks/acf-blocks/js/block-faq.js',
-                                [ 'jquery' ],
-                                '',
-                                true
-                           );
+                         wp_enqueue_script(
+                              'acf-faq-block-js',
+                              get_stylesheet_directory_uri() . '/blocks/acf-blocks/js/block-faq.js',
+                              [ 'jquery' ],
+                              '',
+                              true
+                         );
                     },
                     'keywords' => [
                          'faq',
@@ -155,7 +160,6 @@ function wd_acf_blocks() {
                     ],
                     'supports' => [
                          'align'           => [ 'wide', 'full' ],
-                         'align_content'   => 'matrix',
                          'anchor'          => false,
                          'customClassName' => true,
                          'jsx'             => true,
@@ -241,6 +245,12 @@ function wd_acf_blocks() {
                          'align'           => [ 'full', 'wide' ],
                          'anchor'          => false,
                          'customClassName' => true,
+                         'jsx'             => true,
+                         'color'           => [
+                              'background' => true,
+                              'gradients'  => false,
+                              'text'       => false
+                         ]
                     ]
                ]
           );

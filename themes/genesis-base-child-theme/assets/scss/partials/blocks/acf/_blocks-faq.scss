@@ -7,14 +7,17 @@
  */
 
 .faq-block {
+     display: block;
+     width: 100%;
+     margin-bottom: var(--wp--custom--layout--block-gap);
 
      &__toggle {
           width: 100%;
-          margin-top: 24px;
-          background-color: $grey-light;
-          border: 1px solid $grey-medium;
           position: relative;
+          margin-top: 24px;
           padding: 20px;
+          background-color: $neutral_1;
+          border: 1px solid $neutral_4;
 
           @include media( 'mobile' ) {
                padding: 15px;
@@ -25,9 +28,10 @@
           }
 
           &-question {
-               font-size: 20px;
-               line-height: 24px;
-               padding-right: 40px;
+               margin: -10px 0 -10px -10px;
+               padding: 10px;
+               font-size: var(--wp--preset--font-size--large);
+               line-height: var(--wp--custom--typography--line-height--small);
                font-weight: 600;
                transition: all 0.2s ease-in-out;
                cursor: pointer;
@@ -35,38 +39,53 @@
                background-color: transparent;
                text-align: left;
 
-               &:focus {
-                    outline: none;
-                    outline-offset: 0;
-               }
-
                &:hover {
-                    color: $primary-color;
+                    color: var(--wp--preset--color--primary);
                }
 
                &-icons {
                     position: absolute;
                     right: 20px;
-                    top: 20px;
+                    top: 22px;
+                    width: 20px;
+                    height: 20px;
+                    border: none;
+                    background-color: transparent;
 
-                    i {
-                         color: $primary-color;
+                    &::before,
+                    &::after {
+                         content: "";
+                         position: absolute;
+                         width: 100%;
+                         height: 4px;
+                         top: calc(50% - 2px);
+                         right: 0;
+                         border-radius: 4px;
+                         background-color: var(--wp--preset--color--foreground);
+                         @extend %transition;
+                    }
 
-                         &:hover {
-                              color: $base-color;
-                              cursor: pointer;
+                    &::after {
+                         transform: rotate(90deg);
+                    }
+
+                    &:hover {
+
+                         &::before,
+                         &::after {
+                              background-color: var(--wp--preset--color--primary);
                          }
+                    }
 
-                         &.fa-minus {
-                              display: none;
-                         }
+                    &:focus {
+                         outline-offset: 4px;
                     }
                }
           }
 
           &-answer {
                display: none;
-               margin-top: 24px;
+               margin-top: var(--wp--custom--layout--block-gap);
 
                p {
 
@@ -82,24 +101,21 @@
           }
 
           &.active {
-               background-color: $white;
+               background-color: var(--wp--preset--color--white);
 
                .faq-block__toggle {
 
                     &-question {
-                         color: $primary-color;
+                         color: var(--wp--preset--color--primary);
 
                          &-icons {
 
-                              i {
+                              &::before {
+                                   opacity: 0;
+                              }
 
-                                   &.fa-plus {
-                                        display: none;
-                                   }
-
-                                   &.fa-minus {
-                                        display: block;
-                                   }
+                              &::after {
+                                   transform: rotate(0);
                               }
                          }
                     }

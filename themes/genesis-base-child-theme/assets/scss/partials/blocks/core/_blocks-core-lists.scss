@@ -7,68 +7,27 @@
  */
 
 /* ----- Core List Styles -------------------- */
-ul,ol {
+.entry-content ul,
+.entry-content ol,
+ul.wp-block,
+ol.wp-block {
+     padding-left: var(--wp--custom--layout--block-gap);
+     margin-bottom: var(--wp--custom--layout--block-gap);
 
-     &.is-style-two-column-list {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex-start;
+     li {
+          margin: 0 0 10px;
 
-          li {
-               width: 50%;
-               padding-right: 60px;
-
-               @media(max-width:499px) {
-                    width: 100%;
-                    padding-right: 0;
-               }
-
-               @media(min-width:500px) {
-                    &:nth-child(even) {
-                         padding-right: 0;
-                    }
-               }
-          }
-     }
-
-     &.is-style-three-column-list {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-
-          li {
-               width: 33.33%;
-               padding-right: 60px;
-
-               @media(max-width:649px) {
-                    width: 50%;
-               }
-
-               @media(max-width:499px) {
-                    width: 100%;
-                    padding-right: 0;
-               }
-
-               @media(min-width:650px) and (max-width:500px) {
-                    &:nth-child(3n) {
-                         padding-right: 0;
-                    }
-               }
-
-               @media(min-width:500px) and (max-width:649px) {
-                    &:nth-child(even) {
-                         padding-right: 0;
-                    }
-               }
+          &:last-child {
+               margin-bottom: 0;
           }
      }
 
      &.is-style-styled-list {
           list-style-type: none;
+          background-color: transparent !important;
           padding: 0 !important;
 
           li {
-               margin: 0 0 2px;
                position: relative;
                padding: 0 0 0 17px !important;
 
@@ -77,9 +36,9 @@ ul,ol {
                     width: 7px;
                     height: 7px;
                     border-radius: 7px;
-                    background-color: $primary-color;
+                    background-color: var(--wp--preset--color--primary);
                     position: absolute;
-                    top: 9px;
+                    top: 8px;
                     left: 0;
                }
 
@@ -87,10 +46,18 @@ ul,ol {
                     margin-bottom: 30px;
                }
           }
+
+          &.has-secondary-background-color {
+
+               li::before {
+                    background-color: var(--wp--preset--color--secondary);
+               }
+          }
      }
 }
 
-ol.is-style-styled-list {
+.entry-content ol.is-style-styled-list,
+ol.wp-block.is-style-styled-list {
      counter-reset: wd-counter;
 
      li {
@@ -99,13 +66,20 @@ ol.is-style-styled-list {
 
           &::before {
                content: counter(wd-counter)".";
-               color: $primary-color;
+               color: var(--wp--preset--color--primary);
                font-weight: 600;
                width: auto;
                height: auto;
-               background-color: transparent;
+               background-color: transparent !important;
                top: 0;
-               font-family: $font-stack-secondary;
+               font-family: var(--wp--preset--font-family--secondary-font);
+          }
+     }
+
+     &.has-secondary-background-color {
+
+          li::before {
+               color: var(--wp--preset--color--secondary);
           }
      }
 }

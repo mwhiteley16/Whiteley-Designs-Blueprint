@@ -12,7 +12,7 @@
 
      <div class="search-loop-item__content">
 
-          <h4 class="loop-item__title"><a href="<?php the_permalink(); ?>" tabindex="-1"><?php the_title(); ?></a></h4>
+          <h3 class="loop-item__title"><a href="<?php the_permalink(); ?>" tabindex="-1"><?php the_title(); ?></a></h3>
           <div class="loop-item__excerpt">
                <?php the_excerpt(); ?>
           </div>

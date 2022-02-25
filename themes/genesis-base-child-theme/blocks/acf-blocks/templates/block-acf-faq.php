@@ -52,13 +52,12 @@ if ( ! empty( $block['className'] ) ) {
           <?php $faq_count = 0; ?>
 		<?php while ( have_rows( 'wd_block_faq' ) ) : the_row(); $faq_count++; ?>
                <div class="faq-block__toggle">
-                    <button class="faq-block__toggle-question">
-                         <?php the_sub_field( 'wd_faq_question' ); ?>
-                         <div class="faq-block__toggle-question-icons">
-                              <i class="fas fa-plus"></i>
-                              <i class="fas fa-minus"></i>
-                         </div>
-                    </button>
+                    <div class="faq-block__toggle-question">
+                         <span>
+                              <?php the_sub_field( 'wd_faq_question' ); ?>
+                         </span>
+                         <button class="faq-block__toggle-question-icons" aria-label="Toggle FAQ Item"></button>
+                    </div>
                     <div class="faq-block__toggle-answer">
                          <?php the_sub_field( 'wd_faq_answer' ); ?>
                     </div>

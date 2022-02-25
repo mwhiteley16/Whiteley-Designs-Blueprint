@@ -31,7 +31,7 @@ input[type="tel"],
 input[type="number"],
 textarea,
 select {
-	background: $white;
+	background: var(--wp--preset--color--white);
 	border: $form-border-width solid $form-border-color;
 	color: $form-text-color;
 	padding: $form-padding;
@@ -40,7 +40,7 @@ select {
      line-height: 1.15;
 
      &:focus {
-          background-color: $white;
+          background-color: var(--wp--preset--color--white);
           border-color: $form-border-color-focus;
           color: $form-text-color;
           outline: 0;
@@ -48,4 +48,4 @@ select {
 }
 
 /* ----- Placeholder Styles -------------------- */
-// @include placeholder-color( $base-color );
+// @include placeholder-color( var(--wp--preset--color--foreground) );

@@ -44,7 +44,7 @@
                     content: "";
                     width: 8px;
                     height: 8px;
-                    background-color: $white;
+                    background-color: var(--wp--preset--color--white);
                     position: absolute;
                     top: 5px;
                     left: 4px;
@@ -55,7 +55,7 @@
                &:checked {
 
                     + *::before {
-                         background-color: $primary-color;
+                         background-color: var(--wp--preset--color--primary);
                          box-shadow: none;
                     }
 
@@ -88,7 +88,7 @@
 
                + *::after {
                     content: "";
-                    background-image: url('../images/form-icons/check-solid-light.svg');
+                    background-image: url('../images/forms/check-solid-white.svg');
                     background-size: cover;
                     width: 10px;
                     height: 10px;
@@ -101,7 +101,7 @@
                &:checked {
 
                     + *::before {
-                         background-color: $primary-color;
+                         background-color: var(--wp--preset--color--primary);
                          box-shadow: none;
                     }
 

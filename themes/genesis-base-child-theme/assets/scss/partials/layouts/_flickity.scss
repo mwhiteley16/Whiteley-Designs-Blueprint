@@ -82,8 +82,7 @@
                }
 
                @media(max-width:850px) {
-                    left: 0;
-                    top: calc(100% + 20px);
+                    left: 10px;
                }
           }
 
@@ -99,8 +98,7 @@
                }
 
                @media(max-width:850px) {
-                    right: 0;
-                    top: calc(100% + 20px);
+                    right: 10px;
                }
           }
 
@@ -127,7 +125,7 @@
           }
 
           .arrow {
-               fill: $primary-color;
+               fill: var(--wp--preset--color--primary);
           }
      }
 }
@@ -153,8 +151,8 @@ ol.flickity-page-dots {
           width: 8px;
           height: 8px;
           border-radius: 8px;
-          background-color: $grey-medium;
-          margin-right: 8px;
+          background-color: $neutral_4;
+          margin: 0 4px;
           cursor: pointer;
           padding-bottom: 0;
 
@@ -163,7 +161,7 @@ ol.flickity-page-dots {
           }
 
           &.is-selected {
-               background-color: $primary-color;
+               background-color: var(--wp--preset--color--primary);
           }
      }
 }

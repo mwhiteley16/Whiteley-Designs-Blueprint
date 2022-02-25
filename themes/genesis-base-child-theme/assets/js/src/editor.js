@@ -5,24 +5,11 @@ wp.domReady( () => {
      // button styles
      wp.blocks.unregisterBlockStyle(
      	'core/button',
-     	[ 'default', 'outline', 'squared', 'fill' ]
-     );
-
-     wp.blocks.registerBlockStyle(
-          'core/button',
-          [
-               {
-                    name: 'default',
-                    label: 'Default',
-                    isDefault: true,
-               },
-               {
-                    name: 'inverse',
-                    label: 'Inverse',
-               }
+     	[
+               'outline',
+               'fill',
           ]
      );
-
 
      // column styles
      wp.blocks.registerBlockStyle(
@@ -132,10 +119,6 @@ wp.domReady( () => {
                {
                     name: 'wide-break',
                     label: 'Wide Break',
-               },
-               {
-                    name: 'mobile-image-top',
-                    label: 'Mobile Image Top',
                }
           ]
      );
@@ -172,16 +155,8 @@ wp.domReady( () => {
                     isDefault: true,
                },
                {
-                    name: 'responsive-small',
-                    label: 'Responsive Small (100px-60px)',
-               },
-               {
-                    name: 'responsive-medium',
-                    label: 'Responsive Medium (120px-80px)',
-               },
-               {
-                    name: 'responsive-large',
-                    label: 'Responsive Large (140px-100px)',
+                    name: 'responsive',
+                    label: 'Responsive',
                },
                {
                     name: 'tablet-hide',
@@ -198,30 +173,7 @@ wp.domReady( () => {
           ]
      );
 
-
      // ADD CUSTOM BLOCK VARIATIONS
-
-     // button variations
-     wp.blocks.registerBlockVariation(
-          'core/buttons',
-          [
-               {
-                    name: 'wide',
-                    title: 'Wide Buttons',
-                    attributes: {
-                         className: 'is-variation-wide'
-                    },
-               },
-               {
-                    name: 'full',
-                    title: 'Full Buttons',
-                    attributes: {
-                         className: 'is-variation-full'
-                    },
-               }
-          ]
-     );
-
      // column variations
      wp.blocks.unregisterBlockVariation( // removed unused layouts
           'core/columns',
@@ -381,22 +333,6 @@ wp.domReady( () => {
      wp.blocks.unregisterBlockType( 'yoast-seo/breadcrumbs' );
 
 } );
-
-
-// add center align to group block
-wp.hooks.addFilter(
-	'blocks.registerBlockType',
-	'wd/groupAlignments',
-	function (settings, name) {
-		if (name === 'core/group') { return lodash.assign({}, settings, {
-			supports: lodash.assign({}, settings.supports, {
-				align: [ 'wide', 'full', 'center' ],
-			}),
-		});
-	}
-	return settings;
-	}
-);
 
 
 /**

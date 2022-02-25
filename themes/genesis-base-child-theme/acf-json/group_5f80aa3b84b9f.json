@@ -3,35 +3,6 @@
     "title": "Block - Separator",
     "fields": [
         {
-            "key": "field_5f80aa4f08f3e",
-            "label": "Separator Color",
-            "name": "wd_background_color",
-            "type": "radio",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "primary-color": "Primary Color",
-                "secondary-color": "Secondary Color",
-                "grey-light": "Grey Light",
-                "grey-medium": "Grey Medium",
-                "grey-dark": "Grey Dark",
-                "white": "White",
-                "black": "Black"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "",
-            "layout": "vertical",
-            "return_format": "value",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_602d118ae5ae5",
             "label": "Separator Type",
             "name": "wd_block_separator_type",
@@ -160,7 +131,7 @@
             "label": "Include Margin",
             "name": "wd_block_separator_include_margin",
             "type": "button_group",
-            "instructions": "Include base margin above and below separator?",
+            "instructions": "",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -195,5 +166,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1613566395
+    "show_in_rest": 0,
+    "modified": 1645738680
 }

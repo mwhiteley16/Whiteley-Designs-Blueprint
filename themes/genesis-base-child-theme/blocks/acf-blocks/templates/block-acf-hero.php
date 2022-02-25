@@ -11,10 +11,7 @@
 // ACF Variable custom meta
 $wd_block_hero_image = get_field( 'wd_block_hero_image' );
 $wd_block_hero_image_overlay = get_field( 'wd_block_hero_image_overlay' );
-$wd_block_hero_content_alignment = get_field( 'wd_block_hero_content_alignment' );
-$wd_block_background_type = get_field( 'wd_block_background_type' );
 $wd_block_hero_image_position = get_field( 'wd_block_hero_image_position' );
-$wd_block_hero_content_max_width = get_field( 'wd_block_hero_content_max_width' );
 
 // Block ID
 $block_id = 'hero-' . $block['id'];
@@ -24,8 +21,6 @@ if ( ! empty( $block['anchor'] ) ) { // add anchor if present
 
 // Block Classes
 $block_classes = 'acf-block hero-block';
-$block_classes .= ' image-' . $wd_block_hero_image_position;
-$block_classes .= ' content-' . $wd_block_hero_content_alignment;
 
 // if using animations
 if ( ! empty( $block['animationType'] ) ) {
@@ -51,34 +46,23 @@ if ( ! empty( $block['align'] ) ) {
      $block_classes .= ' align' . $block['align'];
 }
 
-// get content align text class if present
-if ( ! empty( $block['align_content'] ) ) {
-     $block_content_align = preg_replace('#[ -]+#', '-', $block['align_content']);
-}
-
 // get custom class name if present
 if ( ! empty( $block['className'] ) ) {
      $block_classes .= ' ' . $block['className'];
-}
-
-// set proper classes of content container
-$content_class = 'hero-block__content';
-$content_class .= ' hero-block__content--' . $wd_block_background_type;
-if ( $wd_block_background_type == 'solid-color' ) {
-     $wd_block_background_color = get_field( 'wd_background_color' ); // only get background color variable if it is needed
-     $content_class .= ' has-' . $wd_block_background_color . '-background-color';
 }
 
 // create the placeholder template
 $template = [
      [ 'core/heading',
           [
-               'level' => 2,
+               'level'       => 2,
+               'textColor'   => 'white',
                'placeholder' => 'Hero Block Title Here',
           ]
      ],
      [ 'core/paragraph',
           [
+               'textColor'   => 'white',
                'placeholder' => 'Hero block descriptive text goes here. This uses innerBlocks so we can use whatever here.',
           ]
      ],
@@ -97,18 +81,25 @@ $template = [
 ];
 ?>
 
-<div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_classes ); ?>" style="background-image:url('<?php echo esc_url( $wd_block_hero_image['url'] ); ?>">
+<div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_classes ); ?>">
 
-     <?php if ( $wd_block_hero_image_overlay == 'yes-overlay' ) : ?>
-          <?php $wd_block_hero_overlay_opacity = get_field( 'wd_block_hero_overlay_opacity' ); ?>
-          <div class="hero-block__overlay" style="opacity:0.<?php echo $wd_block_hero_overlay_opacity; ?>;"></div>
-     <?php endif; ?>
+     <div class="hero-block__image">
+          <img class="image-<?php echo $wd_block_hero_image_position; ?>" src="<?php echo esc_url( $wd_block_hero_image['url'] ); ?>" alt="<?php echo esc_url( $wd_block_hero_image['alt'] ); ?>" width="<?php echo esc_url( $wd_block_hero_image['width'] ); ?>" height="<?php echo esc_url( $wd_block_hero_image['height'] ); ?>">
+     </div>
 
-     <div class="wrap is-position-<?php echo $block_content_align; ?>">
+     <?php
+     if ( $wd_block_hero_image_overlay == 'yes-overlay' ) {
+          $wd_block_hero_overlay_opacity = get_field( 'wd_block_hero_overlay_opacity' );
+          echo '<div class="hero-block__overlay" style="opacity:0.' . $wd_block_hero_overlay_opacity . '"></div>';
+     }
+     ?>
 
-          <div class="<?php echo esc_attr( $content_class ); ?>" style="max-width:<?php echo $wd_block_hero_content_max_width; ?>px;">
+     <div class="wrap">
+
+          <div class="hero-block__content">
                <InnerBlocks template="<?php echo esc_attr( wp_json_encode( $template ) ); ?>" />
           </div>
 
      </div>
+
 </div>

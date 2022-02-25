@@ -11,7 +11,7 @@
 .pagination {
      width: 100%;
      padding-top: 25px;
-     border-top: 3px solid $grey-light;
+     border-top: 3px solid $neutral_1;
 
      .alignleft {
           float: left;
@@ -22,12 +22,12 @@
      }
 
      a {
-          color: $primary-color;
+          color: var(--wp--preset--color--primary);
           font-weight: 600;
 
           &:hover {
                text-decoration: none;
-               color: $base-color;
+               color: var(--wp--preset--color--foreground);
           }
      }
 
@@ -49,7 +49,7 @@
                a {
                     padding: 2px 11px;
                     border-radius: 3px;
-                    color: $base-color;
+                    color: var(--wp--preset--color--foreground);
                     font-size: 16px;
                     line-height: 26px;
                     display: inline-block;
@@ -59,8 +59,8 @@
                &:hover {
 
                     a {
-                         background-color: $primary-color;
-                         color: $white;
+                         background-color: var(--wp--preset--color--primary);
+                         color: var(--wp--preset--color--white);
                     }
                }
 
@@ -94,19 +94,9 @@
 
           button {
                @extend %button-styles;
-               
-               margin-top: $h-spacing;
-               margin-bottom: $h-spacing;
 
-               @include media( 'tablet' ) {
-                    margin-top: $h-spacing-tablet;
-                    margin-bottom: $h-spacing-tablet;
-               }
-
-               @include media( 'mobile' ) {
-                    margin-top: $h-spacing-mobile;
-                    margin-bottom: $h-spacing-mobile;
-               }
+               margin-top: var(--wp--custom--layout--block-gap);
+               margin-bottom: var(--wp--custom--layout--block-gap);
 
                &.facetwp-hidden {
                     display: none;

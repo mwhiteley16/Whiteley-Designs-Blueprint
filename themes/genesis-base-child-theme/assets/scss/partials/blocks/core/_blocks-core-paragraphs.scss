@@ -8,11 +8,11 @@
 
 /* ----- Core Block Paragraphs -------------------- */
 p {
-	margin: 0 0 $base-margin;
+	margin: 0 0 var(--wp--custom--layout--block-gap);
 	padding: 0;
 
      &.has-background {
-          padding: 15px;
+          padding: var( --wp--custom--layout--padding, 16px );
      }
 
      &.is-style-no-bottom-margin {
@@ -20,6 +20,6 @@ p {
      }
 
      &.is-style-half-bottom-margin {
-          margin-bottom: $base-margin-half;
+          margin-bottom: calc( var(--wp--custom--layout--block-gap) / 2);
      }
 }

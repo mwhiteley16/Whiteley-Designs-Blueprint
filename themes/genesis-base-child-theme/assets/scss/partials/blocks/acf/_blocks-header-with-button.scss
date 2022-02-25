@@ -20,7 +20,7 @@
           margin: 0;
      }
 
-     margin-bottom: $base-margin;
+     margin-bottom: var(--wp--custom--layout--block-gap);
 
      @include media( 'mobile' ) {
 
@@ -28,7 +28,7 @@
                flex-direction: column;
 
                .wp-block-button {
-                    margin-top: $base-margin;
+                    margin-top: var(--wp--custom--layout--block-gap);
                }
           }
 
