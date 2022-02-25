@@ -12,12 +12,12 @@
 .site-inner {
      width: 100%;
      overflow: hidden;
-     @include spacing( 'both', 'no-vertical' );
+     padding: 0 var(--wp--custom--layout--padding);
 
      .content {
           display: flex;
           flex-wrap: wrap;
-          padding: 75px 0;
+          padding: calc(var(--wp--custom--layout--block-gap) * 4) 0;
           width: 100%;
 
           > article {
@@ -27,9 +27,13 @@
 }
 
 .wrap {
-     width: 100%;
-     max-width: $base-width;
-     margin: 0 auto;
+
+     .site-header &,
+     .site-footer & {
+          width: 100%;
+          max-width: calc( var(--wp--custom--layout--default) );
+          margin: 0 auto;
+     }
 }
 
 @include media( 'mobile' ) {
@@ -40,8 +44,7 @@
 }
 
 /* ----- Sidebars -------------------- */
-.content-sidebar,
-.sidebar-content {
+.content-sidebar {
 
      .site-inner {
 
@@ -52,7 +55,7 @@
                justify-content: space-between;
 
                .content {
-                    width: $base-content-width;
+                    width: var(--wp--custom--layout--thin);
 
                     .alignfull,
                     .alignwide {
@@ -63,9 +66,9 @@
                }
 
                .sidebar {
-                    padding: 75px 0;
+                    padding: calc(var(--wp--custom--layout--block-gap) * 4) 0;
                     flex: 1;
-                    padding-left: 50px;
+                    padding-left: calc(var(--wp--custom--layout--block-gap) * 2);
                }
           }
      }

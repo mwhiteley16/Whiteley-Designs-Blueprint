@@ -11,7 +11,7 @@
 
 
 /* Layouts */
-@import 'partials/layouts/blog';
+@import 'partials/layouts/archives';
 @import 'partials/layouts/flickity';
 @import 'partials/layouts/footer';
 @import 'partials/layouts/header';
@@ -19,7 +19,8 @@
 @import 'partials/layouts/navigation';
 @import 'partials/layouts/pagination';
 @import 'partials/layouts/search';
-@import 'partials/layouts/widgets';
+@import 'partials/layouts/singular';
+// @import 'partials/layouts/widgets';
 
 
 /* Forms */

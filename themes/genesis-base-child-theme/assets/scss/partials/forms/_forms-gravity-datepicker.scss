@@ -10,7 +10,7 @@
 
      input.datepicker {
           position: relative;
-          background-image: url('../images/form-icons/calendar-alt-light.svg');
+          background-image: url('../images/forms/calendar-days.svg');
           background-position: calc(100% - #{$form-padding}) 50%;
           background-repeat: no-repeat;
           background-size: 16px;
@@ -182,7 +182,7 @@
                margin: 1px 0;
                padding: 0;
                margin: 0;
-               border: 2px solid $white;
+               border: 2px solid var(--wp--preset--color--white);
                -webkit-appearance: auto;
                -moz-appearance: auto;
                appearance: auto;

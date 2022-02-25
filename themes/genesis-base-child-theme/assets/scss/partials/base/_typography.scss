@@ -17,21 +17,18 @@ textarea:focus,
 }
 
 a {
-     color: $link_color;
      background-color: transparent;
      text-decoration: none;
      @extend %transition;
 
      &:hover {
-          color: darken( $link_color, 10% );
           text-decoration: underline;
      }
 
      &[href^="tel"],
      &[href^="tel"]:hover {
-          color: $base-color;
+          color: var(--wp--preset--color--foreground);
      }
-
 }
 
 ol,
@@ -42,7 +39,7 @@ ul {
 
 b,
 strong {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 em,
@@ -51,18 +48,18 @@ i {
 }
 
 code {
-     background-color: $grey-medium;
      padding: 0.125em 0.25em;
+     background-color: $neutral_4;
 }
 
 
 pre {
-     border: 1px solid $grey-medium;
-     line-height: 1.3125;
      margin: 0 0 1.75em;
-     max-width: 100%;
-     overflow: auto;
      padding: 1.75em;
+     max-width: 100%;
+     border: 1px solid $neutral_4;
+     line-height: 1.3125;
+     overflow: auto;
      white-space: pre;
      white-space: pre-wrap;
      word-wrap: break-word;

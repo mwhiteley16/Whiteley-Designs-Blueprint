@@ -15,25 +15,25 @@ add_action( 'init', 'wd_register_cpt_block_pattern' );
 function wd_register_cpt_block_pattern() {
 
      $labels = [
-          'name'               => _x( 'Block Pattern', 'post type general name', WD_PLUGIN_THEME_NAME ),
-          'singular_name'      => _x( 'Block Pattern', 'post type singular name', WD_PLUGIN_THEME_NAME ),
-          'menu_name'          => _x( 'Block Patterns', 'admin menu', WD_PLUGIN_THEME_NAME ),
-          'name_admin_bar'     => _x( 'Block Pattern', 'add new on admin bar', WD_PLUGIN_THEME_NAME ),
-          'add_new'            => _x( 'Add New', 'Block Pattern', WD_PLUGIN_THEME_NAME ),
-          'add_new_item'       => __( 'Add New Block Pattern', WD_PLUGIN_THEME_NAME ),
-          'new_item'           => __( 'New Block Pattern', WD_PLUGIN_THEME_NAME ),
-          'edit_item'          => __( 'Edit Block Pattern', WD_PLUGIN_THEME_NAME ),
-          'view_item'          => __( 'View Block Pattern', WD_PLUGIN_THEME_NAME ),
-          'all_items'          => __( 'All Block Patterns', WD_PLUGIN_THEME_NAME ),
-          'search_items'       => __( 'Search Block Patterns', WD_PLUGIN_THEME_NAME ),
-          'parent_item_colon'  => __( 'Parent Block Patterns:', WD_PLUGIN_THEME_NAME ),
-          'not_found'          => __( 'No Block Patterns found.', WD_PLUGIN_THEME_NAME ),
-          'not_found_in_trash' => __( 'No Block Patterns found in Trash.', WD_PLUGIN_THEME_NAME )
+          'name'               => _x( 'Block Pattern', 'post type general name', WD_PLUGIN_THEME_SLUG ),
+          'singular_name'      => _x( 'Block Pattern', 'post type singular name', WD_PLUGIN_THEME_SLUG ),
+          'menu_name'          => _x( 'Block Patterns', 'admin menu', WD_PLUGIN_THEME_SLUG ),
+          'name_admin_bar'     => _x( 'Block Pattern', 'add new on admin bar', WD_PLUGIN_THEME_SLUG ),
+          'add_new'            => _x( 'Add New', 'Block Pattern', WD_PLUGIN_THEME_SLUG ),
+          'add_new_item'       => __( 'Add New Block Pattern', WD_PLUGIN_THEME_SLUG ),
+          'new_item'           => __( 'New Block Pattern', WD_PLUGIN_THEME_SLUG ),
+          'edit_item'          => __( 'Edit Block Pattern', WD_PLUGIN_THEME_SLUG ),
+          'view_item'          => __( 'View Block Pattern', WD_PLUGIN_THEME_SLUG ),
+          'all_items'          => __( 'All Block Patterns', WD_PLUGIN_THEME_SLUG ),
+          'search_items'       => __( 'Search Block Patterns', WD_PLUGIN_THEME_SLUG ),
+          'parent_item_colon'  => __( 'Parent Block Patterns:', WD_PLUGIN_THEME_SLUG ),
+          'not_found'          => __( 'No Block Patterns found.', WD_PLUGIN_THEME_SLUG ),
+          'not_found_in_trash' => __( 'No Block Patterns found in Trash.', WD_PLUGIN_THEME_SLUG )
      ];
 
      $args = [
           'labels'              => $labels,
-          'description'         => __( 'Block Patterns.', WD_PLUGIN_THEME_NAME ),
+          'description'         => __( 'Block Patterns.', WD_PLUGIN_THEME_SLUG ),
           'public'              => false,
           'exclude_from_search' => true,
           'publicly_queryable'  => true,
@@ -74,7 +74,7 @@ function wd_register_block_pattern_categories() {
           register_block_pattern_category(
                'whiteley-designs',
                [
-                    'label' => _x( 'Whiteley Designs', 'Block pattern category', WD_PLUGIN_THEME_NAME ),
+                    'label' => _x( 'Whiteley Designs', 'Block pattern category', WD_PLUGIN_THEME_SLUG ),
                ]
           );
 

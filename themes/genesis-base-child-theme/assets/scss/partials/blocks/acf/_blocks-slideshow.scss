@@ -8,7 +8,7 @@
 
 // used when inheriting size of image(s) in slideshow
 .slideshow-block {
-     margin-bottom: 42px;
+     padding-bottom: var(--wp--custom--layout--block-gap);
      position: relative;
 
      &__slides {

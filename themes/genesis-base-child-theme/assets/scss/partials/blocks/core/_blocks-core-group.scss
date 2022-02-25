@@ -9,19 +9,10 @@
  /* ----- Core Block Group -------------------- */
 .wp-block-group {
 
-     &__inner-container > * {
-
-          &.alignwide {
-               margin: 0 calc(25% - 25vw);
-               max-width: 100vw;
-               width: auto;
-          }
-
-          &.alignfull {
-               margin: 0 calc(50% - 50vw);
-               max-width: 100vw;
-               width: 100vw;
-          }
+     > * {
+          max-width: var(--wp--custom--layout--default);
+          margin-left: auto;
+          margin-right: auto;
 
           &:last-child {
                margin-bottom: 0;
@@ -30,32 +21,18 @@
 
      &.alignfull,
      .wp-block[data-align="full"] & {
-          @include spacing( 'both', 'no-vertical' );
-
-          .wp-block-group__inner-container {
-               max-width: $base-width;
-               margin: 0 auto;
-          }
-     }
-
-     &.aligncenter,
-     .wp-block[data-align="center"] & {
-
-          .wp-block-group__inner-container {
-               max-width: $base-content-width;
-               margin: 0 auto;
-          }
+          padding-left: var(--wp--custom--layout--padding);
+          padding-right: var(--wp--custom--layout--padding);
      }
 
      &.has-background {
-          @include spacing( 'both', null );
+          padding: var(--wp--custom--layout--padding);
 
           &.alignfull,
           &.alignwide,
           &.aligncenter,
           .wp-block[data-align="full"] &,
-          .wp-block[data-align="wide"] &,
-          .wp-block[data-align="center"] & {
+          .wp-block[data-align="wide"] & {
                @include spacing( 'vertical', null );
           }
      }

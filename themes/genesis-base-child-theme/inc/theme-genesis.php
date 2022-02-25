@@ -31,14 +31,12 @@ add_theme_support( 'genesis-accessibility',
 add_theme_support( 'genesis-structural-wraps',
      [
           'footer',
-          'footer-widgets',
           'header',
           'nav',
           'site-inner',
           'site-tagline',
      ]
 );
-add_theme_support( 'genesis-footer-widgets', 3 );
 
 
 /**
@@ -72,11 +70,11 @@ add_theme_support( 'genesis-menus',
 * Don't load default data into empty sidebar
 */
 remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
-add_action( 'genesis_sidebar',
-     function() {
-          dynamic_sidebar( 'sidebar' );
-     }
-);
+// add_action( 'genesis_sidebar',
+//      function() {
+//           dynamic_sidebar( 'sidebar' );
+//      }
+// );
 
 
 /**
@@ -85,12 +83,7 @@ add_action( 'genesis_sidebar',
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
-genesis_register_layout(
-     'thin-layout',
-     [
-          'label' => __( 'Thin Layout', WD_CHILD_THEME_SLUG ),
-     ]
-);
+genesis_unregister_layout( 'sidebar-content' );
 
 
 /**
@@ -151,7 +144,6 @@ function wd_footer() {
 * Do not deregister and re-register script or load order will cause console errors
 */
 // add_filter( 'genesis_superfish_args_url', 'wd_superfish_args_url' );
-
 function wd_superfish_args_url( $url ) {
      return get_stylesheet_directory_uri() . '/assets/js/superfish-args-min.js';
 }
@@ -198,7 +190,7 @@ function wd_custom_loop() {
           do_action( 'genesis_after_endwhile' );
 
      } else {
-
+          
      	do_action( 'genesis_loop_else' );
      }
 }

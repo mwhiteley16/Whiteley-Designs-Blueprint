@@ -9,13 +9,12 @@
 * Base text styles
 */
 %base-style {
-     color: $base-color;
-     font-family: $font-stack-main;
-     font-size: 16px;
-     line-height: 1.6;
-     font-weight: 400;
      height: auto;
      min-height: auto;
+     color: var(--wp--preset--color--foreground);
+     font-size: var(--wp--preset--font-size--normal);
+     line-height: var(--wp--custom--typography--line-height--normal);
+     font-weight: 400;
 }
 
 
@@ -23,34 +22,22 @@
 * Base button styles
 */
 %button-styles {
-     border: 2px solid $primary-color;
-     background: $primary-color;
-     color: $white;
-     font-size: 16px;
-     cursor: pointer;
-     padding: 10px 15px;
      display: inline-block;
+     padding: 10px 15px;
      height: auto;
+     border: 2px solid var(--wp--preset--color--primary);
+     background: var(--wp--preset--color--primary);
+     color: var(--wp--preset--color--white);
+     font-size: var(--wp--preset--font-size--normal);
+     cursor: pointer;
      border-radius: 3px;
 
      &:hover,
      &:focus {
-          border-color: $primary-color-hover;
-          background: $primary-color-hover;
-          color: $white;
+          border-color: var(--wp--custom--color--primary-darken);
+          background: var(--wp--custom--color--primary-darken);
+          color: var(--wp--preset--color--white);
           text-decoration: none;
-     }
-
-     &.button--inverse {
-          background-color: transparent;
-          color: $primary-color;
-
-          &:hover,
-          &:focus {
-               background-color: $primary-color;
-               color: $white;
-               border-color: $primary-color;
-          }
      }
 }
 
@@ -130,57 +117,57 @@
 
      @if 'vertical' == $orientation {
 
-          padding-top: $v-spacing;
-          padding-bottom: $v-spacing;
+          padding-top: calc(var(--wp--custom--layout--block-gap) * 4);
+          padding-bottom: calc(var(--wp--custom--layout--block-gap) * 4);
 
           @include media( 'tablet' ) {
-               padding-top: $v-spacing-tablet;
-               padding-bottom: $v-spacing-tablet;
+               padding-top: calc(var(--wp--custom--layout--block-gap) * 3);
+               padding-bottom: calc(var(--wp--custom--layout--block-gap) * 3);
           }
 
           @include media( 'mobile' ) {
-               padding-top: $v-spacing-mobile;
-               padding-bottom: $v-spacing-mobile;
+               padding-top: calc(var(--wp--custom--layout--block-gap) * 2);
+               padding-bottom: calc(var(--wp--custom--layout--block-gap) * 2);
           }
      }
 
      @if 'horizontal' == $orientation {
 
-          padding-left: $h-spacing;
-          padding-right: $h-spacing;
+          padding-left: var(--wp--custom--layout--block-gap);
+          padding-right: var(--wp--custom--layout--block-gap);
 
           @include media( 'tablet' ) {
-               padding-left: $h-spacing-tablet;
-               padding-left: $h-spacing-tablet;
+               padding-left: var(--wp--custom--layout--block-gap);
+               padding-left: var(--wp--custom--layout--block-gap);
           }
 
           @include media( 'mobile' ) {
-               padding-left: $h-spacing-mobile;
-               padding-left: $h-spacing-mobile;
+               padding-left: var(--wp--custom--layout--block-gap);
+               padding-left: var(--wp--custom--layout--block-gap);
           }
      }
 
      @if 'both' == $orientation {
 
-          padding: $h-spacing;
+          padding: var(--wp--custom--layout--block-gap);
 
           @include media( 'tablet' ) {
-               padding: $h-spacing-tablet;
+               padding: var(--wp--custom--layout--block-gap);
           }
 
           @include media( 'mobile' ) {
-               padding: $h-spacing-mobile;
+               padding: var(--wp--custom--layout--block-gap);
           }
 
           @if 'large' == $size {
-               padding: $v-spacing $h-spacing;
+               padding: calc(var(--wp--custom--layout--block-gap) * 4) var(--wp--custom--layout--block-gap);
 
                @include media( 'tablet' ) {
-                    padding: $v-spacing-tablet $h-spacing-tablet;
+                    padding: calc(var(--wp--custom--layout--block-gap) * 3) var(--wp--custom--layout--block-gap);
                }
 
                @include media( 'mobile' ) {
-                    padding: $v-spacing-mobile $h-spacing-mobile;
+                    padding: calc(var(--wp--custom--layout--block-gap) * 2) var(--wp--custom--layout--block-gap);
                }
           }
 

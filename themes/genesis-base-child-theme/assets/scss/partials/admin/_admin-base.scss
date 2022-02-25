@@ -10,18 +10,35 @@
 
 /* ----- block editor --------------- */
 body .editor-styles-wrapper {
-     @include spacing( 'horizontal', 'no-vertical' );
+     padding: 0 var(--wp--custom--layout--padding);
+
+     .block-editor-block-list__layout.is-root-container > {
+
+          * {
+               max-width: var(--wp--custom--layout--default);
+          }
+
+          [data-align="left"],
+          [data-align="right"] {
+               float: none;
+               margin-right: 0;
+               margin-left: 0;
+          }
+
+          [data-align="full"] {
+               margin-left: calc( -1 * var(--wp--custom--layout--padding) ) !important;
+               margin-right: calc( -1 * var(--wp--custom--layout--padding) ) !important;
+               max-width: 100vw;
+          }
+     }
 
      a {
-          color: $link_color;
+          color: var(--wp--custom--color--link);
 
-          &:hover {
-               color: darken( $link_color, 10% );
-          }
 
           &[href^="tel"],
           &[href^="tel"]:hover {
-               color: $base-color;
+               color: var(--wp--preset--color--foreground);
           }
      }
 
@@ -32,135 +49,37 @@ body .editor-styles-wrapper {
      }
 }
 
-/*----- alignfull widths when editing with sidebar and/or WordPress menus --------------- */
-.is-sidebar-opened .editor-styles-wrapper {
-
-     .alignfull {
-          max-width: calc(100vw - 281px);
-          margin: 0 calc(50% - calc(50vw - 140px));
-     }
-}
-
-body:not(.is-fullscreen-mode) .editor-styles-wrapper {
-
-     .alignfull {
-          max-width: calc(100vw - 160px);
-          margin: 0 calc(50% - calc(50vw - 80px));
-     }
-}
-
-body:not(.is-fullscreen-mode) .is-sidebar-opened .editor-styles-wrapper {
-
-     .alignfull {
-          max-width: calc(100vw - 440px);
-          margin: 0 calc(50% - calc(50vw - 220px));
-     }
-}
 
 /* ----- block editor content width for pages with sidebars --------------- */
-.post-type-post,
-.thin-layout {
+.post-type-post {
 
 	.editor-styles-wrapper {
 
-          // .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block, -- only used if you want page title to align with thinner content within editor
-          .editor-post-title__block.wp-block,
-          .wp-block {
-               max-width: $base-content-width;
-               margin-left: auto !important;
-               margin-right: auto !important;
+          .block-editor-block-list__layout.is-root-container > {
 
-               &.wp-block-button {
-                    margin-left: 0 !important;
-                    margin-right: 0 !important;
+               * {
+                    max-width: var(--wp--custom--layout--thin);
                }
           }
      }
 }
 
-.content-sidebar,
-.sidebar-content {
+.content-sidebar {
 
 	.editor-styles-wrapper {
 
-          .editor-post-title__block.wp-block,
-          .wp-block,
-          .wp-block[data-align="full"],
-          .wp-block[data-align="wide"],
-          .alignfull {
-               max-width: $base-content-width;
-               margin-left: auto !important;
-               margin-right: auto !important;
+          .block-editor-block-list__layout.is-root-container > {
 
-               &.wp-block-button {
-                    margin-left: 0 !important;
-                    margin-right: 0 !important;
-               }
-          }
-     }
-}
+               .editor-post-title__block.wp-block,
+               .wp-block,
+               .wp-block[data-align="full"],
+               .wp-block[data-align="wide"],
+               .alignfull {
+                    max-width: var(--wp--custom--layout--thin);
 
-/*----- ACF Radio Button Color Picker ---------------*/
-.wp-admin .acf-block-component {
-
-     ul.acf-radio-list {
-          display: flex;
-          flex-wrap: wrap;
-          padding-left: 0;
-          margin-left: 0;
-
-          li {
-               margin-right: 0;
-               display: flex;
-
-               label {
-                    width: 28px;
-                    height: 28px;
-                    position: relative;
-                    margin-right: 10px;
-                    margin-bottom: 10px;
-                    color: $white;
-
-                    input[type="radio"] {
-                         position: absolute;
-                         top: 0;
-                         left: 0;
-                         width: 28px;
-                         height: 28px;
-
-                         &:checked {
-
-                              &::before {
-                                   content: "\f15e";
-                                   font-family: dashicons;
-                                   width: 20px;
-                                   height: 20px;
-                                   background-color: transparent;
-                                   font-size: 20px;
-                                   margin: 1px;
-                                   color: $white;
-                              }
-                         }
-
-                         // override light colors with a black checkmark when checked (default is white)
-                         &[value="white"],
-                         &[value="grey-light"],
-                         &[value="grey-medium"] {
-
-                              &:checked {
-
-                                   &::before {
-                                        color: $black;
-                                   }
-                              }
-                         }
-
-                         @each $name, $color in $colors {
-
-                         	&[value="#{$name}"] {
-                         		background-color: $color;
-                         	}
-                         }
+                    &.wp-block-button {
+                         margin-left: 0 !important;
+                         margin-right: 0 !important;
                     }
                }
           }

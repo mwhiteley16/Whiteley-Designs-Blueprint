@@ -7,92 +7,37 @@
  */
 
 .hero-block {
-     padding: 100px $base-margin;
-     background-size: cover;
-     background-position: left center;
      position: relative;
-
-     @include media( 'mobile' ) {
-          padding: 100px $mobile-margin;
-     }
-
-     &.image {
-
-          &-center-align {
-               background-position: center center;
-          }
-
-          &-right-align {
-               background-position: right center;
-          }
-     }
+     @include spacing( 'both', 'large' );
 
      .wrap {
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          max-width: $base-width;
+          max-width: var(--wp--custom--layout--default);
           margin: 0 auto;
-
-          &.is-position-top-left {
-               justify-content: flex-start;
-               align-items: flex-start;
-          }
-
-          &.is-position-center-left {
-               justify-content: flex-start;
-               align-items: center;
-          }
-
-          &.is-position-bottom-left {
-               justify-content: flex-start;
-               align-items: flex-end;
-          }
-
-          &.is-position-top-center {
-               justify-content: center;
-               align-items: flex-start;
-          }
-
-          &.is-position-center-center {
-               justify-content: center;
-               align-items: center;
-          }
-
-          &.is-position-bottom-center {
-               justify-content: center;
-               align-items: flex-end;
-          }
-
-          &.is-position-top-right {
-               justify-content: flex-end;
-               align-items: flex-start;
-          }
-
-          &.is-position-center-right {
-               justify-content: flex-end;
-               align-items: center;
-          }
-
-          &.is-position-bottom-right {
-               justify-content: flex-end;
-               align-items: flex-end;
-          }
      }
 
-     &.content {
+     &__image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
 
-          &-center-align {
+          img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               object-position: center center;
 
-               .wrap {
-                    justify-content: center;
+               &.image-left-align {
+                    object-position: left center;
                }
-          }
 
-          &-right-align {
-
-               .wrap {
-                    justify-content: flex-end;
+               &.image-right-align {
+                    object-position: right center;
                }
           }
      }
@@ -103,17 +48,17 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: $black;
-          z-index: 1;
+          background-color: var(--wp--preset--color--black);
+          z-index: 2;
      }
 
      &__content {
           width: 100%;
           position: relative;
-          z-index: 2;
+          z-index: 3;
 
-          &--solid-color {
-               padding: 50px;
+          > *:last-child {
+               margin-bottom: 0;
           }
      }
 }

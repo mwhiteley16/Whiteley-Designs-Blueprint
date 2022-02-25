@@ -145,8 +145,8 @@ function wd_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
 
      // add submenu dropdown to elements that have children
      if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
-          $output .= '<button aria-label="Submenu Dropdown" tabindex="-1">';
-          $output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/images/utility/angle-down-regular.svg" alt="Submenu Down Arrow">';
+          $output .= '<button aria-label="Submenu Dropdown">';
+               $output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/images/icons/angle-down.svg" alt="Submenu Down Arrow">';
           $output .= '</button>';
      }
 
@@ -281,7 +281,7 @@ function wd_disable_self_pingbacks( &$links ) {
           }
      }
 }
-// add_action( 'pre_ping', 'wd_disable_self_pingbacks' );
+add_action( 'pre_ping', 'wd_disable_self_pingbacks' );
 
 
 /**

@@ -12,17 +12,17 @@ h3,
 h4,
 h5,
 h6 {
-     color: $base-color;
-     font-family: $font-stack-secondary;
-     margin: 0 0 $base-margin 0;
-     line-height: 1.6;
+     margin: 0 0 var(--wp--custom--layout--block-gap) 0;
+     color: var(--wp--preset--color--foreground);
+     font-family: var(--wp--preset--font-family--secondary-font);
+     line-height: var(--wp--custom--typography--line-height--small);
      font-weight: 600;
 
      a {
-		color: $base-color;
+		color: var(--wp--preset--color--foreground);
 
 		&:hover {
-			color: $primary-color;
+			color: var(--wp--preset--color--primary);
 			text-decoration: none;
 		}
 	}
@@ -37,7 +37,7 @@ h6 {
 
      &.alignwide,
      &.alignfull {
-          margin-bottom: $base-margin;
+          margin-bottom: var(--wp--custom--layout--block-gap);
      }
 
      &.is-style-no-bottom-margin {
@@ -45,30 +45,30 @@ h6 {
      }
 
      &.is-style-half-bottom-margin {
-          margin-bottom: $base-margin-half;
+          margin-bottom: calc( var(--wp--custom--layout--block-gap) / 2);
      }
 }
 
 h1 {
-     @include font-sizes( 32px, 30px, 28px );
+     font-size: var(--wp--preset--font-size--big);
 }
 
 h2 {
-     @include font-sizes( 26px, 24px, 24px );
+     font-size: var(--wp--preset--font-size--x-large);
 }
 
 h3 {
-     @include font-sizes( 22px, 20px, 20px );
+     font-size: var(--wp--preset--font-size--larger);
 }
 
 h4 {
-     @include font-sizes( 18px, 16px, 16px );
+     font-size: var(--wp--preset--font-size--medium);
 }
 
 h5 {
-     font-size: 16px;
+     font-size: var(--wp--preset--font-size--normal);
 }
 
 h6 {
-     font-size: 12px;
+     font-size: var(--wp--preset--font-size--small);
 }

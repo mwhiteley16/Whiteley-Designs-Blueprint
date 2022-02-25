@@ -1,0 +1,17 @@
+/**
+ * /assets/scss/partials/layouts/singular.scss
+ *
+ * Let's define our singular page/post styles
+ *
+ *
+ */
+
+/* ----- Entry Header -------------------- */
+.entry-header {
+
+     & > * {
+          max-width: var(--wp--custom--layout--default);
+          margin-left: auto;
+          margin-right: auto;
+     }
+}

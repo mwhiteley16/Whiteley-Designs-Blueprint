@@ -7,33 +7,23 @@
  */
 
 /* ----- Core Block Blockquote -------------------- */
-blockquote,
-blockquote.wp-block-quote {
-	background: $grey-light;
-     margin-top: $base-margin;
-     margin-bottom: $base-margin;
-     padding: 40px;
-     border-left: 10px solid darken( $grey-light, 25% );
-
-     .entry-content & {
-          margin-left: 0;
-          margin-right: 0;
-     }
+.wp-block-quote {
+     margin: var(--wp--custom--layout--block-gap) auto;
+	background: var(--wp--custom--color--grey-light);
+     padding: var( --wp--custom--layout--padding, 16px );
+     border-left: 10px solid var(--wp--custom--color--grey-medium);
 
 	p {
           font-size: 20px;
-          margin-bottom: $base-margin;
+          margin-bottom: var(--wp--custom--layout--block-gap);
 
           &:last-child {
                margin-bottom: 0;
           }
 	}
 
-	cite,
-	.wp-block-quote__citation {
-          margin-top: $base-margin;
+	cite {
+          margin-top: var(--wp--custom--layout--block-gap);
           display: block;
-          font-size: inherit;
-          font-style: normal;
 	}
 }
