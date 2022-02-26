@@ -677,6 +677,25 @@ input[type="search"] {
     .loop-wrapper {
       grid-template-columns: 1fr; } }
 /**
+ * /assets/scss/partials/layouts/error404.scss
+ *
+ * Let's define our error404 styles
+ *
+ *
+ */
+.error404 .site-inner .content {
+  padding: calc(var(--wp--custom--layout--block-gap) * 2) 0; }
+  .error404 .site-inner .content > article {
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: center; }
+    .error404 .site-inner .content > article .search-form-submit {
+      margin-top: var(--wp--custom--layout--block-gap); }
+
+/**
  * /assets/scss/partials/layouts/flickity.scss
  *
  * Let's define our flickity slideshow styles

@@ -1,0 +1,27 @@
+/**
+ * /assets/scss/partials/layouts/error404.scss
+ *
+ * Let's define our error404 styles
+ *
+ *
+ */
+
+.error404 {
+
+     .site-inner .content {
+          padding: calc(var(--wp--custom--layout--block-gap) * 2) 0;
+
+          > article {
+               max-width: 600px;
+               display: flex;
+               justify-content: center;
+               flex-wrap: wrap;
+               margin: 0 auto;
+               text-align: center;
+
+               .search-form-submit {
+                    margin-top: var(--wp--custom--layout--block-gap);
+               }
+          }
+     }
+}
