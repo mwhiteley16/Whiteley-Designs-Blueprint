@@ -6,4 +6,13 @@
  *
  */
 
- /* ----- Core Block Gallery -------------------- */
+/* ----- Core Block Gallery -------------------- */
+.wp-block-gallery {
+
+     .wp-block-image {
+
+          img {
+               margin: 0;
+          }
+     }
+}
