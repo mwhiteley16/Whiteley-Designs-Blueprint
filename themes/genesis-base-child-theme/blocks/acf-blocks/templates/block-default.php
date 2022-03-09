@@ -126,7 +126,47 @@ $inner_template = [
                     ]
                ],
           ]
-     ]
+     ],
+     [ 'core/columns',
+          [
+               'className' => 'is-variation-3-columns'
+          ],
+          [
+               [ 'core/column',
+                    [], // must have emptry attributes array or it won't show
+                    [
+                         // array of innerBlocks
+                    ]
+               ],
+               [ 'core/column',
+                    [],
+                    [
+
+                    ]
+               ],
+               [ 'core/column',
+                    [],
+                    [
+
+                    ]
+               ]
+          ]
+     ],
+     [ 'acf/acf-hero',
+          [
+               'data' => [
+                    'wd_block_hero_image' => 22999,
+                    '_wd_block_hero_image' => 'field_5f7b235cec4d2', // used to force image to show in editor and ACF preview
+               ]
+          ],
+          [
+               [ 'core/paragraph',
+                    [
+
+                    ]
+               ]
+          ]
+     ],
 ];
 
 ?>
