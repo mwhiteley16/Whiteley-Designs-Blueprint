@@ -17,6 +17,7 @@
      column-gap: var(--wp--custom--layout--block-gap);
      row-gap: var(--wp--custom--layout--block-gap);
      grid-template-columns: repeat( 3, 1fr );
+     max-width: var(--wp--custom--layout--default);
      width: 100%;
 
      @include media( 'tablet' ) {
