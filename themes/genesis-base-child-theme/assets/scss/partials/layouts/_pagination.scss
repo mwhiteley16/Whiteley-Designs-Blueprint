@@ -12,6 +12,7 @@
      width: 100%;
      padding-top: 25px;
      border-top: 3px solid $neutral_1;
+     margin-top: calc(var(--wp--custom--layout--block-gap) * 2);
 
      .alignleft {
           float: left;

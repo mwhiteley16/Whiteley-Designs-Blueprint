@@ -898,7 +898,7 @@ ol.flickity-page-dots {
     .site-inner .content > article {
       width: 100%; }
 
-.site-header .wrap, .site-footer .wrap {
+.site-header .wrap, .site-footer .wrap, .blog .site-inner .wrap, .archive .site-inner .wrap {
   width: 100%;
   max-width: calc( var(--wp--custom--layout--default));
   margin: 0 auto; }
@@ -1110,7 +1110,8 @@ ol.flickity-page-dots {
 .pagination {
   width: 100%;
   padding-top: 25px;
-  border-top: 3px solid #fafafa; }
+  border-top: 3px solid #fafafa;
+  margin-top: calc(var(--wp--custom--layout--block-gap) * 2); }
   .pagination .alignleft {
     float: left; }
   .pagination .alignright {

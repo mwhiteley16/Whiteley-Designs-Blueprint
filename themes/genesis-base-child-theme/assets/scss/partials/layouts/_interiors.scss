@@ -29,7 +29,9 @@
 .wrap {
 
      .site-header &,
-     .site-footer & {
+     .site-footer &,
+     .blog .site-inner &,
+     .archive .site-inner & {
           width: 100%;
           max-width: calc( var(--wp--custom--layout--default) );
           margin: 0 auto;
