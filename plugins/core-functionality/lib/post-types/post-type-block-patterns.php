@@ -44,7 +44,7 @@ function wd_register_cpt_block_pattern() {
           'has_archive'         => false,
           'hierarchical'        => false,
           'menu_position'       => 290,
-          'menu_icon'           => 'dashicons-align-left',
+          'menu_icon'           => 'dashicons-screenoptions',
           'show_in_rest'        => true,
           'supports'            => [
                'title',
@@ -177,7 +177,7 @@ function wd_block_patterns_cpt_redirect_single() {
 /*
 * Register Block Patterns
 */
-add_action( 'init', 'wd_register_block_patterns' );
+add_action( 'admin_init', 'wd_register_block_patterns' );
 function wd_register_block_patterns() {
 
      if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
