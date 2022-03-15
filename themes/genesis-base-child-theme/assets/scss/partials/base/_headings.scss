@@ -18,17 +18,13 @@ h6 {
      line-height: var(--wp--custom--typography--line-height--small);
      font-weight: 600;
 
-     a {
+     &:not(.has-text-color) a {
 		color: var(--wp--preset--color--foreground);
 
 		&:hover {
 			color: var(--wp--preset--color--primary);
 			text-decoration: none;
 		}
-	}
-
-	&:focus {
-		outline: none;
 	}
 
      &.has-background {

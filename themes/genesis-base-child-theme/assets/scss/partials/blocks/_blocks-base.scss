@@ -35,6 +35,14 @@
 @import 'acf/blocks-slideshow.scss';
 @import 'acf/blocks-team.scss';
 
+/* ----- Base Colors -------------------- */
+.has-text-color {
+
+     > a {
+          color: inherit;
+     }
+}
+
 /* ----- Layouts -------------------- */
 .entry-content,
 .block-area {
@@ -124,7 +132,7 @@
           padding: 20px 30px 0;
           font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
           font-weight: bold;
-          color: black;          
+          color: black;
 
           &::before{
                content: 'Page / Post Title';

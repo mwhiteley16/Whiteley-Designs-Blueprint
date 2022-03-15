@@ -78,28 +78,21 @@ h6 {
   font-family: var(--wp--preset--font-family--secondary-font);
   line-height: var(--wp--custom--typography--line-height--small);
   font-weight: 600; }
-  h1 a,
-  h2 a,
-  h3 a,
-  h4 a,
-  h5 a,
-  h6 a {
+  h1:not(.has-text-color) a,
+  h2:not(.has-text-color) a,
+  h3:not(.has-text-color) a,
+  h4:not(.has-text-color) a,
+  h5:not(.has-text-color) a,
+  h6:not(.has-text-color) a {
     color: var(--wp--preset--color--foreground); }
-    h1 a:hover,
-    h2 a:hover,
-    h3 a:hover,
-    h4 a:hover,
-    h5 a:hover,
-    h6 a:hover {
+    h1:not(.has-text-color) a:hover,
+    h2:not(.has-text-color) a:hover,
+    h3:not(.has-text-color) a:hover,
+    h4:not(.has-text-color) a:hover,
+    h5:not(.has-text-color) a:hover,
+    h6:not(.has-text-color) a:hover {
       color: var(--wp--preset--color--primary);
       text-decoration: none; }
-  h1:focus,
-  h2:focus,
-  h3:focus,
-  h4:focus,
-  h5:focus,
-  h6:focus {
-    outline: none; }
   h1.has-background,
   h2.has-background,
   h3.has-background,
@@ -1187,6 +1180,10 @@ hr.wp-block-separator {
       margin-right: 5px; }
       .team-block__social-item:last-child {
         margin-right: 0; }
+
+/* ----- Base Colors -------------------- */
+.has-text-color > a {
+  color: inherit; }
 
 /* ----- Layouts -------------------- */
 .entry-content > *,
