@@ -1111,7 +1111,7 @@ hr.wp-block-separator {
   .acf-separator-block.alignfull {
     width: 100vw; }
   .acf-separator-block.no-margin {
-    margin: 0; }
+    margin-bottom: 0; }
   .acf-separator-block.center-align {
     justify-content: center; }
   .acf-separator-block.right-align {
