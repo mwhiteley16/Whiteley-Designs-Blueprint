@@ -1186,11 +1186,68 @@ ol.flickity-page-dots {
  *
  *
  */
-/* ----- Entry Header -------------------- */
-.entry-header > * {
-  max-width: var(--wp--custom--layout--default);
+/* ----- Single Layout -------------------- */
+body.full-width-content.single .entry-content > * {
+  max-width: var(--wp--custom--layout--thin); }
+
+/* ----- Entry Header/Footer -------------------- */
+.entry-header > *,
+.entry-footer > * {
+  max-width: var(--wp--custom--layout--thin);
   margin-left: auto;
   margin-right: auto; }
+
+/* ----- Comments -------------------- */
+.comment-respond,
+.entry-comments {
+  width: 100%; }
+  .comment-respond > *,
+  .entry-comments > * {
+    max-width: var(--wp--custom--layout--thin);
+    margin-left: auto;
+    margin-right: auto; }
+
+.entry-comments .comment-list {
+  margin-bottom: 32px; }
+  .entry-comments .comment-list li {
+    list-style-type: none;
+    border: 1px solid #ccc;
+    padding: 16px; }
+    .entry-comments .comment-list li article {
+      position: relative; }
+  .entry-comments .comment-list > li {
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 15px; }
+  .entry-comments .comment-list .comment-author {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0; }
+    .entry-comments .comment-list .comment-author a {
+      color: var(--wp--preset--color--foreground);
+      text-decoration: none; }
+    .entry-comments .comment-list .comment-author .says {
+      display: none; }
+  .entry-comments .comment-list .comment-meta {
+    color: #ccc;
+    vertical-align: middle; }
+    .entry-comments .comment-list .comment-meta a {
+      color: #ccc;
+      font-weight: 400;
+      text-decoration: none; }
+  .entry-comments .comment-list .comment-content p:last-child {
+    margin: 0; }
+  .entry-comments .comment-list .comment-reply-link {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none; }
+  .entry-comments .comment-list ol.children {
+    margin: 0; }
+    .entry-comments .comment-list ol.children li {
+      border-top: 1px solid #ccc; }
 
 /* Forms */
 /**
