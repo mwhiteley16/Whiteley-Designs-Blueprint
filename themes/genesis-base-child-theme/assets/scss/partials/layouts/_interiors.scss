@@ -31,7 +31,8 @@
      .site-header &,
      .site-footer &,
      .blog .site-inner &,
-     .archive .site-inner & {
+     .archive .site-inner &,
+     .search .site-inner & {
           width: 100%;
           max-width: calc( var(--wp--custom--layout--default) );
           margin: 0 auto;

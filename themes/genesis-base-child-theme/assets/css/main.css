@@ -892,7 +892,7 @@ ol.flickity-page-dots {
     .site-inner .content > article {
       width: 100%; }
 
-.site-header .wrap, .site-footer .wrap, .blog .site-inner .wrap, .archive .site-inner .wrap {
+.site-header .wrap, .site-footer .wrap, .blog .site-inner .wrap, .archive .site-inner .wrap, .search .site-inner .wrap {
   width: 100%;
   max-width: calc( var(--wp--custom--layout--default));
   margin: 0 auto; }
@@ -1168,6 +1168,8 @@ ol.flickity-page-dots {
  *
  */
 .search .search-results-found {
+  display: block;
+  width: 100%;
   margin-bottom: 50px; }
 
 .search .search-loop-item {
