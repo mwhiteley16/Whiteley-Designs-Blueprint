@@ -32,7 +32,8 @@
      .site-footer &,
      .blog .site-inner &,
      .archive .site-inner &,
-     .search .site-inner & {
+     .search .site-inner &,
+     .single.content-sidebar .site-inner & {
           width: 100%;
           max-width: calc( var(--wp--custom--layout--default) );
           margin: 0 auto;
@@ -60,11 +61,23 @@
                .content {
                     width: var(--wp--custom--layout--thin);
 
-                    .alignfull,
-                    .alignwide {
-                         max-width: 100%;
-                         margin-left: 0;
-                         margin-right: 0;
+                    @media(max-width:1168px) {
+                         flex: 1;
+                         width: auto;
+                    }
+
+                    @include media( 'tablet' ) {
+                         flex: none;
+                         width: 100%;
+                    }
+
+                    @include media( 'tablet+' ) {
+                         .alignfull,
+                         .alignwide {
+                              max-width: 100%;
+                              margin-left: 0;
+                              margin-right: 0;
+                         }
                     }
                }
 
@@ -72,6 +85,17 @@
                     padding: calc(var(--wp--custom--layout--block-gap) * 4) 0;
                     flex: 1;
                     padding-left: calc(var(--wp--custom--layout--block-gap) * 2);
+
+                    @media(max-width:1168px) {
+                         flex: none;
+                         width: 300px;
+                    }
+
+                    @include media( 'tablet' ) {
+                         width: 100%;
+                         max-width: 375px;
+                         padding: 0 0 calc(var(--wp--custom--layout--block-gap) * 2);
+                    }
                }
           }
      }

@@ -70,11 +70,11 @@ add_theme_support( 'genesis-menus',
 * Don't load default data into empty sidebar
 */
 remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
-// add_action( 'genesis_sidebar',
-//      function() {
-//           dynamic_sidebar( 'sidebar' );
-//      }
-// );
+add_action( 'genesis_sidebar',
+     function() {
+          dynamic_sidebar( 'sidebar' );
+     }
+);
 
 
 /**
@@ -190,7 +190,7 @@ function wd_custom_loop() {
           do_action( 'genesis_after_endwhile' );
 
      } else {
-          
+
      	do_action( 'genesis_loop_else' );
      }
 }
