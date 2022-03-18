@@ -111,35 +111,6 @@ function wd_acf_blocks() {
 
           acf_register_block_type(
                [
-                    'name'			=> 'acf-header-with-button',
-                    'title'			=> __( 'Header with Button Block', WD_CHILD_THEME_NAME ),
-                    'description'		=> __( 'A block for a heading w/ a button on the right side.', WD_CHILD_THEME_NAME ),
-                    'category'		=> 'wd-blocks',
-                    'render_template'   => 'blocks/acf-blocks/templates/block-acf-header-with-button.php',
-                    'mode'              => 'preview',
-                    'icon'              => $block_icon,
-                    'keywords' => [
-                         'heading',
-                         'heading button',
-                         'wd',
-                         'acf',
-                         WD_CHILD_THEME_SLUG,
-                    ],
-                    'post_type' => [
-                         'post',
-                         'page',
-                    ],
-                    'supports' => [
-                         'align'           => false,
-                         'anchor'          => false,
-                         'customClassName' => true,
-                         'jsx'             => true,
-                    ]
-               ]
-          );
-
-          acf_register_block_type(
-               [
                     'name'			=> 'acf-hero',
                     'title'			=> __( 'Hero Block', WD_CHILD_THEME_NAME ),
                     'description'		=> __( 'A hero block.' , WD_CHILD_THEME_NAME ),

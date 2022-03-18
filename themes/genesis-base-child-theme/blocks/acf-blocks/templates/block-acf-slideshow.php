@@ -1,6 +1,6 @@
 <?php
 /**
- * FAQ Block
+ * Slideshow Block
  *
  * @package      ClientName
  * @author       Matt Whiteley
