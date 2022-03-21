@@ -22,6 +22,12 @@ add_theme_support( 'responsive-embeds' );
 
 
 /**
+* Remove support for FSE block templates
+*/
+remove_theme_support( 'block-templates' );
+
+
+/**
 * Show Reusable Blocks UI in WordPress admin
 *
 * @link https://www.billerickson.net/reusable-blocks-accessible-in-wordpress-admin-area
