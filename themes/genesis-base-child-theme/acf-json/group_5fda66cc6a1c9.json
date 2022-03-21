@@ -82,7 +82,7 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_609e95e664fee",
+            "collapsed": "field_609e95a064fec",
             "min": 0,
             "max": 0,
             "layout": "block",
@@ -92,8 +92,8 @@
                     "key": "field_609e95a064fec",
                     "label": "Icon",
                     "name": "wd_icon",
-                    "type": "text",
-                    "instructions": "Enter icon code from <a href=\"https:\/\/fontawesome.com\/icons?d=gallery&p=2&s=brands\" target=\"_blank\">FontAwesome<\/a>.",
+                    "type": "select",
+                    "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -101,41 +101,31 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_609e95e664fee",
-                    "label": "Aria Label",
-                    "name": "wd_aria_label",
-                    "type": "text",
-                    "instructions": "Enter short description of link for accessibility.",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
+                    "choices": {
+                        "facebook": "Facebook",
+                        "instagram": "Instagram",
+                        "pinterest": "Pinterest",
+                        "twitter": "Twitter",
+                        "youtube": "YouTube"
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "array",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
                     "key": "field_609e95d264fed",
                     "label": "Link",
                     "name": "wd_link",
                     "type": "url",
-                    "instructions": "Add full URL to social media channel.",
+                    "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -162,5 +152,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621006240
+    "show_in_rest": 0,
+    "modified": 1647868436
 }

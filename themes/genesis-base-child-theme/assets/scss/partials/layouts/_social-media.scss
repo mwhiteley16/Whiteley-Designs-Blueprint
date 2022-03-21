@@ -1,0 +1,37 @@
+/**
+ * /assets/scss/partials/layouts/social-media.scss
+ *
+ * Let's define our social media styles
+ *
+ *
+ */
+
+.social-media {
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     flex-wrap: wrap;
+
+     &__link {
+          margin-right: 12px;
+
+          &:last-child {
+               margin-right: 0;
+          }
+
+          svg {
+               fill: var(--wp--preset--color--primary);
+               @extend %transition;
+          }
+
+          &:hover,
+          &:focus,
+          &:active {
+               text-decoration: none;
+
+               svg {
+                    fill: var(--preset--color--foreground);
+               }
+          }
+     }
+}

@@ -18,14 +18,8 @@ $wd_options_copyright_text = get_field( 'wd_options_copyright_text', 'option' );
      </div>
 <?php endif; ?>
 
-<?php if ( have_rows( 'wd_options_social_media_links', 'option' ) ) : ?>
-     <div class="social-media">
-     	<?php while ( have_rows( 'wd_options_social_media_links', 'option' ) ) : the_row(); ?>
-
-               <a class="social-media__link" href="<?php the_sub_field( 'wd_link' ); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php the_sub_field( 'wd_aria_label' ); ?>">
-                    <?php the_sub_field( 'wd_icon' ); ?>
-               </a>
-
-     	<?php endwhile; ?>
-     </div>
-<?php endif; ?>
+<?php // social media
+if ( function_exists( 'wd_social_media' ) ) {
+     wd_social_media( '24px', 'social-media__footer' );
+}
+?>

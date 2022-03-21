@@ -69,7 +69,7 @@ button.gform_button {
 /**
 * Transitions
 */
-.faq-block__toggle-question-icons::before, .faq-block__toggle-question-icons::after, .block-editor-block-list__layout .wp-block-image.is-style-hide-desktop, .mobile-navigation-icon span, .mobile-navigation-icon, .nav-primary ul .menu-item .sub-menu, .nav-primary ul .menu-item.menu-button a span, a, button,
+.faq-block__toggle-question-icons::before, .faq-block__toggle-question-icons::after, .block-editor-block-list__layout .wp-block-image.is-style-hide-desktop, .social-media__link svg, .mobile-navigation-icon span, .mobile-navigation-icon, .nav-primary ul .menu-item .sub-menu, .nav-primary ul .menu-item.menu-button a span, a, button,
 input:focus,
 input[type="button"],
 input[type="reset"],
@@ -1261,6 +1261,29 @@ body.full-width-content.single .entry-content > * {
     margin: 0; }
     .entry-comments .comment-list ol.children li {
       border-top: 1px solid #ccc; }
+
+/**
+ * /assets/scss/partials/layouts/social-media.scss
+ *
+ * Let's define our social media styles
+ *
+ *
+ */
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+  .social-media__link {
+    margin-right: 12px; }
+    .social-media__link:last-child {
+      margin-right: 0; }
+    .social-media__link svg {
+      fill: var(--wp--preset--color--primary); }
+    .social-media__link:hover, .social-media__link:focus, .social-media__link:active {
+      text-decoration: none; }
+      .social-media__link:hover svg, .social-media__link:focus svg, .social-media__link:active svg {
+        fill: var(--preset--color--foreground); }
 
 /* Forms */
 /**
