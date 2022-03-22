@@ -22,24 +22,46 @@ define( 'WD_CHILD_THEME_VERSION', '1.0.0' );
 
 
 /**
-* Setup theme fonts
+* Setup local fonts
 */
-function wd_theme_fonts() {
+function wd_get_local_font_families() {
 
-     // array of Google Fonts
-     $font_families_array = [
-          'Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900',
-          'Open+Sans:ital,wght@0,300;0,400;1,300',
-     ];
-
-     // create URL string from array of font families
-     $font_families_string = implode( '&family=', $font_families_array );
-
-     // create proper Google Font URL string
-     $fonts_url = 'https://fonts.googleapis.com/css2?family=' . $font_families_string . '&display=swap';
-
-     return esc_url_raw( $fonts_url );
+	return "
+     @font-face {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-stretch: normal;
+          font-display: swap;
+          font-weight: 400;
+          src: url('" . get_stylesheet_directory_uri() . "/assets/fonts/roboto-v29-latin-regular.woff2') format('woff2');
+     }
+     @font-face {
+          font-family: 'Roboto';
+          font-style: italic;
+          font-stretch: normal;
+          font-display: swap;
+          font-weight: 400;
+          src: url('" . get_stylesheet_directory_uri() . "/assets/fonts/roboto-v29-latin-italic.woff2') format('woff2');
+     }
+     @font-face {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-stretch: normal;
+          font-display: swap;
+          font-weight: 700;
+          src: url('" . get_stylesheet_directory_uri() . "/assets/fonts/roboto-v29-latin-700.woff2') format('woff2');
+     }
+     @font-face {
+          font-family: 'Roboto';
+          font-style: italic;
+          font-stretch: normal;
+          font-display: swap;
+          font-weight: 700;
+          src: url('" . get_stylesheet_directory_uri() . "/assets/fonts/roboto-v29-latin-700italic.woff2') format('woff2');
+     }
+     ";
 }
+
 
 
 /**
@@ -48,13 +70,9 @@ function wd_theme_fonts() {
 function wd_global_enqueues() {
 
      // fonts
-     wp_enqueue_style(
-          'wd-fonts',
-          wd_theme_fonts(),
-          [],
-          null, // remove version parameter to allow multiple fonts in string
-          // 'print' // optionally defer font loading to print (performance)
-     );
+     wp_register_style( 'wd-local-fonts', false );
+     wp_add_inline_style( 'wd-local-fonts', wd_get_local_font_families() );
+     wp_enqueue_style( 'wd-local-fonts' );
 
      // javascript
      wp_enqueue_script(
@@ -88,12 +106,9 @@ add_action( 'wp_enqueue_scripts', 'wd_global_enqueues' );
 function wd_admin_enqueues() {
 
      // fonts
-     wp_enqueue_style(
-          'wd-fonts',
-          wd_theme_fonts(),
-          [],
-          null
-     );
+     wp_register_style( 'wd-local-fonts', false );
+     wp_add_inline_style( 'wd-local-fonts', wd_get_local_font_families() );
+     wp_enqueue_style( 'wd-local-fonts' );
 
      // custom block styles
      wp_enqueue_script(
