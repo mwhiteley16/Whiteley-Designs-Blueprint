@@ -104,6 +104,7 @@
                     "choices": {
                         "facebook": "Facebook",
                         "instagram": "Instagram",
+                        "linkedin": "LinkedIn",
                         "pinterest": "Pinterest",
                         "twitter": "Twitter",
                         "youtube": "YouTube"
@@ -153,5 +154,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1647868436
+    "modified": 1647974460
 }
