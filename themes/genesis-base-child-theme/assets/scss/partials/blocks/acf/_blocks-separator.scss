@@ -28,3 +28,8 @@
           justify-content: flex-end;
      }
 }
+
+// override default 10px min height on acf block previews in editor
+.wp-block-acf-acf-separator .acf-block-body .acf-block-preview {
+     min-height: 1px;
+}

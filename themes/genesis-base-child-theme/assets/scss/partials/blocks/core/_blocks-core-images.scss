@@ -7,7 +7,8 @@
  */
 
  /* ----- Core Block Images -------------------- */
-.wp-block-image {
+.wp-block-image,
+figure.wp-block-image:not(.wp-block) {
      margin-bottom: var(--wp--custom--layout--block-gap);
 
      img {
