@@ -85,3 +85,91 @@ body .editor-styles-wrapper {
           }
      }
 }
+
+/*----- ACF Radio Button Color Picker ---------------*/
+.wp-admin .acf-block-component {
+
+     ul.acf-radio-list {
+          display: flex;
+          flex-wrap: wrap;
+          padding-left: 0;
+          margin-left: 0;
+
+          li {
+               margin-right: 0;
+               display: flex;
+               flex-wrap: wrap;
+
+               label {
+                    width: 28px;
+                    height: 28px;
+                    position: relative;
+                    margin: 6px 12px 6px 0;
+                    color: white;
+
+                    input[type="radio"] {
+                         position: absolute;
+                         top: 0;
+                         left: 0;
+                         width: 28px;
+                         height: 28px;
+                         border: 1px solid rgba(0,0,0,0.2);
+                         @extend %transition;
+
+                         &:hover {
+                              transform: scale(1.2);
+                         }
+
+                         &:focus {
+                              box-shadow: 0 0 0 2px white, 0 0 0 4px #757575;
+                              border: 1px solid transparent;
+                         }
+
+                         &:checked {
+
+                              &::before {
+                                   content: "\f15e";
+                                   font-family: dashicons;
+                                   width: 20px;
+                                   height: 20px;
+                                   background-color: transparent;
+                                   font-size: 20px;
+                                   margin: 1px;
+                                   color: white;
+                              }
+                         }
+
+                         // override light colors with a black checkmark when checked (default is white)
+                         &[value="background"],
+                         &[value="white"],
+                         &[value="grey-light"],
+                         &[value="grey-medium"] {
+
+                              &:checked {
+
+                                   &::before {
+                                        color: black;
+                                   }
+                              }
+                         }
+
+                         &[value="background"] {
+                              background-color: var(--wp--preset--color--background);
+                         }
+
+                         &[value="foreground"] {
+                              background-color: var(--wp--preset--color--foreground);
+                         }
+
+                         &[value="primary"] {
+                              background-color: var(--wp--preset--color--primary);
+                         }
+
+                         &[value="secondary"] {
+                              background-color: var(--wp--preset--color--secondary);
+                         }
+                    }
+               }
+          }
+     }
+}

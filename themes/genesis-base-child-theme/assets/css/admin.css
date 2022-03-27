@@ -14,6 +14,9 @@
 /**
 * Transitions
 */
+.wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"] {
+  transition: all 0.2s ease-in-out; }
+
 /**
 * RGBA color conversion
 */
@@ -78,6 +81,55 @@ body .editor-styles-wrapper {
   .content-sidebar .editor-styles-wrapper .block-editor-block-list__layout.is-root-container > .alignfull.wp-block-button {
     margin-left: 0 !important;
     margin-right: 0 !important; }
+
+/*----- ACF Radio Button Color Picker ---------------*/
+.wp-admin .acf-block-component ul.acf-radio-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-left: 0; }
+  .wp-admin .acf-block-component ul.acf-radio-list li {
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap; }
+    .wp-admin .acf-block-component ul.acf-radio-list li label {
+      width: 28px;
+      height: 28px;
+      position: relative;
+      margin: 6px 12px 6px 0;
+      color: white; }
+      .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: 28px;
+        border: 1px solid rgba(0, 0, 0, 0.2); }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"]:hover {
+          -webkit-transform: scale(1.2);
+                  transform: scale(1.2); }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"]:focus {
+          box-shadow: 0 0 0 2px white, 0 0 0 4px #757575;
+          border: 1px solid transparent; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"]:checked::before {
+          content: "\f15e";
+          font-family: dashicons;
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+          font-size: 20px;
+          margin: 1px;
+          color: white; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="background"]:checked::before, .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="white"]:checked::before, .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="grey-light"]:checked::before, .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="grey-medium"]:checked::before {
+          color: black; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="background"] {
+          background-color: var(--wp--preset--color--background); }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="foreground"] {
+          background-color: var(--wp--preset--color--foreground); }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="primary"] {
+          background-color: var(--wp--preset--color--primary); }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="secondary"] {
+          background-color: var(--wp--preset--color--secondary); }
 
 /* Admin ACF CSS */
 /**
