@@ -27,6 +27,14 @@
                }
           }
 
+          // since gravity forms add a few hidden iframes it messes up the :last-child CSS, this fixes that
+          > *:nth-last-child(3) {
+
+               &.gform_wrapper {
+                    margin-bottom: 0;
+               }
+          }
+
           @media(max-width:781px) and (min-width:600px) {
 
                &:nth-child(n+3) {
