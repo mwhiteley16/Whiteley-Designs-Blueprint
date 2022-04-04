@@ -1409,6 +1409,8 @@ select {
     .gform_body .gform_fields .gfield.spacer {
       margin-bottom: 0; }
     @media (min-width: 601px) {
+      .gform_body .gform_fields .gfield--width-three-quarter {
+        width: calc(75% - calc(var(--wp--custom--layout--block-gap) / 4)); }
       .gform_body .gform_fields .gfield--width-half {
         width: calc(50% - calc(var(--wp--custom--layout--block-gap) / 2)); }
       .gform_body .gform_fields .gfield--width-third {
@@ -1418,6 +1420,13 @@ select {
   @media (min-width: 601px) and (max-width: 1000px) {
     .gform_body .gform_fields .gfield--width-quarter {
       width: calc(50% - calc(var(--wp--custom--layout--block-gap) / 2)); } }
+  @media (min-width: 601px) {
+    .gform_body .gform_fields #field_submit.gfield.gfield--width-quarter {
+      width: calc(calc(25% - calc(calc(var(--wp--custom--layout--block-gap) * 3) / 4)) + var(--wp--custom--layout--block-gap));
+      display: flex; }
+      .gform_body .gform_fields #field_submit.gfield.gfield--width-quarter button {
+        width: 100%;
+        padding: 10px; } }
 /**
  * /assets/scss/partials/forms/forms-gravity-address.scss
  *
@@ -1458,7 +1467,8 @@ select {
   .ginput_container .gfield_radio .gchoice > label {
     position: relative;
     padding: 0 0 0 25px;
-    line-height: 26px; }
+    line-height: 26px;
+    display: block; }
   .ginput_container .gfield_checkbox .gchoice > input[type="radio"],
   .ginput_container .gfield_radio .gchoice > input[type="radio"] {
     position: absolute;
@@ -1472,7 +1482,7 @@ select {
     .ginput_container .gfield_radio .gchoice > input[type="radio"] + *::before {
       content: "";
       position: absolute;
-      top: 1px;
+      top: 4px;
       left: 0;
       width: 16px;
       height: 16px;
@@ -1486,7 +1496,7 @@ select {
       height: 8px;
       background-color: var(--wp--preset--color--white);
       position: absolute;
-      top: 5px;
+      top: 8px;
       left: 4px;
       border-radius: 10px;
       opacity: 0; }
@@ -1510,7 +1520,7 @@ select {
     .ginput_container .gfield_radio .gchoice > input[type="checkbox"] + *::before {
       content: "";
       position: absolute;
-      top: 2px;
+      top: 4px;
       left: 0;
       width: 16px;
       height: 16px;
@@ -1525,7 +1535,7 @@ select {
       width: 10px;
       height: 10px;
       position: absolute;
-      top: 5px;
+      top: 6px;
       left: 3px;
       opacity: 0; }
     .ginput_container .gfield_checkbox .gchoice > input[type="checkbox"]:checked + *::before,

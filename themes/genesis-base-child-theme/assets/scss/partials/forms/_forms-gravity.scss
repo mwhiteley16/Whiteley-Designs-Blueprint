@@ -88,6 +88,10 @@
 
                @include media( 'mobile+') {
 
+                    &--width-three-quarter {
+                         width: calc(75% - calc(#{$form-spacing} / 4));
+                    }
+
                     &--width-half {
                          width: calc(50% - calc(#{$form-spacing} / 2));
                     }
@@ -102,6 +106,19 @@
                          @media(max-width:1000px) {
                               width: calc(50% - calc(#{$form-spacing} / 2));
                          }
+                    }
+               }
+          }
+
+          @include media( 'mobile+' ) {
+
+               #field_submit.gfield.gfield--width-quarter {
+                    width: calc(calc(25% - calc(calc(#{$form-spacing} * 3) / 4)) + #{$form-spacing} );
+                    display: flex;
+
+                    button {
+                         width: 100%;
+                         padding: 10px;
                     }
                }
           }
